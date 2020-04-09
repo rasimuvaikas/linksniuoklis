@@ -1,0 +1,327 @@
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.regex.Pattern;
+
+/**
+ * A class that responds to get request for a sentence with a noun of a specific inflection, number and declension
+ */
+@WebServlet("/Share")
+public class Share extends HttpServlet {
+
+    Data data = null;
+
+    public void init() {
+        data = new Data();
+    }
+
+
+    protected void doOptions(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        setAccessControlHeaders(resp);
+        resp.setStatus(HttpServletResponse.SC_OK);
+    }
+
+    private void setAccessControlHeaders(HttpServletResponse resp) {
+        resp.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
+        resp.setHeader("Access-Control-Allow-Methods", "POST, GET");
+        resp.setHeader("Access-Control-Allow-Headers", "content-type, x-customauthheader");
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+
+        setAccessControlHeaders(response);
+
+        request.setCharacterEncoding("utf-8");
+
+        String infl = request.getParameter("inflection");
+        String num = request.getParameter("number");
+
+        String pattern = request.getParameter("declension");
+
+        ResultSet rs = data.getSentenceDecl(infl, num, pattern);
+
+        try {
+
+
+            response.setCharacterEncoding("UTF-8");
+            response.setContentType("application/json");
+            PrintWriter out = response.getWriter();
+
+            JSONArray jsonArray = new JSONArray();
+
+            while (rs.next()) {
+
+                JSONObject jsb = new JSONObject();
+
+                String stressed = rs.getString("stressed");
+                String simple = rs.getString("clean");
+                String english = rs.getString("english");
+                String noun = rs.getString("noun");
+                int position = rs.getInt("position");
+                String lemma = rs.getString("lemma");
+                String info = rs.getString("info");
+                String inflection = rs.getString("inflection");
+                String number = rs.getString("number");
+                String declension = rs.getString("pattern");
+
+                //create slices - plain text surrounding the noun in question; and strices - stressed text surrounding the noun in question
+                String[] slice = simple.split(" ?(?<!\\G)((?<=[^\\p{Punct}])(?=\\p{Punct})|\\b) ?");
+                String slice1 = "";
+                String slice2 = "";
+                for (int i = 0; i < position; i++) {
+                    if (i == 0) {
+                        slice1 += slice[i];
+                    } else if (Pattern.matches("\\p{Punct}", slice[i])) {
+                        slice1 += slice[i] + " ";
+                    } else if (i == position - 1) {
+                        slice1 += " " + slice[i] + " ";
+                    } else {
+                        slice1 += " " + slice[i];
+                    }
+                }
+
+                for (int i = position + 1; i < slice.length; i++) {
+                    if (i == position + 1) {
+                        slice2 += " " + slice[i];
+                    } else if (Pattern.matches("\\p{Punct}", slice[i])) {
+                        slice2 += slice[i] + " ";
+                    } else if (i == slice.length - 1) {
+                        slice2 += " " + slice[i] + " ";
+                    } else {
+                        slice2 += " " + slice[i];
+                    }
+                }
+
+                String[] strice = stressed.split(" ?(?<!\\G)((?<=[^\\p{Punct}])(?=\\p{Punct})|\\b) ?");
+                String strice1 = "";
+                String strice2 = "";
+                for (int i = 0; i < position; i++) {
+                    if (i == 0) {
+                        strice1 += strice[i];
+                    } else if (Pattern.matches("\\p{Punct}", strice[i])) {
+                        strice1 += strice[i] + " ";
+                    } else if (i == position - 1) {
+                        strice1 += " " + strice[i] + " ";
+                    } else {
+                        strice1 += " " + strice[i];
+                    }
+                }
+
+                for (int i = position + 1; i < strice.length; i++) {
+                    if (i == position + 1) {
+                        strice2 += " " + strice[i];
+                    } else if (Pattern.matches("\\p{Punct}", strice[i])) {
+                        strice2 += strice[i] + " ";
+                    } else if (i == strice.length - 1) {
+                        strice2 += " " + strice[i] + " ";
+                    } else {
+                        strice2 += " " + strice[i];
+                    }
+                }
+
+                ArrayList<String> l = new ArrayList<>();
+
+                Declension decl = new Declension();
+                Noun n = decl.createNoun(noun, lemma, info);
+                for (String s : decl.generateDist(n)) {
+                    l.add(s);
+
+                }
+                l.add(noun);
+
+
+                Collections.shuffle(l);
+                JSONArray nounDist = new JSONArray(l);
+
+                ArrayList<String> m = new ArrayList<>();
+
+                Stress str = new Stress();
+                ArrayList<ArrayList<String>> dist = str.findDistractors(strice[position]);
+                for (ArrayList<String> a : dist) {
+                    String d = str.generateDistractor(a, slice[position]);
+                    m.add(d);
+                }
+
+                m.add(strice[position]);
+
+                Collections.shuffle(m);
+                JSONArray stressDist = new JSONArray(m);
+
+                String gender = "";
+                if(n.getGender().equals("m")){
+                    gender = "masculine";
+                } else if(n.getGender().equals("f")){
+                    gender = "feminine";
+                }
+                jsb.put("gender", gender);
+
+                jsb.put("stressed", stressed);
+                jsb.put("simple", simple);
+                jsb.put("english", english);
+                jsb.put("noun", noun);
+                jsb.put("accNoun", strice[position]);
+                jsb.put("position", position);
+                jsb.put("lemma", lemma);
+                jsb.put("info", info);
+                jsb.put("inflection", inflection);
+                jsb.put("number", number);
+                jsb.put("slice1", slice1);
+                jsb.put("slice2", slice2);
+                jsb.put("strice1", strice1);
+                jsb.put("strice2", strice2);
+                jsb.put("nounDist", nounDist);
+                jsb.put("stressDist", stressDist);
+                jsb.put("declension", declension);
+
+
+                jsonArray.put(jsb);
+            }
+
+
+            out.println(jsonArray);
+
+            out.close();
+
+
+        } catch (SQLException e) {
+            e.getMessage();
+        }
+
+    }
+
+    /**
+     * Get info of a sentence that appeared in a successfully completed exercise, respond with the user's progress regarding the current inflection/number, declension
+     * @param request
+     * @param response
+     * @throws IOException
+     */
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+        setAccessControlHeaders(response);
+
+        request.setCharacterEncoding("utf-8");
+        StringBuffer sb = new StringBuffer();
+        String line;
+
+
+        //get the parameters
+
+        BufferedReader reader = request.getReader();
+        while ((line = reader.readLine()) != null)
+            sb.append(line);
+
+
+        System.out.println("json, kurį gaunu: "  + sb.toString());
+        JSONObject jsonObject = new JSONObject(sb.toString());
+
+        String username = null;
+
+        String number = jsonObject.getString("number");
+        String infl = jsonObject.getString("inflection");
+        String decl = jsonObject.getString("declension");
+        username = jsonObject.getString("username");
+        String level = jsonObject.getString("level");
+
+        data.updateProgress(infl, number, decl, username, level);
+
+
+        try {
+
+            JSONArray arr = new JSONArray();
+
+            response.setCharacterEncoding("UTF-8");
+            response.setContentType("application/json");
+            PrintWriter out = response.getWriter();
+
+            ResultSet rs = data.getProgress(infl, number, username, level);
+            ResultSetMetaData rsmd = rs.getMetaData();
+
+            JSONObject jsb = new JSONObject();
+            while(rs.next()){
+
+                String user = rs.getString(1);
+
+                jsb.put("username", user);
+
+                String num;
+                if (rs.getString(2).endsWith("Sg")) {
+                    num = "singular";
+                } else {
+                    num = "plural";
+                }
+
+                jsb.put("number", num);
+
+                String inflection = "";
+
+                if (rs.getString(2).startsWith("nominative")) {
+                    inflection = "nominative";
+                } else if (rs.getString(2).startsWith("genitive")) {
+                    inflection = "genitive";
+                } else if (rs.getString(2).startsWith("dative")) {
+                    inflection = "dative";
+                } else if (rs.getString(2).startsWith("accusative")) {
+                    inflection = "accusative";
+                } else if (rs.getString(2).startsWith("instrumental")) {
+                    inflection = "instrumental";
+                } else if (rs.getString(2).startsWith("locative")) {
+                    inflection = "locative";
+                }
+
+                jsb.put("inflection", inflection);
+
+                jsb.put("total",  rs.getInt(4));
+
+                jsb.put("level", rs.getString(3));
+
+/*                for(int i = 4; i < 12; i++){
+                    jsb.put(rsmd.getColumnName(i), rs.getInt(i));
+                }*/
+
+                JSONArray decls = new JSONArray(); //store the declensions
+
+                for(int i = 5; i < 14; i++){
+
+                    if(rs.getInt(i) > 0){
+                        JSONObject temp = new JSONObject();
+
+                        temp.put(rsmd.getColumnLabel(i), rs.getInt(i));
+                        decls.put(temp);
+                    }
+
+                }
+
+
+                jsb.put("declensions", decls);
+
+            }
+
+            System.out.println("siunčiu: " + jsb.toString());
+            out.println(jsb);
+
+            out.close();
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+}

@@ -1,0 +1,51 @@
+.progress{
+    position: absolute;
+
+    top:32%;
+    width: 13%;
+    height:60%;
+    opacity: 0.8; 
+    filter: alpha(opacity=80);
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+}
+.progress-bar{
+    position:absolute;
+    top:0%; 
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: cadetblue;
+}
+
+
+.centre{
+    
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+.side {
+    width: 25%;
+}
+
+.content{
+    width: 75%;
+}
+
+.grid-container {
+  margin: 20px;
+}
+
+.centreIn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+

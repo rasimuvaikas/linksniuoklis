@@ -1,0 +1,325 @@
+
+<form>
+    <button mat-stroked-button (click)="openBottomSheet()">Recap</button>
+</form>
+<div class="grid-container">
+    <h1 class="mat-h1">
+        <div class="centreIn">
+            <p>Sveiki sugrįžę, {{username}}!</p>
+
+
+            <button mat-stroked-button (click)="onSubmit()">Let's Practice</button>
+        </div>
+    </h1>
+    <div fxLayout="column" fxLayoutGap="32px">
+        <div fxLayout.xs="column" fxLayout="row" fxLayoutGap="32px">
+            <mat-card class="mat-card-blue" fxFlex="0 1 calc(33.3% - 32px)">
+                <mat-card-header>
+                    <mat-card-title>
+                        Cases you are currently learning, and the ones we propose to continue with next:
+
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <div fxLayout="row">
+
+                        <div fxLayout="column">
+
+                            <p>Singular</p>
+                            <div *ngFor="let in of inflectionsTempSg">
+                                <div *ngIf="in.checked">
+                                    <mat-checkbox class="example-margin" [(ngModel)]="in.checked" disabled>
+                                        {{in.infl}}
+                                    </mat-checkbox>
+                                </div>
+                                <div *ngIf="!in.checked">
+                                    <div *ngIf="in.infl==markSg">
+                                        <mat-checkbox class="example-margin" indeterminate
+                                            (change)="onChangeNov(in.infl, in.number)">
+                                            {{in.infl}}
+                                        </mat-checkbox>
+                                    </div>
+                                    <div *ngIf="in.infl!=markSg">
+                                        <mat-checkbox class="example-margin" [checked]="false"
+                                            (change)="onChangeNov(in.infl, in.number)">
+                                            {{in.infl}}
+                                        </mat-checkbox>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div fxLayout="column">
+                            <p>Plural</p>
+                            <div *ngFor="let in of inflectionsTempPl">
+                                <div *ngIf="in.checked">
+                                    <mat-checkbox class="example-margin" [(ngModel)]="in.checked" disabled>
+                                        {{in.infl}}
+                                    </mat-checkbox>
+                                </div>
+                                <div *ngIf="!in.checked">
+                                    <div *ngIf="in.infl==markPl">
+                                        <mat-checkbox class="example-margin" (change)="onChangeNov(in.infl, in.number)"
+                                            indeterminate>
+                                            {{in.infl}}
+                                        </mat-checkbox>
+                                    </div>
+                                    <div *ngIf="in.infl!=markPl">
+                                        <mat-checkbox class="example-margin" [checked]="false"
+                                            (change)="onChangeNov(in.infl, in.number)">
+                                            {{in.infl}}
+                                        </mat-checkbox>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+
+            <mat-card class="mat-card-blue" fxFlex="0 1 calc(33.3% - 32px)">
+                <mat-card-header>
+                    <mat-card-title>
+                        Cases you know on an intermediate level:
+
+
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <div fxLayout="row">
+                        <div fxLayout="column">
+                            <p>Singular</p>
+                            <div *ngFor="let in of familiarSg">
+                                <mat-checkbox class="example-margin" [(ngModel)]="in.checked" disabled>
+                                    {{in.infl}}
+                                </mat-checkbox>
+                            </div>
+                        </div>
+
+                        <div fxLayout="column">
+                            <p>Plural</p>
+                            <div *ngFor="let in of familiarPl">
+                                <mat-checkbox class="example-margin" [(ngModel)]="in.checked" disabled>
+                                    {{in.infl}}
+                                </mat-checkbox>
+                            </div>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+
+            <mat-card class="mat-card-blue" fxFlex="0 1 calc(33.3% - 32px)">
+                <mat-card-header>
+                    <mat-card-title>
+                        Cases you know on an advanced level:
+
+
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <div fxLayout="row">
+
+                        <div fxLayout="column">
+                            <p>Singular</p>
+                            <div *ngFor="let in of advancedSg">
+                                <mat-checkbox class="example-margin" [(ngModel)]="in.checked" disabled>
+                                    {{in.infl}}
+                                </mat-checkbox>
+                            </div>
+                        </div>
+
+                        <div fxLayout="column">
+                            <p>Plural</p>
+                            <div *ngFor="let in of advancedPl">
+                                <mat-checkbox class="example-margin" [(ngModel)]="in.checked" disabled>
+                                    {{in.infl}}
+                                </mat-checkbox>
+                            </div>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+
+        </div>
+
+        <div>
+            <mat-card class="mat-card-blue" fxFlex="0 1 97.9%">
+
+                <mat-card-header class="centreIn">
+                    <mat-card-title>
+                        Declensions you are practicing, and the ones we propose to move to next:
+                    </mat-card-title>
+                </mat-card-header>
+                <div class="centreIn">
+                    <p>Please note that your level at any inflection can become advanced only once all the declensions
+                        are marked.</p>
+                </div>
+
+                <mat-card-content style="display: flex; justify-content: center;">
+                    <div fxLayout="row">
+                        <div fxLayout="column">
+                            <p>Masculine</p>
+                            <div *ngFor="let in of declensionsMasc">
+                                <div *ngIf="in.declension == declMasc">
+                                    <mat-checkbox class="example-margin" [(ngModel)]="in.checked" indeterminate>
+                                        <div fxLayout="row">
+                                            <p>{{in.display}} </p>
+                                            <pre class="space" style="color:orange;"> {{in.decl}}</pre>
+                                        </div>
+                                    </mat-checkbox>
+                                </div>
+                                <div *ngIf="in.declension != declMasc">
+                                    <mat-checkbox class="example-margin" [(ngModel)]="in.checked">
+                                        <div fxLayout="row">
+                                            <p>{{in.display}} </p>
+                                            <pre class="space" style="color:orange;"> {{in.decl}}</pre>
+                                        </div>
+                                    </mat-checkbox>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div fxLayout="column">
+                            <p>Feminine</p>
+                            <div *ngFor="let in of declensionsFem">
+                                <div *ngIf="in.declension == declFem">
+                                    <mat-checkbox class="example-margin" [(ngModel)]="in.checked" indeterminate>
+                                        <div fxLayout="row">
+                                            <p>{{in.display}} </p>
+                                            <pre class="space" style="color:orange;"> {{in.decl}}</pre>
+                                        </div>
+                                    </mat-checkbox>
+                                </div>
+                                <div *ngIf="in.declension != declFem">
+                                    <mat-checkbox class="example-margin" [(ngModel)]="in.checked">
+                                        <div fxLayout="row">
+                                            <p>{{in.display}} </p>
+                                            <pre class="space" style="color:orange;"> {{in.decl}}</pre>
+                                        </div>
+                                    </mat-checkbox>
+                                </div>
+                            </div>
+                            <mat-checkbox class="example-margin" [(ngModel)]="checked" (click)="selectAll()">
+                                <div fxLayout="row">
+                                    <p>Select All</p>
+                                </div>
+                            </mat-checkbox>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                </mat-card-content>
+            </mat-card>
+        </div>
+
+        <!--correct inflections overall-->
+        <div fxLayout.xs="column" fxLayout="row" fxLayoutGap="32px">
+            <mat-card class="mat-card-blue" fxFlex="0 1 calc(50% - 32px)">
+                <mat-card-header>
+                    <mat-card-title>
+                        Your previous results for each inflection:
+                    </mat-card-title>
+                </mat-card-header>
+                <div *ngIf="empty">
+                    <mat-card-content>
+                        <p>Nothing yet.</p>
+                    </mat-card-content>
+                </div>
+
+                <div *ngIf="!empty">
+                    <div *ngFor="let num of infls">
+                        <mat-card-content>
+                            <div fxLayout="row">
+                                <p>Inflection: {{num.inflection}}</p>
+                                <pre class="space" style="color:orange;"> {{num.number}}</pre>
+                            </div>
+                            <p>Correct answers: {{num.correct}} Incorrect answers: {{num.incorrect}}</p>
+
+                            <mat-progress-bar class="mat-progress-bar-buffer" mode="determinate"
+                                value="{{num.correct * 100 / (num.correct + num.incorrect)}}"></mat-progress-bar>
+
+                        </mat-card-content>
+
+
+                    </div>
+                </div>
+            </mat-card>
+
+            <mat-card class="mat-card-blue" fxFlex="0 1 calc(50% - 32px)">
+                <mat-card-header>
+                    <mat-card-title>
+                        Your previous results for each declension type:
+                    </mat-card-title>
+                </mat-card-header>
+
+                <div *ngIf="empty">
+                    <mat-card-content>
+                        <p>Nothing yet.</p>
+                    </mat-card-content>
+                </div>
+
+                <div *ngIf="!empty">
+                    <div *ngFor="let num of decls">
+                        <mat-card-content>
+
+                            <div fxLayout="row">
+                                <p>Declension: {{getDisplay(num.declension.declension)}}</p>
+                                <pre class="space"
+                                    style="color:orange;"> {{getDecl(num.declension.declension)}} declension</pre>
+                            </div>
+                            <p>Correct answers: {{num.declension.correct}} Incorrect answers:
+                                {{num.declension.incorrect}}
+                            </p>
+
+                            <mat-progress-bar class="mat-progress-bar-buffer" mode="determinate"
+                                value="{{num.declension.correct * 100 / (num.declension.correct + num.declension.incorrect)}}">
+                            </mat-progress-bar>
+
+                        </mat-card-content>
+                    </div>
+                </div>
+            </mat-card>
+
+        </div>
+
+
+        <!-- results for declensions for each inflection > possibly too much information for an average user, especially beginner
+        <div fxLayout="column" fxLayoutGap="32px">
+            <div *ngFor="let num of decls">
+                <mat-card>
+
+                    <mat-card-header>
+                        <mat-card-title>
+                            Your previous results for each declension used in different inflections:
+                        </mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <mat-card-content>
+                            <div fxLayout="row">
+                                <p>Declension: {{getDisplay(num.declension.declension)}}</p>
+                                <pre class="space" style="color:orange;"> {{getDecl(num.declension.declension)}}</pre>
+                            </div>
+                            <div *ngFor="let i of num.dinflections">
+                                <div fxLayout="row">
+                                    <p>Inflection: {{i.inflection}}</p>
+                                    <pre class="space" style="color:orange;"> {{i.number}}</pre>
+                                </div>
+                                <p>Correct answers: {{i.correct}} Incorrect answers: {{i.incorrect}}</p>
+
+                                <mat-progress-bar class="mat-progress-bar-buffer" mode="determinate"
+                                    value="{{i.correct * 100 / (i.correct + i.incorrect)}}"></mat-progress-bar>
+                            </div>
+
+                        </mat-card-content>
+                </mat-card>
+            </div>
+        </div> -->
+
+    </div>
+
+</div>

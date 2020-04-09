@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7b67ce0f-6c65-4b18-830a-95ceb687dbd7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Share.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Share.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Decliner.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Decliner.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Share.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Share.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1ZaLQJBGiIftsdhWkepNMarhvjD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zivil\IdeaProjects\Decliner\src\main\resources\pos" />
+      <recent name="C:\Users\zivil\IdeaProjects\Decliner\src\main\resources\stats" />
+      <recent name="C:\Users\zivil\IdeaProjects\Decliner\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Data">
+    <configuration name="Access" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Access" />
+      <module name="Decliner" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Data" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Data" />
+      <module name="Decliner" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Declension" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Declension" />
+      <module name="Decliner" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Stress" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Stress" />
+      <module name="Decliner" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Data" />
+        <item itemvalue="Application.Declension" />
+        <item itemvalue="Application.Stress" />
+        <item itemvalue="Application.Access" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7b67ce0f-6c65-4b18-830a-95ceb687dbd7" name="Default Changelist" comment="" />
+      <created>1585072241087</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585072241087</updated>
+      <workItem from="1585072246335" duration="605000" />
+      <workItem from="1585132144977" duration="15711000" />
+      <workItem from="1585169464289" duration="19444000" />
+      <workItem from="1585212897191" duration="31178000" />
+      <workItem from="1585309964856" duration="24462000" />
+      <workItem from="1585387560260" duration="43731000" />
+      <workItem from="1585556746953" duration="16251000" />
+      <workItem from="1585643898881" duration="20142000" />
+      <workItem from="1585725775803" duration="7588000" />
+      <workItem from="1585902606550" duration="1086000" />
+      <workItem from="1585905348859" duration="534000" />
+      <workItem from="1585906006810" duration="9000" />
+      <workItem from="1585924092391" duration="4085000" />
+      <workItem from="1586198703176" duration="53000" />
+      <workItem from="1586686291132" duration="15079000" />
+      <workItem from="1586759133074" duration="266000" />
+      <workItem from="1586760125907" duration="5521000" />
+      <workItem from="1586775572964" duration="1305000" />
+      <workItem from="1586872379861" duration="5461000" />
+      <workItem from="1586943291047" duration="16272000" />
+      <workItem from="1587040661847" duration="4145000" />
+      <workItem from="1587064254373" duration="58000" />
+      <workItem from="1587112199537" duration="2484000" />
+      <workItem from="1587125256555" duration="6880000" />
+      <workItem from="1587195418439" duration="13924000" />
+      <workItem from="1587230914562" duration="5601000" />
+      <workItem from="1587236709522" duration="6701000" />
+      <workItem from="1587281254833" duration="6704000" />
+      <workItem from="1587294994501" duration="915000" />
+      <workItem from="1587311387808" duration="3184000" />
+      <workItem from="1587372828872" duration="15780000" />
+      <workItem from="1587461424063" duration="797000" />
+      <workItem from="1587511262094" duration="685000" />
+      <workItem from="1587546138970" duration="1521000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="518" y="222" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585176162015">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="518" y="222" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1585176162015" />
+    <state x="574" y="131" key="#com.intellij.ide.util.MemberChooser" timestamp="1585185966806">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="131" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1585185966806" />
+    <state x="501" y="157" key="FileChooserDialogImpl" timestamp="1585169540376">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="501" y="157" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585169540376" />
+    <state width="1493" height="195" key="GridCell.Tab.0.bottom" timestamp="1587549951798">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587549951798" />
+    <state width="1493" height="195" key="GridCell.Tab.0.center" timestamp="1587549951798">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587549951798" />
+    <state width="1493" height="195" key="GridCell.Tab.0.left" timestamp="1587549951798">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587549951798" />
+    <state width="1493" height="195" key="GridCell.Tab.0.right" timestamp="1587549951798">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587549951798" />
+    <state x="299" y="70" key="Maven.ArtifactSearchDialog" timestamp="1585170845296">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="299" y="70" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1585170845296" />
+    <state x="277" y="0" key="SettingsEditor" timestamp="1585169927848">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1585169927848" />
+    <state x="470" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1585072250584">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="470" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585072250584" />
+    <state x="209" y="120" key="new project wizard" timestamp="1586198759882">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="120" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1586198759882" />
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1587377531554">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1587377531554" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1585251629950">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1585251629950" />
+  </component>
+</project>

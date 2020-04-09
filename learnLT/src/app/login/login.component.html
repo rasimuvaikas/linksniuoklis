@@ -1,0 +1,21 @@
+<div class="centre">
+    <mat-card class="login">
+        <div class="centreIn">
+            <mat-card-header>
+                <mat-card-title>Welcome to Linksniuoklis</mat-card-title>
+            </mat-card-header>
+        </div>
+        <mat-card-content>
+            <div class="centreIn">
+                <form ngNativeValidate #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)">
+                    <input placeholder="Enter username" type="text" name="username" ngModel required>
+                    <br>
+                    <br>
+
+                    <button mat-stroked-button type="submit">Login</button>
+
+                </form>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

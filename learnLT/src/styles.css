@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+mat-progress-bar .mat-progress-bar-buffer {
+    background: rgb(218, 37, 5);
+  }
+
+
+mat-progress-bar .mat-progress-bar-fill::after {
+    background-color: rgb(100, 207, 68);
+}
+
+.theme-light {
+background-color: rgb(86, 161, 223);
+color: white;
+}
+
+
+.mat-card-blue{
+  background-color: rgb(104, 104, 187);
+}

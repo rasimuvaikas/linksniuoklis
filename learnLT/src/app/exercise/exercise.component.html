@@ -1,0 +1,36 @@
+<div class="grid-container">
+    <div fxLayout="row">
+        <form>
+            <button mat-stroked-button type="submit" routerLink="/dashboard">Dashboard</button>
+        </form>
+        <form>
+            <button mat-stroked-button (click)="openBottomSheet()">Recap</button>
+        </form>
+    </div>
+
+
+    <h1 class="mat-h1">
+        <div class="centreIn">
+            <p>What would you like to practice today?</p>
+        </div>
+    </h1>
+    <div class="centre">
+        <mat-card class="mat-card-blue" fxFlex="0 1 calc(33.3% - 32px)">
+            <mat-card-content style="display: flex; justify-content: center;">
+
+
+                <div fxLayout="row">
+                    <form (click)="onSubmitDecl()">
+                        <button mat-stroked-button type="submit">Declension</button>
+                    </form>
+                    <form (click)="onSubmitStress()">
+                        <button mat-stroked-button type="submit">Accentuation</button>
+                    </form>
+                    <form (click)="onSubmitBoth()">
+                        <button mat-stroked-button type="submit">Both</button>
+                    </form>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

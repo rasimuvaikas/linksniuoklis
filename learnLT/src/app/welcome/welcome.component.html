@@ -1,0 +1,471 @@
+
+
+<div class="grid-container">
+
+    <form>
+        <button mat-stroked-button (click)="openBottomSheet()">Recap</button>
+    </form>
+    <h1 class="mat-h1">
+        <div class="centreIn">
+            <p>Labas, {{username}}!</p>
+            <p>First, we'd like to learn a little more about you.</p>
+        </div>
+    </h1>
+
+    <div fxLayout="column" fxLayoutGap="32px">
+        <div>
+            <mat-card class="mat-card-blue" fxFlex="0 1 100%">
+                <div class="centre">
+                    <div fxLayout.xs="column" fxLayout="row">
+                        <mat-button-toggle class="mat-card-blue" (click)="beginner=true; advanced=false">I am new to
+                            noun declension
+                        </mat-button-toggle>
+                        <mat-button-toggle class="mat-card-blue" (click)="advanced=true; beginner = false">I have some
+                            declension
+                            experience</mat-button-toggle>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+
+
+
+
+        <div *ngIf="beginner">
+
+
+            <mat-horizontal-stepper class="mat-card-blue">
+                <mat-step>
+                    <mat-card class="mat-card-blue" fxFlex="0 1 auto">
+                        <mat-card-header class="centreIn">
+                            <mat-card-title>
+                                We propose starting your practice from the inflectional cases checked below.
+                                Feel free to make any desired changes, mark and unmark any cases you wish or do not
+                                wish to practice.
+                            </mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+
+                            <p>Singular</p>
+                            <div fxLayout.xs="column" fxLayout="row">
+                                <div *ngFor="let in of inflectionsSg">
+                                    <div *ngIf="in.infl=='genitive'">
+                                        <mat-checkbox class="example-margin" [(ngModel)]="in.checked" color="primary">
+                                            {{in.infl}}
+                                        </mat-checkbox>
+                                    </div>
+                                    <div *ngIf="in.infl=='nominative'">
+                                        <mat-checkbox class="example-margin" [(ngModel)]="in.checked" color="primary">
+                                            {{in.infl}}
+                                        </mat-checkbox>
+                                    </div>
+                                    <div *ngIf="in.infl!='genitive' && in.infl!='nominative'">
+                                        <mat-checkbox class="example-margin" [(ngModel)]="in.checked">{{in.infl}}
+                                        </mat-checkbox>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Plural</p>
+                            <div fxLayout.xs="column" fxLayout="row">
+                                <div *ngFor="let in of inflectionsPl">
+                                    <div *ngIf="in.infl=='genitive'">
+                                        <mat-checkbox class="example-margin" [(ngModel)]="in.checked" color="primary">
+                                            {{in.infl}}
+                                        </mat-checkbox>
+                                    </div>
+                                    <div *ngIf="in.infl=='nominative'">
+                                        <mat-checkbox class="example-margin" [(ngModel)]="in.checked" color="primary">
+                                            {{in.infl}}
+                                        </mat-checkbox>
+                                    </div>
+                                    <div *ngIf="in.infl!='genitive' && in.infl!='nominative'">
+                                        <mat-checkbox class="example-margin" [(ngModel)]="in.checked">{{in.infl}}
+                                        </mat-checkbox>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </mat-card-content>
+                        <div>
+                            <button mat-button matStepperNext>Next</button>
+                        </div>
+                    </mat-card>
+                </mat-step>
+
+
+                <mat-step>
+                    <mat-card class="mat-card-blue" fxFlex="0 1 auto">
+
+                        <mat-card-header class="centreIn">
+                            <mat-card-title>
+                                Before we begin, please choose the declensions you would like to practice first.
+                                The declensions are presented in a descending order of difficulty. The ones we propose
+                                starting from are marked.
+                                You can always come back to this list later once you're ready to practice more
+                                declensions.
+
+                            </mat-card-title>
+                        </mat-card-header>
+
+
+                        <mat-card-content style="display: flex; justify-content: center;">
+
+                            <div fxLayout.xs="column" fxLayout="row">
+
+
+                                <div fxLayout="column">
+                                    <p>Masculine</p>
+                                    <div *ngFor="let in of declensionsMasc">
+                                        <div *ngIf="in.declension=='1mascIAS'">
+                                            <mat-checkbox class="example-margin" [(ngModel)]="in.checked"
+                                                color="primary">
+                                                <div fxLayout="row">
+                                                    <p>{{in.display}} </p>
+                                                    <pre class="space" style="color:orange;"> {{in.decl}}</pre>
+                                                </div>
+                                            </mat-checkbox>
+                                        </div>
+                                        <div *ngIf="in.declension!='1mascIAS'">
+                                            <mat-checkbox class="example-margin" [(ngModel)]="in.checked">
+                                                <div fxLayout="row">
+                                                    <p>{{in.display}} </p>
+                                                    <pre class="space" style="color:orange;"> {{in.decl}}</pre>
+                                                </div>
+                                            </mat-checkbox>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div fxLayout="column">
+                                    <p>Feminine</p>
+                                    <div *ngFor="let in of declensionsFem">
+                                        <div *ngIf="in.declension=='2femIA'">
+                                            <mat-checkbox class="example-margin" [(ngModel)]="in.checked"
+                                                color="primary">
+                                                <div fxLayout="row">
+                                                    <p>{{in.display}} </p>
+                                                    <pre class="space" style="color:orange;"> {{in.decl}}</pre>
+                                                </div>
+                                            </mat-checkbox>
+                                        </div>
+                                        <div *ngIf="in.declension=='2femĖ'">
+                                            <mat-checkbox class="example-margin" [(ngModel)]="in.checked"
+                                                color="primary">
+                                                <div fxLayout="row">
+                                                    <p>{{in.display}} </p>
+                                                    <pre class="space" style="color:orange;"> {{in.decl}}</pre>
+                                                </div>
+                                            </mat-checkbox>
+                                        </div>
+                                        <div *ngIf="in.declension!='2femĖ' && in.declension!='2femIA'">
+                                            <mat-checkbox class="example-margin" [(ngModel)]="in.checked">
+                                                <div fxLayout="row">
+                                                    <p>{{in.display}} </p>
+                                                    <pre class="space" style="color:orange;"> {{in.decl}}</pre>
+                                                </div>
+                                            </mat-checkbox>
+                                        </div>
+
+                                    </div>
+                                    <mat-checkbox class="example-margin" [(ngModel)]="checked" (click)="selectAll()">
+                                        <div fxLayout="row">
+                                            <p>Select All</p>
+                                        </div>
+                                    </mat-checkbox>
+                                </div>
+                            </div>
+
+                        </mat-card-content>
+
+                        <div>
+                            <button mat-button matStepperPrevious>Back</button>
+                        </div>
+                        <div style="display: flex; justify-content: center;">
+                            <button mat-stroked-button (click)="onSubmitNew()">Start Practice</button>
+                        </div>
+
+                    </mat-card>
+
+
+                </mat-step>
+            </mat-horizontal-stepper>
+
+        </div>
+
+
+
+
+
+
+        <div *ngIf="advanced">
+            <mat-horizontal-stepper class="mat-card-blue">
+                <mat-step>
+                    <mat-card class="mat-card-blue" fxFlex="0 1 auto">
+                        <mat-card-header class="centreIn">
+                            <mat-card-title>
+                                I am completely comfortable declining nouns in these cases:
+                            </mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+
+                            <p>Singular</p>
+                            <div fxLayout.xs="column" fxLayout="row">
+                                <div *ngFor="let in of advancedSg">
+                                    <mat-checkbox class="example-margin" [(ngModel)]="in.checked">{{in.infl}}
+                                    </mat-checkbox>
+                                </div>
+                            </div>
+                            <p>Plural</p>
+                            <div fxLayout.xs="column" fxLayout="row">
+                                <div *ngFor="let in of advancedPl">
+                                    <mat-checkbox class="example-margin" [(ngModel)]="in.checked">{{in.infl}}
+                                    </mat-checkbox>
+                                </div>
+                            </div>
+                            <div>
+                                <button mat-button matStepperNext>Next</button>
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+                </mat-step>
+
+                <mat-step>
+                    <mat-card class="mat-card-blue" fxFlex="0 1 auto">
+                        <mat-card-header class="centreIn">
+                            <mat-card-title>
+                                I am somewhat familiar with the declension patterns of these cases:
+                            </mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+
+                            <p>Singular</p>
+                            <div fxLayout.xs="column" fxLayout="row">
+                                <div *ngFor="let in of advancedSg">
+
+                                    <div *ngIf="in.checked==true">
+                                        <mat-checkbox class="example-margin" [checked]="true" color=primary disabled>
+                                            {{in.infl}}
+                                        </mat-checkbox>
+                                    </div>
+
+                                    <div *ngIf="!in.checked==true">
+                                        <mat-checkbox class="example-margin" (change)="onChangeFam(in.infl, in.number)"
+                                            [checked]="false">
+                                            {{in.infl}}
+                                        </mat-checkbox>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <p>Plural</p>
+                            <div fxLayout.xs="column" fxLayout="row">
+                                <div *ngFor="let in of advancedPl">
+
+                                    <div *ngIf="in.checked==true">
+                                        <mat-checkbox class="example-margin" [checked]="true" color=primary disabled>
+                                            {{in.infl}}
+                                        </mat-checkbox>
+                                    </div>
+
+                                    <div *ngIf="!in.checked==true">
+                                        <mat-checkbox class="example-margin" (change)="onChangeFam(in.infl, in.number)"
+                                            [checked]="false">
+                                            {{in.infl}}
+                                        </mat-checkbox>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div fxLayout="row">
+                                <div>
+                                    <button mat-button matStepperPrevious>Back</button>
+                                </div>
+
+                                <div>
+                                    <button mat-button matStepperNext (click)="onLast()">Next</button>
+                                </div>
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+                </mat-step>
+
+                <mat-step>
+                    <mat-card class="mat-card-blue" fxFlex="0 1 auto">
+                        <mat-card-header class="centreIn">
+                            <mat-card-title>
+                                We propose practicing what you've already learnt along with the marked cases.
+                                Feel free to make any desired changes, mark and unmark the cases you wish or do not wish
+                                to practice yet.
+                            </mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+
+                            <p>Singular</p>
+                            <div fxLayout.xs="column" fxLayout="row">
+                                <div *ngFor="let in of inflectionsTempSg">
+
+                                    <div *ngIf="in.checked==true">
+                                        <mat-checkbox class="example-margin" [checked]="true" color=primary disabled>
+                                            {{in.infl}}
+                                        </mat-checkbox>
+                                    </div>
+
+                                    <div *ngIf="!in.checked==true">
+                                        <div *ngFor="let i of inflectionsNoviceSg">
+                                            <div *ngIf="in.infl == i.infl && i.checked==true">
+                                                <mat-checkbox class="example-margin" [checked]="true" color=primary
+                                                    (change)="onChangeNov(in.infl, in.number)">
+                                                    {{in.infl}}
+                                                </mat-checkbox>
+                                            </div>
+                                            <div *ngIf="in.infl == i.infl && !i.checked==true">
+                                                <mat-checkbox class="example-margin"
+                                                    (change)="onChangeNov(in.infl, in.number)" [checked]="false">
+                                                    {{in.infl}}
+                                                </mat-checkbox>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <p>Plural</p>
+                            <div fxLayout.xs="column" fxLayout="row">
+                                <div *ngFor="let in of inflectionsTempPl">
+
+                                    <div *ngIf="in.checked==true">
+                                        <mat-checkbox class="example-margin" [checked]="true" color=primary disabled>
+                                            {{in.infl}}
+                                        </mat-checkbox>
+                                    </div>
+
+                                    <div *ngIf="!in.checked==true">
+                                        <div *ngFor="let i of inflectionsNovicePl">
+                                            <div *ngIf="in.infl == i.infl && i.checked==true">
+                                                <mat-checkbox class="example-margin" [checked]="true" color=primary
+                                                    (change)="onChangeNov(in.infl, in.number)">
+                                                    {{in.infl}}
+                                                </mat-checkbox>
+                                            </div>
+                                            <div *ngIf="in.infl == i.infl && !i.checked==true">
+                                                <mat-checkbox class="example-margin"
+                                                    (change)="onChangeNov(in.infl, in.number)" [checked]="false">
+                                                    {{in.infl}}
+                                                </mat-checkbox>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div fxLayout="row">
+                                <div>
+                                    <button mat-button matStepperPrevious>Back</button>
+                                </div>
+
+                                <div>
+                                    <button mat-button matStepperNext>Next</button>
+                                </div>
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+                </mat-step>
+
+                <mat-step>
+                    <mat-card class="mat-card-blue" fxFlex="0 1 auto">
+
+                        <mat-card-header class="centreIn">
+                            <mat-card-title>
+                                Before we begin, please choose the declensions you would like to practice first.
+                                The declensions are presented in a descending order of difficulty. The ones we propose
+                                starting from are marked.
+                                You can always come back to this list later once you're ready to practice more
+                                declensions.
+
+                            </mat-card-title>
+                        </mat-card-header>
+
+                        <mat-card-content style="display: flex; justify-content: center;">
+
+
+                            <div fxLayout.xs="column" fxLayout="row">
+
+
+                                <div fxLayout="column">
+                                    <p>Masculine</p>
+                                    <div *ngFor="let in of declensionsMasc">
+                                        <div *ngIf="in.declension=='1mascIAS'">
+                                            <mat-checkbox class="example-margin" [(ngModel)]="in.checked"
+                                                color="primary">
+                                                <div fxLayout="row">
+                                                    <p>{{in.display}} </p>
+                                                    <pre class="space" style="color:orange;"> {{in.decl}}</pre>
+                                                </div>
+                                            </mat-checkbox>
+                                        </div>
+                                        <div *ngIf="in.declension!='1mascIAS'">
+                                            <mat-checkbox class="example-margin" [(ngModel)]="in.checked">
+                                                <div fxLayout="row">
+                                                    <p>{{in.display}} </p>
+                                                    <pre class="space" style="color:orange;"> {{in.decl}}</pre>
+                                                </div>
+                                            </mat-checkbox>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div fxLayout="column">
+                                    <p>Feminine</p>
+                                    <div *ngFor="let in of declensionsFem">
+                                        <div *ngIf="in.declension=='2femIA'">
+                                            <mat-checkbox class="example-margin" [(ngModel)]="in.checked"
+                                                color="primary">
+                                                <div fxLayout="row">
+                                                    <p>{{in.display}} </p>
+                                                    <pre class="space" style="color:orange;"> {{in.decl}}</pre>
+                                                </div>
+                                            </mat-checkbox>
+                                        </div>
+                                        <div *ngIf="in.declension=='2femĖ'">
+                                            <mat-checkbox class="example-margin" [(ngModel)]="in.checked"
+                                                color="primary">
+                                                <div fxLayout="row">
+                                                    <p>{{in.display}} </p>
+                                                    <pre class="space" style="color:orange;"> {{in.decl}}</pre>
+                                                </div>
+                                            </mat-checkbox>
+                                        </div>
+                                        <div *ngIf="in.declension!='2femĖ' && in.declension!='2femIA'">
+                                            <mat-checkbox class="example-margin" [(ngModel)]="in.checked">
+                                                <div fxLayout="row">
+                                                    <p>{{in.display}} </p>
+                                                    <pre class="space" style="color:orange;"> {{in.decl}}</pre>
+                                                </div>
+                                            </mat-checkbox>
+                                        </div>
+
+                                    </div>
+                                    <mat-checkbox class="example-margin" [(ngModel)]="checked" (click)="selectAll()">
+                                        <div fxLayout="row">
+                                            <p>Select All</p>
+                                        </div>
+                                    </mat-checkbox>
+                                </div>
+                            </div>
+
+                        </mat-card-content>
+                        <div>
+                            <button mat-button matStepperPrevious>Back</button>
+                        </div>
+
+                        <div style="display: flex; justify-content: center;">
+                            <button mat-stroked-button matStepperNext (click)="onSubmit()">Start Practice</button>
+                        </div>
+                    </mat-card>
+                </mat-step>
+            </mat-horizontal-stepper>
+
+        </div>
+    </div>

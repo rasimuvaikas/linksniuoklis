@@ -1,0 +1,39 @@
+.exercise {
+    
+    background-color:grey;
+    color: black;
+    margin: 40px;
+    min-width: 150px;
+    width: 90%;
+    border-style: solid;
+    border-color: rgb(33, 59, 109);
+  }
+
+  .centre{
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .side {
+    width: 25%;
+}
+
+.content{
+    width: 75%;
+}
+
+.grid-container {
+  margin: 20px;
+}
+
+.centreIn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

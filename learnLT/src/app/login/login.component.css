@@ -1,0 +1,31 @@
+.login {
+    
+    background-color: rgb(33, 59, 109);
+    color: white;
+    margin: 20px;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+  
+  }
+
+
+  .centre{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fcont {
+  display: flex;
+  flex-direction: column;
+}
+
+.centreIn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

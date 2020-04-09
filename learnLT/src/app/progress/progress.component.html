@@ -1,0 +1,34 @@
+<div class="grid-container">
+
+
+        <mat-card fxFlex="100%" style="height: 100vh; background-color: white; color: rgb(86, 161, 223);">
+
+            <mat-card-title>
+                <div class="centreIn">
+                    <p>Track Your Progress</p>
+                </div>
+            </mat-card-title>
+
+            <mat-card-content>
+                <div fxLayoutGap="row" fxLayoutAlign="center stretch" fxLayoutGap="60px">
+                    <div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" [style.top]="topNow" [style.height]="heightNow"
+                                [style.background-color]="filling">
+                                <div class="centre">{{numNow}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="progress" style="width: 8%; height:68%; top:24%;">
+                            <div class="progress-bar" role="progressbar" [style.background]="background"
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+
+</div>
