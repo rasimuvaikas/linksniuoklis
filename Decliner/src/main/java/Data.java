@@ -171,7 +171,7 @@ public class Data {
                     " inflection NVARCHAR(20), " +
                     " number NVARCHAR(20))";
 
-            stmt.executeUpdate(nouns);
+            stmt.executeUpdate(nouns2);
 
             URL url2 = getClass().getResource("decl");
             File temp2 = new File(url2.toURI());
@@ -576,6 +576,16 @@ public class Data {
         return rs;
     }
 
+    /**
+     * Update the scores database with a correct or an incorrect answer for a specific inflection/declension pair in a specific learning session
+     * @param infl the inflection of a noun
+     * @param num the number of a noun
+     * @param username the username
+     * @param time the current session
+     * @param decl the declension of a noun
+     * @param correct 1 if answer is correct, 0 if incorrect
+     * @param incorrect 1 if answer is incorrect, 0 if correct
+     */
     public void updateScores(String infl, String num, String username, String time, String decl, int correct, int incorrect){
         try {
 
@@ -617,12 +627,18 @@ public class Data {
         }
     }
 
+    /**
+     * Get the amount of correct  and incorrect answers the user has made overall during the current session
+     * @param username username
+     * @param time time of the current session
+     * @return a resultset that contains the amount of correct and incorrect answers the user has made overall during the current session
+     */
     public ResultSet getScoresOverall(String username, String time) {
 
         try {
             stmt.executeUpdate("USE models");
 
-            String sql = "SELECT correct, incorrect FROM scores WHERE username = ? AND time = ? COLLATE utf8mb4_bin";
+            String sql = "SELECT SUM(correct), SUM(incorrect) FROM scores WHERE username = ? AND time = ? COLLATE utf8mb4_bin";
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, username);
             pstmt.setString(2, time);
@@ -634,6 +650,13 @@ public class Data {
         return rs;
     }
 
+    /**
+     * Get a list of every row in a "column" in scores that appeared in every session other than the current
+     * @param column either 'inflection' or 'declension'
+     * @param username username
+     * @param time current session time
+     * @return a list of every row in a "column" in scores that appeared in every session other than the current
+     */
     public ResultSet getColumn(String column, String username, String time) {
 
         try {
@@ -652,7 +675,14 @@ public class Data {
         return rs;
     }
 
-
+    /**
+     * Get the sum of correct an incorrect answers when a column had a certain value in every session other than the current
+     * @param column either 'inflection' or 'declension'
+     * @param username username
+     * @param value the value of either 'inflection' or 'declension'
+     * @param time the current session time
+     * @return the sum of correct an incorrect answers when a column had a certain value in every session other than the current
+     */
     public ResultSet getColumnScores(String column, String username, String value, String time) {
 
         try {
@@ -671,6 +701,13 @@ public class Data {
         return rs;
     }
 
+    /**
+     * Find all inflections that a declension appeared in in every session other than the current
+     * @param declension the declension
+     * @param username username
+     * @param time the current session time
+     * @return a list of all inflections that a declension appeared in in every session other than the current
+     */
     public ResultSet getDeclensionInflections(String declension, String username, String time) {
 
         try {
@@ -689,6 +726,14 @@ public class Data {
         return rs;
     }
 
+    /**
+     * Get the sum of correct and incorrect answers a user made during every session other than the current where inflection and declension had specific values
+     * @param declension declension of a noun
+     * @param inflection inflection of a noun
+     * @param username username
+     * @param time current session time
+     * @return the sum of correct and incorrect answers a user made during every session other than the current where inflection and declension had specific values
+     */
     public ResultSet getDeclensionScores(String declension, String inflection, String username, String time) {
 
         try {
@@ -709,7 +754,12 @@ public class Data {
     }
 
 
-
+    /**
+     * Generate a truncated version of an inflection and its number (one string)
+     * @param inflection the inflection a word is in
+     * @param number the number a word is in
+     * @return the truncated one string version
+     */
     private String generateInfl(String inflection, String number){
         String result = "";
         if(inflection.equals("nominative")){

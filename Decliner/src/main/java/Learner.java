@@ -280,11 +280,7 @@ public class Learner extends HttpServlet {
                 }
             }
 
-            System.out.println(arr.toString());
             out.println(arr);
-
-
-
             out.close();
 
 

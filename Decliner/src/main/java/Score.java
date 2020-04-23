@@ -6,7 +6,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.xml.transform.Result;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -14,7 +13,7 @@ import java.io.UnsupportedEncodingException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Iterator;
+
 
 @WebServlet("/Score")
 public class Score extends HttpServlet {
@@ -39,6 +38,12 @@ public class Score extends HttpServlet {
     }
 
 
+    /**
+     * Get user's info and respond with the amount of correct vs. incorrect answers the user has made overall during the current session
+     * @param request user's info
+     * @param response correct and incorrect responses
+     * @throws IOException
+     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         setAccessControlHeaders(response);
@@ -68,9 +73,6 @@ public class Score extends HttpServlet {
 
         data.updateScores(inflection, number, username, time, declension, correct, incorrect);
 
-        //with the post method i want to respond with the amount of correct vs. incorrect answers the user has made eo far overall to update
-        //the overal progress bar
-
         response.setCharacterEncoding("UTF-8");
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
@@ -80,10 +82,11 @@ public class Score extends HttpServlet {
         ResultSet rs = data.getScoresOverall(username, time);
         int correctOverall = 0;
         int incorrectOverall = 0;
+
         try {
             while (rs.next()) {
-                correctOverall = correctOverall + rs.getInt(1);
-                incorrectOverall = incorrectOverall + rs.getInt(2);
+                correctOverall = rs.getInt("sum(correct)");
+                incorrectOverall = rs.getInt("sum(incorrect)");
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -100,6 +103,12 @@ public class Score extends HttpServlet {
     }
 
 
+    /**
+     * Get user's results from previous learning sessions
+     * @param request user's info
+     * @param response user's results from previous sessions (for different inflections and declensions)
+     * @throws UnsupportedEncodingException
+     */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
 
 
@@ -122,7 +131,6 @@ public class Score extends HttpServlet {
                 do {
 
                     String i = rs.getString("inflection");
-                    System.out.println(i);
                     if(!inflections.contains(i)){
                         inflections.add(i);
                     }
@@ -132,12 +140,10 @@ public class Score extends HttpServlet {
                 ArrayList<String> declensions = new ArrayList<>();
                 while(rsDecl.next()){
                     String d = rsDecl.getString("declension");
-                    System.out.println(d);
                     if(!declensions.contains(d)){
                         declensions.add(d);
                     }
                 }
-                System.out.println("declension: " + declensions.toString());
 
                 JSONArray infl = new JSONArray(); //store all inflection scores in one array first
                 for(String s : inflections){
@@ -278,10 +284,6 @@ public class Score extends HttpServlet {
 
             }
 
-
-
-
-
             else{ //first time user
                 response.setCharacterEncoding("UTF-8");
                 response.setContentType("application/json");
@@ -292,11 +294,6 @@ public class Score extends HttpServlet {
                 out.println(result);
                 out.close();
             }
-
-
-
-
-
 
         } catch (SQLException | IOException e) {
             e.printStackTrace();

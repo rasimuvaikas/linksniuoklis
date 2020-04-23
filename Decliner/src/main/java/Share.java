@@ -18,7 +18,7 @@ import java.util.Collections;
 import java.util.regex.Pattern;
 
 /**
- * A class that responds to get request for a sentence with a noun of a specific inflection, number and declension
+ * A class that shares sentence with requested noun forms and information about the user's current learning level
  */
 @WebServlet("/Share")
 public class Share extends HttpServlet {
@@ -42,6 +42,13 @@ public class Share extends HttpServlet {
         resp.setHeader("Access-Control-Allow-Headers", "content-type, x-customauthheader");
     }
 
+    /**
+     * Find a sentence in a database, share it
+     * @param request the requirements for a kind of sentence
+     * @param response the sentence along with information about the noun it contains
+     * @throws IOException
+     * @throws ServletException
+     */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
         setAccessControlHeaders(response);
@@ -225,8 +232,6 @@ public class Share extends HttpServlet {
         while ((line = reader.readLine()) != null)
             sb.append(line);
 
-
-        System.out.println("json, kurį gaunu: "  + sb.toString());
         JSONObject jsonObject = new JSONObject(sb.toString());
 
         String username = null;
@@ -241,9 +246,6 @@ public class Share extends HttpServlet {
 
 
         try {
-
-            JSONArray arr = new JSONArray();
-
             response.setCharacterEncoding("UTF-8");
             response.setContentType("application/json");
             PrintWriter out = response.getWriter();
@@ -289,10 +291,6 @@ public class Share extends HttpServlet {
 
                 jsb.put("level", rs.getString(3));
 
-/*                for(int i = 4; i < 12; i++){
-                    jsb.put(rsmd.getColumnName(i), rs.getInt(i));
-                }*/
-
                 JSONArray decls = new JSONArray(); //store the declensions
 
                 for(int i = 5; i < 14; i++){
@@ -311,7 +309,6 @@ public class Share extends HttpServlet {
 
             }
 
-            System.out.println("siunčiu: " + jsb.toString());
             out.println(jsb);
 
             out.close();
