@@ -129,16 +129,16 @@ export class StressComponent implements OnInit {
 
     this.con.postProgress(sentence).subscribe(data => {
       this.progress = data;
-      console.log("data", this.progress);
-      console.log("this.progress.total", this.progress.total);
-      console.log("this.progress.declensions.length", this.progress.declensions.length);
-      for (let i = 0; i < this.progress.declensions.length; i++) {
+      //console.log("data", this.progress);
+      //console.log("this.progress.total", this.progress.total);
+      //console.log("this.progress.declensions.length", this.progress.declensions.length);
+     /** for (let i = 0; i < this.progress.declensions.length; i++) {
         console.log("element.value", this.progress.declensions[i]);
         for (var j in this.progress.declensions[i]) {
           console.log("element.invalue", this.progress.declensions[i][j]);
         }
 
-      }
+      }*/
 
 
       //the user can move to the next level if they have completed a certain number of exercises
@@ -295,6 +295,8 @@ export class StressComponent implements OnInit {
       let i = this.novel[Math.floor(Math.random() * ((this.novel.length - 1) - 0 + 1) + 0)]; //choose a random case that belongs to the novel category
       this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
+        console.log("kortelė:", this.card);
+        console.log("vyksta veiksmas");
         console.log(JSON.parse(car))
       });
       this.model.sendFam(this.counterFam + 1);

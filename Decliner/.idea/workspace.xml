@@ -3,10 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="7b67ce0f-6c65-4b18-830a-95ceb687dbd7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Learner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Learner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Score.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Share.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Share.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Stress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Stress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Decliner.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Decliner.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Data.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Learner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Learner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Score.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Score.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Share.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Share.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Stress$Pair.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Stress$Pair.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Stress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Stress.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../learnLT/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../learnLT/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../learnLT/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../learnLT/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../learnLT/src/app/connect.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../learnLT/src/app/connect.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../learnLT/src/app/stress/stress.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../learnLT/src/app/stress/stress.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,6 +157,7 @@
       <workItem from="1587511262094" duration="685000" />
       <workItem from="1587546138970" duration="1521000" />
       <workItem from="1587666423364" duration="3171000" />
+      <workItem from="1587848197228" duration="2573000" />
     </task>
     <servers />
   </component>
@@ -170,22 +180,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="501" y="157" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585169540376" />
-    <state width="1493" height="195" key="GridCell.Tab.0.bottom" timestamp="1587549951798">
+    <state width="1493" height="195" key="GridCell.Tab.0.bottom" timestamp="1587851146701">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587549951798" />
-    <state width="1493" height="195" key="GridCell.Tab.0.center" timestamp="1587549951798">
+    <state width="1493" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587851146701" />
+    <state width="1493" height="195" key="GridCell.Tab.0.center" timestamp="1587851146701">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587549951798" />
-    <state width="1493" height="195" key="GridCell.Tab.0.left" timestamp="1587549951798">
+    <state width="1493" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587851146701" />
+    <state width="1493" height="195" key="GridCell.Tab.0.left" timestamp="1587851146701">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587549951798" />
-    <state width="1493" height="195" key="GridCell.Tab.0.right" timestamp="1587549951798">
+    <state width="1493" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587851146701" />
+    <state width="1493" height="195" key="GridCell.Tab.0.right" timestamp="1587851146701">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587549951798" />
+    <state width="1493" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587851146701" />
     <state x="299" y="70" key="Maven.ArtifactSearchDialog" timestamp="1585170845296">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -202,10 +212,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="209" y="120" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1586198759882" />
-    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1587377531554">
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1587849466900">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1587377531554" />
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1587849466900" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1585251629950">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

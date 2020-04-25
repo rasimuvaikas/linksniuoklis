@@ -41,7 +41,6 @@ import { ProgressComponent } from './progress/progress.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ExerciseComponent } from './exercise/exercise.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { BelenkasComponent } from './belenkas/belenkas.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -60,7 +59,6 @@ import { RecapComponent } from './recap/recap.component';
     ProgressComponent,
     ExerciseComponent,
     DashboardComponent,
-    BelenkasComponent,
     RecapComponent
   ],
   imports: [

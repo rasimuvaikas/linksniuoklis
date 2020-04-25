@@ -60,6 +60,8 @@ public class Share extends HttpServlet {
 
         String pattern = request.getParameter("declension");
 
+        System.out.println("gavau uzklausa");
+
         ResultSet rs = data.getSentenceDecl(infl, num, pattern);
 
         try {

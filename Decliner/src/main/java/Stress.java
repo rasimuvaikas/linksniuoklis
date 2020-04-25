@@ -464,6 +464,8 @@ public class Stress {
      * @return
      */
     public String generateDistractor(ArrayList<String> dist, String cleanWord) {
+        System.out.println("disttostring: " + dist.toString());
+        System.out.println("cleanWord: " + cleanWord);
 
         findSyllables(cleanWord, true); //generate count arraylist that contains the indices of consonants that go inbetween tokens (vowels or diphthongs)
         String result = "";
@@ -491,7 +493,11 @@ public class Stress {
                         i++;
                     }
                     int diff = result.length() - cleanWord.length(); //if a previously inserted token is longer than the original version, move count indices forward
-                    result = result.substring(0, count.get(i) + 1 + diff) + dist.get(j) + result.substring(count.get(i + 1) + diff);
+                    if(i < count.size() - 1) {
+                        result = result.substring(0, count.get(i) + 1 + diff) + dist.get(j) + result.substring(count.get(i + 1) + diff);
+                    } else{
+                        result = result.substring(0, count.get(i) + 1 + diff) + dist.get(j);
+                    }
 
                 }
                 //check if next char is a consonant, if so, skip to the end of a consonant sequence

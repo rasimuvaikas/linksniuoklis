@@ -24,6 +24,7 @@ export class ConnectService {
   getCards(inflection="accusative", number="singular", declensions=["1masc"]):Observable<any>{
 
     let i = declensions[Math.floor(Math.random() * ((declensions.length - 1) - 0 + 1) + 0)];
+    console.log("pasirinkta declension: ", i);
 
     let httpParams = new HttpParams()
     .append("inflection", inflection)
