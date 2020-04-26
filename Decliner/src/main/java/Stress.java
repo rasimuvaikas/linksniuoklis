@@ -25,8 +25,8 @@ public class Stress {
         //s.findPatterns(s.findSyllables("slenksčiaìs", false));
         try {
             //s.mapIt();
-            for (ArrayList<String> a : s.findDistractors("fùnkcijas")) {
-                s.generateDistractor(a, "funkcijas");
+            for (ArrayList<String> a : s.findDistractors("ánglų")) {
+                s.generateDistractor(a, "anglų");
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -479,10 +479,16 @@ public class Stress {
                 //word starts with a consonant
                 if (count.get(0) == 0) {
 
+                    //check if next char is a consonant, if so, skip to the end of a consonant sequence
                     while (i < count.size() - 1 && count.get(i) + 1 == count.get(i + 1)) {
                         i++;
                     }
-                    result = cleanWord.substring(0, i + 1) + dist.get(0) + cleanWord.substring(count.get(i + 1));
+
+                    if(i == count.size() - 1){ //the word contains one consonant/consonant sequence
+                        result = cleanWord.substring(0, i + 1) + dist.get(0);
+                    } else {
+                        result = cleanWord.substring(0, i + 1) + dist.get(0) + cleanWord.substring(count.get(i + 1));
+                    }
 
                 } else { //word starts with the first dist token
 
@@ -493,11 +499,11 @@ public class Stress {
                         i++;
                     }
                     int diff = result.length() - cleanWord.length(); //if a previously inserted token is longer than the original version, move count indices forward
-                    if(i < count.size() - 1) {
+                    if(i < count.size() - 1) { //if we have more than one consonant sequence with at least an index inbetween then there must be a vowel inbetween, so no need to check if j is less than dist.size()
                         result = result.substring(0, count.get(i) + 1 + diff) + dist.get(j) + result.substring(count.get(i + 1) + diff);
-                    } else{
+                    } else if(j < dist.size()){ //word contains two vowels, one consonant sequence inbetween
                         result = result.substring(0, count.get(i) + 1 + diff) + dist.get(j);
-                    }
+                    } //else no more vowels, result stays the same
 
                 }
                 //check if next char is a consonant, if so, skip to the end of a consonant sequence
@@ -510,13 +516,10 @@ public class Stress {
 
             } else if (i == count.size() - 1) {
                 int diff = result.length() - cleanWord.length(); //if a previously inserted token is longer than the original version, move count indices forward
-                while (j < dist.size()) {
-                    if (j == dist.size() - 1) {
-                        result = result.substring(0, count.get(i) + 1 + diff) + dist.get(j);
-                    } else {
-                        result = result.substring(0, count.get(i) + 1 + diff) + dist.get(j) + result.substring(count.get(i + 1) + diff);
-                    }
-                    j++;
+                if(j < dist.size()){
+                    result = result.substring(0, count.get(i) + 1 + diff) + dist.get(j);
+                } else{ //no more vowels left
+                    result = result.substring(0, count.get(i) + 1 + diff);
                 }
                 i++;
             } else {
@@ -539,6 +542,7 @@ public class Stress {
         if (Character.isUpperCase(cleanWord.charAt(0))) {
             result = result.substring(0, 1).toUpperCase() + result.substring(1);
         }
+        System.out.println(result);
         return result;
     }
 
