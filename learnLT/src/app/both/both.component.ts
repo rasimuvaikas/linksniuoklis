@@ -367,6 +367,14 @@ export class BothComponent implements OnInit {
       this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
         console.log(JSON.parse(car))
+        if(this.card.length==0 && this.familiar.length > 1){
+          this.ngOnInit();
+        }
+        else if(this.card.length==0){
+          this.model.sendFam(0); //reset the variable to start counting from 0 again
+          this.model.sendAdv(this.counterAdv + 1);
+          this.ngOnInit();
+        }
       });
       this.model.sendFam(0); //reset the variable to start counting from 0 again
       this.model.sendAdv(this.counterAdv + 1);
@@ -379,6 +387,14 @@ export class BothComponent implements OnInit {
       this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
         console.log(JSON.parse(car))
+        if(this.card.length==0 && this.advanced.length > 1){
+          this.ngOnInit();
+        }
+        else if(this.card.length==0){
+          this.model.sendFam(0); //reset the variable to start counting from 0 again
+          this.model.sendAdv(this.counterAdv + 1);
+          this.ngOnInit();
+        }
       });
       this.model.sendFam(this.counterFam + 1);
       this.model.sendAdv(0); //reset the variable to start counting from 0 again
@@ -391,6 +407,14 @@ export class BothComponent implements OnInit {
       this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
         console.log(JSON.parse(car))
+        if(this.card.length==0 && this.novel.length > 1){
+          this.ngOnInit();
+        }
+        else if(this.card.length==0){
+          this.model.sendFam(0); //reset the variable to start counting from 0 again
+          this.model.sendAdv(this.counterAdv + 1);
+          this.ngOnInit();
+        }
       });
       this.model.sendFam(this.counterFam + 1);
       this.model.sendAdv(this.counterAdv + 1);
@@ -403,6 +427,14 @@ export class BothComponent implements OnInit {
       this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
         console.log(JSON.parse(car))
+        if(this.card.length==0 && this.familiar.length > 1){
+          this.ngOnInit();
+        }
+        else if(this.card.length==0){
+          this.model.sendFam(0); //reset the variable to start counting from 0 again
+          this.model.sendAdv(this.counterAdv + 1);
+          this.ngOnInit();
+        }
       });
       this.model.sendFam(this.counterFam + 1);
       this.model.sendAdv(this.counterAdv + 1);
@@ -414,6 +446,14 @@ export class BothComponent implements OnInit {
       this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
         console.log(JSON.parse(car))
+        if(this.card.length==0 && this.advanced.length > 1){
+          this.ngOnInit();
+        }
+        else if(this.card.length==0){
+          this.model.sendFam(0); //reset the variable to start counting from 0 again
+          this.model.sendAdv(this.counterAdv + 1);
+          this.ngOnInit();
+        }
       });
       this.model.sendFam(this.counterFam + 1);
       this.model.sendAdv(this.counterAdv + 1);
