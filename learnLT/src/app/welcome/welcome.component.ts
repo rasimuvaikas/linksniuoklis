@@ -7,6 +7,8 @@ import { Level } from '../level';
 import { ConnectService } from '../connect.service';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { RecapComponent } from '../recap/recap.component';
+import { MatDialog } from '@angular/material/dialog';
+import { AlertComponent } from '../alert/alert.component';
 
 @Component({
   selector: 'app-welcome',
@@ -61,7 +63,7 @@ export class WelcomeComponent implements OnInit {
 
 
   constructor(private user: UserInfoService, private route: Router, private model: LearnerModelService, private connect: ConnectService,
-    private _bottomSheet: MatBottomSheet) {
+    private _bottomSheet: MatBottomSheet, private dialogue: MatDialog) {
     this.inflectionsSg = [{ number: "singular", infl: "nominative", checked: true },
     { number: "singular", infl: "genitive", checked: true },
     { number: "singular", infl: "dative", checked: false },
@@ -152,6 +154,13 @@ export class WelcomeComponent implements OnInit {
 
     //missing exception words
 
+  }
+
+  openDialog(d: string): void {
+    const dialogRef = this.dialogue.open(AlertComponent, {
+      width: '250px',
+      data: d
+    });
   }
 
 
@@ -344,53 +353,69 @@ export class WelcomeComponent implements OnInit {
       }
     });
 
+    if (decls.length == 0) {
+      this.openDialog("At least one declension type must be marked.");
+    }
 
 
-    for (let i of this.advancedSg) {
-      if (i.checked) {
-        let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "advanced", declensions: decls };
-        this.lmodel.push(temp);
+    else {
+
+
+
+      for (let i of this.advancedSg) {
+        if (i.checked) {
+          let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "advanced", declensions: decls };
+          this.lmodel.push(temp);
+        }
+      }
+
+      for (let i of this.advancedPl) {
+        if (i.checked) {
+          let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "advanced", declensions: decls };
+          this.lmodel.push(temp);
+        }
+      }
+
+      for (let i of this.familiarSg) {
+        if (i.checked) {
+          let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "familiar", declensions: decls };
+          this.lmodel.push(temp);
+        }
+      }
+
+      for (let i of this.familiarPl) {
+        if (i.checked) {
+          let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "familiar", declensions: decls };
+          this.lmodel.push(temp);
+        }
+      }
+
+      for (let i of this.inflectionsNoviceSg) {
+        if (i.checked) {
+          let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "novel", declensions: decls };
+          this.lmodel.push(temp);
+        }
+      }
+
+      for (let i of this.inflectionsNovicePl) {
+        if (i.checked) {
+          let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "novel", declensions: decls };
+          this.lmodel.push(temp);
+        }
+      }
+
+      if (this.lmodel.length == 0) {
+        this.openDialog("At least one inflection type must be marked.");
+      }
+
+      else {
+
+        this.model.sendModel(this.lmodel);
+
+        this.route.navigate(['exercise'])
       }
     }
 
-    for (let i of this.advancedPl) {
-      if (i.checked) {
-        let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "advanced", declensions: decls };
-        this.lmodel.push(temp);
-      }
-    }
-
-    for (let i of this.familiarSg) {
-      if (i.checked) {
-        let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "familiar", declensions: decls };
-        this.lmodel.push(temp);
-      }
-    }
-
-    for (let i of this.familiarPl) {
-      if (i.checked) {
-        let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "familiar", declensions: decls };
-        this.lmodel.push(temp);
-      }
-    }
-
-    for (let i of this.inflectionsNoviceSg) {
-      if (i.checked) {
-        let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "novel", declensions: decls };
-        this.lmodel.push(temp);
-      }
-    }
-
-    for (let i of this.inflectionsNovicePl) {
-      if (i.checked) {
-        let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "novel", declensions: decls };
-        this.lmodel.push(temp);
-      }
-    }
-
-    this.model.sendModel(this.lmodel);
-
-    this.route.navigate(['exercise'])
 
   }
 
@@ -414,24 +439,41 @@ export class WelcomeComponent implements OnInit {
       }
     });
 
-    for (let i of this.inflectionsSg) {
-      if (i.checked) {
-        let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "novel", declensions: decls };
-        this.lmodel.push(temp);
-      }
+
+    if (decls.length == 0) {
+      this.openDialog("At least one declension type must be marked.");
     }
 
-    for (let i of this.inflectionsPl) {
-      if (i.checked) {
-        let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "novel", declensions: decls };
-        this.lmodel.push(temp);
+
+    else {
+
+      for (let i of this.inflectionsSg) {
+        if (i.checked) {
+          let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "novel", declensions: decls };
+          this.lmodel.push(temp);
+        }
       }
+
+      for (let i of this.inflectionsPl) {
+        if (i.checked) {
+          let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "novel", declensions: decls };
+          this.lmodel.push(temp);
+        }
+      }
+
+      if (this.lmodel.length == 0) {
+        this.openDialog("At least one inflection type must be marked.");
+      }
+
+      else {
+
+        this.model.sendModel(this.lmodel);
+
+        this.route.navigate(['exercise'])
+      }
+
+
     }
-
-    this.model.sendModel(this.lmodel);
-
-
-    this.route.navigate(['exercise'])
   }
 
 
@@ -468,8 +510,6 @@ export class WelcomeComponent implements OnInit {
 
     this.user.currentName.subscribe(username => this.username = username)
 
-    //šito nereikia, nes jeigu esu čia, tai learner model tikrai neturiu. bet paliksiu kol kas just in case
-    this.connect.getResults(this.username).subscribe(data => { this.userModel = data; console.log("va ką gaunu: ", JSON.parse(data)) });
 
   }
 

@@ -7,6 +7,8 @@ import { AuthService } from '../auth.service';
 import { Level } from '../level';
 import { ConnectService } from '../connect.service';
 import { LearnerModelService } from '../learner-model.service';
+import { MatDialog } from '@angular/material/dialog';
+import { AlertComponent } from '../alert/alert.component';
 
 
 @Component({
@@ -28,6 +30,8 @@ export class LoginComponent implements OnInit {
   
 
   }
+
+
 
   onSubmit(formContent) {
     this.username = formContent.username;

@@ -22,8 +22,7 @@ const routes: Routes = [
   {path: 'stress', canActivate: [AuthGuard], component: StressComponent},
   {path: 'both', canActivate: [AuthGuard], component: BothComponent},
   {path: 'dashboard', canActivate: [AuthGuard], component: DashboardComponent},
-  {path: 'progress', component: ProgressComponent},  
-  {path: 'recap', component: RecapComponent}, 
+  {path: 'progress', canActivate: [AuthGuard], component: ProgressComponent},  
   {path: '', redirectTo: '/start', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent}
 ];

@@ -32,7 +32,6 @@ export class ProgressComponent implements OnChanges {
 
 
   setBar(score: number) {
-    console.log("daro numnow stuff")
     this.numNow = score;
     if (this.numNow > 10) {
       this.heightNow = 10 * 10 + "%";

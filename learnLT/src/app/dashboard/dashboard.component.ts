@@ -6,6 +6,8 @@ import { Router } from '@angular/router';
 import { ConnectService } from '../connect.service';
 import { RecapComponent } from '../recap/recap.component';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { MatDialog } from '@angular/material/dialog';
+import { AlertComponent } from '../alert/alert.component';
 
 
 @Component({
@@ -18,7 +20,7 @@ export class DashboardComponent implements OnInit {
   decls: any;
   infls: any;
 
-  empty:boolean;
+  empty: boolean;
 
   time: Date;
 
@@ -54,7 +56,8 @@ export class DashboardComponent implements OnInit {
   inflectionsTempSg: { number: string; infl: string; checked: boolean; }[];
   inflectionsTempPl: { number: string; infl: string; checked: boolean; }[];
 
-  constructor(private user: UserInfoService, private model: LearnerModelService, private route: Router, private con: ConnectService, private _bottomSheet: MatBottomSheet) {
+  constructor(private user: UserInfoService, private model: LearnerModelService, private route: Router, private con: ConnectService,
+    private _bottomSheet: MatBottomSheet, private dialogue: MatDialog) {
 
     this.inflectionsSg = [{ number: "singular", infl: "nominative", checked: false },
     { number: "singular", infl: "genitive", checked: false },
@@ -128,6 +131,13 @@ export class DashboardComponent implements OnInit {
     { display: "-is", declension: "3fem", decl: "3rd", checked: false },
     { display: "sesuo, duktė", declension: "5fem", decl: "5th", checked: false },
     ]
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialogue.open(AlertComponent, {
+      width: '250px',
+      data: "At least one declension type must be marked."
+    });
   }
 
 
@@ -212,16 +222,6 @@ export class DashboardComponent implements OnInit {
 
       this.declensionsMasc.forEach(element => {
         element.checked = true;
-      });
-    }
-
-    else {
-      this.declensionsFem.forEach(element => {
-        element.checked = false;
-      });
-
-      this.declensionsMasc.forEach(element => {
-        element.checked = false;
       });
     }
   }
@@ -359,11 +359,11 @@ export class DashboardComponent implements OnInit {
 
   }
 
-    /**
-   * Mark inflections selected as novel to the user
-   * @param infl 
-   * @param num 
-   */
+  /**
+ * Mark inflections selected as novel to the user
+ * @param infl 
+ * @param num 
+ */
   onChangeNov(infl: string, num: string) {
 
     if (num == 'singular') {
@@ -412,53 +412,59 @@ export class DashboardComponent implements OnInit {
       }
     });
 
-
-
-    for (let i of this.advancedSg) {
-      if (i.checked) {
-        let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "advanced", declensions: decls };
-        this.lmodel.push(temp);
-      }
+    if (decls.length == 0) {
+      this.openDialog();
     }
 
-    for (let i of this.advancedPl) {
-      if (i.checked) {
-        let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "advanced", declensions: decls };
-        this.lmodel.push(temp);
+
+    else {
+
+      for (let i of this.advancedSg) {
+        if (i.checked) {
+          let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "advanced", declensions: decls };
+          this.lmodel.push(temp);
+        }
       }
-    }
 
-    for (let i of this.familiarSg) {
-      if (i.checked) {
-        let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "familiar", declensions: decls };
-        this.lmodel.push(temp);
+      for (let i of this.advancedPl) {
+        if (i.checked) {
+          let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "advanced", declensions: decls };
+          this.lmodel.push(temp);
+        }
       }
-    }
 
-    for (let i of this.familiarPl) {
-      if (i.checked) {
-        let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "familiar", declensions: decls };
-        this.lmodel.push(temp);
+      for (let i of this.familiarSg) {
+        if (i.checked) {
+          let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "familiar", declensions: decls };
+          this.lmodel.push(temp);
+        }
       }
-    }
 
-    for (let i of this.inflectionsSg) {
-      if (i.checked) {
-        let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "novel", declensions: decls };
-        this.lmodel.push(temp);
+      for (let i of this.familiarPl) {
+        if (i.checked) {
+          let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "familiar", declensions: decls };
+          this.lmodel.push(temp);
+        }
       }
-    }
 
-    for (let i of this.inflectionsPl) {
-      if (i.checked) {
-        let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "novel", declensions: decls };
-        this.lmodel.push(temp);
+      for (let i of this.inflectionsSg) {
+        if (i.checked) {
+          let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "novel", declensions: decls };
+          this.lmodel.push(temp);
+        }
       }
+
+      for (let i of this.inflectionsPl) {
+        if (i.checked) {
+          let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "novel", declensions: decls };
+          this.lmodel.push(temp);
+        }
+      }
+
+      this.model.sendModel(this.lmodel);
+
+      this.route.navigate(['exercise'])
     }
-
-    this.model.sendModel(this.lmodel);
-
-    this.route.navigate(['exercise'])
   }
 
 
@@ -474,7 +480,7 @@ export class DashboardComponent implements OnInit {
     this.con.getScore(this.username, this.time.toString()).subscribe(data => {
       console.log(JSON.parse(data)); let response = JSON.parse(data);
       this.decls = response['declension']; this.infls = response['inflections'];
-      if(this.decls==null && this.infls==null){
+      if (this.decls == null && this.infls == null) {
         console.log("taip, null");
         this.empty = true;
       }
