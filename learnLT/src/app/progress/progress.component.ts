@@ -5,6 +5,10 @@ import { Component, OnChanges, SimpleChanges, Input } from '@angular/core';
   templateUrl: './progress.component.html',
   styleUrls: ['./progress.component.css']
 })
+
+/**
+ * Instant visualisation of learner's progress
+ */
 export class ProgressComponent implements OnChanges {
 
   @Input('numNow') numNow: number;
@@ -31,6 +35,10 @@ export class ProgressComponent implements OnChanges {
   }
 
 
+  /**
+   * Update the progress bar that displays continuous progress of the learner
+   * @param score the number of correct answers the user has hit in a row
+   */
   setBar(score: number) {
     this.numNow = score;
     if (this.numNow > 10) {
@@ -54,7 +62,11 @@ export class ProgressComponent implements OnChanges {
 
   }
 
-  setOverallBar(update: any, previous: any) {
+  /**
+   * Update the progress bar that displays the proportion of correct answers and mistakes that the user has made during the current session
+   * @param update an element that contains the numbers of correct and incorrect answers
+   */
+  setOverallBar(update: any) {
 
     var total = update.correct + update.incorrect;
 
@@ -78,7 +90,7 @@ export class ProgressComponent implements OnChanges {
         this.setBar(changes[i].currentValue);
       }
       if (i == 'overall') {
-        this.setOverallBar(changes[i].currentValue, changes[i].previousValue);
+        this.setOverallBar(changes[i].currentValue);
       }
     }
 

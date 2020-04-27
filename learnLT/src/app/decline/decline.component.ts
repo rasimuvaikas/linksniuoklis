@@ -78,11 +78,17 @@ export class DeclineComponent implements OnInit {
 
   }
 
+  /**
+   * Recap bottom sheet
+   */
   openBottomSheet(): void {
     this._bottomSheet.open(RecapComponent);
   }
 
-
+  /**
+   * Find the equivalent 'display' option for a declension code
+   * @param decl declension code
+   */
   getDecl(decl: string) {
     switch (decl) {
       case "1mascIAS": {
@@ -309,16 +315,13 @@ export class DeclineComponent implements OnInit {
 
   ngOnInit(): void {
 
-    //int score is used to update the progress bar in the progress component
+    //int score is used to update a progress bar in the progress component
     this.model.sc.subscribe(data => this.score = data);
-    console.log("gavau score: ", this.score);
-
+    //int update is used to update a progress bar in the progress component
     this.model.scTotal.subscribe(data => this.update = data);
-    console.log("gavau overall: ", this.update);
 
 
-    this.user.currentName.subscribe(username => this.username = username);
-    //this.model.lvls.subscribe(lvls => this.lmodel = lvls);
+    this.user.currentName.subscribe(username => this.username = username); //get username
 
     this.answered = false;
 
@@ -349,10 +352,10 @@ export class DeclineComponent implements OnInit {
       this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
         console.log(JSON.parse(car))
-        if(this.card.length==0 && this.familiar.length > 1){
+        if (this.card.length == 0 && this.familiar.length > 1) {
           this.ngOnInit();
         }
-        else if(this.card.length==0){
+        else if (this.card.length == 0) {
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
           this.ngOnInit();
@@ -369,10 +372,10 @@ export class DeclineComponent implements OnInit {
       this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
         console.log(JSON.parse(car))
-        if(this.card.length==0 && this.advanced.length > 1){
+        if (this.card.length == 0 && this.advanced.length > 1) {
           this.ngOnInit();
         }
-        else if(this.card.length==0){
+        else if (this.card.length == 0) {
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
           this.ngOnInit();
@@ -389,10 +392,10 @@ export class DeclineComponent implements OnInit {
       this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
         console.log(JSON.parse(car))
-        if(this.card.length==0 && this.novel.length > 1){
+        if (this.card.length == 0 && this.novel.length > 1) {
           this.ngOnInit();
         }
-        else if(this.card.length==0){
+        else if (this.card.length == 0) {
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
           this.ngOnInit();
@@ -409,10 +412,10 @@ export class DeclineComponent implements OnInit {
       this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
         console.log(JSON.parse(car))
-        if(this.card.length==0 && this.familiar.length > 1){
+        if (this.card.length == 0 && this.familiar.length > 1) {
           this.ngOnInit();
         }
-        else if(this.card.length==0){
+        else if (this.card.length == 0) {
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
           this.ngOnInit();
@@ -428,10 +431,10 @@ export class DeclineComponent implements OnInit {
       this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
         console.log(JSON.parse(car))
-        if(this.card.length==0 && this.advanced.length > 1){
+        if (this.card.length == 0 && this.advanced.length > 1) {
           this.ngOnInit();
         }
-        else if(this.card.length==0){
+        else if (this.card.length == 0) {
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
           this.ngOnInit();

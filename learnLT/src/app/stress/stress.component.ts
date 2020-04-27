@@ -31,9 +31,9 @@ export class StressComponent implements OnInit {
   displayInfo: boolean;
 
   score: number;
-  update: {correct: number, incorrect: number}
+  update: { correct: number, incorrect: number }
 
-  time:Date;
+  time: Date;
 
   advanced: Level[];
   familiar: Level[];
@@ -42,7 +42,7 @@ export class StressComponent implements OnInit {
   counterFam: number
   counterAdv: number
 
-  constructor(private model: LearnerModelService, private route: Router, private con: ConnectService, private user: UserInfoService, 
+  constructor(private model: LearnerModelService, private route: Router, private con: ConnectService, private user: UserInfoService,
     private _bottomSheet: MatBottomSheet) {
 
     this.user.currenttime.subscribe(t => this.time = t);
@@ -56,6 +56,9 @@ export class StressComponent implements OnInit {
   }
 
 
+  /**
+   * Recap bottom sheet
+   */
   openBottomSheet(): void {
     this._bottomSheet.open(RecapComponent);
   }
@@ -75,38 +78,41 @@ export class StressComponent implements OnInit {
   }
 
 
-
-    getDecl(decl: string){
-      switch(decl){
-        case "1mascIAS":{
-          return "1st"
-        }
-        case "1mascIS":{
-          return "1st"
-        }
-        case "3masc":{
-          return "3rd"
-        }
-        case "4masc":{
-          return "4th"
-        }
-        case "5masc":{
-          return "5th"
-        }
-        case "2femIA":{
-          return "2nd"
-        }
-        case "2femĖ":{
-          return "2nd"
-        }
-        case "3fem":{
-          return "3rd"
-        }
-        case "5fem":{
-          return "5th"
-        }
+  /**
+   * Find the equivalent 'display' option for a declension code
+   * @param decl declension code
+   */
+  getDecl(decl: string) {
+    switch (decl) {
+      case "1mascIAS": {
+        return "1st"
+      }
+      case "1mascIS": {
+        return "1st"
+      }
+      case "3masc": {
+        return "3rd"
+      }
+      case "4masc": {
+        return "4th"
+      }
+      case "5masc": {
+        return "5th"
+      }
+      case "2femIA": {
+        return "2nd"
+      }
+      case "2femĖ": {
+        return "2nd"
+      }
+      case "3fem": {
+        return "3rd"
+      }
+      case "5fem": {
+        return "5th"
       }
     }
+  }
 
 
   /**
@@ -129,23 +135,13 @@ export class StressComponent implements OnInit {
 
     this.con.postProgress(sentence).subscribe(data => {
       this.progress = data;
-      //console.log("data", this.progress);
-      //console.log("this.progress.total", this.progress.total);
-      //console.log("this.progress.declensions.length", this.progress.declensions.length);
-     /** for (let i = 0; i < this.progress.declensions.length; i++) {
-        console.log("element.value", this.progress.declensions[i]);
-        for (var j in this.progress.declensions[i]) {
-          console.log("element.invalue", this.progress.declensions[i][j]);
-        }
-
-      }*/
 
 
       //the user can move to the next level if they have completed a certain number of exercises
       if (level == "novel") {
-        if (this.progress.total >= 30) { //was 3
-          if (this.progress.declensions.length >= 5) {// was 5
-            let completed = true;//check if all the user has completed at least 5 exercises for each declension
+        if (this.progress.total >= 30) {
+          if (this.progress.declensions.length >= 5) {//check if the user has completed at least 5 exercises for each declension
+            let completed = true;
             for (let i = 0; i < this.progress.declensions.length; i++) {
               for (var j in this.progress.declensions[i]) {
                 if (this.progress.declensions[i][j] < 5) {
@@ -221,7 +217,7 @@ export class StressComponent implements OnInit {
         username: this.username, time: this.time.toDateString() + " " + this.time.toLocaleTimeString(),
         inflection: sentence.inflection, number: sentence.number, declension: sentence.declension, correct: 1, incorrect: 0
       };
-      this.con.postScore(send).subscribe(data => {this.update = data; this.model.sendOverallScore(this.update)}); 
+      this.con.postScore(send).subscribe(data => { this.update = data; this.model.sendOverallScore(this.update) });
 
       setTimeout(() => { this.ngOnInit(); }, 1000);
     }
@@ -233,18 +229,18 @@ export class StressComponent implements OnInit {
         username: this.username, time: this.time.toDateString() + " " + this.time.toLocaleTimeString(),
         inflection: sentence.inflection, number: sentence.number, declension: sentence.declension, correct: 0, incorrect: 1
       };
-      this.con.postScore(send).subscribe(data => {this.update = data; this.model.sendOverallScore(this.update)}); 
+      this.con.postScore(send).subscribe(data => { this.update = data; this.model.sendOverallScore(this.update) });
     }
   }
 
   ngOnInit(): void {
 
-    //int score is used to update the progress bar in the progress component
+    //int score is used to update a progress bar in the progress component
     this.model.sc.subscribe(data => this.score = data);
-
+    //int update is used to update a progress bar in the progress component
     this.model.scTotal.subscribe(data => this.update = data);
 
-    this.user.currentName.subscribe(username => this.username = username);
+    this.user.currentName.subscribe(username => this.username = username); //get username
 
     this.correct = 3; //reset correct so that neither 'correct' nor 'incorrect' would be displayed
 
@@ -272,10 +268,10 @@ export class StressComponent implements OnInit {
       this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
         console.log(JSON.parse(car))
-        if(this.card.length==0 && this.familiar.length > 1){
+        if (this.card.length == 0 && this.familiar.length > 1) {
           this.ngOnInit();
         }
-        else if(this.card.length==0){
+        else if (this.card.length == 0) {
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
           this.ngOnInit();
@@ -292,10 +288,10 @@ export class StressComponent implements OnInit {
       this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
         console.log(JSON.parse(car))
-        if(this.card.length==0 && this.advanced.length > 1){
+        if (this.card.length == 0 && this.advanced.length > 1) {
           this.ngOnInit();
         }
-        else if(this.card.length==0){
+        else if (this.card.length == 0) {
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
           this.ngOnInit();
@@ -314,10 +310,10 @@ export class StressComponent implements OnInit {
         console.log("kortelė:", this.card);
         console.log("vyksta veiksmas");
         console.log(JSON.parse(car))
-        if(this.card.length==0 && this.novel.length > 1){
+        if (this.card.length == 0 && this.novel.length > 1) {
           this.ngOnInit();
         }
-        else if(this.card.length==0){
+        else if (this.card.length == 0) {
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
           this.ngOnInit();
@@ -334,10 +330,10 @@ export class StressComponent implements OnInit {
       this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
         console.log(JSON.parse(car))
-        if(this.card.length==0 && this.familiar.length > 1){
+        if (this.card.length == 0 && this.familiar.length > 1) {
           this.ngOnInit();
         }
-        else if(this.card.length==0){
+        else if (this.card.length == 0) {
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
           this.ngOnInit();
@@ -353,10 +349,10 @@ export class StressComponent implements OnInit {
       this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
         console.log(JSON.parse(car))
-        if(this.card.length==0 && this.advanced.length > 1){
+        if (this.card.length == 0 && this.advanced.length > 1) {
           this.ngOnInit();
         }
-        else if(this.card.length==0){
+        else if (this.card.length == 0) {
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
           this.ngOnInit();

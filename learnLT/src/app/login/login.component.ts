@@ -28,9 +28,7 @@ export class LoginComponent implements OnInit {
 
     this.lmodel = [];
   
-
   }
-
 
 
   onSubmit(formContent) {
@@ -46,16 +44,12 @@ export class LoginComponent implements OnInit {
 
       //check if the user has an existing learner model
       this.conn.getResults(this.username).subscribe(res => {
-        
-        console.log(JSON.parse(res));
       this.lmodel = JSON.parse(res); 
-      console.log("gavau: ", JSON.parse(res));
 
         if (this.lmodel.length == 1 && this.lmodel[0].infl == null) {
           this.route.navigate(['welcome']);
           
         } else {
-          console.log("jau buvo")
           this.model.sendModel(JSON.parse(res));
           this.route.navigate(['dashboard']);
         }

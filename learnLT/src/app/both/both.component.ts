@@ -43,9 +43,9 @@ export class BothComponent implements OnInit {
   stress: boolean;
 
   score: number;
-  update: {correct: number, incorrect: number}
+  update: { correct: number, incorrect: number }
 
-  time:Date;
+  time: Date;
 
   answered: boolean;
 
@@ -56,7 +56,7 @@ export class BothComponent implements OnInit {
   counterFam: number
   counterAdv: number
 
-  constructor(private model: LearnerModelService, private route: Router, private con: ConnectService, private user:UserInfoService, 
+  constructor(private model: LearnerModelService, private route: Router, private con: ConnectService, private user: UserInfoService,
     private _bottomSheet: MatBottomSheet) {
 
     this.user.currenttime.subscribe(t => this.time = t);
@@ -69,7 +69,9 @@ export class BothComponent implements OnInit {
     this.model.sendAdv(0);
   }
 
-
+  /**
+   * Recap bottom sheet 
+   */
   openBottomSheet(): void {
     this._bottomSheet.open(RecapComponent);
   }
@@ -88,38 +90,41 @@ export class BothComponent implements OnInit {
     }
   }
 
-
-    getDecl(decl: string){
-      switch(decl){
-        case "1mascIAS":{
-          return "1st"
-        }
-        case "1mascIS":{
-          return "1st"
-        }
-        case "3masc":{
-          return "3rd"
-        }
-        case "4masc":{
-          return "4th"
-        }
-        case "5masc":{
-          return "5th"
-        }
-        case "2femIA":{
-          return "2nd"
-        }
-        case "2femĖ":{
-          return "2nd"
-        }
-        case "3fem":{
-          return "3rd"
-        }
-        case "5fem":{
-          return "5th"
-        }
+  /**
+   * Find the equivalent 'display' option for a declension code
+   * @param decl declension code
+   */
+  getDecl(decl: string) {
+    switch (decl) {
+      case "1mascIAS": {
+        return "1st"
+      }
+      case "1mascIS": {
+        return "1st"
+      }
+      case "3masc": {
+        return "3rd"
+      }
+      case "4masc": {
+        return "4th"
+      }
+      case "5masc": {
+        return "5th"
+      }
+      case "2femIA": {
+        return "2nd"
+      }
+      case "2femĖ": {
+        return "2nd"
+      }
+      case "3fem": {
+        return "3rd"
+      }
+      case "5fem": {
+        return "5th"
       }
     }
+  }
 
 
 
@@ -235,7 +240,7 @@ export class BothComponent implements OnInit {
         username: this.username, time: this.time.toDateString() + " " + this.time.toLocaleTimeString(),
         inflection: sentence.inflection, number: sentence.number, declension: sentence.declension, correct: 1, incorrect: 0
       };
-      this.con.postScore(send).subscribe(data => {this.update = data; this.model.sendOverallScore(this.update)}); 
+      this.con.postScore(send).subscribe(data => { this.update = data; this.model.sendOverallScore(this.update) });
 
       //reset correct, and set decl to false and stress to true to display a stress exercise card next
       setTimeout(() => { this.correct = 3; this.decl = false; this.stress = true; }, 1000);
@@ -248,7 +253,7 @@ export class BothComponent implements OnInit {
         username: this.username, time: this.time.toDateString() + " " + this.time.toLocaleTimeString(),
         inflection: sentence.inflection, number: sentence.number, declension: sentence.declension, correct: 0, incorrect: 1
       };
-      this.con.postScore(send).subscribe(data => {this.update = data; this.model.sendOverallScore(this.update)}); 
+      this.con.postScore(send).subscribe(data => { this.update = data; this.model.sendOverallScore(this.update) });
     }
   }
 
@@ -267,7 +272,7 @@ export class BothComponent implements OnInit {
         username: this.username, time: this.time.toDateString() + " " + this.time.toLocaleTimeString(),
         inflection: sentence.inflection, number: sentence.number, declension: sentence.declension, correct: 1, incorrect: 0
       };
-      this.con.postScore(send).subscribe(data => {this.update = data; this.model.sendOverallScore(this.update)});
+      this.con.postScore(send).subscribe(data => { this.update = data; this.model.sendOverallScore(this.update) });
       //reset correct, and set decl to true and stress to false to display a declension exercise card next
       setTimeout(() => { this.ngOnInit(); this.decl = true; this.stress = false; }, 1000);
     }
@@ -279,7 +284,7 @@ export class BothComponent implements OnInit {
         username: this.username, time: this.time.toDateString() + " " + this.time.toLocaleTimeString(),
         inflection: sentence.inflection, number: sentence.number, declension: sentence.declension, correct: 0, incorrect: 1
       };
-      this.con.postScore(send).subscribe(data => {this.update = data; this.model.sendOverallScore(this.update)}); 
+      this.con.postScore(send).subscribe(data => { this.update = data; this.model.sendOverallScore(this.update) });
     }
   }
 
@@ -306,7 +311,7 @@ export class BothComponent implements OnInit {
         username: this.username, time: this.time.toDateString() + " " + this.time.toLocaleTimeString(),
         inflection: sentence.inflection, number: sentence.number, declension: sentence.declension, correct: 1, incorrect: 0
       };
-      this.con.postScore(send).subscribe(data => {this.update = data; this.model.sendOverallScore(this.update)});
+      this.con.postScore(send).subscribe(data => { this.update = data; this.model.sendOverallScore(this.update) });
       //reset correct, and set decl to false and stress to true to display a stress exercise card next
       setTimeout(() => { this.correct = 3; this.decl = false; this.stress = true; }, 1000);
     } else {
@@ -317,7 +322,7 @@ export class BothComponent implements OnInit {
         username: this.username, time: this.time.toDateString() + " " + this.time.toLocaleTimeString(),
         inflection: sentence.inflection, number: sentence.number, declension: sentence.declension, correct: 0, incorrect: 1
       };
-      this.con.postScore(send).subscribe(data => {this.update = data; this.model.sendOverallScore(this.update)});
+      this.con.postScore(send).subscribe(data => { this.update = data; this.model.sendOverallScore(this.update) });
       this.count = this.count + 1;
       console.log(this.count);
       this.correct = 0; //set correct to 0 to display "incorrect" message
@@ -329,16 +334,16 @@ export class BothComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.user.currentName.subscribe(username => this.username = username);
+    this.user.currentName.subscribe(username => this.username = username); //get username
 
-    //int score is used to update the progress bar in the progress component
+    //int score is used to update a progress bar in the progress component
     this.model.sc.subscribe(data => this.score = data);
-
+    //int update is used to update a progress bar in the progress component
     this.model.scTotal.subscribe(data => this.update = data);
 
-    this.correct = 3;
+    this.correct = 3; //reset correct so that neither 'correct' nor 'incorrect' would be displayed
 
-    this.answered = false; //reset correct so that neither 'correct' nor 'incorrect' would be displayed
+    this.answered = false; 
 
 
 
@@ -367,10 +372,10 @@ export class BothComponent implements OnInit {
       this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
         console.log(JSON.parse(car))
-        if(this.card.length==0 && this.familiar.length > 1){
+        if (this.card.length == 0 && this.familiar.length > 1) {
           this.ngOnInit();
         }
-        else if(this.card.length==0){
+        else if (this.card.length == 0) {
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
           this.ngOnInit();
@@ -387,10 +392,10 @@ export class BothComponent implements OnInit {
       this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
         console.log(JSON.parse(car))
-        if(this.card.length==0 && this.advanced.length > 1){
+        if (this.card.length == 0 && this.advanced.length > 1) {
           this.ngOnInit();
         }
-        else if(this.card.length==0){
+        else if (this.card.length == 0) {
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
           this.ngOnInit();
@@ -407,10 +412,10 @@ export class BothComponent implements OnInit {
       this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
         console.log(JSON.parse(car))
-        if(this.card.length==0 && this.novel.length > 1){
+        if (this.card.length == 0 && this.novel.length > 1) {
           this.ngOnInit();
         }
-        else if(this.card.length==0){
+        else if (this.card.length == 0) {
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
           this.ngOnInit();
@@ -427,10 +432,10 @@ export class BothComponent implements OnInit {
       this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
         console.log(JSON.parse(car))
-        if(this.card.length==0 && this.familiar.length > 1){
+        if (this.card.length == 0 && this.familiar.length > 1) {
           this.ngOnInit();
         }
-        else if(this.card.length==0){
+        else if (this.card.length == 0) {
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
           this.ngOnInit();
@@ -446,10 +451,10 @@ export class BothComponent implements OnInit {
       this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
         console.log(JSON.parse(car))
-        if(this.card.length==0 && this.advanced.length > 1){
+        if (this.card.length == 0 && this.advanced.length > 1) {
           this.ngOnInit();
         }
-        else if(this.card.length==0){
+        else if (this.card.length == 0) {
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
           this.ngOnInit();

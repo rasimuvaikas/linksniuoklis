@@ -156,6 +156,9 @@ export class WelcomeComponent implements OnInit {
 
   }
 
+  /**
+   * Alert box
+   */
   openDialog(d: string): void {
     const dialogRef = this.dialogue.open(AlertComponent, {
       width: '250px',
@@ -163,7 +166,9 @@ export class WelcomeComponent implements OnInit {
     });
   }
 
-
+  /**
+   * Recap bottom sheet
+   */
   openBottomSheet(): void {
     this._bottomSheet.open(RecapComponent);
   }
@@ -198,9 +203,6 @@ export class WelcomeComponent implements OnInit {
         }
       }
     }
-
-
-    console.log(JSON.stringify(this.familiarSg)); //to be deleted
 
   }
 
@@ -302,8 +304,8 @@ export class WelcomeComponent implements OnInit {
 
   /**
    * Mark inflections selected as novel to the user
-   * @param infl 
-   * @param num 
+   * @param infl inflection
+   * @param num number
    */
   onChangeNov(infl: string, num: string) {
 
@@ -353,6 +355,7 @@ export class WelcomeComponent implements OnInit {
       }
     });
 
+    //make sure the user has chosen at least one declension type
     if (decls.length == 0) {
       this.openDialog("At least one declension type must be marked.");
     }
@@ -404,6 +407,7 @@ export class WelcomeComponent implements OnInit {
         }
       }
 
+      //make sure the user has chosen at least one inflection type
       if (this.lmodel.length == 0) {
         this.openDialog("At least one inflection type must be marked.");
       }
@@ -439,7 +443,7 @@ export class WelcomeComponent implements OnInit {
       }
     });
 
-
+    //make sure the user has chosen at least one declension type
     if (decls.length == 0) {
       this.openDialog("At least one declension type must be marked.");
     }
@@ -461,6 +465,7 @@ export class WelcomeComponent implements OnInit {
         }
       }
 
+      //make sure the user has chosen at least one inflection type
       if (this.lmodel.length == 0) {
         this.openDialog("At least one inflection type must be marked.");
       }
@@ -506,11 +511,7 @@ export class WelcomeComponent implements OnInit {
 
   ngOnInit(): void {
 
-
-
-    this.user.currentName.subscribe(username => this.username = username)
-
-
+    this.user.currentName.subscribe(username => this.username = username) //get username
   }
 
 }

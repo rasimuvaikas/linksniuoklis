@@ -50,6 +50,7 @@ export class DashboardComponent implements OnInit {
   //inflections in the order from most useful (proposed first) to least
   inflections: string[] = ["nominative", "genitive", "accusative", "locative", "instrumental", "dative"];
 
+  //declensions in the order from most useful (proposed first) to least
   declensions: string[] = ["1mascIAS", "2femIA", "1mascIS", "2femĖ", "3masc", "3fem", "4masc", "5masc", "5fem"];
 
 
@@ -133,6 +134,9 @@ export class DashboardComponent implements OnInit {
     ]
   }
 
+  /**
+   * Alert box
+   */
   openDialog(): void {
     const dialogRef = this.dialogue.open(AlertComponent, {
       width: '250px',
@@ -141,11 +145,18 @@ export class DashboardComponent implements OnInit {
   }
 
 
+  /**
+   * Recap bottom sheet
+   */
   openBottomSheet(): void {
     this._bottomSheet.open(RecapComponent);
   }
 
 
+  /**
+   * Find the equivalent 'display' option for a declension code
+   * @param decl declension code
+   */
   getDisplay(decl: string) {
     switch (decl) {
       case "1mascIAS": {
@@ -178,6 +189,10 @@ export class DashboardComponent implements OnInit {
     }
   }
 
+  /**
+   * Find the equivalent declension number for a declension code
+   * @param decl declension code
+   */
   getDecl(decl: string) {
     switch (decl) {
       case "1mascIAS": {
@@ -327,7 +342,7 @@ export class DashboardComponent implements OnInit {
     }
 
 
-    //determine which singular inflection should be proposed next 
+    //determine which masculine declension should be proposed next 
     let dSg: boolean = false;
 
     for (let i of this.declensions) {
@@ -342,7 +357,7 @@ export class DashboardComponent implements OnInit {
       }
     }
 
-    //determine which plural inflection should be proposed next 
+    //determine which feminine declension should be proposed next 
     let dPl: boolean = false;
     for (let i of this.declensions) {
       for (let j of this.declensionsFem) {
@@ -361,8 +376,8 @@ export class DashboardComponent implements OnInit {
 
   /**
  * Mark inflections selected as novel to the user
- * @param infl 
- * @param num 
+ * @param infl inflection
+ * @param num number
  */
   onChangeNov(infl: string, num: string) {
 
@@ -390,13 +405,13 @@ export class DashboardComponent implements OnInit {
       }
     }
 
-    console.log(this.inflectionsSg);
-    console.log(this.inflectionsPl);
-
   }
 
 
 
+  /**
+   * Check if the user has made any changes to the dashboard, change learner model if so, move to the exercise component
+   */
   onSubmit() {
     let decls: string[] = [];
 
@@ -472,24 +487,21 @@ export class DashboardComponent implements OnInit {
 
 
 
-    this.user.currentName.subscribe(username => this.username = username);
-    this.user.currenttime.subscribe(t => this.time = t);
-    this.model.lvls.subscribe(lvls => this.levels = lvls);
+    this.user.currentName.subscribe(username => this.username = username); //get username
+    this.user.currenttime.subscribe(t => this.time = t); //get the time of the current session
+    this.model.lvls.subscribe(lvls => this.levels = lvls); //get learner model
 
 
+    //get user's results from previous sessions
     this.con.getScore(this.username, this.time.toString()).subscribe(data => {
       console.log(JSON.parse(data)); let response = JSON.parse(data);
       this.decls = response['declension']; this.infls = response['inflections'];
       if (this.decls == null && this.infls == null) {
-        console.log("taip, null");
         this.empty = true;
       }
     });
 
-
-
-    console.log("leveliai: ", this.levels);
-
+    //mark all the checkboxes that are part of the learner model
     for (let i of this.levels) {
       if (i.level == "novel") {
         if (i.number == "singular") {
@@ -553,12 +565,8 @@ export class DashboardComponent implements OnInit {
       }
     }
 
+    //propose new inflection & declensions to practice
     this.propose();
-
-
-
-
-
   }
 
 }

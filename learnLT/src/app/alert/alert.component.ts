@@ -6,6 +6,10 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   templateUrl: './alert.component.html',
   styleUrls: ['./alert.component.css']
 })
+
+/**
+ * Dialogue Box component, used as an alert box in case the user has not fulfilled certain requirements upon information submission
+ */
 export class AlertComponent implements OnInit {
 
   constructor(private dialogRef: MatDialogRef<AlertComponent>,

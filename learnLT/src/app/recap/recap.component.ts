@@ -6,6 +6,10 @@ import { MatBottomSheetRef } from '@angular/material/bottom-sheet';
   templateUrl: './recap.component.html',
   styleUrls: ['./recap.component.css']
 })
+
+/**
+ * A bottom sheet element that contains useful grammar information
+ */
 export class RecapComponent implements OnInit {
 
   decl:boolean;

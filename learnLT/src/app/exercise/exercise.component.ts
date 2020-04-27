@@ -27,10 +27,16 @@ export class ExerciseComponent implements OnInit {
     private _bottomSheet: MatBottomSheet) { }
 
 
+  /**
+   * Display bottom sheet with recap info
+   */
   openBottomSheet(): void {
     this._bottomSheet.open(RecapComponent);
   }
 
+  /**
+   * Practise declension
+   */
   onSubmitDecl() {
 
     this.model.sendModel(this.currentModel);
@@ -38,6 +44,9 @@ export class ExerciseComponent implements OnInit {
 
   }
 
+  /**
+ * Practise accentuation
+ */
   onSubmitStress() {
 
     this.model.sendModel(this.currentModel);
@@ -45,6 +54,9 @@ export class ExerciseComponent implements OnInit {
 
   }
 
+  /**
+ * Practise both declension and accentuation
+ */
   onSubmitBoth() {
 
     this.model.sendModel(this.currentModel);
