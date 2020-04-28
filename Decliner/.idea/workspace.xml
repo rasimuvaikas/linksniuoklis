@@ -3,7 +3,28 @@
   <component name="ChangeListManager">
     <list default="true" id="7b67ce0f-6c65-4b18-830a-95ceb687dbd7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Declension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Declension.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/decl/accusativeDeclPl.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/decl/accusativeDeclPl.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/decl/accusativeDeclSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/decl/accusativeDeclSg.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/decl/dativeDeclPl.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/decl/dativeDeclPl.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/decl/dativeDeclSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/decl/dativeDeclSg.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/decl/genitiveDeclPl.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/decl/genitiveDeclPl.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/decl/genitiveDeclSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/decl/genitiveDeclSg.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/decl/instrumentalDeclSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/decl/instrumentalDeclSg.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/decl/locativeDeclSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/decl/locativeDeclSg.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/decl/nominativeDeclPl.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/decl/nominativeDeclPl.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/decl/nominativeDeclSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/decl/nominativeDeclSg.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Data.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Declension.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Declension.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/decl/accusativeDeclPl.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/decl/accusativeDeclPl.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/decl/accusativeDeclSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/decl/accusativeDeclSg.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/decl/dativeDeclPl.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/decl/dativeDeclPl.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/decl/dativeDeclSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/decl/dativeDeclSg.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/decl/genitiveDeclPl.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/decl/genitiveDeclPl.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/decl/genitiveDeclSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/decl/genitiveDeclSg.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/decl/instrumentalDeclSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/decl/instrumentalDeclSg.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/decl/locativeDeclSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/decl/locativeDeclSg.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/decl/nominativeDeclPl.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/decl/nominativeDeclPl.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/decl/nominativeDeclSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/decl/nominativeDeclSg.tsv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +83,7 @@
       <recent name="C:\Users\zivil\IdeaProjects\Decliner\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Stress">
+  <component name="RunManager" selected="Application.Data">
     <configuration name="Access" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Access" />
       <module name="Decliner" />
@@ -93,9 +114,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Stress" />
         <item itemvalue="Application.Data" />
         <item itemvalue="Application.Declension" />
+        <item itemvalue="Application.Stress" />
         <item itemvalue="Application.Access" />
       </list>
     </recent_temporary>
@@ -148,7 +169,7 @@
       <workItem from="1587848197228" duration="2573000" />
       <workItem from="1587892621263" duration="4930000" />
       <workItem from="1588065417665" duration="2233000" />
-      <workItem from="1588091372819" duration="1192000" />
+      <workItem from="1588091372819" duration="3191000" />
     </task>
     <servers />
   </component>
@@ -171,22 +192,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="501" y="157" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585169540376" />
-    <state width="1493" height="195" key="GridCell.Tab.0.bottom" timestamp="1587898189859">
+    <state width="1493" height="195" key="GridCell.Tab.0.bottom" timestamp="1588103052818">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587898189859" />
-    <state width="1493" height="195" key="GridCell.Tab.0.center" timestamp="1587898189858">
+    <state width="1493" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588103052818" />
+    <state width="1493" height="195" key="GridCell.Tab.0.center" timestamp="1588103052818">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587898189858" />
-    <state width="1493" height="195" key="GridCell.Tab.0.left" timestamp="1587898189858">
+    <state width="1493" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588103052818" />
+    <state width="1493" height="195" key="GridCell.Tab.0.left" timestamp="1588103052818">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587898189858" />
-    <state width="1493" height="195" key="GridCell.Tab.0.right" timestamp="1587898189858">
+    <state width="1493" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588103052818" />
+    <state width="1493" height="195" key="GridCell.Tab.0.right" timestamp="1588103052818">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587898189858" />
+    <state width="1493" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588103052818" />
     <state x="299" y="70" key="Maven.ArtifactSearchDialog" timestamp="1585170845296">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

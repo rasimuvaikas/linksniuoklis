@@ -51,7 +51,7 @@ export class DashboardComponent implements OnInit {
   inflections: string[] = ["nominative", "genitive", "accusative", "locative", "instrumental", "dative"];
 
   //declensions in the order from most useful (proposed first) to least
-  declensions: string[] = ["1mascIAS", "2femIA", "1mascIS", "2femĖ", "3masc", "3fem", "4masc", "5masc", "5fem"];
+  declensions: string[] = ["1mascIAS", "2femIA", "1mascIS", "2femĖ", "3masc", "3fem", "4masc", "5masc", "5fem", "exception"];
 
 
   inflectionsTempSg: { number: string; infl: string; checked: boolean; }[];
@@ -124,7 +124,8 @@ export class DashboardComponent implements OnInit {
     { display: "-is, -ys", declension: "1mascIS", decl: "1st", checked: false },
     { display: "-is", declension: "3masc", decl: "3rd", checked: false },
     { display: "-(i)us", declension: "4masc", decl: "4th", checked: false },
-    { display: "-uo", declension: "5masc", decl: "5th", checked: false }
+    { display: "-uo", declension: "5masc", decl: "5th", checked: false },
+    { display: "exceptions", declension: "exception", decl: "", checked: false }
     ]
 
     this.declensionsFem = [{ display: "-(i)a", declension: "2femIA", decl: "2nd", checked: false },
@@ -186,6 +187,9 @@ export class DashboardComponent implements OnInit {
       case "5fem": {
         return "sesuo, duktė"
       }
+      case "exception": {
+        return "exceptions"
+      }
     }
   }
 
@@ -221,6 +225,9 @@ export class DashboardComponent implements OnInit {
       }
       case "5fem": {
         return "5th"
+      }
+      case "exception": {
+        return ""
       }
     }
   }

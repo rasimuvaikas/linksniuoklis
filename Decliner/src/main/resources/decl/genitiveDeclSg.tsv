@@ -70,7 +70,7 @@ Gál nóri išgertì arbãtos?	Gal nori išgerti arbatos?	Would you like to 
 Íeškau sàvo telefòno.	Ieškau savo telefono.	I am looking for my phone.	telefono	2	telefonas	Ncmsgn-	1mascIAS
 Jìs ỹra žõdžio žmogùs, tàd gãli juõ pasitikė́ti.	Jis yra žodžio žmogus, tad gali juo pasitikėti.	He's a man of his word, so you can count on him.	žodžio	2	žodis	Ncmsgn-	1mascIS
 Niẽkas niekadà nėrà mãtęs Diẽvo.	Niekas niekada nėra matęs Dievo.	No one has ever seen God.	Dievo	4	dievas	Ncmsgn-	1mascIAS
-Pasáulis prasidė́jo bè žmogaũs ir̃ baĩgsis bè jõ.	Pasaulis prasidėjo be žmogaus ir baigsis be jo.	The world began without man and it shall end without him.	žmogaus	3	žmogus	Ncmsgn-	žmogus
+Pasáulis prasidė́jo bè žmogaũs ir̃ baĩgsis bè jõ.	Pasaulis prasidėjo be žmogaus ir baigsis be jo.	The world began without man and it shall end without him.	žmogaus	3	žmogus	Ncmsgn-	exception
 Sustók priẽ mokỹklos.	Sustok prie mokyklos.	Stop next to the school.	mokyklos	2	mokykla	Ncfsgn-	2femIA
 Tù taĩp greĩtai kalbì kàd àš nesuprantù nė̃ žõdžio.	Tu taip greitai kalbi kad aš nesuprantu nė žodžio.	You talk so fast I can't understand a word you say.	žodžio	8	žodis	Ncmsgn-	1mascIS
 Dvì šeĩmos gyvẽna tamè namè.	Dvi šeimos gyvena tame name.	Two families live in that house.	šeimos	1	šeima	Ncfsgn-	2femIA
@@ -159,12 +159,12 @@ Rãktas gùli añt stãlo.	Raktas guli ant stalo.	The key is on the table.	s
 Tù esì pìlnas ener̃gijos.	Tu esi pilnas energijos.	You are full of energy.	energijos	3	energija	Ncfsgn-	2femIA
 Tù vìs dár esì pìlnas ener̃gijos.	Tu vis dar esi pilnas energijos.	You are still full of energy.	energijos	5	energija	Ncfsgn-	2femIA
 Ver̃ta kovóti ùž ateitiẽs kar̃tas.	Verta kovoti už ateities kartas.	It is worth fighting for future generations.	ateities	3	ateitis	Ncfsgn-	3fem
-Alisà nemãtė tõ šuñs.	Alisa nematė to šuns.	Alice didn't see the dog.	šuns	3	šuo	Ncmsgn-	šuo
+Alisà nemãtė tõ šuñs.	Alisa nematė to šuns.	Alice didn't see the dog.	šuns	3	šuo	Ncmsgn-	exception
 Ar̃ tàvo automobìlis stõvi priẽ jõs nãmo?	Ar tavo automobilis stovi prie jos namo?	Is your car next to her house?	namo	6	namas	Ncmsgn-	1mascIAS
 Àš klausaũ rãdijo.	Aš klausau radijo.	I'm listening to the radio.	radijo	2	radijas	Ncmsgn-	1mascIAS
-Àš nóriu šuñs.	Aš noriu šuns.	I want a dog.	šuns	2	šuo	Ncmsgn-	šuo
+Àš nóriu šuñs.	Aš noriu šuns.	I want a dog.	šuns	2	šuo	Ncmsgn-	exception
 Àš turiù kaĩ ką̃ pasiim̃ti ìš automobìlio.	Aš turiu kai ką pasiimti iš automobilio.	I need to get something out of the car.	iš	5	automobilis	Ncmsgn-	1mascIS
-Àš visadà norė́jau šuñs.	Aš visada norėjau šuns.	I always wanted a dog.	šuns	3	šuo	Ncmsgn-	šuo
+Àš visadà norė́jau šuñs.	Aš visada norėjau šuns.	I always wanted a dog.	šuns	3	šuo	Ncmsgn-	exception
 Dė̃l šiõs priežastiẽs àš negaliù sù tavimì sutiktì.	Dėl šios priežasties aš negaliu su tavimi sutikti.	For this reason I cannot agree with you.	priežasties	2	priežastis	Ncfsgn-	3fem
 Džòrdžas ỹra mū́sų komándos kapitõnas.	Džordžas yra mūsų komandos kapitonas.	George is the captain of our team.	komandos	3	komanda	Ncfsgn-	2femIA
 Gyvẽnimas bè tavę̃s netùri prasmė̃s.	Gyvenimas be tavęs neturi prasmės.	Life without you makes no sense.	prasmės	4	prasmė	Ncfsgn-	2femĖ
@@ -185,7 +185,7 @@ Nėrà daũg viltiẽs kàd jiẽ ỹra gývi.	Nėra daug vilties kad jie yr
 Nesijáudink dė̃l tókio dalỹko.	Nesijaudink dėl tokio dalyko.	Don't worry about such a thing.	dalyko	3	dalykas	Ncmsgn-	1mascIAS
 Neturė́tum sakýti tókio dalỹko kaĩ vaikaĩ ỹra šalià.	Neturėtum sakyti tokio dalyko kai vaikai yra šalia.	You shouldn't say that kind of thing when children are around.	dalyko	3	dalykas	Ncmsgn-	1mascIAS
 Neturė́tum sakýti tókio dalỹko priẽ vaikų̃.	Neturėtum sakyti tokio dalyko prie vaikų.	You shouldn't say that kind of thing when children are around.	dalyko	3	dalykas	Ncmsgn-	1mascIAS
-Neturiù šuñs.	Neturiu šuns.	I don't have a dog.	šuns	1	šuo	Ncmsgn-	šuo
+Neturiù šuñs.	Neturiu šuns.	I don't have a dog.	šuns	1	šuo	Ncmsgn-	exception
 Niẽkas nenóri ieškóti màno automobìlio.	Niekas nenori ieškoti mano automobilio.	Nobody wants to look for my car.	automobilio	4	automobilis	Ncmsgn-	1mascIS
 Nórite automobìlio?	Norite automobilio?	Do you want a car?	automobilio	1	automobilis	Ncmsgn-	1mascIS
 Taĩ ỹra tõs pačiõs spalvõs kaĩp ir̃ màno.	Tai yra tos pačios spalvos kaip ir mano.	That is the same color as mine.	pačios	3	spalva	Ncfsgn-	2femIA
@@ -259,7 +259,7 @@ Kàs sė́di kitamè stãlo galè?	Kas sėdi kitame stalo gale?	Who is sitti
 Kàs tàs výras kurìs sė́di kitamè stãlo galè?	Kas tas vyras kuris sėdi kitame stalo gale?	Who is the man sitting at the other end of the table?	stalo	6	stalas	Ncmsgn-	1mascIAS
 Màno tė́vas nemė́gsta fùtbolo.	Mano tėvas nemėgsta futbolo.	My father doesn't like soccer.	futbolo	3	futbolas	Ncmsgn-	1mascIAS
 Màno tė́vas nemė́gsta mùzikos.	Mano tėvas nemėgsta muzikos.	My father doesn't like music.	muzikos	3	muzika	Ncfsgn-	2femIA
-Màno tė́vas sugrį̃š kìto mė́nesio pradžiojè.	Mano tėvas sugrįš kito mėnesio pradžioje.	My father will be back at the beginning of next month.	mėnesio	4	mėnuo	Ncmsgn-	mėnuo
+Màno tė́vas sugrį̃š kìto mė́nesio pradžiojè.	Mano tėvas sugrįš kito mėnesio pradžioje.	My father will be back at the beginning of next month.	mėnesio	4	mėnuo	Ncmsgn-	exception
 Nepamir̃šk atidarýti lángo sàvo kambaryjè.	Nepamiršk atidaryti lango savo kambaryje.	Don't forget to open the window in your room.	lango	2	langas	Ncmsgn-	1mascIAS
 Nėrà prasmė̃s prašýti manę̃s pinigų̃.	Nėra prasmės prašyti manęs pinigų.	It's no use asking me for money.	prasmės	1	prasmė	Ncfsgn-	2femĖ
 Niẽkas nežìno atsãkymo.	Niekas nežino atsakymo.	No one knows the answer.	atsakymo	2	atsakymas	Ncmsgn-	1mascIAS
@@ -511,7 +511,7 @@ Àš turiù gyvýbės draudìmą.	Aš turiu gyvybės draudimą.	I have life 
 Jì bañdo numestì svõrio.	Ji bando numesti svorio.	She is trying to lose weight.	svorio	3	svoris	Ncmsgn-	1mascIS
 Jiẽ negaũs galimýbės.	Jie negaus galimybės.	They won't get the chance.	galimybės	2	galimybė	Ncfsgn-	2femĖ
 Jiẽ negaũs šánso.	Jie negaus šanso.	They won't get the chance.	šanso	2	šansas	Ncmsgn-	1mascIAS
-Jì išsigañdo šuñs.	Ji išsigando šuns.	She was afraid of the dog.	šuns	2	šuo	Ncmsgn-	šuo
+Jì išsigañdo šuñs.	Ji išsigando šuns.	She was afraid of the dog.	šuns	2	šuo	Ncmsgn-	exception
 Jì labaĩ nóri numestì svõrio.	Ji labai nori numesti svorio.	She really wants to lose weight.	svorio	4	svoris	Ncmsgn-	1mascIS
 Jìs iššóko ìš lóvos.	Jis iššoko iš lovos.	He jumped out of bed.	lovos	3	lova	Ncfsgn-	2femIA
 Jìs ỹra íeškomas polìcijos.	Jis yra ieškomas policijos.	He's wanted by the police.	policijos	3	policija	Ncfsgn-	2femIA
@@ -650,7 +650,7 @@ Jì turė́jo móters gálvą, liū̃to kū́ną, paũkščio sparnùs ir̃
 Jì turė́jo móters gálvą, liū̃to kū́ną, paũkščio sparnùs ir̃ gyvãtės úodegą.	Ji turėjo moters galvą, liūto kūną, paukščio sparnus ir gyvatės uodegą.	It had the head of a woman, the body of a lion, the wings of a bird, and the tail of a serpent.	liūto	5	liūtas	Ncmsgn-	1mascIAS
 Jì turė́jo móters gálvą, liū̃to kū́ną, paũkščio sparnùs ir̃ gyvãtės úodegą.	Ji turėjo moters galvą, liūto kūną, paukščio sparnus ir gyvatės uodegą.	It had the head of a woman, the body of a lion, the wings of a bird, and the tail of a serpent.	paukščio	8	paukštis	Ncmsgn-	1mascIS
 Jì turė́jo móters gálvą, liū̃to kū́ną, paũkščio sparnùs ir̃ gyvãtės úodegą.	Ji turėjo moters galvą, liūto kūną, paukščio sparnus ir gyvatės uodegą.	It had the head of a woman, the body of a lion, the wings of a bird, and the tail of a serpent.	gyvatės	11	gyvatė	Ncfsgn-	2femĖ
-Kančià ỹra žmogaũs likìmas.	Kančia yra žmogaus likimas.	It is man's destiny to suffer.	žmogaus	2	žmogus	Ncmsgn-	žmogus
+Kančià ỹra žmogaũs likìmas.	Kančia yra žmogaus likimas.	It is man's destiny to suffer.	žmogaus	2	žmogus	Ncmsgn-	exception
 Kárvės ỹra fer̃moje.	Karvės yra fermoje.	The cows are on the farm.	Karvės	0	karvė	Ncfsgn-	2femĖ
 Kažkàs ỹra nè taĩp sù šià skalbìmo mašinà.	Kažkas yra ne taip su šia skalbimo mašina.	Something is wrong with this washing machine.	skalbimo	6	skalbimas	Ncmsgn-	1mascIAS
 Kókio nóri sumuštìnio?	Kokio nori sumuštinio?	What kind of sandwich do you want?	sumuštinio	2	sumuštinis	Ncmsgn-	1mascIS
@@ -868,7 +868,7 @@ Tòmas pakė́lė sàvo gálvą vir̃š palángės.	Tomas pakėlė savo galv
 Tù esì sàvo likìmo kálvis.	Tu esi savo likimo kalvis.	You are the master of your own destiny.	likimo	3	likimas	Ncmsgn-	1mascIAS
 Vìsos jū́sų kãtės ỹra pìlkos.	Visos jūsų katės yra pilkos.	All of your cats are grey.	katės	2	katė	Ncfsgn-	2femĖ
 Vìsos kãtės ỹra pìlkos tamsojè.	Visos katės yra pilkos tamsoje.	All cats are grey in the dark.	katės	1	katė	Ncfsgn-	2femĖ
-Žmogaũs širdìs ỹra maždaũg jõ kùmščio dỹdžio.	Žmogaus širdis yra maždaug jo kumščio dydžio.	A man's heart is about as large as his fist.	Žmogaus	0	žmogus	Ncmsgn-	žmogus
+Žmogaũs širdìs ỹra maždaũg jõ kùmščio dỹdžio.	Žmogaus širdis yra maždaug jo kumščio dydžio.	A man's heart is about as large as his fist.	Žmogaus	0	žmogus	Ncmsgn-	exception
 Žmogaũs širdìs ỹra maždaũg jõ kùmščio dỹdžio.	Žmogaus širdis yra maždaug jo kumščio dydžio.	A man's heart is about as large as his fist.	kumščio	5	kumštis	Ncmsgn-	1mascIS
 Žmogaũs širdìs ỹra maždaũg jõ kùmščio dỹdžio.	Žmogaus širdis yra maždaug jo kumščio dydžio.	A man's heart is about as large as his fist.	dydžio	6	dydis	Ncmsgn-	1mascIS
 Añt geltónos kėdė̃s miẽga vienà júoda katė̃.	Ant geltonos kėdės miega viena juoda katė.	There's one black cat sleeping on the yellow chair.	kėdės	2	kėdė	Ncfsgn-	2femĖ
@@ -907,7 +907,7 @@ Tiktaĩ lẽdkalnio viršū́nė mãtosi vir̃š vandeñs.	Tiktai ledkalnio v
 Tòmas netùri prieštarãvimų dė̃l tàvo plãno.	Tomas neturi prieštaravimų dėl tavo plano.	Tom has no objection to your plan.	plano	5	planas	Ncmsgn-	1mascIAS
 Tòmas paslýdo añt lẽdo ir̃ parkrìto.	Tomas paslydo ant ledo ir parkrito.	Tom slipped on the ice and fell down.	ledo	3	ledas	Ncmsgn-	1mascIAS
 Tù laikýsies sàvo žõdžio, ar̃ nè?	Tu laikysies savo žodžio, ar ne?	You will keep your word, won't you?	žodžio	3	žodis	Ncmsgn-	1mascIS
-Žmogaũs kū́nas mìršta, bèt jõ síela ỹra nemirtìnga.	Žmogaus kūnas miršta, bet jo siela yra nemirtinga.	A man's body dies, but his soul is immortal.	Žmogaus	0	žmogus	Ncmsgn-	žmogus
+Žmogaũs kū́nas mìršta, bèt jõ síela ỹra nemirtìnga.	Žmogaus kūnas miršta, bet jo siela yra nemirtinga.	A man's body dies, but his soul is immortal.	Žmogaus	0	žmogus	Ncmsgn-	exception
 Ãfrika ỹra žmonìjos lopšỹs.	Afrika yra žmonijos lopšys.	Africa is the cradle of humanity.	žmonijos	2	žmonija	Ncfsgn-	2femIA
 Ámsterdamas ỹra Olándijos sóstinė.	Amsterdamas yra Olandijos sostinė.	The capital city of the Netherlands is Amsterdam.	Olandijos	2	Olandija	Npfsgng	2femIA
 Ar̃ Jū̃s mókate rašýti spáusdinimo mašinėlè?	Ar Jūs mokate rašyti spausdinimo mašinėle?	Are you able to type?	spausdinimo	4	spausdinimas	Ncmsgn-	1mascIAS
@@ -966,7 +966,7 @@ Kãtės neė́da banãnų.	Katės neėda bananų.	Cats don't eat bananas.	Kat�
 Kurį̃ láiką vénkite kẽpto maĩsto.	Kurį laiką venkite kepto maisto.	Avoid fried foods for a while.	maisto	4	maistas	Ncmsgn-	1mascIAS
 Laukè labaĩ šálta. Péršalsi bè pálto.	Lauke labai šalta. Peršalsi be palto.	It is very cold outside. You'll catch a cold without a coat.	palto	6	paltas	Ncmsgn-	1mascIAS
 Mán reikė́tų vìsos amžinýbės tám kàd vìską paáiškinčiau.	Man reikėtų visos amžinybės tam kad viską paaiškinčiau.	I'd need a whole eternity to explain everything.	amžinybės	3	amžinybė	Ncfsgn-	2femĖ
-Nepaléiskite tõ šuñs.	Nepaleiskite to šuns.	Don't release that dog.	šuns	2	šuo	Ncmsgn-	šuo
+Nepaléiskite tõ šuñs.	Nepaleiskite to šuns.	Don't release that dog.	šuns	2	šuo	Ncmsgn-	exception
 Niekadà nelýgink sàvo žmonõs sù kità móterimi.	Niekada nelygink savo žmonos su kita moterimi.	Never compare your wife to another woman.	žmonos	3	žmona	Ncfsgn-	2femIA
 Paim̃k šį̃ gãbalą kreidõs ir̃ rašýk añt lentõs.	Paimk šį gabalą kreidos ir rašyk ant lentos.	Take this piece of chalk and write on the blackboard.	kreidos	3	kreida	Ncfsgn-	2femIA
 Paim̃k šį̃ gãbalą kreidõs ir̃ rašýk añt lentõs.	Paimk šį gabalą kreidos ir rašyk ant lentos.	Take this piece of chalk and write on the blackboard.	lentos	7	lenta	Ncfsgn-	2femIA

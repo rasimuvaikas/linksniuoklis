@@ -8,7 +8,7 @@ Jìs tùri šíek tíek pinigų̃.	Jis turi šiek tiek pinigų.	He has a lit
 Vìsiškai neturiù pinigų̃.	Visiškai neturiu pinigų.	I don't have any money.	pinigų	2	pinigas	Ncmpgn-	1mascIAS
 Àš turiù pakañkamai pinigų̃.	Aš turiu pakankamai pinigų.	I have enough money.	pinigų	3	pinigas	Ncmpgn-	1mascIAS
 Àš nenorė́jau pinigų̃.	Aš nenorėjau pinigų.	I didn't want the money.	pinigų	2	pinigas	Ncmpgn-	1mascIAS
-Jì negãli suprastì kitų̃ žmonių̃.	Ji negali suprasti kitų žmonių.	She can't understand other people.	žmonių	4	žmogus	Ncmpgn-	žmogus
+Jì negãli suprastì kitų̃ žmonių̃.	Ji negali suprasti kitų žmonių.	She can't understand other people.	žmonių	4	žmogus	Ncmpgn-	exception
 Ar̃ kàs nórs žìno kíek dabar̃ valandų̃?	Ar kas nors žino kiek dabar valandų?	Does anybody know what hour it is?	dabar	5	valanda	Ncfpgn-	2femIA
 Ar̃ norė́tum turė́ti daũg pinigų̃?	Ar norėtum turėti daug pinigų?	Would you like to have lots of money?	pinigų	4	pinigas	Ncmpgn-	1mascIAS
 Àš tą̃ daraũ bè jokių̃ problèmų.	Aš tą darau be jokių problemų.	I do it without any problems.	problemų	5	problema	Ncfpgn-	2femIA
@@ -24,7 +24,7 @@ Jìs mìrė priẽš dẽšimt mẽtų.	Jis mirė prieš dešimt metų.	He die
 Jì tùri dẽšimt vaikų̃.	Ji turi dešimt vaikų.	She has ten children.	vaikų	3	vaikas	Ncmpgn-	1mascIAS
 Prãšom ateitì dár kar̃tą põ trijų̃ dienų̃.	Prašom ateiti dar kartą po trijų dienų.	Please come again in three days time.	dienų	6	diena	Ncfpgn-	2femIA
 Ar̃ tùrite kláusimų?	Ar turite klausimų?	Do you have any questions?	klausimų	2	klausimas	Ncmpgn-	1mascIAS
-Kíek žmonių̃ tù geraĩ pažį́sti?	Kiek žmonių tu gerai pažįsti?	How many people do you know well?	žmonių	1	žmogus	Ncmpgn-	žmogus
+Kíek žmonių̃ tù geraĩ pažį́sti?	Kiek žmonių tu gerai pažįsti?	How many people do you know well?	žmonių	1	žmogus	Ncmpgn-	exception
 Tùrite kláusimų?	Turite klausimų?	Any questions?	klausimų	1	klausimas	Ncmpgn-	1mascIAS
 Àš čià íeškau draugų̃.	Aš čia ieškau draugų.	I'm searching for friends here.	draugų	3	draugas	Ncmpgn-	1mascIAS
 Àš neturė́jau jokių̃ problèmų.	Aš neturėjau jokių problemų.	I didn't have any problems.	problemų	3	problema	Ncfpgn-	2femIA
@@ -32,8 +32,8 @@ Kur̃ tù gyvenì, jéigu tù netùri namų̃?	Kur tu gyveni, jeigu tu netu
 Ar̃ Tòmas pasãkė kám jám reikė́jo pinigų̃?	Ar Tomas pasakė kam jam reikėjo pinigų?	Did Tom say what he needed the money for?	pinigų	6	pinigas	Ncmpgn-	1mascIAS
 Jìs netùri nė̃ žmonõs, nė̃ vaikų̃, nė̃ draugų̃.	Jis neturi nė žmonos, nė vaikų, nė draugų.	He has no wife, no children and no friends.	vaikų	6	vaikas	Ncmpgn-	1mascIAS
 Jìs netùri nė̃ žmonõs, nė̃ vaikų̃, nė̃ draugų̃.	Jis neturi nė žmonos, nė vaikų, nė draugų.	He has no wife, no children and no friends.	draugų	9	draugas	Ncmpgn-	1mascIAS
-Nedaũg žmonių̃ taĩp galvója.	Nedaug žmonių taip galvoja.	Few people think so.	žmonių	1	žmogus	Ncmpgn-	žmogus
-Šiamè namè gyvẽna daũg žmonių̃.	Šiame name gyvena daug žmonių.	There are many people living in this house.	žmonių	4	žmogus	Ncmpgn-	žmogus
+Nedaũg žmonių̃ taĩp galvója.	Nedaug žmonių taip galvoja.	Few people think so.	žmonių	1	žmogus	Ncmpgn-	exception
+Šiamè namè gyvẽna daũg žmonių̃.	Šiame name gyvena daug žmonių.	There are many people living in this house.	žmonių	4	žmogus	Ncmpgn-	exception
 Daugumà jõ draugų̃ ỹra mergáitės.	Dauguma jo draugų yra mergaitės.	Most of his friends are girls.	draugų	2	draugas	Ncmpgn-	1mascIAS
 Daugumà jõ draugų̃ ỹra mergìnos.	Dauguma jo draugų yra merginos.	Most of his friends are girls.	draugų	2	draugas	Ncmpgn-	1mascIAS
 Jì bė́ga ìš namų̃.	Ji bėga iš namų.	She's running from home.	namų	3	namai	Ncmpgn-	1mascIAS
@@ -61,7 +61,7 @@ Kodė̃l tù nóri mókytis ánglų kalbõs?	Kodėl tu nori mokytis anglų 
 Põ kelių̃ dienų̃, lėktùvas pagaliaũ išvỹko.	Po kelių dienų, lėktuvas pagaliau išvyko.	After several delays, the plane finally left.	kelių	1	kelis	Ncmpgn-	1mascIS
 Põ kelių̃ dienų̃, lėktùvas pagaliaũ išvỹko.	Po kelių dienų, lėktuvas pagaliau išvyko.	After several delays, the plane finally left.	dienų	2	diena	Ncfpgn-	2femIA
 Tikiúosi kàd galė́siu vairúoti tàvo automobìlį bè jokių̃ problèmų.	Tikiuosi kad galėsiu vairuoti tavo automobilį be jokių problemų.	I hope I can drive your car without any troubles.	problemų	8	problema	Ncfpgn-	2femIA
-Vãkar mū́sų namè bùvo kẽletas žmonių̃.	Vakar mūsų name buvo keletas žmonių.	There were some people at our house yesterday.	žmonių	5	žmogus	Ncmpgn-	žmogus
+Vãkar mū́sų namè bùvo kẽletas žmonių̃.	Vakar mūsų name buvo keletas žmonių.	There were some people at our house yesterday.	žmonių	5	žmogus	Ncmpgn-	exception
 Ar̃ jìs tùri daũg knỹgų?	Ar jis turi daug knygų?	Does he have many books?	knygų	4	knyga	Ncfpgn-	2femIA
 Ar̃ jū̃s tikraĩ netùrite namų̃?	Ar jūs tikrai neturite namų?	Do you really have no home?	namų	4	namai	Ncmpgn-	1mascIAS
 Bevéik nėrà knỹgų.	Beveik nėra knygų.	There are almost no books.	knygų	2	knyga	Ncfpgn-	2femIA
@@ -81,7 +81,7 @@ Jì gãvo nuõ tė́vo põrą bãtų.	Ji gavo nuo tėvo porą batų.	She go
 Jì pamir̃šo sustotì priẽ màno namų̃.	Ji pamiršo sustoti prie mano namų.	She forgot to stop next to my house.	namų	5	namai	Ncmpgn-	1mascIAS
 Jì tãpo mókytoja kaĩ jái bùvo dvìdešimt mẽtų.	Ji tapo mokytoja kai jai buvo dvidešimt metų.	She became a teacher when she was twenty.	metų	7	metai	Ncmpgn-	1mascIAS
 Jì tùri dù tū́kstančius knỹgų.	Ji turi du tūkstančius knygų.	She has two thousand books.	knygų	4	knyga	Ncfpgn-	2femIA
-Kíek žmonių̃ ỹra parduotùvėje?	Kiek žmonių yra parduotuvėje?	How many people are there in the store?	žmonių	1	žmogus	Ncmpgn-	žmogus
+Kíek žmonių̃ ỹra parduotùvėje?	Kiek žmonių yra parduotuvėje?	How many people are there in the store?	žmonių	1	žmogus	Ncmpgn-	exception
 Pinigaĩ negãli nupirktì draugų̃.	Pinigai negali nupirkti draugų.	Money can't buy friends.	draugų	3	draugas	Ncmpgn-	1mascIAS
 Tõs mùzikos ver̃ta klausýtis daũg kar̃tų.	Tos muzikos verta klausytis daug kartų.	That music is worth listening to many times.	kartų	5	kartas	Ncmpgn-	1mascIAS
 Àš geraĩ mokù vókiečių.	Aš gerai moku vokiečių.	I speak German well.	vokiečių	3	vokietis	Ncmpgn-	1mascIS
@@ -97,12 +97,12 @@ Taĩ ỹra gẽra knỹgą, nepáisant kelių̃ klaidų̃.	Tai yra gera knygą
 Taĩ ỹra gẽra knỹgą, nepáisant kelių̃ klaidų̃.	Tai yra gera knygą, nepaisant kelių klaidų.	This is a good book except for a few mistakes.	klaidų	7	klaida	Ncfpgn-	2femIA
 Tàs kurìs nedãro klaidų̃, nedãro niẽko.	Tas kuris nedaro klaidų, nedaro nieko.	He who makes no mistakes makes nothing.	klaidų	3	klaida	Ncfpgn-	2femIA
 Tòmas netùri jokių̃ príešų.	Tomas neturi jokių priešų.	Tom doesn't have any enemies.	priešų	3	priešas	Ncmpgn-	1mascIAS
-Tū́kstančiai žmonių̃ norė́jo žinóti atsãkymą.	Tūkstančiai žmonių norėjo žinoti atsakymą.	Thousands of people wanted to know the answer.	žmonių	1	žmogus	Ncmpgn-	žmogus
-Àš bijaũ šunų̃.	Aš bijau šunų.	I'm afraid of dogs.	šunų	2	šuo	Ncmpgn-	šuo
+Tū́kstančiai žmonių̃ norė́jo žinóti atsãkymą.	Tūkstančiai žmonių norėjo žinoti atsakymą.	Thousands of people wanted to know the answer.	žmonių	1	žmogus	Ncmpgn-	exception
+Àš bijaũ šunų̃.	Aš bijau šunų.	I'm afraid of dogs.	šunų	2	šuo	Ncmpgn-	exception
 Àš pérskaičiau tą̃ knỹgą kẽletą kar̃tų.	Aš perskaičiau tą knygą keletą kartų.	I have read that book several times.	kartų	5	kartas	Ncmpgn-	1mascIAS
-Bèt ìš kìtos pùsės, daũg žmonių̃ mìršta jaunì.	Bet iš kitos pusės, daug žmonių miršta jauni.	On the other hand a lot of people die young.	žmonių	6	žmogus	Ncmpgn-	žmogus
-Daugumà šunų̃ ỹra gývi.	Dauguma šunų yra gyvi.	Most of the dogs are alive.	šunų	1	šuo	Ncmpgn-	šuo
-Jì tùri daũg šunų̃.	Ji turi daug šunų.	She has many dogs.	šunų	3	šuo	Ncmpgn-	šuo
+Bèt ìš kìtos pùsės, daũg žmonių̃ mìršta jaunì.	Bet iš kitos pusės, daug žmonių miršta jauni.	On the other hand a lot of people die young.	žmonių	6	žmogus	Ncmpgn-	exception
+Daugumà šunų̃ ỹra gývi.	Dauguma šunų yra gyvi.	Most of the dogs are alive.	šunų	1	šuo	Ncmpgn-	exception
+Jì tùri daũg šunų̃.	Ji turi daug šunų.	She has many dogs.	šunų	3	šuo	Ncmpgn-	exception
 Jì tùri per̃ daũg vaikìnų.	Ji turi per daug vaikinų.	She has too many boyfriends.	vaikinų	4	vaikinas	Ncmpgn-	1mascIAS
 Kambarỹs ỹra pìlnas gėlių̃.	Kambarys yra pilnas gėlių.	The room is full of flowers.	gėlių	3	gėlė	Ncfpgn-	2femĖ
 Mẽs turė́tume duotì jái gėlių̃.	Mes turėtume duoti jai gėlių.	We should give her flowers.	gėlių	4	gėlė	Ncfpgn-	2femĖ
@@ -111,7 +111,7 @@ Nėrà prasmė̃s prašýti manę̃s pinigų̃.	Nėra prasmės prašyti manęs
 Tòmas nepasãkė kíek kar̃tų jìs teñ bùvęs.	Tomas nepasakė kiek kartų jis ten buvęs.	Tom didn't say how many times he had been there.	kartų	3	kartas	Ncmpgn-	1mascIAS
 Tòmas tùri daugiaũ pinigų̃, neĩ galė́tų išleistì.	Tomas turi daugiau pinigų, nei galėtų išleisti.	Tom has more money than he can spend.	pinigų	3	pinigas	Ncmpgn-	1mascIAS
 Turiù dẽšimties mẽtų sū́nų.	Turiu dešimties metų sūnų.	I have a ten-year-old boy.	metų	2	metai	Ncmpgn-	1mascIAS
-Víenas ìš šunų̃ ỹra gývas.	Vienas iš šunų yra gyvas.	One of the dogs is alive.	šunų	2	šuo	Ncmpgn-	šuo
+Víenas ìš šunų̃ ỹra gývas.	Vienas iš šunų yra gyvas.	One of the dogs is alive.	šunų	2	šuo	Ncmpgn-	exception
 Ar̃ mokì stovė́ti añt rañkų?	Ar moki stovėti ant rankų?	Can you stand on your hands?	rankų	4	ranka	Ncfpgn-	2femIA
 Àš šiañdien neturiù pamokų̃.	Aš šiandien neturiu pamokų.	I don't have classes today.	pamokų	3	pamoka	Ncfpgn-	2femIA
 Àš turiù daũg svajõnių.	Aš turiu daug svajonių.	I have a lot of dreams.	svajonių	3	svajonė	Ncfpgn-	2femĖ
@@ -132,31 +132,31 @@ Nueitì į̃ stõtį reikė́jo penkių̃ minùčių.	Nueiti į stotį reikė
 Pasáulyje ỹra daugiaũ neĩ keturì tū́kstančiai kalbų̃.	Pasaulyje yra daugiau nei keturi tūkstančiai kalbų.	There are more than 4,000 languages in the world.	kalbų	6	kalba	Ncfpgn-	2femIA
 Pasáulyje ỹra daugiaũ neĩ septynì tū́kstančiai kalbų̃.	Pasaulyje yra daugiau nei septyni tūkstančiai kalbų.	There are more than seven thousand languages in the world.	kalbų	6	kalba	Ncfpgn-	2femIA
 Šių̃ namų̃ virtùvė ỹra labaĩ dìdelė.	Šių namų virtuvė yra labai didelė.	The kitchen of this house is very large.	namų	1	namai	Ncmpgn-	1mascIAS
-Tū́kstančiai žmonių̃ mìršta ìš bãdo.	Tūkstančiai žmonių miršta iš bado.	Thousands of people died of hunger.	žmonių	1	žmogus	Ncmpgn-	žmogus
+Tū́kstančiai žmonių̃ mìršta ìš bãdo.	Tūkstančiai žmonių miršta iš bado.	Thousands of people died of hunger.	žmonių	1	žmogus	Ncmpgn-	exception
 Tùrime mažaĩ galimýbių kalbė́ti ángliškai.	Turime mažai galimybių kalbėti angliškai.	We have little opportunity to use English.	galimybių	2	galimybė	Ncfpgn-	2femĖ
 Ar̃ esì ùžimta sekmãdienį põ pietų̃?	Ar esi užimta sekmadienį po pietų?	Are you busy on Sunday afternoon?	pietų	5	pietūs	Ncmpgn-	
 Àš nemė́gstu siaũbo fìlmų.	Aš nemėgstu siaubo filmų.	I don't like scary movies.	filmų	3	filmas	Ncmpgn-	1mascIAS
 Àš visái negaliù suprastì jõ idė́jų.	Aš visai negaliu suprasti jo idėjų.	I can't understand his ideas at all.	idėjų	5	idėja	Ncfpgn-	2femIA
 Ilgiúosi senų̃ gerų̃ dienų̃.	Ilgiuosi senų gerų dienų.	I miss the good old days.	dienų	3	diena	Ncfpgn-	2femIA
 Màno dañtys ỹra vìsiškai sveikì ir̃ bè jokių̃ problèmų.	Mano dantys yra visiškai sveiki ir be jokių problemų.	My teeth are totally healthy and free of problems.	problemų	8	problema	Ncfpgn-	2femIA
-Nebijók pažintì naujų̃ žmonių̃.	Nebijok pažinti naujų žmonių.	Don't be scared to meet new people.	žmonių	3	žmogus	Ncmpgn-	žmogus
+Nebijók pažintì naujų̃ žmonių̃.	Nebijok pažinti naujų žmonių.	Don't be scared to meet new people.	žmonių	3	žmogus	Ncmpgn-	exception
 Ramiaĩ prieĩk priẽ dùrų.	Ramiai prieik prie durų.	Walk calmly to the door.	durų	3	durys	Ncfpgn-	3fem
 Šì pamokà pasibaĩgs põ dẽšimties minùčių.	Ši pamoka pasibaigs po dešimties minučių.	This class will be over in ten minutes.	minučių	5	minutė	Ncfpgn-	2femĖ
-Teñ bùvo võs peñkiasdešimt žmonių̃.	Ten buvo vos penkiasdešimt žmonių.	There were barely fifty people there.	žmonių	4	žmogus	Ncmpgn-	žmogus
+Teñ bùvo võs peñkiasdešimt žmonių̃.	Ten buvo vos penkiasdešimt žmonių.	There were barely fifty people there.	žmonių	4	žmogus	Ncmpgn-	exception
 Tuõj pàt paruõšk sàvo namų̃ dárbus.	Tuoj pat paruošk savo namų darbus.	Do your homework right away.	savo	3	namai	Ncmpgn-	1mascIAS
 Vieniñtelis dalỹkas kurìs jái rū̃pi ỹra jõs vaikų̃ saugùmas.	Vienintelis dalykas kuris jai rūpi yra jos vaikų saugumas.	Her only care is the safety of her children.	vaikų	7	vaikas	Ncmpgn-	1mascIAS
 Àš turiù abejõnių.	Aš turiu abejonių.	I have doubts.	abejonių	2	abejonė	Ncfpgn-	2femĖ
 Jì netùri brólių.	Ji neturi brolių.	She has no brothers.	brolių	2	brolis	Ncmpgn-	1mascIS
 Jìs atródo, kaĩp graĩkų diẽvas.	Jis atrodo, kaip graikų dievas.	He looks like a Greek god.	graikų	4	graikas	Ncmpgn-	1mascIAS
 Jì tãpo mótina kaĩ jái bùvo penkiólika mẽtų.	Ji tapo motina kai jai buvo penkiolika metų.	She became a mother when she was fifteen years old.	metų	7	metai	Ncmpgn-	1mascIAS
-Labaĩ mažaĩ žmonių̃ pastebė́jo, kàd jõs nebùvo vakarė̃lyje.	Labai mažai žmonių pastebėjo, kad jos nebuvo vakarėlyje.	Few people noticed her absence from the party.	žmonių	2	žmogus	Ncmpgn-	žmogus
+Labaĩ mažaĩ žmonių̃ pastebė́jo, kàd jõs nebùvo vakarė̃lyje.	Labai mažai žmonių pastebėjo, kad jos nebuvo vakarėlyje.	Few people noticed her absence from the party.	žmonių	2	žmogus	Ncmpgn-	exception
 Màno katė̃ išė̃jo ìš namų̃ ir̃ niekadà negrį̃žo.	Mano katė išėjo iš namų ir niekada negrįžo.	My cat left the house and never returned.	namų	4	namai	Ncmpgn-	1mascIAS
-Mèrė bìjo šunų̃.	Merė bijo šunų.	Merry is scared of dogs.	šunų	2	šuo	Ncmpgn-	šuo
-Milijõnas žmonių̃ prarãdo sàvo gyvýbę kãro metù.	Milijonas žmonių prarado savo gyvybę karo metu.	A million people lost their live during the war.	žmonių	1	žmogus	Ncmpgn-	žmogus
-Mū́sų gãtvėje gyvẽna daũg įvairių̃ žmonių̃.	Mūsų gatvėje gyvena daug įvairių žmonių.	Many kinds of people live on our street.	žmonių	5	žmogus	Ncmpgn-	žmogus
+Mèrė bìjo šunų̃.	Merė bijo šunų.	Merry is scared of dogs.	šunų	2	šuo	Ncmpgn-	exception
+Milijõnas žmonių̃ prarãdo sàvo gyvýbę kãro metù.	Milijonas žmonių prarado savo gyvybę karo metu.	A million people lost their live during the war.	žmonių	1	žmogus	Ncmpgn-	exception
+Mū́sų gãtvėje gyvẽna daũg įvairių̃ žmonių̃.	Mūsų gatvėje gyvena daug įvairių žmonių.	Many kinds of people live on our street.	žmonių	5	žmogus	Ncmpgn-	exception
 Paprašýk jõs duotì mùms pinigų̃.	Paprašyk jos duoti mums pinigų.	Ask her to give us some money.	pinigų	4	pinigas	Ncmpgn-	1mascIAS
 Šìs klùbas tùri vir̃š peñkiasdešimt narių̃.	Šis klubas turi virš penkiasdešimt narių.	The club has more than fifty members.	narių	5	narys	Ncmpgn-	1mascIS
-Susiriñko daũg žmonių̃.	Susirinko daug žmonių.	Many people have gathered.	žmonių	2	žmogus	Ncmpgn-	žmogus
+Susiriñko daũg žmonių̃.	Susirinko daug žmonių.	Many people have gathered.	žmonių	2	žmogus	Ncmpgn-	exception
 Ỹra labaĩ mažaĩ tikė́tina kàd jìs tikraĩ ỹra tàs pàts výras kurį̃ tù sutikaĩ priẽš dẽšimt mẽtų.	Yra labai mažai tikėtina kad jis tikrai yra tas pats vyras kurį tu sutikai prieš dešimt metų.	It's very unlikely that he is actually the same man you met ten years ago.	dešimt	15	metai	Ncmpgn-	1mascIAS
 Ar̃ čià ỹra gražių̃ móterų?	Ar čia yra gražių moterų?	Are there beautiful women here?	moterų	4	moteris	Ncfpgn-	3fem
 Ar̃ vãkar jìs mókėsi ánglų kalbõs?	Ar vakar jis mokėsi anglų kalbos?	Did he study English yesterday?	anglų	4	anglas	Ncmpgn-	1mascIAS
@@ -171,13 +171,13 @@ Bevéik visì mokiniaĩ mė́gsta ánglų kal̃bą.	Beveik visi mokiniai mė
 Jiẽ šiañdien suválgė per̃ daũg salõtų.	Jie šiandien suvalgė per daug salotų.	They've eaten too much salad today.	salotų	5	salotos	Ncfpgn-	2femIA
 Kodė̃l tàvo dukrà nemė́gsta saldaĩnių?	Kodėl tavo dukra nemėgsta saldainių?	Why does your daughter dislike candies?	saldainių	4	saldainis	Ncmpgn-	1mascIS
 Màno dukrà norė́tų paválgyti saldaĩnių.	Mano dukra norėtų pavalgyti saldainių.	My daughter would like to eat some candies.	saldainių	4	saldainis	Ncmpgn-	1mascIS
-Pasáulis ỹra pìlnas kvailų̃ žmonių̃.	Pasaulis yra pilnas kvailų žmonių.	The world is full of dumb people.	žmonių	4	žmogus	Ncmpgn-	žmogus
+Pasáulis ỹra pìlnas kvailų̃ žmonių̃.	Pasaulis yra pilnas kvailų žmonių.	The world is full of dumb people.	žmonių	4	žmogus	Ncmpgn-	exception
 Àš išmókau grotì gitarà kaĩ mán bùvo dẽšimt mẽtų.	Aš išmokau groti gitara kai man buvo dešimt metų.	I learned to play guitar when I was ten years old.	metų	8	metai	Ncmpgn-	1mascIAS
 Àš nuspréndžiau nustotì mókytis prancū̃zų kalbõs.	Aš nusprendžiau nustoti mokytis prancūzų kalbos.	I've decided to stop studying French.	prancūzų	4	prancūzas	Ncmpgn-	1mascIAS
 Mãrika ìšvertė màno knỹgą į̃ vókiečių kal̃bą.	Marika išvertė mano knygą į vokiečių kalbą.	Marika translated my book into German.	vokiečių	5	vokietis	Ncmpgn-	1mascIS
 Mẽs niẽkur negalė́jome nusipir̃kti kelių̃ giñklų.	Mes niekur negalėjome nusipirkti kelių ginklų.	We couldn't buy a few guns anywhere.	kelių	4	kelis	Ncmpgn-	1mascIS
 Mẽs niẽkur negalė́jome nusipir̃kti kelių̃ giñklų.	Mes niekur negalėjome nusipirkti kelių ginklų.	We couldn't buy a few guns anywhere.	ginklų	5	ginklas	Ncmpgn-	1mascIAS
-Pasáulyje daũg žmonių̃ ỹra alkanì.	Pasaulyje daug žmonių yra alkani.	Many people in the world are hungry.	žmonių	2	žmogus	Ncmpgn-	žmogus
+Pasáulyje daũg žmonių̃ ỹra alkanì.	Pasaulyje daug žmonių yra alkani.	Many people in the world are hungry.	žmonių	2	žmogus	Ncmpgn-	exception
 Tàvo akiniaĩ nukrìto añt grindų̃.	Tavo akiniai nukrito ant grindų.	Your glasses fell on the floor.	grindų	4	grindys	Ncfpgn-	3fem
 Ar̃ jùms patiñka itãlų kalbà?	Ar jums patinka italų kalba?	Do you like Italian?	italų	3	italas	Ncmpgn-	1mascIAS
 Ar̃ tù žinaĩ kíek jì tùri kačių̃?	Ar tu žinai kiek ji turi kačių?	Do you know how many cats she has?	kačių	6	katė	Ncfpgn-	2femĖ
@@ -189,7 +189,7 @@ Jì neklaũso sàvo tėvų̃.	Ji neklauso savo tėvų.	She doesn't listen to 
 Jìs neklaũso sàvo mókytojų.	Jis neklauso savo mokytojų.	He doesn't listen to his teachers.	mokytojų	3	mokytojas	Ncmpgn-	1mascIAS
 Jìs neklaũso sàvo tėvų̃.	Jis neklauso savo tėvų.	He doesn't listen to his parents.	tėvų	3	tėvai	Ncmpgn-	1mascIAS
 Jìs uždìrba trìs kárt daugiaũ pinigų̃ neĩ àš.	Jis uždirba tris kart daugiau pinigų nei aš.	He makes three times more money than I do.	pinigų	5	pinigas	Ncmpgn-	1mascIAS
-Kẽletas žmonių̃ atė̃jo į̃ pãskaitą.	Keletas žmonių atėjo į paskaitą.	A few people came to the lecture.	žmonių	1	žmogus	Ncmpgn-	žmogus
+Kẽletas žmonių̃ atė̃jo į̃ pãskaitą.	Keletas žmonių atėjo į paskaitą.	A few people came to the lecture.	žmonių	1	žmogus	Ncmpgn-	exception
 Kokių̃ dalỹkų mókaisi mokỹkloje?	Kokių dalykų mokaisi mokykloje?	What subjects do you study at school?	dalykų	1	dalykas	Ncmpgn-	1mascIAS
 Màno žmonà nekeñčia kačių̃.	Mano žmona nekenčia kačių.	My wife hates cats.	kačių	3	katė	Ncfpgn-	2femĖ
 Mẽs lìksime čià ikì kitų̃ varžýbų.	Mes liksime čia iki kitų varžybų.	We'll stay here until the next contest.	varžybų	5	varžybos	Ncfpgn-	2femIA
@@ -203,13 +203,13 @@ Àš bijaũ laukìnių gyvū̃nų.	Aš bijau laukinių gyvūnų.	I'm afraid o
 Àš turiù kẽletą draugų̃ Bòstone.	Aš turiu keletą draugų Bostone.	I have several friends in Boston.	draugų	3	draugas	Ncmpgn-	1mascIAS
 Atnèšk jái lė̃kštę salõtų.	Atnešk jai lėkštę salotų.	Bring her a plate of salad.	salotų	3	salotos	Ncfpgn-	2femIA
 Dabar̃ ỹra bè dẽšimties minùčių aštúonios.	Dabar yra be dešimties minučių aštuonios.	It's 7:50 in the morning.	minučių	4	minutė	Ncfpgn-	2femĖ
-Daugumà žmonių̃ válgė labaĩ greĩtai, ir̃ maĩstas greĩtai dìngo.	Dauguma žmonių valgė labai greitai, ir maistas greitai dingo.	Most folks ate very quickly and the food soon disappeared.	žmonių	1	žmogus	Ncmpgn-	žmogus
+Daugumà žmonių̃ válgė labaĩ greĩtai, ir̃ maĩstas greĩtai dìngo.	Dauguma žmonių valgė labai greitai, ir maistas greitai dingo.	Most folks ate very quickly and the food soon disappeared.	žmonių	1	žmogus	Ncmpgn-	exception
 Džònas ỹra prancū̃zų literatū̃ros profèsorius Òksfordo Universitetè.	Džonas yra prancūzų literatūros profesorius Oksfordo Universitete.	John is professor of French literature at Oxford and his wife is French.	prancūzų	2	prancūzas	Ncmpgn-	1mascIAS
 Jìs išmóko ánglų priẽš išvỹkstant į̃ Ángliją.	Jis išmoko anglų prieš išvykstant į Angliją.	He had learned English before he left for England.	anglų	2	anglas	Ncmpgn-	1mascIAS
 Mẽs jaũ nebetùrime bùlvių.	Mes jau nebeturime bulvių.	We don't have any potatoes any more.	bulvių	3	bulvė	Ncfpgn-	2femĖ
 Mókau ispãnų kalbõs.	Mokau ispanų kalbos.	I teach Spanish.	ispanų	1	ispanas	Ncmpgn-	1mascIAS
 Nekenčiù kompiùterių.	Nekenčiu kompiuterių.	I hate computers.	kompiuterių	1	kompiuteris	Ncmpgn-	1mascIS
-Neturė́tum bè leidìmo skaitýti kitų̃ žmonių̃ asmenìnių laiškų̃.	Neturėtum be leidimo skaityti kitų žmonių asmeninių laiškų.	You shouldn't read other people's private letters without permission.	žmonių	5	žmogus	Ncmpgn-	žmogus
+Neturė́tum bè leidìmo skaitýti kitų̃ žmonių̃ asmenìnių laiškų̃.	Neturėtum be leidimo skaityti kitų žmonių asmeninių laiškų.	You shouldn't read other people's private letters without permission.	žmonių	5	žmogus	Ncmpgn-	exception
 Neturė́tum bè leidìmo skaitýti kitų̃ žmonių̃ asmenìnių laiškų̃.	Neturėtum be leidimo skaityti kitų žmonių asmeninių laiškų.	You shouldn't read other people's private letters without permission.	laiškų	7	laiškas	Ncmpgn-	1mascIAS
 Norė́čiau tartì põrą žõdžių.	Norėčiau tarti porą žodžių.	I'd like to say a few words.	žodžių	3	žodis	Ncmpgn-	1mascIS
 Paskõlink jám tíek pinigų̃ kíek jám reĩkia.	Paskolink jam tiek pinigų kiek jam reikia.	Lend him as much money as he needs.	pinigų	3	pinigas	Ncmpgn-	1mascIAS
@@ -316,7 +316,7 @@ Nebijók pérmainų.	Nebijok permainų.	Don't be afraid of change.	permainų	1
 Paskutìnį dešim̃tmetį mẽs patýrėme daũg pérmainų.	Paskutinį dešimtmetį mes patyrėme daug permainų.	We have experienced many changes over the last decade.	permainų	5	permaina	Ncfpgn-	2femIA
 Polìcininkas pareikalãvo jų̃ vardų̃ ir̃ adresų̃.	Policininkas pareikalavo jų vardų ir adresų.	The policeman demanded their names and addresses.	vardų	3	vardas	Ncmpgn-	1mascIAS
 Polìcininkas pareikalãvo jų̃ vardų̃ ir̃ adresų̃.	Policininkas pareikalavo jų vardų ir adresų.	The policeman demanded their names and addresses.	adresų	5	adresas	Ncmpgn-	1mascIAS
-Šveñto Pẽtro aikštė̃ bùvo pìlna žmonių̃.	Švento Petro aikštė buvo pilna žmonių.	Saint Peter's Square was crowded.	žmonių	5	žmogus	Ncmpgn-	žmogus
+Šveñto Pẽtro aikštė̃ bùvo pìlna žmonių̃.	Švento Petro aikštė buvo pilna žmonių.	Saint Peter's Square was crowded.	žmonių	5	žmogus	Ncmpgn-	exception
 Tàvo laĩkrodis vėlúoja dẽšimčia minùčių.	Tavo laikrodis vėluoja dešimčia minučių.	Your watch is ten minutes slow.	minučių	4	minutė	Ncfpgn-	2femĖ
 Vėžliaĩ netùri dantų̃.	Vėžliai neturi dantų.	Turtles don't have teeth.	dantų	2	dantis	Ncmpgn-	3masc
 Viliúosi kàd galė́siu vairúoti tàvo automobìlį bè jokių̃ problèmų.	Viliuosi kad galėsiu vairuoti tavo automobilį be jokių problemų.	I hope I can drive your car without any troubles.	problemų	8	problema	Ncfpgn-	2femIA
@@ -335,9 +335,9 @@ Mèrė niekadà nedė̃vi tų̃ pačių̃ rū̃bų dù kartùs į̃ saváit
 Mẽs tùrime beñdrų interèsų.	Mes turime bendrų interesų.	We have common interests.	bendrų	2	bendras	Ncmpgn-	1mascIAS
 Mẽs tùrime beñdrų interèsų.	Mes turime bendrų interesų.	We have common interests.	interesų	3	interesas	Ncmpgn-	1mascIAS
 Mókytojas ir̃ mokiniaĩ ỹra pavéikslų galèrijoje.	Mokytojas ir mokiniai yra paveikslų galerijoje.	The teacher and the students are at the art museum.	paveikslų	4	paveikslas	Ncmpgn-	1mascIAS
-Pasáulyje daũg žmonių̃ skùndžiasi kàd jiẽ netùri laĩko skaitýti.	Pasaulyje daug žmonių skundžiasi kad jie neturi laiko skaityti.	Many people in the world complain that they don't have time to read.	žmonių	2	žmogus	Ncmpgn-	žmogus
+Pasáulyje daũg žmonių̃ skùndžiasi kàd jiẽ netùri laĩko skaitýti.	Pasaulyje daug žmonių skundžiasi kad jie neturi laiko skaityti.	Many people in the world complain that they don't have time to read.	žmonių	2	žmogus	Ncmpgn-	exception
 Tòmas negalė́jo atskirtì dvynių̃ víeno nuõ kìto.	Tomas negalėjo atskirti dvynių vieno nuo kito.	Tom couldn't tell the two twins apart.	dvynių	3	dvynys	Ncmpgn-	1mascIS
-Tū́kstančiai žmonių̃ mìršta nuõ al̃kio.	Tūkstančiai žmonių miršta nuo alkio.	Thousands of people died of hunger.	žmonių	1	žmogus	Ncmpgn-	žmogus
+Tū́kstančiai žmonių̃ mìršta nuõ al̃kio.	Tūkstančiai žmonių miršta nuo alkio.	Thousands of people died of hunger.	žmonių	1	žmogus	Ncmpgn-	exception
 Turė́jo būtì lénkų kalbà õ bùvo matemãtika.	Turėjo būti lenkų kalba o buvo matematika.	It had to be an easy language, or it was math.	lenkų	2	lenkas	Ncmpgn-	1mascIAS
 Turiù daũg ùžsienio kalbų̃ mókymosi knỹgų.	Turiu daug užsienio kalbų mokymosi knygų.	I have many language books.	kalbų	3	kalba	Ncfpgn-	2femIA
 Turiù daũg ùžsienio kalbų̃ mókymosi knỹgų.	Turiu daug užsienio kalbų mokymosi knygų.	I have many language books.	knygų	5	knyga	Ncfpgn-	2femIA
@@ -359,12 +359,12 @@ Màno tė́vas mìrė bū́damas kẽturiasdešimt devynerių̃ mẽtų.	Mano 
 Miestè gyvẽnantys žmónės káimo gyvẽnimo malonùmų nežìno.	Mieste gyvenantys žmonės kaimo gyvenimo malonumų nežino.	People living in town don't know the pleasures of country life.	malonumų	5	malonumas	Ncmpgn-	1mascIAS
 Nàgi, sūnaũ. Nustók káutis sù blõgio jėgomìs beñt dẽšimčiai minùčių ir̃ ateĩk paválgyti vakariẽnės!	Nagi, sūnau. Nustok kautis su blogio jėgomis bent dešimčiai minučių ir ateik pavalgyti vakarienės!	Come on, son. Quit battling the forces of evil for ten minutes and come to dinner!	minučių	11	minutė	Ncfpgn-	2femĖ
 Nepalìk dùrų pravirų̃.	Nepalik durų pravirų.	Don't leave the door open.	durų	1	durys	Ncfpgn-	3fem
-Paprastaĩ vilkaĩ neužpúola žmonių̃.	Paprastai vilkai neužpuola žmonių.	Wolves won't usually attack people.	žmonių	3	žmogus	Ncmpgn-	žmogus
+Paprastaĩ vilkaĩ neužpúola žmonių̃.	Paprastai vilkai neužpuola žmonių.	Wolves won't usually attack people.	žmonių	3	žmogus	Ncmpgn-	exception
 Patalpõs plótas ỹra dù sù pusè kvadrãtinių mètrų.	Patalpos plotas yra du su puse kvadratinių metrų.	The room's area is two and half square meters.	metrų	7	metras	Ncmpgn-	1mascIAS
 Víeno lašẽlio nuodų̃ pakañka nužudýti šim̃tą šẽšiasdešimt žmonių̃.	Vieno lašelio nuodų pakanka nužudyti šimtą šešiasdešimt žmonių.	One drop of the poison is enough to kill 160 people.	nuodų	2	nuodas	Ncmpgn-	1mascIAS
-Víeno lašẽlio nuodų̃ pakañka nužudýti šim̃tą šẽšiasdešimt žmonių̃.	Vieno lašelio nuodų pakanka nužudyti šimtą šešiasdešimt žmonių.	One drop of the poison is enough to kill 160 people.	žmonių	7	žmogus	Ncmpgn-	žmogus
+Víeno lašẽlio nuodų̃ pakañka nužudýti šim̃tą šẽšiasdešimt žmonių̃.	Vieno lašelio nuodų pakanka nužudyti šimtą šešiasdešimt žmonių.	One drop of the poison is enough to kill 160 people.	žmonių	7	žmogus	Ncmpgn-	exception
 Ar̃ gãlite paródyti mán kẽlią į̃ autobùsų stotẽlę?	Ar galite parodyti man kelią į autobusų stotelę?	Could you show me the way to the bus stop?	autobusų	6	autobusas	Ncmpgn-	1mascIAS
-Àš nepriim̃siu tokių̃ žmonių̃ sàvo namuosè.	Aš nepriimsiu tokių žmonių savo namuose.	I won't accept that kind of people in my house.	žmonių	3	žmogus	Ncmpgn-	žmogus
+Àš nepriim̃siu tokių̃ žmonių̃ sàvo namuosè.	Aš nepriimsiu tokių žmonių savo namuose.	I won't accept that kind of people in my house.	žmonių	3	žmogus	Ncmpgn-	exception
 Àš turiù daũg draugų̃ gyvẽnančių Bòstone.	Aš turiu daug draugų gyvenančių Bostone.	I have a lot of friends living in Boston.	draugų	3	draugas	Ncmpgn-	1mascIAS
 Grúodis ỹra paskutìnis mẽtų mė́nuo.	Gruodis yra paskutinis metų mėnuo.	December is the last month of the year.	metų	3	metai	Ncmpgn-	1mascIAS
 Kàs jùms dė́sto vókiečių kal̃bą?	Kas jums dėsto vokiečių kalbą?	Who teaches you German?	vokiečių	3	vokietis	Ncmpgn-	1mascIS
@@ -400,13 +400,13 @@ Niekadà nesupràsiu móterų.	Niekada nesuprasiu moterų	I'll never understa
 Niẽkas negalė́jo pagautì tų̃ kelių̃ paskutìnių vìštų.	Niekas negalėjo pagauti tų kelių paskutinių vištų.	Nobody could catch those last few hens.	kelių	4	kelis	Ncmpgn-	1mascIS
 Niẽkas negalė́jo pagautì tų̃ kelių̃ paskutìnių vìštų.	Niekas negalėjo pagauti tų kelių paskutinių vištų.	Nobody could catch those last few hens.	vištų	6	višta	Ncfpgn-	2femIA
 Rùdenį mẽdžių lãpai tam̃pa raudõni ir̃ geltõni.	Rudenį medžių lapai tampa raudoni ir geltoni.	In the fall, the leaves turn red and gold.	medžių	1	medis	Ncmpgn-	1mascIS
-Šiaĩs laikaĩs daũg žmonių̃ gáuna aukštèsnį išsilãvinimą.	Šiais laikais daug žmonių gauna aukštesnį išsilavinimą.	Today, many people receive higher education.	žmonių	3	žmogus	Ncmpgn-	žmogus
+Šiaĩs laikaĩs daũg žmonių̃ gáuna aukštèsnį išsilãvinimą.	Šiais laikais daug žmonių gauna aukštesnį išsilavinimą.	Today, many people receive higher education.	žmonių	3	žmogus	Ncmpgn-	exception
 Šiáurės ašìgalyje pingvìnų nėrà.	Šiaurės ašigalyje pingvinų nėra.	At the North Pole, there are no penguins.	pingvinų	2	pingvinas	Ncmpgn-	1mascIAS
 Tegyvúoja Tarýbų Są́junga!	Tegyvuoja Tarybų Sąjunga!	Long live the Soviet Union!	Tarybų	1	taryba	Ncfpgn-	2femIA
 Tòmas netùri prieštarãvimų dė̃l tàvo plãno.	Tomas neturi prieštaravimų dėl tavo plano.	Tom has no objection to your plan.	prieštaravimų	2	prieštaravimas	Ncmpgn-	1mascIAS
 Daũg europiẽčių nepažį́sta šiuolaikìnės Japònijos.	Daug europiečių nepažįsta šiuolaikinės Japonijos.	Many Europeans do not know modern Japan.	europiečių	1	europietis	Ncmpgn-	1mascIS
 Jìs padarỹs bèt ką̃, kàd uždìrbtų pinigų̃.	Jis padarys bet ką, kad uždirbtų pinigų.	He will do anything to make money.	uždirbtų	6	pinigas	Ncmpgn-	1mascIAS
-Kaĩ màno dė̃dė vỹko į̃ Amèriką, daũg žmonių̃ atė̃jo į̃ óro úostą išlydė́ti jõ.	Kai mano dėdė vyko į Ameriką, daug žmonių atėjo į oro uostą išlydėti jo.	When my uncle left for America, many people came to see him off at the airport.	žmonių	8	žmogus	Ncmpgn-	žmogus
+Kaĩ màno dė̃dė vỹko į̃ Amèriką, daũg žmonių̃ atė̃jo į̃ óro úostą išlydė́ti jõ.	Kai mano dėdė vyko į Ameriką, daug žmonių atėjo į oro uostą išlydėti jo.	When my uncle left for America, many people came to see him off at the airport.	žmonių	8	žmogus	Ncmpgn-	exception
 Kíek pinigų̃ tù tùri paslė̃pęs põ sàvo lóva?	Kiek pinigų tu turi paslėpęs po savo lova?	How much money do you have hidden under your bed?	pinigų	1	pinigas	Ncmpgn-	1mascIAS
 Màno nãmas ỹra netolì nuõ autobùsų stotẽlės.	Mano namas yra netoli nuo autobusų stotelės.	My house is close to a bus stop.	autobusų	5	autobusas	Ncmpgn-	1mascIAS
 Mū́sų miestè ỹra daũg párkų.	Mūsų mieste yra daug parkų.	There are many parks in our town.	parkų	4	parkas	Ncmpgn-	1mascIAS
@@ -414,7 +414,7 @@ Mū́sų miestè ỹra daũg párkų.	Mūsų mieste yra daug parkų.	There ar
 Šitàs televìzorius tùri dvejų̃ mẽtų garántiją.	Šitas televizorius turi dvejų metų garantiją.	This TV set has a two year guarantee.	dvejų	3	dveja	Ncfpgn-	2femIA
 Šitàs televìzorius tùri dvejų̃ mẽtų garántiją.	Šitas televizorius turi dvejų metų garantiją.	This TV set has a two year guarantee.	metų	4	metai	Ncmpgn-	1mascIAS
 Taĩ ỹra pìrmas kar̃tas kaĩ àš nùsiunčiau Mèrei gėlių̃.	Tai yra pirmas kartas kai aš nusiunčiau Merei gėlių.	This is the first time I've sent flowers to Mary.	gėlių	8	gėlė	Ncfpgn-	2femĖ
-Teñ visadà daũg žmonių̃, bèt àš užrezervavaũ staliùką, tàd mùms nėrà kõ jáudintis.	Ten visada daug žmonių, bet aš užrezervavau staliuką, tad mums nėra ko jaudintis.	That place is always crowded, but I reserved a table today, so we don't have to worry.	žmonių	3	žmogus	Ncmpgn-	žmogus
+Teñ visadà daũg žmonių̃, bèt àš užrezervavaũ staliùką, tàd mùms nėrà kõ jáudintis.	Ten visada daug žmonių, bet aš užrezervavau staliuką, tad mums nėra ko jaudintis.	That place is always crowded, but I reserved a table today, so we don't have to worry.	žmonių	3	žmogus	Ncmpgn-	exception
 Tòmas tùri bánko są́skaitą Kaimãnų salosè.	Tomas turi banko sąskaitą Kaimanų salose.	Tom has a bank account in the Cayman Islands.	Kaimanų	4	kaimanas	Ncmpgn-	1mascIAS
 Àš nekenčiù melãgių.	Aš nekenčiu melagių.	I hate liars.	melagių	2	melagis	Ncmpgn-	1mascIS
 Bijaũ žẽmės drebė́jimų.	Bijau žemės drebėjimų.	I'm afraid of earthquakes.	drebėjimų	2	drebėjimas	Ncmpgn-	1mascIAS
@@ -424,7 +424,7 @@ Jì sãko kàd tù atsivèsi draugų̃.	Ji sako kad tu atsivesi draugų.	Sh
 Kãtės mė́gsta lakstýti pãskui siū́lų kamuoliukùs.	Katės mėgsta lakstyti paskui siūlų kamuoliukus.	Cats love to run after balls of wool.	siūlų	4	siūlas	Ncmpgn-	1mascIAS
 Kãtės neė́da banãnų.	Katės neėda bananų.	Cats don't eat bananas.	bananų	2	bananas	Ncmpgn-	1mascIAS
 Nekalbė́k apiẽ žmónes jíems ùž nùgarų.	Nekalbėk apie žmones jiems už nugarų.	Don't talk about people behind their backs.	nugarų	5	nugara	Ncfpgn-	2femIA
-Nepakeičiamų̃ žmonių̃ nėrà.	Nepakeičiamų žmonių nėra.	Nobody's indispensable.	žmonių	1	žmogus	Ncmpgn-	žmogus
+Nepakeičiamų̃ žmonių̃ nėrà.	Nepakeičiamų žmonių nėra.	Nobody's indispensable.	žmonių	1	žmogus	Ncmpgn-	exception
 Neturė́tum kalbė́ti apiẽ žmónes jíems ùž nùgarų.	Neturėtum kalbėti apie žmones jiems už nugarų.	You shouldn't talk about people behind their backs.	nugarų	6	nugara	Ncfpgn-	2femIA
 Niẽkas, išskýrus tavè, nemóka gamìnti tokių̃ skanių̃ salõtų.	Niekas, išskyrus tave, nemoka gaminti tokių skanių salotų.	No one other than you knows how to make such a tasty salad.	salotų	9	salotos	Ncfpgn-	2femIA
 Paaugliaĩ nóri būtì nepriklaũsomi nuõ tėvų̃.	Paaugliai nori būti nepriklausomi nuo tėvų.	Teenagers want to be independent of their parents.	tėvų	5	tėvai	Ncmpgn-	1mascIAS
@@ -436,7 +436,7 @@ Saũsis ỹra pìrmas mẽtų mė́nuo.	Sausis yra pirmas metų mėnuo.	Januar
 Šiẽmet obuolių̃ der̃lius bùvo gáusus.	Šiemet obuolių derlius buvo gausus.	There has been a good apple harvest this year.	obuolių	1	obuolys	Ncmpgn-	1mascIS
 Tòmas sugrióvė vaikų̃ pastatýtą smė̃lio pìlį.	Tomas sugriovė vaikų pastatytą smėlio pilį.	Tom destroyed the children's sand castle.	vaikų	2	vaikas	Ncmpgn-	1mascIAS
 Apskaičiúok kíek pinigų̃ mùms reikė̃s kitaĩs mẽtais.	Apskaičiuok kiek pinigų mums reikės kitais metais.	Calculate how much money we will need next year.	pinigų	2	pinigas	Ncmpgn-	1mascIAS
-Architèktas pritáikė šį̃ nãmą senų̃ žmonių̃ póreikiams.	Architektas pritaikė šį namą senų žmonių poreikiams.	The architect adapted the house to the needs of old people.	žmonių	5	žmogus	Ncmpgn-	žmogus
+Architèktas pritáikė šį̃ nãmą senų̃ žmonių̃ póreikiams.	Architektas pritaikė šį namą senų žmonių poreikiams.	The architect adapted the house to the needs of old people.	žmonių	5	žmogus	Ncmpgn-	exception
 Ar̃ jū̃s nusipir̃kote bùlvių?	Ar jūs nusipirkote bulvių?	Did you buy some potatoes?	bulvių	3	bulvė	Ncfpgn-	2femĖ
 Ar̃ tùrite pigesnių̃ kambarių̃?	Ar turite pigesnių kambarių?	Do you have any cheaper rooms?	kambarių	3	kambarys	Ncmpgn-	1mascIS
 Àš turiù nuskustì vìsą kìbirą obuolių̃ uogiẽnei.	Aš turiu nuskusti visą kibirą obuolių uogienei.	I have to peel a whole bucket of apples for a jam.	obuolių	5	obuolys	Ncmpgn-	1mascIS
@@ -455,7 +455,7 @@ Parašýta leñgva ánglų kalbà, šì knygà ỹra lengvaĩ skaĩtoma.
 Tíek tõ, išver̃siu dár penkiólika sakinių̃ ir̃ tadà išeĩsiu.	Tiek to, išversiu dar penkiolika sakinių ir tada išeisiu.	All right. I'll translate another fifteen sentences in German, and then leave.	penkiolika	5	sakinys	Ncmpgn-	1mascIS
 Tòmas tìkisi kàd šią̃nakt jìs likùčių ir̃ vė̃l neválgys.	Tomas tikisi kad šiąnakt jis likučių ir vėl nevalgys.	Tom hopes he won't be eating leftovers again tonight.	likučių	5	likutis	Ncmpgn-	1mascIS
 Vaikų̃ jì taĩp daugiaũ ir̃ nebemãtė.	Vaikų ji taip daugiau ir nebematė.	She was never to see her children again.	Vaikų	0	vaikas	Ncmpgn-	1mascIAS
-Daũg jaunų̃ žmonių̃ Ispãnijoje ỹra bedar̃biai.	Daug jaunų žmonių Ispanijoje yra bedarbiai.	Many young people in Spain are unemployed.	žmonių	2	žmogus	Ncmpgn-	žmogus
+Daũg jaunų̃ žmonių̃ Ispãnijoje ỹra bedar̃biai.	Daug jaunų žmonių Ispanijoje yra bedarbiai.	Many young people in Spain are unemployed.	žmonių	2	žmogus	Ncmpgn-	exception
 Dìkui bùvo dẽšimt mẽtų kaĩ jìs nùmirė.	Dikui buvo dešimt metų kai jis numirė.	Dick was ten years old when he died.	metų	3	metai	Ncmpgn-	1mascIAS
 Išver̃skite šią̃ knỹgą į̃ ánglų kal̃bą.	Išverskite šią knygą į anglų kalbą.	Translate this book into English.	anglų	4	anglas	Ncmpgn-	1mascIAS
 Jìs greĩtai priprãto priẽ šaltų̃ órų.	Jis greitai priprato prie šaltų orų.	He soon accustomed himself to cold weather.	orų	5	oras	Ncmpgn-	1mascIAS
@@ -468,9 +468,9 @@ Tòmas taĩp ir̃ nesugebė́jo pamirštì kãro baisýbių.	Tomas taip ir 
 Vỹnas ỹra dãromas ìš vỹnuogių.	Vynas yra daromas iš vynuogių.	Wine is made from grapes.	vynuogių	4	vynuogė	Ncfpgn-	2femĖ
 Ámžina tylà šių̃ begalìnių erdvių̃ manè baugìna.	Amžina tyla šių begalinių erdvių mane baugina.	The eternal silence of these infinite spaces terrifies me.	erdvių	4	erdvė	Ncfpgn-	2femĖ
 Àš išspáusdinau šim̃tą pùslapių.	Aš išspausdinau šimtą puslapių.	I have printed 100 pages.	puslapių	3	puslapis	Ncmpgn-	1mascIS
-Àš manaũ, kàd daũgumai žmonių̃ mókytis trigonomètrines fùnkcijas ỹra beprãsmiška.	Aš manau, kad daugumai žmonių mokytis trigonometrines funkcijas yra beprasmiška.	I think that for many people learning the trigonometric functions is meaningless.	žmonių	5	žmogus	Ncmpgn-	žmogus
+Àš manaũ, kàd daũgumai žmonių̃ mókytis trigonomètrines fùnkcijas ỹra beprãsmiška.	Aš manau, kad daugumai žmonių mokytis trigonometrines funkcijas yra beprasmiška.	I think that for many people learning the trigonometric functions is meaningless.	žmonių	5	žmogus	Ncmpgn-	exception
 Įsigýkime Kalė̃dų eglùtę.	Įsigykime Kalėdų eglutę.	Let's go get a Christmas tree.	Kalėdų	1	kalėda	Ncfpgn-	2femIA
-Ìš žmonių̃ pasigir̃do šū́ksnis.	Iš žmonių pasigirdo šūksnis.	A shout arose from the people.	žmonių	1	žmogus	Ncmpgn-	žmogus
+Ìš žmonių̃ pasigir̃do šū́ksnis.	Iš žmonių pasigirdo šūksnis.	A shout arose from the people.	žmonių	1	žmogus	Ncmpgn-	exception
 Jéigu nebūtų̃ óro, žmogùs nepragyvéntų nė̃ dẽšimt minùčių.	Jeigu nebūtų oro, žmogus nepragyventų nė dešimt minučių.	If there were no air, man could not live even ten minutes.	minučių	8	minutė	Ncfpgn-	2femĖ
 Jìs parsìvežė suvenỹrų.	Jis parsivežė suvenyrų.	He brought back several souvenirs.	suvenyrų	2	suvenyras	Ncmpgn-	1mascIAS
 Kaĩ mẽs pažiūrė́jome žemỹn, mẽs pamãtėme daũg pastatų̃.	Kai mes pažiūrėjome žemyn, mes pamatėme daug pastatų.	When we looked down, we saw many buildings.	pastatų	8	pastatas	Ncmpgn-	1mascIAS
@@ -487,7 +487,7 @@ Greĩtai ìš pietų̃ parskrìs kregždùtės.	Greitai iš pietų parskris 
 Japònijoje studijúojama ánglų kalbà.	Japonijoje studijuojama anglų kalba.	English is studied in Japan.	anglų	2	anglas	Ncmpgn-	1mascIAS
 Japònijoje ỹra mókomasi ánglų kalbõs.	Japonijoje yra mokomasi anglų kalbos.	English is studied in Japan.	anglų	3	anglas	Ncmpgn-	1mascIAS
 Mán reĩkia analgètikų.	Man reikia analgetikų.	I need an analgesic.	analgetikų	2	analgetikas	Ncmpgn-	1mascIAS
-Metùs sudãro dvýlika mė́nesių: saũsis, vasãris, kovàs, balañdis, gegužė̃, biržẽlis, líepa, rugpjū́tis, rugsė́jis, spãlis, lãpkritis ir̃ grúodis.	Metus sudaro dvylika mėnesių: sausis, vasaris, kovas, balandis, gegužė, birželis, liepa, rugpjūtis, rugsėjis, spalis, lapkritis ir gruodis.	January, February, March, April, May, June, July, August, September, October, November and December are the twelve months of the year.	mėnesių	3	mėnuo	Ncmpgn-	mėnuo
+Metùs sudãro dvýlika mė́nesių: saũsis, vasãris, kovàs, balañdis, gegužė̃, biržẽlis, líepa, rugpjū́tis, rugsė́jis, spãlis, lãpkritis ir̃ grúodis.	Metus sudaro dvylika mėnesių: sausis, vasaris, kovas, balandis, gegužė, birželis, liepa, rugpjūtis, rugsėjis, spalis, lapkritis ir gruodis.	January, February, March, April, May, June, July, August, September, October, November and December are the twelve months of the year.	mėnesių	3	mėnuo	Ncmpgn-	exception
 Mókslas, bičiùli, padarýtas ìš klaidų̃, tačiaũ gerų̃jų, kadángi jõs palaipsniuĩ priar̃tina tavè priẽ tiesõs.	Mokslas, bičiuli, padarytas iš klaidų, tačiau gerųjų, kadangi jos palaipsniui priartina tave prie tiesos.	Science, my lad, is made out of errors, but of good ones, for they bring you step by step closer to the truth.	klaidų	6	klaida	Ncfpgn-	2femIA
 Põ kelių̃ mẽtų žmónės teĩgs, kàd paskutìnis dìdelis kãras bùvo daugiaũ neĩ priẽš šim̃tmetį.	Po kelių metų žmonės teigs, kad paskutinis didelis karas buvo daugiau nei prieš šimtmetį.	In some years from now, people will say the last great war was over a hundred years ago.	kelių	1	kelis	Ncmpgn-	1mascIS
 Põ kelių̃ mẽtų žmónės teĩgs, kàd paskutìnis dìdelis kãras bùvo daugiaũ neĩ priẽš šim̃tmetį.	Po kelių metų žmonės teigs, kad paskutinis didelis karas buvo daugiau nei prieš šimtmetį.	In some years from now, people will say the last great war was over a hundred years ago.	metų	2	metai	Ncmpgn-	1mascIAS
@@ -500,19 +500,19 @@ Visãtoje ỹra nesuskaičiúojama daugýbė žvaigždžių̃.	Visatoje yra n
 Visì keliaĩ vẽdantys į̃ miẽstą ỹra pilnì automobìlių.	Visi keliai vedantys į miestą yra pilni automobilių.	All the roads leading into the city are full of cars.	automobilių	7	automobilis	Ncmpgn-	1mascIS
 Alkohòlis neišspréndžia jokių̃ problèmų.	Alkoholis neišsprendžia jokių problemų.	Alcohol doesn't solve any problems.	problemų	3	problema	Ncfpgn-	2femIA
 Ankarojè, visì mẽtų laikaĩ ỹra tar̃si žiemà.	Ankaroje, visi metų laikai yra tarsi žiema.	In Ankara, all the seasons are like winter.	metų	3	metai	Ncmpgn-	1mascIAS
-Ar̃ žmonių̃ padėtìs pakañkamai lankstì, kàd jiẽ prisitáikytų priẽ nežẽmiškos aplinkõs?	Ar žmonių padėtis pakankamai lanksti, kad jie prisitaikytų prie nežemiškos aplinkos?	Is the human condition flexible enough to adapt to environments beyond Earth?	žmonių	1	žmogus	Ncmpgn-	žmogus
+Ar̃ žmonių̃ padėtìs pakañkamai lankstì, kàd jiẽ prisitáikytų priẽ nežẽmiškos aplinkõs?	Ar žmonių padėtis pakankamai lanksti, kad jie prisitaikytų prie nežemiškos aplinkos?	Is the human condition flexible enough to adapt to environments beyond Earth?	žmonių	1	žmogus	Ncmpgn-	exception
 Àš negaliù uždarýti šių̃ dùrų. Jõs sulū́žusios.	Aš negaliu uždaryti šių durų. Jos sulūžusios.	I can't close this door. It's broken.	durų	4	durys	Ncfpgn-	3fem
 Àš turiù vìs daugiaũ ir̃ daugiaũ žilų̃ plaukų̃.	Aš turiu vis daugiau ir daugiau žilų plaukų.	I'm getting more and more gray hair.	plaukų	7	plaukas	Ncmpgn-	1mascIAS
 Marìlė turė́jo problèmų sù plaũčiais.	Marilė turėjo problemų su plaučiais.	Marilla had problems with her lungs.	problemų	2	problema	Ncfpgn-	2femIA
 Mė́gstu tènisą labiáusiai ìš visų̃ spòrtų.	Mėgstu tenisą labiausiai iš visų sportų.	I like tennis the best of all sports.	sportų	5	sportas	Ncmpgn-	1mascIAS
 Mẽs pàpuošėme Kalė̃dų eglùtę žiburė̃liais.	Mes papuošėme Kalėdų eglutę žiburėliais.	We decorated the Christmas tree with lights.	Kalėdų	2	Kalėdos	Npfpgn-	2femIA
-Niekadà nemaitìnkite sàvo katė̃s šunų̃ maistù.	Niekada nemaitinkite savo katės šunų maistu.	Never feed dog food to your cat.	šunų	4	šuo	Ncmpgn-	šuo
+Niekadà nemaitìnkite sàvo katė̃s šunų̃ maistù.	Niekada nemaitinkite savo katės šunų maistu.	Never feed dog food to your cat.	šunų	4	šuo	Ncmpgn-	exception
 Parỹžius vadìnamas žiburių̃ miestù. Daũg gražių̃ pastatų̃ nãktį ỹra apšviestì.	Paryžius vadinamas žiburių miestu. Daug gražių pastatų naktį yra apšviesti.	Paris is called the City of Lights. Many beautiful buildings are lit at night.	žiburių	2	žiburys	Ncmpgn-	1mascIS
 Parỹžius vadìnamas žiburių̃ miestù. Daũg gražių̃ pastatų̃ nãktį ỹra apšviestì.	Paryžius vadinamas žiburių miestu. Daug gražių pastatų naktį yra apšviesti.	Paris is called the City of Lights. Many beautiful buildings are lit at night.	pastatų	7	pastatas	Ncmpgn-	1mascIAS
 Šiamè internètiniame pùslapyje daugiaũ ỹra narių̃ výrų neĩ móterų.	Šiame internetiniame puslapyje daugiau yra narių vyrų nei moterų.	There are more male members than female ones on this website.	narių	5	narys	Ncmpgn-	1mascIS
 Šiamè internètiniame pùslapyje daugiaũ ỹra narių̃ výrų neĩ móterų.	Šiame internetiniame puslapyje daugiau yra narių vyrų nei moterų.	There are more male members than female ones on this website.	vyrų	6	vyras	Ncmpgn-	1mascIAS
 Šiamè internètiniame pùslapyje daugiaũ ỹra narių̃ výrų neĩ móterų.	Šiame internetiniame puslapyje daugiau yra narių vyrų nei moterų.	There are more male members than female ones on this website.	moterų	8	moteris	Ncfpgn-	3fem
-Šiõ metòdo veiksmingùmas bùvo patvìrtintas daũgelio žmonių̃ patirtimì.	Šio metodo veiksmingumas buvo patvirtintas daugelio žmonių patirtimi.	The effectiveness of this method was confirmed by many people's experiences.	žmonių	6	žmogus	Ncmpgn-	žmogus
+Šiõ metòdo veiksmingùmas bùvo patvìrtintas daũgelio žmonių̃ patirtimì.	Šio metodo veiksmingumas buvo patvirtintas daugelio žmonių patirtimi.	The effectiveness of this method was confirmed by many people's experiences.	žmonių	6	žmogus	Ncmpgn-	exception
 Taĩ ỹra pigiáusias ìš visų̃ metòdų.	Tai yra pigiausias iš visų metodų.	This is the least expensive method of all.	metodų	5	metodas	Ncmpgn-	1mascIAS
 Žaidýmų aikštẽlėje ỹra dvì mergáitės.	Žaidymų aikštelėje yra dvi mergaitės.	There are two girls in the playground.	Žaidymų	0	žaidymas	Ncmpgn-	1mascIAS
 Àš kasmẽt perkù naujų̃ są́siuvinių mokỹklai.	Aš kasmet perku naujų sąsiuvinių mokyklai.	Every year, I buy new notebooks for school.	sąsiuvinių	4	sąsiuvinis	Ncmpgn-	1mascIS

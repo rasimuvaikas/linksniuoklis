@@ -111,6 +111,9 @@ export class StressComponent implements OnInit {
       case "5fem": {
         return "5th"
       }
+      case "exception": {
+        return "exception"
+      }
     }
   }
 

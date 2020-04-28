@@ -1,5 +1,5 @@
-Ar̃ ỹra viẽtos dár vienám žmógui?	Ar yra vietos dar vienam žmogui?	Is there space for one more person?	žmogui	5	žmogus	Ncmsdn-	žmogus
-Pasakýk tám žmógui kur̃ ỹra màno nãmas.	Pasakyk tam žmogui kur yra mano namas.	Tell that person where my house is.	žmogui	2	žmogus	Ncmsdn-	žmogus
+Ar̃ ỹra viẽtos dár vienám žmógui?	Ar yra vietos dar vienam žmogui?	Is there space for one more person?	žmogui	5	žmogus	Ncmsdn-	exception
+Pasakýk tám žmógui kur̃ ỹra màno nãmas.	Pasakyk tam žmogui kur yra mano namas.	Tell that person where my house is.	žmogui	2	žmogus	Ncmsdn-	exception
 Kodė̃l? Todė̃l kàd jõ šeĩmai reikė́jo pinigų̃, štaĩ kodė̃l.	Kodėl? Todėl kad jo šeimai reikėjo pinigų, štai kodėl.	Why? Because his family needed the money, that's why.	šeimai	5	šeima	Ncfsdn-	2femIA
 Kodė̃l tù nenóri padėtì polìcijai?	Kodėl tu nenori padėti policijai?	Why don't you want to help the police?	policijai	4	policija	Ncfsdn-	2femIA
 Mẽs tùrime paskam̃binti polìcijai.	Mes turime paskambinti policijai.	We have to call the police.	policijai	3	policija	Ncfsdn-	2femIA
@@ -19,7 +19,7 @@ Kõ norė́tum vakariẽnei?	Ko norėtum vakarienei?	What would you like for su
 Mèrė pàdeda sàvo mãmai.	Merė padeda savo mamai.	Mary is helping her mother.	mamai	3	mama	Ncfsdn-	2femIA
 Šiañdien vakariẽnei bùs žuvìs.	Šiandien vakarienei bus žuvis.	We have fish for dinner today.	vakarienei	1	vakarienė	Ncfsdn-	2femĖ
 Ką̃ tù nupirkaĩ sàvo vaikìnui?	Ką tu nupirkai savo vaikinui?	What did you buy for your boyfriend?	vaikinui	4	vaikinas	Ncmsdn-	1mascIAS
-Neléisk šùniui miegóti mū́sų lóvoje.	Neleisk šuniui miegoti mūsų lovoje.	Don't let the dog sleep in our bed.	šuniui	1	šuo	Ncmsdn-	šuo
+Neléisk šùniui miegóti mū́sų lóvoje.	Neleisk šuniui miegoti mūsų lovoje.	Don't let the dog sleep in our bed.	šuniui	1	šuo	Ncmsdn-	exception
 Ar̃ mãnai kàd turė́čiau pasakýti Tòmui?	Ar manai kad turėčiau pasakyti Tomui?	Do you think I should tell Tom?	Tomui	5	tomas	Ncmsdn-	1mascIAS
 Àš daviaũ tą̃ knỹgą Tòmui šį̃ rýtą.	Aš daviau tą knygą Tomui šį rytą.	I gave that book to Tom this morning.	Tomui	4	tomas	Ncmsdn-	1mascIAS
 Àš daviaũ Tòmui põrą bilietų̃ į̃ sàvo koncer̃tą.	Aš daviau Tomui porą bilietų į savo koncertą.	I gave Tom a couple of tickets for my concert.	Tomui	2	Tomas	Npmsdnf	1mascIAS
@@ -47,13 +47,13 @@ Nusikal̃tėlis pasìdavė polìcijai.	Nusikaltėlis pasidavė policijai.	The 
 Šiojè šalyjè vidutìnis vaikų̃ skaĩčius šeĩmai nukrìto nuõ dviejų̃ ikì víeno sù pusè.	Šioje šalyje vidutinis vaikų skaičius šeimai nukrito nuo dviejų iki vieno su puse.	In this country the average number of children per family fell from 2 to 1.5.	šeimai	5	šeima	Ncfsdn-	2femIA
 Dárbui savanõrių nebùvo.	Darbui savanorių nebuvo.	There were no volunteers for the job.	Darbui	0	darbas	Ncmsdn-	1mascIAS
 Ìš pradžių̃ bùvome vìsiškai nepažį́stami. Bèt bė́gant laĩkui mẽs susipažìnome.	Iš pradžių buvome visiškai nepažįstami. Bet bėgant laikui mes susipažinome.	At first, we weren't familiar at all. Over time we got to know each other.	bėgant	7	laikas	Ncmsdn-	1mascIAS
-Jìs išvažiãvo mė́nesiui.	Jis išvažiavo mėnesiui.	He left for a month.	mėnesiui	2	mėnuo	Ncmsdn-	mėnuo
-Jìs išvažiãvo vienám mė́nesiui.	Jis išvažiavo vienam mėnesiui.	He left for a month.	mėnesiui	3	mėnuo	Ncmsdn-	mėnuo
+Jìs išvažiãvo mė́nesiui.	Jis išvažiavo mėnesiui.	He left for a month.	mėnesiui	2	mėnuo	Ncmsdn-	exception
+Jìs išvažiãvo vienám mė́nesiui.	Jis išvažiavo vienam mėnesiui.	He left for a month.	mėnesiui	3	mėnuo	Ncmsdn-	exception
 Nè gyvẽnimui, bèt mokỹklai mókomės.	Ne gyvenimui, bet mokyklai mokomės.	Not for life, but for school do we learn.	gyvenimui	1	gyvenimas	Ncmsdn-	1mascIAS
 Nè gyvẽnimui, bèt mokỹklai mókomės.	Ne gyvenimui, bet mokyklai mokomės.	Not for life, but for school do we learn.	mokyklai	4	mokykla	Ncfsdn-	2femIA
 Àš daviaũ Tòmui añtklodę.	Aš daviau Tomui antklodę.	I gave Tom a blanket.	Tomui	2	Tomas	Npmsdnf	1mascIAS
 Màno sū́nui skaũda dañtį.	Mano sūnui skauda dantį.	My son has a toothache.	sūnui	1	sūnus	Ncmsdn-	4masc
-Dúok tám žmógui sàvo kilìmą.	Duok tam žmogui savo kilimą.	Give your carpet to that person.	žmogui	2	žmogus	Ncmsdn-	žmogus
+Dúok tám žmógui sàvo kilìmą.	Duok tam žmogui savo kilimą.	Give your carpet to that person.	žmogui	2	žmogus	Ncmsdn-	exception
 Nuspréndžiau būtì laimìnga, nès taĩ geraĩ màno sveikãtai.	Nusprendžiau būti laiminga, nes tai gerai mano sveikatai.	I decided to be happy because it's good for my health.	sveikatai	8	sveikata	Ncfsdn-	2femIA
 Nuspréndžiau būtì laimìngas, nès taĩ geraĩ màno sveikãtai.	Nusprendžiau būti laimingas, nes tai gerai mano sveikatai.	I decided to be happy because it's good for my health.	sveikatai	8	sveikata	Ncfsdn-	2femIA
 Tòmui nederė́jo vogtì Mèrės pinigų̃.	Tomui nederėjo vogti Merės pinigų.	Tom shouldn't have stolen Mary's money.	Tomui	0	Tomas	Npmsdnf	1mascIAS

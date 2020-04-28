@@ -92,7 +92,7 @@ Nežaĩsk sù ugnimì.	Nežaisk su ugnimi.	Don't play with fire.	ugnimi	2	ugn
 Norė́čiau taptì mókytoju.	Norėčiau tapti mokytoju.	I'd like to be a teacher.	mokytoju	2	mokytojas	Ncmsin-	1mascIAS
 Pavojìnga žaistì sù ugnimì.	Pavojinga žaisti su ugnimi.	It's dangerous to play with fire.	ugnimi	3	ugnis	Ncfsin-	3fem
 Ar̃ šiuõ metù ẽsate užsiė̃mę?	Ar šiuo metu esate užsiėmę?	Are you busy at the moment?	metu	2	metas	Ncmsin-	1mascIAS
-Kaĩp tù susipažinaĩ sù tuõ žmogumì?	Kaip tu susipažinai su tuo žmogumi?	How did you get to know that person?	žmogumi	5	žmogus	Ncmsin-	žmogus
+Kaĩp tù susipažinaĩ sù tuõ žmogumì?	Kaip tu susipažinai su tuo žmogumi?	How did you get to know that person?	žmogumi	5	žmogus	Ncmsin-	exception
 Kàs skam̃bina pianinù?	Kas skambina pianinu?	Who is playing the piano?	pianinu	2	pianinas	Ncmsin-	1mascIAS
 Šiojè šalyjè vidutìnis vaikų̃ skaĩčius šeĩmai nukrìto nuõ dviejų̃ ikì víeno sù pusè.	Šioje šalyje vidutinis vaikų skaičius šeimai nukrito nuo dviejų iki vieno su puse.	In this country the average number of children per family fell from 2 to 1.5.	puse	12	pusė	Ncfsin-	2femĖ
 Tòmas važiúoja dvìračiu.	Tomas važiuoja dviračiu.	Tom is riding a bicycle.	dviračiu	2	dviratis	Ncmsin-	1mascIS
@@ -146,7 +146,7 @@ Àš radaũ põrą pir̃štinių põ kėdè.	Aš radau porą pirštinių po
 Àš tuõ metù buvaũ tìk septynerių̃ mẽtų mergáitė.	Aš tuo metu buvau tik septynerių metų mergaitė.	I was only a seven-year-old girl at that time.	metu	2	metas	Ncmsin-	1mascIAS
 Jìs susitiñka sù sàvo merginà šeštãdieniais.	Jis susitinka su savo mergina šeštadieniais.	He meets his girlfriend on Saturdays.	mergina	4	mergina	Ncfsin-	2femIA
 Jì ỹra apsė́sta vélniu.	Ji yra apsėsta velniu.	She is possessed by a devil.	velniu	3	velnias	Ncmsin-	1mascIAS
-Kàs pasirū́pins šunimì, kõl mẽs bū́sime išvỹkę?	Kas pasirūpins šunimi, kol mes būsime išvykę?	Who will take care of the dog while we are away?	šunimi	2	šuo	Ncmsin-	šuo
+Kàs pasirū́pins šunimì, kõl mẽs bū́sime išvỹkę?	Kas pasirūpins šunimi, kol mes būsime išvykę?	Who will take care of the dog while we are away?	šunimi	2	šuo	Ncmsin-	exception
 Màno draũgas pavadìno manè bailiù.	Mano draugas pavadino mane bailiu.	My friend called me a coward.	bailiu	4	bailys	Ncmsin-	1mascIS
 Màno svajõnė liẽka svajonè.	Mano svajonė lieka svajone.	My dream is still just a dream.	svajone	3	svajonė	Ncfsin-	2femĖ
 Mèrė nóri taptì advokatè.	Merė nori tapti advokate.	Mary wants to be a lawyer.	advokate	3	advokatė	Ncfsin-	2femĖ
@@ -159,7 +159,7 @@ Kaĩ àš užáugsiu, àš nóriu būtì karãliumi.	Kai aš užaugsiu, a
 Laisvãlaikiu labiáusiai mė́gstu váikščioti pakránte.	Laisvalaikiu labiausiai mėgstu vaikščioti pakrante.	My favorite pastime is strolling along the shore.	Laisvalaikiu	0	laisvalaikis	Ncmsin-	1mascIS
 Laisvãlaikiu labiáusiai mė́gstu váikščioti pakránte.	Laisvalaikiu labiausiai mėgstu vaikščioti pakrante.	My favorite pastime is strolling along the shore.	pakrante	4	pakrantė	Ncfsin-	2femĖ
 Mẽs vadìname Niujòrką Didžiúoju óbuoliu.	Mes vadiname Niujorką Didžiuoju obuoliu.	We call New York the Big Apple.	obuoliu	4	obuolys	Ncmsin-	1mascIS
-Nepasitikė́k žmogumì, apiẽ kuriõ prãeitį tù niẽko nežinaĩ.	Nepasitikėk žmogumi, apie kurio praeitį tu nieko nežinai.	Don't trust a man whose past you know nothing about.	žmogumi	1	žmogus	Ncmsin-	žmogus
+Nepasitikė́k žmogumì, apiẽ kuriõ prãeitį tù niẽko nežinaĩ.	Nepasitikėk žmogumi, apie kurio praeitį tu nieko nežinai.	Don't trust a man whose past you know nothing about.	žmogumi	1	žmogus	Ncmsin-	exception
 Patalpõs plótas ỹra dù sù pusè kvadrãtinių mètrų.	Patalpos plotas yra du su puse kvadratinių metrų.	The room's area is two and half square meters.	puse	5	pusė	Ncfsin-	2femĖ
 Tòmas apsimetinė́jo Mèrės draugù.	Tomas apsimetinėjo Merės draugu.	Tom pretended to be Mary's friend.	draugu	3	draugas	Ncmsin-	1mascIAS
 Tòmas gãli susisíekti sù Merè elektròniniu paštù.	Tomas gali susisiekti su Mere elektroniniu paštu.	Tom can get in touch with Mary by email.	Mere	4	merė	Ncfsin-	2femĖ

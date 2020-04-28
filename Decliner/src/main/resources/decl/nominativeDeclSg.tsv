@@ -2,8 +2,8 @@ Taĩ ỹra tiesà.	Tai yra tiesa.	That's true.	tiesa	2	tiesa	Ncfsnn-	2femIA
 Taĩ ỹra tiesà.	Tai yra tiesa.	That's true.	tiesa	2	tiesa	Ncfsnn-	2femIA
 Nè, taĩ negãli būtì tiesà.	Ne, tai negali būti tiesa.	No, it cannot be true.	tiesa	5	tiesa	Ncfsnn-	2femIA
 Taĩ negãli būtì tiesà.	Tai negali būti tiesa.	That can't be true.	tiesa	3	tiesa	Ncfsnn-	2femIA
-Àš nežinaũ kóks jìs per̃ žmogùs.	Aš nežinau koks jis per žmogus.	I don't know what kind of person he is.	žmogus	5	žmogus	Ncmsnn-	žmogus
-Jìs ỹra labaĩ sveikàs žmogùs.	Jis yra labai sveikas žmogus.	He's a very healthy person.	žmogus	4	žmogus	Ncmsnn-	žmogus
+Àš nežinaũ kóks jìs per̃ žmogùs.	Aš nežinau koks jis per žmogus.	I don't know what kind of person he is.	žmogus	5	žmogus	Ncmsnn-	exception
+Jìs ỹra labaĩ sveikàs žmogùs.	Jis yra labai sveikas žmogus.	He's a very healthy person.	žmogus	4	žmogus	Ncmsnn-	exception
 Maniaũ kàd taĩ bùvo tiesà.	Maniau kad tai buvo tiesa.	I thought it was true.	tiesa	4	tiesa	Ncfsnn-	2femIA
 Taĩ, ką̃ jiẽ sãko, ỹra tiesà.	Tai, ką jie sako, yra tiesa.	What they say is true.	tiesa	7	tiesa	Ncfsnn-	2femIA
 Àš esù tàvo tė́vas.	Aš esu tavo tėvas.	I'm your father.	tėvas	3	tėvas	Ncmsnn-	1mascIAS
@@ -13,13 +13,13 @@ Àš suprataũ ką̃ jìs sãkė.	Aš supratau ką jis sakė.	I understood w
 Jìs tìk ỹra výras.	Jis tik yra vyras.	He is only a man.	vyras	3	vyras	Ncmsnn-	1mascIAS
 Jìs ỹra màno tė́vas.	Jis yra mano tėvas.	He is my father.	tėvas	3	tėvas	Ncmsnn-	1mascIAS
 Taĩ nebùvo tiesà.	Tai nebuvo tiesa.	That wasn't the truth.	tiesa	2	tiesa	Ncfsnn-	2femIA
-Tàs žmogùs visái netùri pinigų̃.	Tas žmogus visai neturi pinigų.	That person doesn't have any money at all.	žmogus	1	žmogus	Ncmsnn-	žmogus
+Tàs žmogùs visái netùri pinigų̃.	Tas žmogus visai neturi pinigų.	That person doesn't have any money at all.	žmogus	1	žmogus	Ncmsnn-	exception
 Kur̃ ỹra màno tė̃tis?	Kur yra mano tėtis?	Where's my father?	tėtis	3	tėtis	Ncmsnn-	1mascIS
 Vìskas ką̃ jìs pasãkė bùvo tiesà.	Viskas ką jis pasakė buvo tiesa.	All he said was true.	tiesa	5	tiesa	Ncfsnn-	2femIA
 Ar̃ àš esù jū́sų draũgas?	Ar aš esu jūsų draugas?	Am I your friend?	draugas	4	draugas	Ncmsnn-	1mascIAS
 Ar̃ àš esù tàvo draũgas?	Ar aš esu tavo draugas?	Am I your friend?	draugas	4	draugas	Ncmsnn-	1mascIAS
 Ar̃ tù esì màno draũgas?	Ar tu esi mano draugas?	Are you my friend?	draugas	4	draugas	Ncmsnn-	1mascIAS
-Àš nesù geràs žmogùs.	Aš nesu geras žmogus.	I'm not a good person.	žmogus	3	žmogus	Ncmsnn-	žmogus
+Àš nesù geràs žmogùs.	Aš nesu geras žmogus.	I'm not a good person.	žmogus	3	žmogus	Ncmsnn-	exception
 Màno draũgas čià ỹra.	Mano draugas čia yra.	My friend is here.	draugas	1	draugas	Ncmsnn-	1mascIAS
 Tàvo draũgas čià ỹra.	Tavo draugas čia yra.	Your friend is here.	draugas	1	draugas	Ncmsnn-	1mascIAS
 Ar̃ taĩ ỹra tìkra tiesà?	Ar tai yra tikra tiesa?	Is this the real truth?	tiesa	4	tiesa	Ncfsnn-	2femIA
@@ -30,7 +30,7 @@ Jì ỹra màno žmóna.	Ji yra mano žmona.	She's my wife.	žmona	3	žmona	N
 Kur̃ ỹra màno sū́nus?	Kur yra mano sūnus?	Where is my son?	sūnus	3	sūnus	Ncmsnn-	4masc
 Móteris nóri žinóti tiẽsą.	Moteris nori žinoti tiesą.	The woman wants to know the truth.	Moteris	0	moteris	Ncfsnn-	3fem
 Nèt vaĩkas gãli tą̃ padarýti.	Net vaikas gali tą padaryti.	Even a child can do it.	vaikas	1	vaikas	Ncmsnn-	1mascIAS
-Tàs žmogùs nenóri niẽko darýti.	Tas žmogus nenori nieko daryti.	That person doesn't want to do anything.	žmogus	1	žmogus	Ncmsnn-	žmogus
+Tàs žmogùs nenóri niẽko darýti.	Tas žmogus nenori nieko daryti.	That person doesn't want to do anything.	žmogus	1	žmogus	Ncmsnn-	exception
 Výras nóri žinóti tiẽsą.	Vyras nori žinoti tiesą.	The man wants to know the truth.	Vyras	0	vyras	Ncmsnn-	1mascIAS
 Lìko tìk vienà dienà, patiñka taĩ mùms ar̃ nè.	Liko tik viena diena, patinka tai mums ar ne.	There is only one day left, whether we like it or not.	diena	3	diena	Ncfsnn-	2femIA
 Ỹra víenas kẽlias.	Yra vienas kelias.	There is one way.	kelias	2	kelias	Ncmsnn-	1mascIAS
@@ -50,7 +50,7 @@ Àš esù dìdelis vaĩkas.	Aš esu didelis vaikas.	I'm a big child.	vaikas	
 Àš nesù tàvo mótina.	Aš nesu tavo motina.	I'm not your mother.	motina	3	motina	Ncfsnn-	2femIA
 Àš nežinaũ, kàs ỹra màno mótina.	Aš nežinau, kas yra mano motina.	I don't know who my mother is.	motina	6	motina	Ncfsnn-	2femIA
 Galbū́t taĩ ką̃ tù pasakeĩ ỹra tiesà.	Galbūt tai ką tu pasakei yra tiesa.	Maybe what you said is true.	tiesa	6	tiesa	Ncfsnn-	2femIA
-Jìs bùvo puikùs žmogùs.	Jis buvo puikus žmogus.	He was a wonderful man.	žmogus	3	žmogus	Ncmsnn-	žmogus
+Jìs bùvo puikùs žmogùs.	Jis buvo puikus žmogus.	He was a wonderful man.	žmogus	3	žmogus	Ncmsnn-	exception
 Kàd ir̃ kaĩp bū́tų, taĩ nè tàvo reĩkalas.	Kad ir kaip būtų, tai ne tavo reikalas.	In any case, it's none of your business.	reikalas	8	reikalas	Ncmsnn-	1mascIAS
 Tà merginà apiẽ kurią̃ àš táu sakiaũ gyvẽna čià.	Ta mergina apie kurią aš tau sakiau gyvena čia.	The girl I told you about lives here.	mergina	1	mergina	Ncfsnn-	2femIA
 Tàs vyrùkas ỹra màno draũgas.	Tas vyrukas yra mano draugas.	That guy's a friend of mine.	vyrukas	1	vyrukas	Ncmsnn-	1mascIAS
@@ -109,7 +109,7 @@ Ar̃ ỹra skìrtumas?	Ar yra skirtumas?	Is there a difference?	skirtumas	2	ski
 Diẽvas ỹra blogàs.	Dievas yra blogas.	God is bad.	Dievas	0	dievas	Ncmsnn-	1mascIAS
 Jì nėrà màno sesuõ, jì màno žmonà.	Ji nėra mano sesuo, ji mano žmona.	She is not my sister, she's my wife.	sesuo	3	sesuo	Ncfsnn-	5fem
 Jì nėrà màno sesuõ, jì màno žmonà.	Ji nėra mano sesuo, ji mano žmona.	She is not my sister, she's my wife.	žmona	7	žmona	Ncfsnn-	2femIA
-Jìs nėrà blogàs žmogùs.	Jis nėra blogas žmogus.	He's not a bad person.	žmogus	3	žmogus	Ncmsnn-	žmogus
+Jìs nėrà blogàs žmogùs.	Jis nėra blogas žmogus.	He's not a bad person.	žmogus	3	žmogus	Ncmsnn-	exception
 Kurìs nãmas ỹra jõ?	Kuris namas yra jo?	Which house is his?	namas	1	namas	Ncmsnn-	1mascIAS
 Màno mótina negãli ateitì.	Mano motina negali ateiti.	My mother can't come.	motina	1	motina	Ncfsnn-	2femIA
 Mán patiñka šità mergáitė.	Man patinka šita mergaitė.	I like this girl.	mergaitė	3	mergaitė	Ncfsnn-	2femĖ
@@ -154,15 +154,15 @@ Ar̃ táu patiñka šìs miẽstas?	Ar tau patinka šis miestas?	How do you l
 Àš nemanaũ kàd taĩ ỹra gẽra idė́ja.	Aš nemanau kad tai yra gera idėja.	I don't think this is a good idea.	idėja	6	idėja	Ncfsnn-	2femIA
 Jáučiu kàd táu patìks šitàs fìlmas.	Jaučiu kad tau patiks šitas filmas.	I've got a feeling that you're going to like this movie.	filmas	5	filmas	Ncmsnn-	1mascIAS
 Jìs ỹra výras kuriuõ mẽs gãlime pasitikė́ti.	Jis yra vyras kuriuo mes galime pasitikėti.	He's a man we can trust.	vyras	2	vyras	Ncmsnn-	1mascIAS
-Jìs ỹra žõdžio žmogùs, tàd gãli juõ pasitikė́ti.	Jis yra žodžio žmogus, tad gali juo pasitikėti.	He's a man of his word, so you can count on him.	žmogus	3	žmogus	Ncmsnn-	žmogus
+Jìs ỹra žõdžio žmogùs, tàd gãli juõ pasitikė́ti.	Jis yra žodžio žmogus, tad gali juo pasitikėti.	He's a man of his word, so you can count on him.	žmogus	3	žmogus	Ncmsnn-	exception
 Jõs výras ỹra kalė́jime.	Jos vyras yra kalėjime.	Her husband is in prison.	vyras	1	vyras	Ncmsnn-	1mascIAS
 Kaĩ kuriẽ žmónės màno, kàd taĩ ỹra blõga idė́ja.	Kai kurie žmonės mano, kad tai yra bloga idėja.	Some people think it's a bad idea.	bloga	8	idėja	Ncfsnn-	2femIA
 Manaũ, kàd taĩ gẽra idė́ja.	Manau, kad tai gera idėja.	I think that's a good idea.	idėja	5	idėja	Ncfsnn-	2femIA
 Mán bùvo per̃ daũg gė́da pažiūrė́ti jái į̃ akìs.	Man buvo per daug gėda pažiūrėti jai į akis.	I was too embarrassed to look her in the eye.	gėda	4	gėda	Ncfsnn-	2femIA
 Pasáulis prasidė́jo bè žmogaũs ir̃ baĩgsis bè jõ.	Pasaulis prasidėjo be žmogaus ir baigsis be jo.	The world began without man and it shall end without him.	Pasaulis	0	pasaulis	Ncmsnn-	1mascIS
 Põnas tóks-ir̃-tóks šiañdien skam̃bino.	Ponas toks-ir-toks šiandien skambino.	Mr So-and-so called today.	Ponas	0	ponas	Ncmsnn-	1mascIAS
-Šuõ bùvo mìręs.	Šuo buvo miręs.	The dog was dead.	Šuo	0	šuo	Ncmsnn-	šuo
-Šuõ bùvo negývas.	Šuo buvo negyvas.	The dog was dead.	Šuo	0	šuo	Ncmsnn-	šuo
+Šuõ bùvo mìręs.	Šuo buvo miręs.	The dog was dead.	Šuo	0	šuo	Ncmsnn-	exception
+Šuõ bùvo negývas.	Šuo buvo negyvas.	The dog was dead.	Šuo	0	šuo	Ncmsnn-	exception
 Taĩ ỹra gẽra idė́ja.	Tai yra gera idėja.	That's a good idea.	idėja	3	idėja	Ncfsnn-	2femIA
 Taĩ ỹra miẽstas apiẽ kurį̃ àš táu sakiaũ.	Tai yra miestas apie kurį aš tau sakiau.	This is the city I told you about.	miestas	2	miestas	Ncmsnn-	1mascIAS
 Taĩ ỹra nuostabì idė́ja.	Tai yra nuostabi idėja.	This is a great idea.	idėja	3	idėja	Ncfsnn-	2femIA
@@ -174,7 +174,7 @@ Ar̃ taĩ Tòmas padãrė?	Ar tai Tomas padarė?	Was Tom the one who did this
 Ar̃ Tòmas mir̃s?	Ar Tomas mirs?	Is Tom going to die?	Tomas	1	tomas	Ncmsnn-	1mascIAS
 Ar̃ Tòmas pasãkė kám jám reikė́jo pinigų̃?	Ar Tomas pasakė kam jam reikėjo pinigų?	Did Tom say what he needed the money for?	Tomas	1	tomas	Ncmsnn-	1mascIAS
 Ar̃ Tòmas žìno, kàs àš esù?	Ar Tomas žino, kas aš esu?	Does Tom know who I am?	Tomas	1	tomas	Ncmsnn-	1mascIAS
-Ar̃ tù nóri išgirstì ką̃ tàs žmogùs apiẽ tavè pasãkė?	Ar tu nori išgirsti ką tas žmogus apie tave pasakė?	Do you want to hear what that person said about you?	žmogus	6	žmogus	Ncmsnn-	žmogus
+Ar̃ tù nóri išgirstì ką̃ tàs žmogùs apiẽ tavè pasãkė?	Ar tu nori išgirsti ką tas žmogus apie tave pasakė?	Do you want to hear what that person said about you?	žmogus	6	žmogus	Ncmsnn-	exception
 Ar̃ žinaĩ ìš kur̃ Tòmas?	Ar žinai iš kur Tomas?	Do you know where Tom is from?	Tomas	4	tomas	Ncmsnn-	1mascIAS
 Àš mė́gstu móteris.	Aš mėgstu moteris.	I like women.	moteris	2	moteris	Ncfsnn-	3fem
 Àš nežinaũ, ar̃ Tòmas čià dár gyvẽna ar̃ nè.	Aš nežinau, ar Tomas čia dar gyvena ar ne.	I don't know whether Tom still lives here or not.	Tomas	4	tomas	Ncmsnn-	1mascIAS
@@ -187,7 +187,7 @@ Kõ Tòmas ìš manę̃s nóri?	Ko Tomas iš manęs nori?	What does Tom want
 Šiañdien Tòmas atródo kitaĩp.	Šiandien Tomas atrodo kitaip.	Tom seems different today.	Tomas	1	tomas	Ncmsnn-	1mascIAS
 Šiuõ metù Tòmas nėrà kalė́jime.	Šiuo metu Tomas nėra kalėjime.	Tom isn't currently in prison.	Tomas	2	tomas	Ncmsnn-	1mascIAS
 Štaĩ tàs berniùkas, kurìs padė́jo mán.	Štai tas berniukas, kuris padėjo man.	This is the boy who helped me.	berniukas	2	berniukas	Ncmsnn-	1mascIAS
-Šuõ mìršta.	Šuo miršta.	The dog is dying.	Šuo	0	šuo	Ncmsnn-	šuo
+Šuõ mìršta.	Šuo miršta.	The dog is dying.	Šuo	0	šuo	Ncmsnn-	exception
 Taĩ nėrà klaidà.	Tai nėra klaida.	This is not an error.	klaida	2	klaida	Ncfsnn-	2femIA
 Taĩ ỹra labaĩ pavojìnga sistemà.	Tai yra labai pavojinga sistema.	It's a very dangerous system.	sistema	4	sistema	Ncfsnn-	2femIA
 Tòmas atródo kaĩp móteris.	Tomas atrodo kaip moteris.	Tom looks like a woman.	Tomas	0	Tomas	Npmsnnf	1mascIAS
@@ -236,7 +236,7 @@ Daugumà jõ draugų̃ ỹra mergìnos.	Dauguma jo draugų yra merginos.	Most
 Màno tė́vas ỹra jáunas.	Mano tėvas yra jaunas.	My father is young.	tėvas	1	tėvas	Ncmsnn-	1mascIAS
 Mán patiñka šì mùzika.	Man patinka ši muzika.	I like this music.	muzika	3	muzika	Ncfsnn-	2femIA
 Mū́sų dárbas ỹra bevéik baigtàs.	Mūsų darbas yra beveik baigtas.	Our work is almost over.	darbas	1	darbas	Ncmsnn-	1mascIAS
-Šìs šuõ greĩtai bė́ga.	Šis šuo greitai bėga.	This dog runs fast.	šuo	1	šuo	Ncmsnn-	šuo
+Šìs šuõ greĩtai bė́ga.	Šis šuo greitai bėga.	This dog runs fast.	šuo	1	šuo	Ncmsnn-	exception
 Tàs výras kurį̃ tù vãkar mateĩ ỹra màno dė̃dė.	Tas vyras kurį tu vakar matei yra mano dėdė.	The man you saw yesterday is my uncle.	vyras	1	vyras	Ncmsnn-	1mascIAS
 Tàs výras kurį̃ tù vãkar mateĩ ỹra màno dė̃dė.	Tas vyras kurį tu vakar matei yra mano dėdė.	The man you saw yesterday is my uncle.	dėdė	8	dėdė	Ncmsnn-	
 Tòmas atródo jáunas.	Tomas atrodo jaunas.	Tom looks young.	Tomas	0	Tomas	Npmsnnf	1mascIAS
@@ -254,7 +254,7 @@ Àš pamiršaũ kur̃ ỹra màno mokyklà.	Aš pamiršau kur yra mano mokyk
 Diẽvas pàdeda tíems, kuriẽ pãtys sáu pàdeda.	Dievas padeda tiems, kurie patys sau padeda.	God helps those who help themselves.	Dievas	0	dievas	Ncmsnn-	1mascIAS
 Jì kalbė́jo taĩp, tar̃si bū́tų màno mamà.	Ji kalbėjo taip, tarsi būtų mano mama.	She talked as if she were my mother.	mama	7	mama	Ncfsnn-	2femIA
 Jìs mòka skaitýti mintìs.	Jis moka skaityti mintis.	He can read thoughts.	mintis	3	mintis	Ncfsnn-	3fem
-Jìs ỹra labaĩ svarbùs žmogùs.	Jis yra labai svarbus žmogus.	He's a very important person.	žmogus	4	žmogus	Ncmsnn-	žmogus
+Jìs ỹra labaĩ svarbùs žmogùs.	Jis yra labai svarbus žmogus.	He's a very important person.	žmogus	4	žmogus	Ncmsnn-	exception
 Jų̃ mokyklà atródo labaĩ blogaĩ.	Jų mokykla atrodo labai blogai.	Their school looks very bad.	mokykla	1	mokykla	Ncfsnn-	2femIA
 Kókį maĩstą Tòmas mė́gsta?	Kokį maistą Tomas mėgsta?	What kind of food does Tom like?	Tomas	2	Tomas	Npmsnnf	1mascIAS
 Kurì móteris sù tavimì kalbė́jo?	Kuri moteris su tavimi kalbėjo?	Which woman was talking to you?	moteris	1	moteris	Ncfsnn-	3fem
@@ -426,7 +426,7 @@ Markàs pasìėmė sàvo dáiktus ir̃ išė̃jo.	Markas pasiėmė savo daik
 Norė́čiau taptì mókytoja.	Norėčiau tapti mokytoja.	I'd like to be a teacher.	mokytoja	2	mokytoja	Ncfsnn-	2femIA
 Šì dovanà skìrta màno draũgui.	Ši dovana skirta mano draugui.	This gift is for my friend.	dovana	1	dovana	Ncfsnn-	2femIA
 Šì jáuna panẽlė ỹra ìš Rùsijos.	Ši jauna panelė yra iš Rusijos.	This young lady is from Russia.	panelė	2	panelė	Ncfsnn-	2femĖ
-Šuõ válgo sàvo maĩstą.	Šuo valgo savo maistą.	The dog is eating his food.	Šuo	0	šuo	Ncmsnn-	šuo
+Šuõ válgo sàvo maĩstą.	Šuo valgo savo maistą.	The dog is eating his food.	Šuo	0	šuo	Ncmsnn-	exception
 Tà dienà ìš tikrų̃jų bùvo labaĩ baisì.	Ta diena iš tikrųjų buvo labai baisi.	That day really was very scary.	diena	1	diena	Ncfsnn-	2femIA
 Taĩ bùvo didžiáusia màno gyvẽnimo klaidà.	Tai buvo didžiausia mano gyvenimo klaida.	It was the biggest mistake of my life.	klaida	5	klaida	Ncfsnn-	2femIA
 Tiẽsą sãkant, tàs fìlmas mán nebùvo labaĩ įdomùs.	Tiesą sakant, tas filmas man nebuvo labai įdomus.	To tell the truth, that film was not very interesting to me.	filmas	4	filmas	Ncmsnn-	1mascIAS
@@ -444,7 +444,7 @@ Àš esù jõ draũgas ir̃ juõ lìksiu.	Aš esu jo draugas ir juo liksiu
 Gyvẽnimas tę̃siasi.	Gyvenimas tęsiasi.	Life goes on.	Gyvenimas	0	gyvenimas	Ncmsnn-	1mascIAS
 Jéigu tàs automobìlis nebùvo júodas, tadà kokiõs jìs bùvo spalvõs?	Jeigu tas automobilis nebuvo juodas, tada kokios jis buvo spalvos?	If that car wasn't black then what colour was it?	automobilis	2	automobilis	Ncmsnn-	1mascIS
 Jì ỹra labaĩ atsargùs vairúotojas.	Ji yra labai atsargus vairuotojas.	He is a very careful driver.	vairuotojas	4	vairuotojas	Ncmsnn-	1mascIAS
-Jõs šuõ nėrà labaĩ greitàs.	Jos šuo nėra labai greitas.	Her dog isn't very fast.	šuo	1	šuo	Ncmsnn-	šuo
+Jõs šuõ nėrà labaĩ greitàs.	Jos šuo nėra labai greitas.	Her dog isn't very fast.	šuo	1	šuo	Ncmsnn-	exception
 Kàs tą̃ pasãkė? Taĩ vìsiška netiesà!	Kas tą pasakė? Tai visiška netiesa!	Who said that? It's totally wrong!	netiesa	6	netiesa	Ncfsnn-	2femIA
 Kàs ỹra tàvo mėgstamiáusias rašýtojas?	Kas yra tavo mėgstamiausias rašytojas?	Who's your favorite writer?	rašytojas	4	rašytojas	Ncmsnn-	1mascIAS
 Màno príešo príešas ỹra màno draũgas.	Mano priešo priešas yra mano draugas.	An enemy of an enemy is a friend.	priešas	2	priešas	Ncmsnn-	1mascIAS
@@ -481,7 +481,7 @@ Fìlmas bùvo siaubìngas.	Filmas buvo siaubingas.	That movie was terrible.	F
 Jìs nežìno ar̃ tàs mẽdis ỹra tikràs.	Jis nežino ar tas medis yra tikras.	He doesn't know if that tree is real.	medis	4	medis	Ncmsnn-	1mascIS
 Kambarỹs ỹra pìlnas gėlių̃.	Kambarys yra pilnas gėlių.	The room is full of flowers.	Kambarys	0	kambarys	Ncmsnn-	1mascIS
 Kàs tàs výras kurìs sė́di kitamè stãlo galè?	Kas tas vyras kuris sėdi kitame stalo gale?	Who is the man sitting at the other end of the table?	vyras	2	vyras	Ncmsnn-	1mascIAS
-Kóks žmogùs kažką̃ tókio padarýtų?	Koks žmogus kažką tokio padarytų?	What kind of person would do that kind of thing?	žmogus	1	žmogus	Ncmsnn-	žmogus
+Kóks žmogùs kažką̃ tókio padarýtų?	Koks žmogus kažką tokio padarytų?	What kind of person would do that kind of thing?	žmogus	1	žmogus	Ncmsnn-	exception
 Màno kompiùteris ỹra màno geriáusias draũgas.	Mano kompiuteris yra mano geriausias draugas.	My computer is my best friend.	kompiuteris	1	kompiuteris	Ncmsnn-	1mascIS
 Màno kompiùteris ỹra màno geriáusias draũgas.	Mano kompiuteris yra mano geriausias draugas.	My computer is my best friend.	draugas	5	draugas	Ncmsnn-	1mascIAS
 Màno mašinà sugẽdo pakeliuĩ.	Mano mašina sugedo pakeliui.	My car broke down on the way.	mašina	1	mašina	Ncfsnn-	2femIA
@@ -566,7 +566,7 @@ Raudóna, príešingai neĩ žãlia, ỹra pavõjaus žénklas.	Raudona, p
 Šì mėsà negeraĩ kvẽpia.	Ši mėsa negerai kvepia.	This meat smells bad.	mėsa	1	mėsa	Ncfsnn-	2femIA
 Šviesõs greĩtis ỹra daũg didèsnis ùž gar̃so greĩtį.	Šviesos greitis yra daug didesnis už garso greitį.	The speed of light is much greater than that of sound.	greitis	1	greitis	Ncmsnn-	1mascIS
 Taĩ ỹra ligóninė kuriojè àš gimiaũ.	Tai yra ligoninė kurioje aš gimiau.	This is the hospital which I was born in.	ligoninė	2	ligoninė	Ncfsnn-	2femĖ
-Tàs žmogùs màno kàd màno katė̃ gyvẽna añt mẽdžio.	Tas žmogus mano kad mano katė gyvena ant medžio.	That person thinks that my cat lives on the tree.	žmogus	1	žmogus	Ncmsnn-	žmogus
+Tàs žmogùs màno kàd màno katė̃ gyvẽna añt mẽdžio.	Tas žmogus mano kad mano katė gyvena ant medžio.	That person thinks that my cat lives on the tree.	žmogus	1	žmogus	Ncmsnn-	exception
 Tàs žmogùs màno kàd màno katė̃ gyvẽna añt mẽdžio.	Tas žmogus mano kad mano katė gyvena ant medžio.	That person thinks that my cat lives on the tree.	katė	5	katė	Ncfsnn-	2femĖ
 Tàvo katė̃ nuõ manę̃s slẽpiasi.	Tavo katė nuo manęs slepiasi.	Your cat is hiding from me.	katė	1	katė	Ncfsnn-	2femĖ
 Tòmas atródys kaĩp idiòtas.	Tomas atrodys kaip idiotas.	Tom will look like an idiot.	Tomas	0	Tomas	Npmsnnf	1mascIAS
@@ -621,7 +621,7 @@ Mótina nežinójo ką̃ darýti sù sàvo sūnumì.	Motina nežinojo ką 
 Nósis žìno.	Nosis žino.	The nose knows.	Nosis	0	nosis	Ncfsnn-	3fem
 Polìcija bùvo į́vykio viẽtoje.	Policija buvo įvykio vietoje.	The police were on the scene of the accident.	Policija	0	policija	Ncfsnn-	2femIA
 Põpierius ỹra báltas.	Popierius yra baltas.	Paper is white.	Popierius	0	popierius	Ncmsnn-	4masc
-Šìs šuõ ỹra báltas.	Šis šuo yra baltas.	The dog is white.	šuo	1	šuo	Ncmsnn-	šuo
+Šìs šuõ ỹra báltas.	Šis šuo yra baltas.	The dog is white.	šuo	1	šuo	Ncmsnn-	exception
 Šità mergáitė visái neblogaĩ dainúoja.	Šita mergaitė visai neblogai dainuoja.	This girl sings pretty well.	mergaitė	1	mergaitė	Ncfsnn-	2femĖ
 Šių̃ namų̃ virtùvė ỹra labaĩ dìdelė.	Šių namų virtuvė yra labai didelė.	The kitchen of this house is very large.	virtuvė	2	virtuvė	Ncfsnn-	2femĖ
 Suñkvežimis stovė́jo vidurỹ kẽlio.	Sunkvežimis stovėjo vidury kelio.	A truck was standing in the middle of the road.	Sunkvežimis	0	sunkvežimis	Ncmsnn-	1mascIS
@@ -752,7 +752,7 @@ Tòmas nežìno, ar̃ Mèrė stovyklaũs kartù sù mumìs ar̃ nè.	Tom
 Tòmas nežìno, ar̃ Mèrė stovyklaũs kartù sù mumìs ar̃ nè.	Tomas nežino, ar Merė stovyklaus kartu su mumis ar ne.	Tom doesn't know if Mary will go camping with us or not.	Merė	4	merė	Ncfsnn-	2femĖ
 Tòmas nežìno kóks Mèrė per̃ žmogùs.	Tomas nežino koks Merė per žmogus.	Tom doesn't know what kind of person Mary is.	Tomas	0	Tomas	Npmsnnf	1mascIAS
 Tòmas nežìno kóks Mèrė per̃ žmogùs.	Tomas nežino koks Merė per žmogus.	Tom doesn't know what kind of person Mary is.	Merė	3	merė	Ncfsnn-	2femĖ
-Tòmas nežìno kóks Mèrė per̃ žmogùs.	Tomas nežino koks Merė per žmogus.	Tom doesn't know what kind of person Mary is.	žmogus	5	žmogus	Ncmsnn-	žmogus
+Tòmas nežìno kóks Mèrė per̃ žmogùs.	Tomas nežino koks Merė per žmogus.	Tom doesn't know what kind of person Mary is.	žmogus	5	žmogus	Ncmsnn-	exception
 Tòmas pamir̃šo, kur̃ padė́jo sàvo ãkinius.	Tomas pamiršo, kur padėjo savo akinius.	Tom forgot where he put his glasses.	Tomas	0	Tomas	Npmsnnf	1mascIAS
 Tòmas pasikeĩs.	Tomas pasikeis.	Tom'll change.	Tomas	0	Tomas	Npmsnnf	1mascIAS
 Tòmas suprãto ką̃ Mèrė sãkė.	Tomas suprato ką Merė sakė.	Tom understood what Mary was saying.	Tomas	0	Tomas	Npmsnnf	1mascIAS
@@ -809,7 +809,7 @@ Tòmas vìs dár ỹra kalinỹs.	Tomas vis dar yra kalinys.	Tom is still a p
 Tòmas vìs dár ỹra kalinỹs.	Tomas vis dar yra kalinys.	Tom is still a prisoner.	kalinys	4	kalinys	Ncmsnn-	1mascIS
 Tòmas ỹra geràs kaimýnas.	Tomas yra geras kaimynas.	Tom is a good neighbour.	Tomas	0	Tomas	Npmsnnf	1mascIAS
 Tòmas ỹra geràs kaimýnas.	Tomas yra geras kaimynas.	Tom is a good neighbour.	kaimynas	3	kaimynas	Ncmsnn-	1mascIAS
-Tù esì pìrmas žmogùs kuriám àš tą̃ papãsakojau.	Tu esi pirmas žmogus kuriam aš tą papasakojau.	You're the first person I told that to.	žmogus	3	žmogus	Ncmsnn-	žmogus
+Tù esì pìrmas žmogùs kuriám àš tą̃ papãsakojau.	Tu esi pirmas žmogus kuriam aš tą papasakojau.	You're the first person I told that to.	žmogus	3	žmogus	Ncmsnn-	exception
 Ùpė lėtaĩ tẽka į̃ jū́rą.	Upė lėtai teka į jūrą.	The river flows slowly to the sea.	Upė	0	upė	Ncfsnn-	2femĖ
 Ùpė ramiaĩ tẽka.	Upė ramiai teka.	The river flows calmly.	Upė	0	upė	Ncfsnn-	2femĖ
 Ùpė tẽka į̃ jū́rą.	Upė teka į jūrą.	The river flows into the sea.	Upė	0	upė	Ncfsnn-	2femĖ
@@ -868,7 +868,7 @@ Àš esù krepšìnio komándos narỹs.	Aš esu krepšinio komandos narys.	
 Àš esù žurnalìstas.	Aš esu žurnalistas.	I'm a journalist.	žurnalistas	2	žurnalistas	Ncmsnn-	1mascIAS
 Àš nóriu būtì žurnalìstas.	Aš noriu būti žurnalistas.	I want to be a journalist.	žurnalistas	3	žurnalistas	Ncmsnn-	1mascIAS
 Àš turiù kãtę ir̃ šùnį. Katė̃ ỹra júoda, õ šuõ ỹra báltas.	Aš turiu katę ir šunį. Katė yra juoda, o šuo yra baltas.	I have a cat and a dog. The cat is black and the dog is white.	Katė	6	katė	Ncfsnn-	2femĖ
-Àš turiù kãtę ir̃ šùnį. Katė̃ ỹra júoda, õ šuõ ỹra báltas.	Aš turiu katę ir šunį. Katė yra juoda, o šuo yra baltas.	I have a cat and a dog. The cat is black and the dog is white.	šuo	11	šuo	Ncmsnn-	šuo
+Àš turiù kãtę ir̃ šùnį. Katė̃ ỹra júoda, õ šuõ ỹra báltas.	Aš turiu katę ir šunį. Katė yra juoda, o šuo yra baltas.	I have a cat and a dog. The cat is black and the dog is white.	šuo	11	šuo	Ncmsnn-	exception
 Batèrija nùmirė.	Baterija numirė.	The battery died out.	Baterija	0	baterija	Ncfsnn-	2femIA
 Bìlas mán àtnešė stiklìnę vandeñs.	Bilas man atnešė stiklinę vandens.	Bill brought me a glass of water.	Bilas	0	Bilas	Npmsnnf	1mascIAS
 Geràs šū̃vis, vaikè. Patáikei.	Geras šūvis, vaike. Pataikei.	Good shot, kid. You got him.	šūvis	1	šūvis	Ncmsnn-	1mascIS
@@ -876,7 +876,7 @@ Jéi bū́tum gyvū̃nas, kókiu bū́tum?	Jei būtum gyvūnas, kokiu būtum?	
 Jìs gãli grotì gitarà.	Jis gali groti gitara.	He can play the guitar.	gitara	3	gitara	Ncfsnn-	2femIA
 Jìs ỹra žurnalìstas.	Jis yra žurnalistas.	He's a journalist.	žurnalistas	2	žurnalistas	Ncmsnn-	1mascIAS
 Jì tùri kãtę. Katė̃ ỹra bálta.	Ji turi katę. Katė yra balta.	She has a cat. The cat is white.	Katė	4	katė	Ncfsnn-	2femĖ
-Jóks žmogùs negãli išgyvénti ikì šim̃to.	Joks žmogus negali išgyventi iki šimto.	No man can live to be two hundred years old.	žmogus	1	žmogus	Ncmsnn-	žmogus
+Jóks žmogùs negãli išgyvénti ikì šim̃to.	Joks žmogus negali išgyventi iki šimto.	No man can live to be two hundred years old.	žmogus	1	žmogus	Ncmsnn-	exception
 Jõ šeimà daũg keliãvo.	Jo šeima daug keliavo.	His family moved around quite a lot.	šeima	1	šeima	Ncfsnn-	2femIA
 Ką̃ pasakỹs spaudà?	Ką pasakys spauda?	What will the newspapers say?	spauda	2	spauda	Ncfsnn-	2femIA
 Kárvė ỹra naudìngas gyvū̃nas.	Karvė yra naudingas gyvūnas.	A cow is a useful animal.	Karvė	0	karvė	Ncfsnn-	2femĖ
@@ -930,7 +930,7 @@ Bìlas nemė́gsta kàd jõ tė́vas taĩp daũg rū̃ko.	Bilas nemėgsta k
 Fìlmas trùko dvì vãlandas.	Filmas truko dvi valandas.	The film lasted 2 hours.	Filmas	0	filmas	Ncmsnn-	1mascIAS
 Jám bùvo sùteikta svarbì mìsija.	Jam buvo suteikta svarbi misija.	He was given an important mission.	misija	4	misija	Ncfsnn-	2femIA
 Jìs neprisìmena ar̃ tàs kambarỹs bùvo tuščiàs ar̃ nè.	Jis neprisimena ar tas kambarys buvo tuščias ar ne.	He doesn't remember whether that room was empty or not.	kambarys	4	kambarys	Ncmsnn-	1mascIS
-Jì ỹra tylùs žmogùs.	Ji yra tylus žmogus.	She's a quiet person.	žmogus	3	žmogus	Ncmsnn-	žmogus
+Jì ỹra tylùs žmogùs.	Ji yra tylus žmogus.	She's a quiet person.	žmogus	3	žmogus	Ncmsnn-	exception
 Jõ mamà neprisìmena ką̃ jì rãdo tamè kambaryjè.	Jo mama neprisimena ką ji rado tame kambaryje.	His mum doesn't remember what she found in that room.	mama	1	mama	Ncfsnn-	2femIA
 Jõ senẽlis bùvo aũkšto rángo kariniñkas.	Jo senelis buvo aukšto rango karininkas.	His grandfather was a soldier of high degree.	senelis	1	senelis	Ncmsnn-	1mascIS
 Jõ senẽlis bùvo aũkšto rángo kariniñkas.	Jo senelis buvo aukšto rango karininkas.	His grandfather was a soldier of high degree.	karininkas	5	karininkas	Ncmsnn-	1mascIAS
@@ -1036,7 +1036,7 @@ Prancūzijà ỹra Vakarų̃ Euròpoje.	Prancūzija yra Vakarų Europoje.	Fran
 Šìs berniùkas tùri stìprų ir̃ sveĩką kū́ną.	Šis berniukas turi stiprų ir sveiką kūną.	This boy has a strong and healthy body.	berniukas	1	berniukas	Ncmsnn-	1mascIAS
 Šìs dvìratis priklaũso mán.	Šis dviratis priklauso man.	This bicycle belongs to me.	dviratis	1	dviratis	Ncmsnn-	1mascIS
 Šì sofà ùžima per̃ daũg viẽtos.	Ši sofa užima per daug vietos.	This sofa takes too much room.	sofa	1	sofa	Ncfsnn-	2femIA
-Šuõ negãli užliptì añt síenos.	Šuo negali užlipti ant sienos.	A dog can't climb up a wall.	Šuo	0	šuo	Ncmsnn-	šuo
+Šuõ negãli užliptì añt síenos.	Šuo negali užlipti ant sienos.	A dog can't climb up a wall.	Šuo	0	šuo	Ncmsnn-	exception
 Tà klaidà ỹra labaĩ beñdras.	Ta klaida yra labai bendras.	That error is very common.	klaida	1	klaida	Ncfsnn-	2femIA
 Tàs kaklãraištis táu labaĩ tiñka.	Tas kaklaraištis tau labai tinka.	That tie suits you very well.	kaklaraištis	1	kaklaraištis	Ncmsnn-	1mascIS
 Tàvo dvìratis ỹra gerèsnis neĩ màno.	Tavo dviratis yra geresnis nei mano.	Your bike is better than mine.	dviratis	1	dviratis	Ncmsnn-	1mascIS
@@ -1171,7 +1171,7 @@ Sekmãdieniais parduotùvė uždarýta.	Sekmadieniais parduotuvė uždaryta.	
 Šiañdien ỹra pirmãdienis, õ rytój bùs antrãdienis.	Šiandien yra pirmadienis, o rytoj bus antradienis.	It's Monday today and it will be Tuesday tomorrow.	pirmadienis	2	pirmadienis	Ncmsnn-	1mascIS
 Šiañdien ỹra pirmãdienis, õ rytój bùs antrãdienis.	Šiandien yra pirmadienis, o rytoj bus antradienis.	It's Monday today and it will be Tuesday tomorrow.	antradienis	7	antradienis	Ncmsnn-	1mascIS
 Skalbìmo mašinà sugẽdo.	Skalbimo mašina sugedo.	The washing machine has broken down.	mašina	1	mašina	Ncfsnn-	2femIA
-Šuõ gùli añt sòfos, õ àš guliù lóvoj.	Šuo guli ant sofos, o aš guliu lovoj.	The dog is lying on the sofa and I'm lying in bed.	Šuo	0	šuo	Ncmsnn-	šuo
+Šuõ gùli añt sòfos, õ àš guliù lóvoj.	Šuo guli ant sofos, o aš guliu lovoj.	The dog is lying on the sofa and I'm lying in bed.	Šuo	0	šuo	Ncmsnn-	exception
 Taĩ bùvo vertìnga patirtìs.	Tai buvo vertinga patirtis.	That was a valuable experience.	patirtis	3	patirtis	Ncfsnn-	3fem
 Tàs debesìs prìmena Kìniją.	Tas debesis primena Kiniją.	That cloud looks like China.	debesis	1	debesis	Ncmsnn-	3masc
 Tòmas gãvo medãlį.	Tomas gavo medalį.	Tom was given a medal.	Tomas	0	Tomas	Npmsnnf	1mascIAS
@@ -1439,7 +1439,7 @@ Tòmas netùri jókio nóro keliáuti į̃ Bòstoną.	Tomas neturi jokio n
 Tòmas nuspréndė nuvyktì į̃ Bòstoną.	Tomas nusprendė nuvykti į Bostoną.	Tom decided to go to Boston.	Tomas	0	Tomas	Npmsnnf	1mascIAS
 Tòmas pàdegė Mèrės namùs.	Tomas padegė Merės namus.	Tom set fire to Mary's house.	Tomas	0	Tomas	Npmsnnf	1mascIAS
 Tòmas pradiñgo bè pė́dsako.	Tomas pradingo be pėdsako.	Tom disappeared without a trace.	Tomas	0	Tomas	Npmsnnf	1mascIAS
-Tù esì vieniñtelis žmogùs, kurìs mán skam̃bina põ dešim̃tos valandõs vãkaro.	Tu esi vienintelis žmogus, kuris man skambina po dešimtos valandos vakaro.	You're the only person who ever calls me after 10:00 p.m.	žmogus	3	žmogus	Ncmsnn-	žmogus
+Tù esì vieniñtelis žmogùs, kurìs mán skam̃bina põ dešim̃tos valandõs vãkaro.	Tu esi vienintelis žmogus, kuris man skambina po dešimtos valandos vakaro.	You're the only person who ever calls me after 10:00 p.m.	žmogus	3	žmogus	Ncmsnn-	exception
 Turė́jo būtì lénkų kalbà õ bùvo matemãtika.	Turėjo būti lenkų kalba o buvo matematika.	It had to be an easy language, or it was math.	kalba	3	kalba	Ncfsnn-	2femIA
 Turė́jo būtì lénkų kalbà õ bùvo matemãtika.	Turėjo būti lenkų kalba o buvo matematika.	It had to be an easy language, or it was math.	matematika	6	matematika	Ncfsnn-	2femIA
 Vakariẽnė bùs pàruošta põ maždaũg penkiólikos minùčių.	Vakarienė bus paruošta po maždaug penkiolikos minučių.	Dinner will be ready in about fifteen minutes.	Vakarienė	0	vakarienė	Ncfsnn-	2femĖ
@@ -1514,7 +1514,7 @@ Àš nóriu būtì plaukìkė.	Aš noriu būti plaukikė.	I want to be a swi
 Drąsùsis kapitõnas išgélbėjo sàvo laĩvą.	Drąsusis kapitonas išgelbėjo savo laivą.	The brave captain saved his ship.	kapitonas	1	kapitonas	Ncmsnn-	1mascIAS
 Dukrà bùvo ìš manę̃s àtimta.	Dukra buvo iš manęs atimta.	My daughter was taken away from me.	Dukra	0	dukra	Ncfsnn-	2femIA
 Grúodis ỹra paskutìnis mẽtų mė́nuo.	Gruodis yra paskutinis metų mėnuo.	December is the last month of the year.	Gruodis	0	gruodis	Ncmsnn-	1mascIS
-Grúodis ỹra paskutìnis mẽtų mė́nuo.	Gruodis yra paskutinis metų mėnuo.	December is the last month of the year.	mėnuo	4	mėnuo	Ncmsnn-	mėnuo
+Grúodis ỹra paskutìnis mẽtų mė́nuo.	Gruodis yra paskutinis metų mėnuo.	December is the last month of the year.	mėnuo	4	mėnuo	Ncmsnn-	exception
 Gyvẽnimas per̃ trumpàs gertì pìgų vỹną.	Gyvenimas per trumpas gerti pigų vyną.	Life's too short to drink cheap wine.	Gyvenimas	0	gyvenimas	Ncmsnn-	1mascIAS
 Jõ kū́nas drebė́jo ìš pỹkčio.	Jo kūnas drebėjo iš pykčio.	His body was shaking in anger.	kūnas	1	kūnas	Ncmsnn-	1mascIAS
 Jõs katė̃ nulìpo nuõ màno lóvos.	Jos katė nulipo nuo mano lovos.	Her cat climbed off my bed.	katė	1	katė	Ncfsnn-	2femĖ
@@ -1594,7 +1594,7 @@ Prancūzijà kariãvo sù Rùsija.	Prancūzija kariavo su Rusija.	France was
 Sakinyjè ỹra klaidà.	Sakinyje yra klaida.	There is a mistake in the sentence.	klaida	2	klaida	Ncfsnn-	2femIA
 Šìs bañdymas baĩgėsi nẽsėkme.	Šis bandymas baigėsi nesėkme.	This attempt resulted in failure.	bandymas	1	bandymas	Ncmsnn-	1mascIAS
 Šìs stãlas ỹra medìnis.	Šis stalas yra medinis.	This table is wooden.	stalas	1	stalas	Ncmsnn-	1mascIAS
-Šuõ bañdo išsivadúoti.	Šuo bando išsivaduoti.	The dog is trying to escape.	Šuo	0	šuo	Ncmsnn-	šuo
+Šuõ bañdo išsivadúoti.	Šuo bando išsivaduoti.	The dog is trying to escape.	Šuo	0	šuo	Ncmsnn-	exception
 Susitikìmas bùvo atidė́tas ikì kìto penktãdienio.	Susitikimas buvo atidėtas iki kito penktadienio.	The meeting was put off until next Friday.	Susitikimas	0	susitikimas	Ncmsnn-	1mascIAS
 Tàs laĩvas keliáuja į̃ Súomiją.	Tas laivas keliauja į Suomiją.	The ship is bound for Finland.	laivas	1	laivas	Ncmsnn-	1mascIAS
 Tàs sijõnas ỹra per̃ trumpàs, ar̃ nè?	Tas sijonas yra per trumpas, ar ne?	That skirt's too short, isn't it?	sijonas	1	sijonas	Ncmsnn-	1mascIAS
@@ -1706,7 +1706,7 @@ Rõžių kvãpas pripìldė kam̃barį.	Rožių kvapas pripildė kambarį.	Th
 Rytój turė́tų būtì giedrà.	Rytoj turėtų būti giedra.	It will be fine weather tomorrow, perhaps.	giedra	3	giedra	Ncfsnn-	2femIA
 Są́rašas ỹra begalìnis.	Sąrašas yra begalinis.	The list is endless.	Sąrašas	0	sąrašas	Ncmsnn-	1mascIAS
 Saũsis ỹra pìrmas mẽtų mė́nuo.	Sausis yra pirmas metų mėnuo.	January is the first month of the year.	Sausis	0	sausis	Ncmsnn-	1mascIS
-Saũsis ỹra pìrmas mẽtų mė́nuo.	Sausis yra pirmas metų mėnuo.	January is the first month of the year.	mėnuo	4	mėnuo	Ncmsnn-	mėnuo
+Saũsis ỹra pìrmas mẽtų mė́nuo.	Sausis yra pirmas metų mėnuo.	January is the first month of the year.	mėnuo	4	mėnuo	Ncmsnn-	exception
 Šiañdien ỹra karščiáusia mẽtų dienà.	Šiandien yra karščiausia metų diena.	Today is the hottest day this year.	diena	4	diena	Ncfsnn-	2femIA
 Šì batèrija pakráuta.	Ši baterija pakrauta.	This battery is charged.	baterija	1	baterija	Ncfsnn-	2femIA
 Šiẽmet obuolių̃ der̃lius bùvo gáusus.	Šiemet obuolių derlius buvo gausus.	There has been a good apple harvest this year.	derlius	2	derlius	Ncmsnn-	4masc
@@ -1756,7 +1756,7 @@ Profèsorius ramiaĩ plóvė sàvo rankàs.	Profesorius ramiai plovė savo 
 Šì mintìs ỹra màno argumeñto pãgrindas.	Ši mintis yra mano argumento pagrindas.	This idea is the basis of my argument.	mintis	1	mintis	Ncfsnn-	3fem
 Šì mintìs ỹra màno argumeñto pãgrindas.	Ši mintis yra mano argumento pagrindas.	This idea is the basis of my argument.	pagrindas	5	pagrindas	Ncmsnn-	1mascIAS
 Šìs kálnas ỹra pàdengtas sniegù visùs metùs.	Šis kalnas yra padengtas sniegu visus metus.	This mountain is snow-covered the entire year.	kalnas	1	kalnas	Ncmsnn-	1mascIAS
-Šuõ mérdėjo.	Šuo merdėjo.	The dog was dying.	Šuo	0	šuo	Ncmsnn-	šuo
+Šuõ mérdėjo.	Šuo merdėjo.	The dog was dying.	Šuo	0	šuo	Ncmsnn-	exception
 Tė̃tis mė́gsta sakýti juokìngus dalykùs.	Tėtis mėgsta sakyti juokingus dalykus.	Daddy loves to say funny things.	Tėtis	0	tėtis	Ncmsnn-	1mascIS
 Tòmas neatródė sudõmintas tuõ ką̃ Mèrė sãkė.	Tomas neatrodė sudomintas tuo ką Merė sakė.	Tom didn't seem interested in what Mary was saying.	Tomas	0	Tomas	Npmsnnf	1mascIAS
 Tòmas neatródė sudõmintas tuõ ką̃ Mèrė sãkė.	Tomas neatrodė sudomintas tuo ką Merė sakė.	Tom didn't seem interested in what Mary was saying.	Merė	5	merė	Ncfsnn-	2femĖ
@@ -1812,14 +1812,14 @@ Floreñcija ỹra pàts gražiáusias miẽstas Itãlijoje.	Florencija yra p
 Ìndija bùvo pavaldì Britãnijos impèrijai.	Indija buvo pavaldi Britanijos imperijai.	India was subject to the British Empire.	Indija	0	Indija	Npfsnng	2femIA
 Ìš žmonių̃ pasigir̃do šū́ksnis.	Iš žmonių pasigirdo šūksnis.	A shout arose from the people.	šūksnis	3	šūksnis	Ncmsnn-	1mascIS
 Jéi Diẽvas neegzistúotų, mùms tèktų jį̃ sukurtì.	Jei Dievas neegzistuotų, mums tektų jį sukurti.	If God did not exist, it would be necessary to invent him.	Dievas	1	dievas	Ncmsnn-	1mascIAS
-Jéigu nebūtų̃ óro, žmogùs nepragyvéntų nė̃ dẽšimt minùčių.	Jeigu nebūtų oro, žmogus nepragyventų nė dešimt minučių.	If there were no air, man could not live even ten minutes.	žmogus	4	žmogus	Ncmsnn-	žmogus
+Jéigu nebūtų̃ óro, žmogùs nepragyvéntų nė̃ dẽšimt minùčių.	Jeigu nebūtų oro, žmogus nepragyventų nė dešimt minučių.	If there were no air, man could not live even ten minutes.	žmogus	4	žmogus	Ncmsnn-	exception
 Jõ véidas pabãlo.	Jo veidas pabalo.	His face turned white.	veidas	1	veidas	Ncmsnn-	1mascIAS
 Kománda bùvo padalìnta į̃ mažesnès grupelès.	Komanda buvo padalinta į mažesnes grupeles.	The team was divided into smaller groups.	Komanda	0	komanda	Ncfsnn-	2femIA
 Kraũjas tẽka kraujãgyslėse.	Kraujas teka kraujagyslėse.	Blood runs in the veins.	Kraujas	0	kraujas	Ncmsnn-	1mascIAS
 Lietuvà įstója į̃ Euròpos Są́jungą.	Lietuva įstoja į Europos Sąjungą.	Lithuania is joining the European Union.	Lietuva	0	Lietuva	Npfsnng	2femIA
 Maĩsto ruošìmas ùžima per̃ daũg laĩko.	Maisto ruošimas užima per daug laiko.	Cooking takes up too much time.	ruošimas	1	ruošimas	Ncmsnn-	1mascIAS
 Màno sẽsė mė́gsta melionùs, ir̃ àš taĩp pàt.	Mano sesė mėgsta melionus, ir aš taip pat.	My sister likes melons and so do I.	sesė	1	sesė	Ncfsnn-	2femĖ
-Màno šuõ bùvo rimtaĩ susir̃gęs.	Mano šuo buvo rimtai susirgęs.	My pet dog was seriously ill.	šuo	1	šuo	Ncmsnn-	šuo
+Màno šuõ bùvo rimtaĩ susir̃gęs.	Mano šuo buvo rimtai susirgęs.	My pet dog was seriously ill.	šuo	1	šuo	Ncmsnn-	exception
 Mẽs bùvome nustẽbinti jõ el̃gsena.	Mes buvome nustebinti jo elgsena.	We were surprised by his behavior.	elgsena	4	elgsena	Ncfsnn-	2femIA
 Mùsė gãli váikščioti lùbomis.	Musė gali vaikščioti lubomis.	A fly can walk on the ceiling.	Musė	0	musė	Ncfsnn-	2femĖ
 Neatidarýkite priẽš taĩ kaĩ traukinỹs sustõs.	Neatidarykite prieš tai kai traukinys sustos.	Don't open before the train stops.	kai	3	traukinys	Ncmsnn-	1mascIS
@@ -1907,7 +1907,7 @@ Tòmas galiáusiai nusiramìno.	Tomas galiausiai nusiramino.	Tom eventually c
 Tòmas mélžia kárvę.	Tomas melžia karvę.	Tom is milking the cow.	Tomas	0	Tomas	Npmsnnf	1mascIAS
 Tòmas žiūrė́jo animãcinį filmùką.	Tomas žiūrėjo animacinį filmuką.	Tom watched a cartoon.	Tomas	0	Tomas	Npmsnnf	1mascIAS
 Tòmas žùvo nùtrenktas žaĩbo.	Tomas žuvo nutrenktas žaibo.	Tom was killed by lightning.	Tomas	0	Tomas	Npmsnnf	1mascIAS
-Víenišas žmogùs gáuna malonùmą stebė́damas skrùzdėles.	Vienišas žmogus gauna malonumą stebėdamas skruzdėles.	The lonely man derives pleasure from observing ants.	žmogus	1	žmogus	Ncmsnn-	žmogus
+Víenišas žmogùs gáuna malonùmą stebė́damas skrùzdėles.	Vienišas žmogus gauna malonumą stebėdamas skruzdėles.	The lonely man derives pleasure from observing ants.	žmogus	1	žmogus	Ncmsnn-	exception
 Vladivostòkas ỹra miẽstas Rùsijoje.	Vladivostokas yra miestas Rusijoje.	Vladivostok is a city in Russia.	Vladivostokas	0	Vladivostokas	Npmsnng	1mascIAS
 Vladivostòkas ỹra miẽstas Rùsijoje.	Vladivostokas yra miestas Rusijoje.	Vladivostok is a city in Russia.	miestas	2	miestas	Ncmsnn-	1mascIAS
 Àš apsìmečiau nesuprañtanti ką̃ jìs sãkė.	Aš apsimečiau nesuprantanti ką jis sakė.	I pretended not to understand what he was saying.	sakė	5	sakė	Ncfsnn-	2femĖ
@@ -1962,7 +1962,7 @@ Kadángi jìs jaũ pilnamẽtis, jìs gãli balsúoti.	Kadangi jis jau pil
 Kaĩ výras ir̃ móteris sujùngia jėgàs, dárbas tam̃pa nebè tókiu várginančiu.	Kai vyras ir moteris sujungia jėgas, darbas tampa nebe tokiu varginančiu.	When man and woman unite, work is no longer as tiring.	vyras	1	vyras	Ncmsnn-	1mascIAS
 Kaĩ výras ir̃ móteris sujùngia jėgàs, dárbas tam̃pa nebè tókiu várginančiu.	Kai vyras ir moteris sujungia jėgas, darbas tampa nebe tokiu varginančiu.	When man and woman unite, work is no longer as tiring.	moteris	3	moteris	Ncfsnn-	3fem
 Kaĩ výras ir̃ móteris sujùngia jėgàs, dárbas tam̃pa nebè tókiu várginančiu.	Kai vyras ir moteris sujungia jėgas, darbas tampa nebe tokiu varginančiu.	When man and woman unite, work is no longer as tiring.	darbas	7	darbas	Ncmsnn-	1mascIAS
-Màno šuõ vìrus sù manimì eĩna.	Mano šuo virus su manimi eina.	My dog goes everywhere with me.	šuo	1	šuo	Ncmsnn-	šuo
+Màno šuõ vìrus sù manimì eĩna.	Mano šuo virus su manimi eina.	My dog goes everywhere with me.	šuo	1	šuo	Ncmsnn-	exception
 Mèrė žìno kaĩp geraĩ pralèsti laĩką.	Merė žino kaip gerai pralesti laiką.	Mary knows how to have a good time.	Merė	0	merė	Ncfsnn-	2femĖ
 Mėsà pagẽdo.	Mėsa pagedo.	The meat spoiled.	Mėsa	0	mėsa	Ncfsnn-	2femIA
 Muziẽjus ỹra vertàs aplañkymo.	Muziejus yra vertas aplankymo.	The museum is worth visiting.	Muziejus	0	muziejus	Ncmsnn-	4masc

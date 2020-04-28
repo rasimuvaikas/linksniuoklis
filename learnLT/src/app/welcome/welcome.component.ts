@@ -143,7 +143,8 @@ export class WelcomeComponent implements OnInit {
     { display: "-is, -ys", declension: "1mascIS", decl: "1st", checked: false },
     { display: "-is", declension: "3masc", decl: "3rd", checked: false },
     { display: "-(i)us", declension: "4masc", decl: "4th", checked: false },
-    { display: "-uo", declension: "5masc", decl: "5th", checked: false }
+    { display: "-uo", declension: "5masc", decl: "5th", checked: false },
+    { display: "exceptions", declension: "exception", decl: "", checked: false }
     ]
 
     this.declensionsFem = [{ display: "-(i)a", declension: "2femIA", decl: "2nd", checked: true },
