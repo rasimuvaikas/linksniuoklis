@@ -18,6 +18,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatButtonToggleModule} from '@angular/material/button-toggle'; 
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatDialogModule} from '@angular/material/dialog';  
+import {MatTableModule} from '@angular/material/table';
 
 
 import {MatExpansionModule} from '@angular/material/expansion'; 
@@ -47,6 +48,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { LayoutModule } from '@angular/cdk/layout';
 import { RecapComponent } from './recap/recap.component';
 import { AlertComponent } from './alert/alert.component';
+import { BelenkasComponent } from './belenkas/belenkas.component';
 
 
 @NgModule({
@@ -62,7 +64,8 @@ import { AlertComponent } from './alert/alert.component';
     ExerciseComponent,
     DashboardComponent,
     RecapComponent,
-    AlertComponent
+    AlertComponent,
+    BelenkasComponent
   ],
   imports: [
     BrowserModule,
@@ -90,6 +93,7 @@ import { AlertComponent } from './alert/alert.component';
     MatExpansionModule,
     MatBottomSheetModule,
     MatDialogModule,
+    MatTableModule,
     LayoutModule
   ],
   providers: [AuthGuard],

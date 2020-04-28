@@ -17,51 +17,19 @@
     </div>
 
     <div *ngIf="decl">
-        <p>In the tunnel I noticed I had a choice of three. While I thought it very kind of them to offer me this, I do
-            wonder if they realized what a dilemma they were sending to face me.
-            The trouble was, if I looked at your reflection in the left window I missed the actual image of you and your
-            reflection in the right. And if I looked in the right I had the same problem but the other way around.
-            At first I thought I should probably settle on one of the mirrors as they were soon to disappear, but that
-            idea quickly wilted, and my attention was drawn back to the center, occasionally checking on either side.
+        <p>
+            In Modern Lithuanian there are 5 declension classes, which can be determined by noun endings in the
+            nominative singular and the dative plural.
+        </p>
 
-            I must say I did question the authenticity of your nap a few minutes before. As the train left Loughborough
-            I suspected it could've been a device to avoid conversation. I'd barely considered this for a moment,
-            however, when a heavy breath and a gulping sound that I decided would be too embarrassing to fake led me to
-            conclude that your nap wasn't fraudulent.
-            I found it difficult to concentrate on anything else as you slumped beneath your coat. Delighted that we'd
-            waited until this hour to travel so the evening sun got its opportunity to skip across those sleeping
-            cheeks, but unnerved by the prospect of being removed from the opposing chair to yours. I knew it was
-            reserved but hoped that whoever had reserved it had fallen over.
-            It looked as if today I'd be safe. The train wasn't too busy but I did take a moment to recall the time when
-            I was less fortunate.
+        <table mat-table [dataSource]="declension1mascASSg" class="mat-elevation-z8">
+            <ng-container matColumnDef="inflection">
+                <td mat-cell *matCellDef="let element"> {{element.inflection}} </td>
+            </ng-container>
+            <ng-container matColumnDef="form">
+                <td mat-cell *matCellDef="let element"> {{element.form}} </td>
+            </ng-container>
+        </table>
 
-            I remembered it with a chilling vividity we were on the way to Brighton.
-            I knew it was going to be his seat as soon as I saw him on the platform, unzipping, checking, zipping, and
-            rechecking things. Something about his face suggested that he had for years had a mustache and had not long
-            since removed it. He wasn't going to think twice about disposing of me, especially considering then he'd get
-            the chance to sit with you.
-            Though his hiking boot-march through the carriage was rather revolting, it wasn't this that made my hands
-            tense up into sour claws of nausea. It was the way he said it.
-            "You're in my seat."
-            No "excuse me," no polite uncertainty, just the rigid, hideous fact. The thud with which it landed expelled
-            all my preparation. Before I remembered my plans to pretend to be asleep, deaf, French, or only sat there
-            because someone else was in my seat, I was walking to find another vacancy.
-            I ended up dwelling unhappily beside a girl with a boys bum. I knew that because she walked too far past
-            when she returned to one of what I thought to be two empty seats when I sat myself there. I fidgeted until
-            our reunion on the platform, where you brutally informed me "That man was really rather pleasant, actually."
-
-            Today I thought I'd better make sure that couldn't happen again and I pulled the ticket from the top of my
-            seat. It took a few attempts and the facade of hanging a jacket to finally complete. I was terribly
-            cautious. There's a threat of punishment for such deeds by fine as far as I understand, but those shackles
-            were at the back of my mind as I crushed the reservation in my hidden fist. Folding and squeezing as if it
-            were that beast on the way to the seaside.
-
-            Fortunately, there was no retribution. If anything the train got quieter as the journey continued.
-            And so in the tunnel, unable to decide, my head flicked through this trilogy of angles, angel after angle,
-            until we were out the other side.
-            My frantic twitching no doubt caused the man at the adjacent table to narrow his eyes at the very least, I
-            imagine.
-            I don't know for sure.
-            I didn't have time to add him to the cycle.</p>
     </div>
 </mat-card>

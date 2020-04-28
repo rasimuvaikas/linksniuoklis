@@ -10,7 +10,8 @@ import { BothComponent } from './both/both.component';
 import { ProgressComponent } from './progress/progress.component';
 import { ExerciseComponent } from './exercise/exercise.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { RecapComponent } from './recap/recap.component';
+import { BelenkasComponent } from './belenkas/belenkas.component';
+
 
 
 
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'both', canActivate: [AuthGuard], component: BothComponent},
   {path: 'dashboard', canActivate: [AuthGuard], component: DashboardComponent},
   {path: 'progress', canActivate: [AuthGuard], component: ProgressComponent},  
+  {path: 'belenkas', component: BelenkasComponent},  
   {path: '', redirectTo: '/start', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent}
 ];
