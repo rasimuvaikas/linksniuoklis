@@ -619,15 +619,9 @@ public class Declension {
         if (n.getGender().equals("m")) {
             if (lemma.endsWith("dantis") || lemma.endsWith("vagis") || lemma.endsWith("debesis") || lemma.endsWith("žvėris")) {
                 result = "3masc";
-            } else if (lemma.equals("šuo")) {
-                result = "šuo";
-            } else if (lemma.equals("mėnuo")) {
-                result = "mėnuo"; //all these will probably become exception later
-            } else if (lemma.equals("petys")) {
-                result = "petys";
-            } else if (lemma.equals("žmogus")) {
-                result = "žmogus";
-            }else if (lemma.endsWith("as") || lemma.endsWith("ai")) {
+            } else if (lemma.equals("šuo") || lemma.equals("mėnuo") || lemma.equals("petys") || lemma.equals("žmogus")) {
+                result = "exception";
+            } else if (lemma.endsWith("as") || lemma.endsWith("ai")) {
                 result = "1mascIAS";
             } else if(lemma.endsWith("is") || lemma.endsWith("ys")){
                 result = "1mascIS";
