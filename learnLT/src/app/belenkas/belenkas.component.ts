@@ -162,9 +162,9 @@ export class BelenkasComponent implements OnInit {
     {inflection: "genitive", singular1: 'akmeñs', plural1: 'akmenų̃', singular2: 'vandeñs', plural2: 'vandenų̃'},
     {inflection: "dative", singular1: 'ãkmeniui', plural1: 'akmenìms', singular2: 'vándeniui', plural2: 'vandenìms'},
     {inflection: "accusative", singular1: 'ãkmenį', plural1: 'ãkmenis', singular2: 'vándenį', plural2: 'vándenis'},
-    {inflection: "instrumental", singular1: 'ãkmeniu', plural1: 'akmenimìs', singular2: 'vándeniu', plural2: 'muziẽjais'},
-    {inflection: "locative", singular1: 'akmenyjè', plural1: 'akmenysè', singular2: 'vandenyjè', plural2: 'vandenimìs'},
-    {inflection: "vocative", singular1: 'akmeniẽ!', plural1: 'ãkmenys!', singular2: 'vandeniẽ!', plural2: 'vandenysè!'},
+    {inflection: "instrumental", singular1: 'ãkmeniu', plural1: 'akmenimìs', singular2: 'vándeniu', plural2: 'vandenimìs'},
+    {inflection: "locative", singular1: 'akmenyjè', plural1: 'akmenysè', singular2: 'vandenyjè', plural2: 'vandenysè'},
+    {inflection: "vocative", singular1: 'akmeniẽ!', plural1: 'ãkmenys!', singular2: 'vandeniẽ!', plural2: 'vándenys!'},
 
   ];
 
@@ -214,11 +214,216 @@ export class BelenkasComponent implements OnInit {
 
   ];
 
+  //1st paradigm
+  savaite = [
+    {inflection: "nominative", singular: 'saváitė', plural: 'saváitės'},
+    {inflection: "genitive", singular: 'saváitės', plural: 'saváičių'},
+    {inflection: "dative", singular: 'saváitei', plural: 'saváitėms'},
+    {inflection: "accusative", singular: 'saváitę', plural: 'saváites'},
+    {inflection: "instrumental", singular: 'saváite', plural: 'saváitėmis'},
+    {inflection: "locative", singular: 'saváitėje', plural: 'saváitėse'},
+    {inflection: "vocative", singular: 'saváite!', plural: 'saváitės!'},
 
+  ];
+
+  vasara = [
+    {inflection: "nominative", singular: 'vãsara', plural: 'vãsaros'},
+    {inflection: "genitive", singular: 'vãsaros', plural: 'vãsarų'},
+    {inflection: "dative", singular: 'vãsarai', plural: 'vãsaroms'},
+    {inflection: "accusative", singular: 'vãsarą', plural: 'vãsaras'},
+    {inflection: "instrumental", singular: 'vãsara', plural: 'vãsaromis'},
+    {inflection: "locative", singular: 'vãsaroje', plural: 'vãsarose'},
+    {inflection: "vocative", singular: 'vãsara!', plural: 'vãsaros!'},
+
+  ];
+
+  brolis = [
+    {inflection: "nominative", singular: 'brólis', plural: 'bróliai'},
+    {inflection: "genitive", singular: 'brólio', plural: 'brólių'},
+    {inflection: "dative", singular: 'bróliui', plural: 'bróliams'},
+    {inflection: "accusative", singular: 'brólį', plural: 'brólius'},
+    {inflection: "instrumental", singular: 'bróliu', plural: 'bróliais'},
+    {inflection: "locative", singular: 'brólyje', plural: 'bróliuose'},
+    {inflection: "vocative", singular: 'bróli!', plural: 'bróliai!'},
+
+  ];
+
+
+  //2nd paradigm
+  knyga = [
+    {inflection: "nominative", singular: 'knygà', plural: 'knỹgos'},
+    {inflection: "genitive", singular: 'knỹgos', plural: 'knỹgų'},
+    {inflection: "dative", singular: 'knỹgai', plural: 'knỹgoms'},
+    {inflection: "accusative", singular: 'knỹgą', plural: 'knygàs'},
+    {inflection: "instrumental", singular: 'knygà', plural: 'knỹgomis'},
+    {inflection: "locative", singular: 'knỹgoje', plural: 'knỹgose'},
+    {inflection: "vocative", singular: 'knỹga!', plural: 'knỹgos!'},
+
+  ];
+
+  medis = [
+    {inflection: "nominative", singular: 'mẽdis', plural: 'mẽdžiai'},
+    {inflection: "genitive", singular: 'mẽdžio', plural: 'mẽdžių'},
+    {inflection: "dative", singular: 'mẽdžiui', plural: 'mẽdžiams'},
+    {inflection: "accusative", singular: 'mẽdį', plural: 'medžiùs'},
+    {inflection: "instrumental", singular: 'medžiù', plural: 'mẽdžiais'},
+    {inflection: "locative", singular: 'mẽdyje', plural: 'mẽdžiuose'},
+    {inflection: "vocative", singular: 'mẽdi!', plural: 'mẽdžiai!'},
+
+  ];
+
+  pirstas = [
+    {inflection: "nominative", singular: 'pir̃štas', plural: 'pir̃štai'},
+    {inflection: "genitive", singular: 'pir̃što', plural: 'pir̃štų'},
+    {inflection: "dative", singular: 'pir̃štui', plural: 'pir̃štams'},
+    {inflection: "accusative", singular: 'pir̃štą', plural: 'pirštùs'},
+    {inflection: "instrumental", singular: 'pirštù', plural: 'pir̃štais'},
+    {inflection: "locative", singular: 'pirštè', plural: 'pir̃štuose'},
+    {inflection: "vocative", singular: 'pir̃šte!', plural: 'pir̃štai!'},
+
+  ];
+
+  skaicius = [
+    {inflection: "nominative", singular: 'skaĩčius', plural: 'skaĩčiai'},
+    {inflection: "genitive", singular: 'skaĩčiaus', plural: 'skaĩčių'},
+    {inflection: "dative", singular: 'skaĩčiui', plural: 'skaĩčiams'},
+    {inflection: "accusative", singular: 'skaĩčių', plural: 'skaičiùs'},
+    {inflection: "instrumental", singular: 'skaĩčiumi', plural: 'skaĩčiais'},
+    {inflection: "locative", singular: 'skaĩčiuje', plural: 'skaĩčiuose'},
+    {inflection: "vocative", singular: 'skaĩčiau!', plural: 'skaĩčiai!'},
+
+  ];
+
+  upe = [
+    {inflection: "nominative", singular: 'ùpė', plural: 'ùpės'},
+    {inflection: "genitive", singular: 'ùpės', plural: 'ùpių'},
+    {inflection: "dative", singular: 'ùpei', plural: 'ùpėms'},
+    {inflection: "accusative", singular: 'ùpę', plural: 'upès'},
+    {inflection: "instrumental", singular: 'upè', plural: 'ùpėmis'},
+    {inflection: "locative", singular: 'ùpėje', plural: 'ùpėse'},
+    {inflection: "vocative", singular: 'ùpe!', plural: 'ùpės!'},
+
+  ];
+
+//3rd paradigm
+
+  langas = [
+    {inflection: "nominative", singular: 'lángas', plural: 'langaĩ'},
+    {inflection: "genitive", singular: 'lángo', plural: 'langų̃'},
+    {inflection: "dative", singular: 'lángui', plural: 'langáms'},
+    {inflection: "accusative", singular: 'lángą', plural: 'lángus'},
+    {inflection: "instrumental", singular: 'lángu', plural: 'langaĩs'},
+    {inflection: "locative", singular: 'langè', plural: 'languosè'},
+    {inflection: "vocative", singular: 'lánge!', plural: 'langaĩ!'},
+
+  ];
+
+  rasinys = [
+    {inflection: "nominative", singular: 'rašinỹs', plural: 'rašiniaĩ'},
+    {inflection: "genitive", singular: 'rãšinio', plural: 'rašinių̃'},
+    {inflection: "dative", singular: 'rãšiniui', plural: 'rašiniáms'},
+    {inflection: "accusative", singular: 'rãšinį', plural: 'rãšinius'},
+    {inflection: "instrumental", singular: 'rãšiniu', plural: 'rašiniaĩs'},
+    {inflection: "locative", singular: 'rašinyjè', plural: 'rašiniuosè'},
+    {inflection: "vocative", singular: 'rašinỹ!', plural: 'rašiniaĩ!'},
+
+  ];
+
+  galva = [
+    {inflection: "nominative", singular: 'galvà', plural: 'gálvos'},
+    {inflection: "genitive", singular: 'galvõs', plural: 'galvų̃'},
+    {inflection: "dative", singular: 'gálvai', plural: 'galvóms'},
+    {inflection: "accusative", singular: 'gálvą', plural: 'gálvas'},
+    {inflection: "instrumental", singular: 'gálva', plural: 'galvomìs'},
+    {inflection: "locative", singular: 'galvojè', plural: 'galvosè'},
+    {inflection: "vocative", singular: 'gálva!', plural: 'gálvos!'},
+
+  ];
+
+  gerkle = [
+    {inflection: "nominative", singular: 'gerklė̃', plural: 'gérklės'},
+    {inflection: "genitive", singular: 'gerklė̃s', plural: 'gerklių̃'},
+    {inflection: "dative", singular: 'gérklei', plural: 'gerklė́ms'},
+    {inflection: "accusative", singular: 'gérklę', plural: 'gérkles'},
+    {inflection: "instrumental", singular: 'gérkle', plural: 'gerklėmìs'},
+    {inflection: "locative", singular: 'gerklėjè', plural: 'gerklėsè'},
+    {inflection: "vocative", singular: 'gérkle!', plural: 'gérklės!'},
+
+  ];
+
+  viltis = [
+    {inflection: "nominative", singular: 'viltìs', plural: 'vìltys'},
+    {inflection: "genitive", singular: 'viltiẽs', plural: 'vilčių̃'},
+    {inflection: "dative", singular: 'vìlčiai', plural: 'viltìms'},
+    {inflection: "accusative", singular: 'vìltį', plural: 'vìltis'},
+    {inflection: "instrumental", singular: 'viltimìs', plural: 'viltimìs'},
+    {inflection: "locative", singular: 'viltyjè', plural: 'viltysè'},
+    {inflection: "vocative", singular: 'viltiẽ!', plural: 'vìltys!'},
+
+  ];
+
+
+  //4th paradigm 
+
+  namas = [
+    {inflection: "nominative", singular: 'nãmas', plural: 'namaĩ'},
+    {inflection: "genitive", singular: 'nãmo', plural: 'namų̃'},
+    {inflection: "dative", singular: 'nãmui', plural: 'namáms'},
+    {inflection: "accusative", singular: 'nãmą', plural: 'namùs'},
+    {inflection: "instrumental", singular: 'namù', plural: 'namaĩs'},
+    {inflection: "locative", singular: 'namè', plural: 'namuosè'},
+    {inflection: "vocative", singular: 'nãme!', plural: 'namaĩ!'},
+
+  ];
+
+  daina = [
+    {inflection: "nominative", singular: 'dainà', plural: 'daĩnos'},
+    {inflection: "genitive", singular: 'dainõs', plural: 'dainų̃'},
+    {inflection: "dative", singular: 'daĩnai', plural: 'dainóms'},
+    {inflection: "accusative", singular: 'daĩną', plural: 'dainàs'},
+    {inflection: "instrumental", singular: 'dainà', plural: 'dainomìs'},
+    {inflection: "locative", singular: 'dainojè', plural: 'dainosè'},
+    {inflection: "vocative", singular: 'daĩna!', plural: 'daĩnos!'},
+
+  ];
+
+
+  zole = [
+    {inflection: "nominative", singular: 'žolė̃', plural: 'žõlės'},
+    {inflection: "genitive", singular: 'žolė̃s', plural: 'žolių̃'},
+    {inflection: "dative", singular: 'žõlei', plural: 'žolė́ms'},
+    {inflection: "accusative", singular: 'žõlę', plural: 'žolès'},
+    {inflection: "instrumental", singular: 'žolè', plural: 'žolėmìs'},
+    {inflection: "locative", singular: 'žolėjè', plural: 'žolėsè'},
+    {inflection: "vocative", singular: 'žõle!', plural: 'žõlės!'},
+
+  ];
+
+//dangus
+
+
+akis = [
+  {inflection: "nominative", singular: 'akìs', plural: 'ãkys'},
+  {inflection: "genitive", singular: 'akiẽs', plural: 'akių̃'},
+  {inflection: "dative", singular: 'ãkiai', plural: 'akìms'},
+  {inflection: "accusative", singular: 'ãkį', plural: 'akìs'},
+  {inflection: "instrumental", singular: 'akimì', plural: 'akimìs'},
+  {inflection: "locative", singular: 'akyjè', plural: 'akysè'},
+  {inflection: "vocative", singular: 'akiẽ!', plural: 'ãkys!'},
+
+];
+
+
+
+
+
+
+   
 
 
   displayedColumns: string[] = ["inflection", "singular", "plural"]
   displayedColumnsDouble: string[] = ["inflection", "singular1", "plural1", "singular2", "plural2" ]
+
 
 
   constructor() { }
