@@ -5,11 +5,12 @@
     </p>
 
     <div fxLayout="column" fxLayoutGap="32px">
-        <h3 style="display: flex; justify-content: center;">1st declension</h3>
-        <h3 style="display: flex; justify-content: center;">Masculine nouns that end by -as and -ias in nominative singular, -ams and -iams in dative plural </h3>
+        <h2 style="display: flex; justify-content: center;">1st declension</h2>
+        <h3 style="display: flex; justify-content: center;">Masculine nouns that end by -as and -ias in nominative
+            singular, -ams and -iams in dative plural </h3>
         <div fxLayout.xs="column" fxLayout="row" fxLayoutGap="32px">
             <div fxFlex="0 1 calc(50% - 32px)">
-                <h3 style="display: flex; justify-content: center;">vyras, vyrams (man)</h3>
+                <h3 style="display: flex; justify-content: center;">vyras, vyrams ('man')</h3>
                 <table mat-table style="background-color: rgb(58, 158, 125);" [dataSource]="declension1mascAS"
                     class="mat-elevation-z8">
                     <ng-container matColumnDef="inflection">
@@ -31,28 +32,29 @@
             </div>
 
             <div fxFlex="0 1 calc(50% - 32px)">
-                <h3 style="display: flex; justify-content: center;">kelias, keliams (road); vėjas, vėjams (wind) </h3>
+                <h3 style="display: flex; justify-content: center;">kelias, keliams ('road'); vėjas, vėjams ('wind')
+                </h3>
                 <table mat-table style="background-color: rgb(58, 158, 125);" [dataSource]="declension1mascIAS"
                     class="mat-elevation-z8">
                     <ng-container matColumnDef="inflection">
                         <th mat-header-cell *matHeaderCellDef>Case</th>
                         <td mat-cell *matCellDef="let element"> {{element.inflection}} </td>
                     </ng-container>
-                    <ng-container matColumnDef="singularIAS">
+                    <ng-container matColumnDef="singular1">
                         <th mat-header-cell *matHeaderCellDef>Singular</th>
-                        <td mat-cell *matCellDef="let element"> {{element.singularIAS}} </td>
+                        <td mat-cell *matCellDef="let element"> {{element.singular1}} </td>
                     </ng-container>
-                    <ng-container matColumnDef="pluralIAS">
+                    <ng-container matColumnDef="plural1">
                         <th mat-header-cell *matHeaderCellDef>Plural</th>
-                        <td mat-cell *matCellDef="let element"> {{element.pluralIAS}} </td>
+                        <td mat-cell *matCellDef="let element"> {{element.plural1}} </td>
                     </ng-container>
-                    <ng-container matColumnDef="singularJAS">
+                    <ng-container matColumnDef="singular2">
                         <th mat-header-cell *matHeaderCellDef>Singular</th>
-                        <td mat-cell *matCellDef="let element"> {{element.singularJAS}} </td>
+                        <td mat-cell *matCellDef="let element"> {{element.singular2}} </td>
                     </ng-container>
-                    <ng-container matColumnDef="pluralJAS">
+                    <ng-container matColumnDef="plural2">
                         <th mat-header-cell *matHeaderCellDef>Plural</th>
-                        <td mat-cell *matCellDef="let element"> {{element.pluralJAS}} </td>
+                        <td mat-cell *matCellDef="let element"> {{element.plural2}} </td>
                     </ng-container>
 
                     <tr mat-header-row *matHeaderRowDef="displayedColumnsDouble"></tr>
@@ -62,13 +64,86 @@
 
         </div>
 
-        <h3 style="display: flex; justify-content: center;">2nd declension</h3>
-        <h3 style="display: flex; justify-content: center;">Feminine nouns that end by -a and -ė in nominative singular, -oms and -ėms in dative plural </h3>
-        <h4>Pay attention to the genitive plural case: if a noun's stem ends with a palatalised consonants "d" or "t", they become "dž" or "č" respectively. Palatalisation is marked by the letter "i".
-            </h4>
+        <h3 style="display: flex; justify-content: center;">Masculine nouns that end by non-accentuated -is and
+            accentuated -ys in nominative singular, -iams or -ams in dative plural </h3>
+        <h4 style="display: flex; justify-content: center;">Pay attention if a noun's stem ends with a palatalised
+            consonant "d" or "t", in some cases they become "dž"
+            or "č" respectively. Palatalisation is marked by the letter "i".</h4>
+
         <div fxLayout.xs="column" fxLayout="row" fxLayoutGap="32px">
             <div fxFlex="0 1 calc(50% - 32px)">
-                <h3 style="display: flex; justify-content: center;">ranka, rankoms (hand)</h3>
+                <h3 style="display: flex; justify-content: center;">skėtis, skėčiams ('umbrella'); peilis, peiliams
+                    ('knife')</h3>
+                <table mat-table style="background-color: rgb(58, 158, 125);" [dataSource]="declension1mascIS"
+                    class="mat-elevation-z8">
+                    <ng-container matColumnDef="inflection">
+                        <th mat-header-cell *matHeaderCellDef>Case</th>
+                        <td mat-cell *matCellDef="let element"> {{element.inflection}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="singular1">
+                        <th mat-header-cell *matHeaderCellDef>Singular</th>
+                        <td mat-cell *matCellDef="let element"> {{element.singular1}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="plural1">
+                        <th mat-header-cell *matHeaderCellDef>Plural</th>
+                        <td mat-cell *matCellDef="let element"> {{element.plural1}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="singular2">
+                        <th mat-header-cell *matHeaderCellDef>Singular</th>
+                        <td mat-cell *matCellDef="let element"> {{element.singular2}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="plural2">
+                        <th mat-header-cell *matHeaderCellDef>Plural</th>
+                        <td mat-cell *matCellDef="let element"> {{element.plural2}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumnsDouble"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumnsDouble;"></tr>
+                </table>
+            </div>
+
+            <div fxFlex="0 1 calc(50% - 32px)">
+                <h3 style="display: flex; justify-content: center;">arklys, arkliams ('horse'); gaidys, gaidžiams
+                    ('rooster') </h3>
+                <table mat-table style="background-color: rgb(58, 158, 125);" [dataSource]="declension1mascYS"
+                    class="mat-elevation-z8">
+                    <ng-container matColumnDef="inflection">
+                        <th mat-header-cell *matHeaderCellDef>Case</th>
+                        <td mat-cell *matCellDef="let element"> {{element.inflection}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="singular1">
+                        <th mat-header-cell *matHeaderCellDef>Singular</th>
+                        <td mat-cell *matCellDef="let element"> {{element.singular1}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="plural1">
+                        <th mat-header-cell *matHeaderCellDef>Plural</th>
+                        <td mat-cell *matCellDef="let element"> {{element.plural1}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="singular2">
+                        <th mat-header-cell *matHeaderCellDef>Singular</th>
+                        <td mat-cell *matCellDef="let element"> {{element.singular2}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="plural2">
+                        <th mat-header-cell *matHeaderCellDef>Plural</th>
+                        <td mat-cell *matCellDef="let element"> {{element.plural2}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumnsDouble"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumnsDouble;"></tr>
+                </table>
+            </div>
+
+        </div>
+
+        <h2 style="display: flex; justify-content: center;">2nd declension</h2>
+        <h3 style="display: flex; justify-content: center;">Feminine nouns that end by -a and -ė in nominative
+            singular, -oms and -ėms in dative plural </h3>
+        <h4>Pay attention to the genitive plural case: if a noun's stem ends with a palatalised consonants "d" or
+            "t", they become "dž" or "č" respectively. Palatalisation is marked by the letter "i".
+        </h4>
+        <div fxLayout.xs="column" fxLayout="row" fxLayoutGap="32px">
+            <div fxFlex="0 1 calc(50% - 32px)">
+                <h3 style="display: flex; justify-content: center;">ranka, rankoms ('hand')</h3>
                 <table mat-table style="background-color: rgb(58, 158, 125);" [dataSource]="declension2femA"
                     class="mat-elevation-z8">
                     <ng-container matColumnDef="inflection">
@@ -90,20 +165,158 @@
             </div>
 
             <div fxFlex="0 1 calc(50% - 32px)">
-                <h3 style="display: flex; justify-content: center;">kelias, keliams (road); vėjas, vėjams (wind) </h3>
+                <h3 style="display: flex; justify-content: center;">kaltė, kaltėms ('guilt'); gėlė, gėlėms
+                    ('flower') </h3>
                 <table mat-table style="background-color: rgb(58, 158, 125);" [dataSource]="declension2fem"
                     class="mat-elevation-z8">
                     <ng-container matColumnDef="inflection">
                         <th mat-header-cell *matHeaderCellDef>Case</th>
                         <td mat-cell *matCellDef="let element"> {{element.inflection}} </td>
                     </ng-container>
-                    <ng-container matColumnDef="singularDT">
+                    <ng-container matColumnDef="singular1">
                         <th mat-header-cell *matHeaderCellDef>Singular</th>
-                        <td mat-cell *matCellDef="let element"> {{element.singularDT}} </td>
+                        <td mat-cell *matCellDef="let element"> {{element.singular1}} </td>
                     </ng-container>
-                    <ng-container matColumnDef="pluralDT">
+                    <ng-container matColumnDef="plural1">
                         <th mat-header-cell *matHeaderCellDef>Plural</th>
-                        <td mat-cell *matCellDef="let element"> {{element.pluralDT}} </td>
+                        <td mat-cell *matCellDef="let element"> {{element.plural1}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="singular2">
+                        <th mat-header-cell *matHeaderCellDef>Singular</th>
+                        <td mat-cell *matCellDef="let element"> {{element.singular2}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="plural2">
+                        <th mat-header-cell *matHeaderCellDef>Plural</th>
+                        <td mat-cell *matCellDef="let element"> {{element.plural2}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumnsDouble"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumnsDouble;"></tr>
+                </table>
+            </div>
+
+        </div>
+
+        <h2 style="display: flex; justify-content: center;">3d declension</h2>
+        <h3 style="display: flex; justify-content: center;">A handful of masculine nouns that end by an accentuated -is
+            in nominative
+            singular, and -ims in dative plural. </h3>
+        <h4 style="display: flex; justify-content: center;">This declension includes such nouns as: debesis ('cloud'),
+            dantis ('tooth'), žvėris ('beast'), vagis ('thief'), </h4>
+        <h4 style="display: flex; justify-content: center;">It is best to memorise these nouns in order not to confuse
+            them with those of feminine gender, as the two have different endings in the dative singular case.</h4>
+        <div fxLayout.xs="column" fxLayout="row" fxLayoutGap="32px">
+            <div fxFlex="0 1 calc(50% - 32px)">
+                <h3 style="display: flex; justify-content: center;">dantis, dantims ('tooth'); debesis, debesims
+                    ('cloud')</h3>
+                <table mat-table style="background-color: rgb(58, 158, 125);" [dataSource]="declension3masc"
+                    class="mat-elevation-z8">
+                    <ng-container matColumnDef="inflection">
+                        <th mat-header-cell *matHeaderCellDef>Case</th>
+                        <td mat-cell *matCellDef="let element"> {{element.inflection}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="singular1">
+                        <th mat-header-cell *matHeaderCellDef>Singular</th>
+                        <td mat-cell *matCellDef="let element"> {{element.singular1}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="plural1">
+                        <th mat-header-cell *matHeaderCellDef>Plural</th>
+                        <td mat-cell *matCellDef="let element"> {{element.plural1}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="singular2">
+                        <th mat-header-cell *matHeaderCellDef>Singular</th>
+                        <td mat-cell *matCellDef="let element"> {{element.singular2}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="plural2">
+                        <th mat-header-cell *matHeaderCellDef>Plural</th>
+                        <td mat-cell *matCellDef="let element"> {{element.plural2}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumnsDouble"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumnsDouble;"></tr>
+                </table>
+            </div>
+
+            <div fxFlex="0 1 calc(50% - 32px)">
+                <h3 style="display: flex; justify-content: center;">žvėris, žvėrims ('beast'); vagis, vagims
+                    ('thief')</h3>
+                <table mat-table style="background-color: rgb(58, 158, 125);" [dataSource]="declension3mascVagis"
+                    class="mat-elevation-z8">
+                    <ng-container matColumnDef="inflection">
+                        <th mat-header-cell *matHeaderCellDef>Case</th>
+                        <td mat-cell *matCellDef="let element"> {{element.inflection}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="singular1">
+                        <th mat-header-cell *matHeaderCellDef>Singular</th>
+                        <td mat-cell *matCellDef="let element"> {{element.singular1}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="plural1">
+                        <th mat-header-cell *matHeaderCellDef>Plural</th>
+                        <td mat-cell *matCellDef="let element"> {{element.plural1}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="singular2">
+                        <th mat-header-cell *matHeaderCellDef>Singular</th>
+                        <td mat-cell *matCellDef="let element"> {{element.singular2}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="plural2">
+                        <th mat-header-cell *matHeaderCellDef>Plural</th>
+                        <td mat-cell *matCellDef="let element"> {{element.plural2}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumnsDouble"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumnsDouble;"></tr>
+                </table>
+            </div>
+
+        </div>
+
+
+        <h3 style="display: flex; justify-content: center;">Feminine nouns that end by -is in nominative
+            singular, -ims in dative plural </h3>
+        <h4 style="display: flex; justify-content: center;">Pay attention to the genitive plural case: if a noun's stem
+            ends with a palatalised consonants "d" or
+            "t", they become "dž" or "č" respectively. Palatalisation is marked by the letter "i".
+        </h4>
+        <div fxLayout.xs="column" fxLayout="row" fxLayoutGap="32px">
+            <div fxFlex="0 1 calc(50% - 32px)">
+                <h3 style="display: flex; justify-content: center;">širdis, širdims ('heart'); žuvis, žuvims
+                    ('fish') </h3>
+                <table mat-table style="background-color: rgb(58, 158, 125);" [dataSource]="declension3femDT"
+                    class="mat-elevation-z8">
+                    <ng-container matColumnDef="inflection">
+                        <th mat-header-cell *matHeaderCellDef>Case</th>
+                        <td mat-cell *matCellDef="let element"> {{element.inflection}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="singular1">
+                        <th mat-header-cell *matHeaderCellDef>Singular</th>
+                        <td mat-cell *matCellDef="let element"> {{element.singular1}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="plural1">
+                        <th mat-header-cell *matHeaderCellDef>Plural</th>
+                        <td mat-cell *matCellDef="let element"> {{element.plural1}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="singular2">
+                        <th mat-header-cell *matHeaderCellDef>Singular</th>
+                        <td mat-cell *matCellDef="let element"> {{element.singular2}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="plural2">
+                        <th mat-header-cell *matHeaderCellDef>Plural</th>
+                        <td mat-cell *matCellDef="let element"> {{element.plural2}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumnsDouble"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumnsDouble;"></tr>
+                </table>
+            </div>
+
+            <div fxFlex="0 1 calc(50% - 32px)">
+                <h3 style="display: flex; justify-content: center;">moteris, moterims ('woman') [this particular noun
+                    has a different ending in the genitive singular]</h3>
+                <table mat-table style="background-color: rgb(58, 158, 125);" [dataSource]="moteris"
+                    class="mat-elevation-z8">
+                    <ng-container matColumnDef="inflection">
+                        <th mat-header-cell *matHeaderCellDef>Case</th>
+                        <td mat-cell *matCellDef="let element"> {{element.inflection}} </td>
                     </ng-container>
                     <ng-container matColumnDef="singular">
                         <th mat-header-cell *matHeaderCellDef>Singular</th>
@@ -114,11 +327,246 @@
                         <td mat-cell *matCellDef="let element"> {{element.plural}} </td>
                     </ng-container>
 
-                    <tr mat-header-row *matHeaderRowDef="displayedColumnsDT"></tr>
-                    <tr mat-row *matRowDef="let row; columns: displayedColumnsDT;"></tr>
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
             </div>
 
         </div>
+
+
+        <h4 style="display: flex; justify-content: center;">This declension also requires special attention to the
+            genitive plural ending -ų:
+            some nouns have this ending after a hard consonant (e.g. ausis -> ausų ('ear'), šaknis -> šaknų ('root')),
+            others after a palatalised one (e.g. ugnis -> ugnių ('fire'); nosis -> nosių ('nose')).
+            It is best to memorise the genitive plural ending of each feminine 3rd declension noun, as the ending
+            difference is due to historical reasons, and the nouns no longer contain any visible cues for the correct
+            genitive ending.
+        </h4>
+
+
+        <h2 style="display: flex; justify-content: center;">4th declension</h2>
+        <h3 style="display: flex; justify-content: center;">Masculine nouns that end by -us or -ius
+            in nominative singular, and -ums, -ams, -iams in dative plural. </h3>
+
+        <div fxLayout.xs="column" fxLayout="row" fxLayoutGap="32px">
+            <div fxFlex="0 1 calc(50% - 32px)">
+                <h3 style="display: flex; justify-content: center;">vaisius, vaisiams ('fruit'); muziejus, muziejams
+                    ('museum') </h3>
+                <table mat-table style="background-color: rgb(58, 158, 125);" [dataSource]="vaisius"
+                    class="mat-elevation-z8">
+                    <ng-container matColumnDef="inflection">
+                        <th mat-header-cell *matHeaderCellDef>Case</th>
+                        <td mat-cell *matCellDef="let element"> {{element.inflection}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="singular1">
+                        <th mat-header-cell *matHeaderCellDef>Singular</th>
+                        <td mat-cell *matCellDef="let element"> {{element.singular1}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="plural1">
+                        <th mat-header-cell *matHeaderCellDef>Plural</th>
+                        <td mat-cell *matCellDef="let element"> {{element.plural1}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="singular2">
+                        <th mat-header-cell *matHeaderCellDef>Singular</th>
+                        <td mat-cell *matCellDef="let element"> {{element.singular2}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="plural2">
+                        <th mat-header-cell *matHeaderCellDef>Plural</th>
+                        <td mat-cell *matCellDef="let element"> {{element.plural2}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumnsDouble"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumnsDouble;"></tr>
+                </table>
+            </div>
+
+            <div fxFlex="0 1 calc(50% - 32px)">
+                <h3 style="display: flex; justify-content: center;">dangus, dangums ('sky')</h3>
+                <table mat-table style="background-color: rgb(58, 158, 125);" [dataSource]="dangus"
+                    class="mat-elevation-z8">
+                    <ng-container matColumnDef="inflection">
+                        <th mat-header-cell *matHeaderCellDef>Case</th>
+                        <td mat-cell *matCellDef="let element"> {{element.inflection}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="singular">
+                        <th mat-header-cell *matHeaderCellDef>Singular</th>
+                        <td mat-cell *matCellDef="let element"> {{element.singular}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="plural">
+                        <th mat-header-cell *matHeaderCellDef>Plural</th>
+                        <td mat-cell *matCellDef="let element"> {{element.plural}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+            </div>
+
+        </div>
+
+        <h4 style="display: flex; justify-content: center;">This declension also includes the noun žmogus ('man'),
+            which has to be treateded as a noun with an -us ending when inflected in singular, but as a noun with an -ė
+            ending (2nd declension), when inflected in plural. </h4>
+
+        <div fxFlex="0 1 100%">
+            <h3 style="display: flex; justify-content: center;">žmogus, žmonėms ('man')</h3>
+            <table mat-table style="background-color: rgb(58, 158, 125);" [dataSource]="zmogus"
+                class="mat-elevation-z8">
+                <ng-container matColumnDef="inflection">
+                    <th mat-header-cell *matHeaderCellDef>Case</th>
+                    <td mat-cell *matCellDef="let element"> {{element.inflection}} </td>
+                </ng-container>
+                <ng-container matColumnDef="singular">
+                    <th mat-header-cell *matHeaderCellDef>Singular</th>
+                    <td mat-cell *matCellDef="let element"> {{element.singular}} </td>
+                </ng-container>
+                <ng-container matColumnDef="plural">
+                    <th mat-header-cell *matHeaderCellDef>Plural</th>
+                    <td mat-cell *matCellDef="let element"> {{element.plural}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+
+
+        <h2 style="display: flex; justify-content: center;">5th declension</h2>
+        <h3 style="display: flex; justify-content: center;">A hanfdul of masculine nouns that end by -uo in nominative
+            singular, and -ims in dative plural. </h3>
+
+        <div fxLayout.xs="column" fxLayout="row" fxLayoutGap="32px">
+            <div fxFlex="0 1 calc(50% - 32px)">
+                <h3 style="display: flex; justify-content: center;">akmuo, akmenims ('stone'); vanduo, vandenims
+                    ('water') </h3>
+                <table mat-table style="background-color: rgb(58, 158, 125);" [dataSource]="akmuo"
+                    class="mat-elevation-z8">
+                    <ng-container matColumnDef="inflection">
+                        <th mat-header-cell *matHeaderCellDef>Case</th>
+                        <td mat-cell *matCellDef="let element"> {{element.inflection}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="singular1">
+                        <th mat-header-cell *matHeaderCellDef>Singular</th>
+                        <td mat-cell *matCellDef="let element"> {{element.singular1}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="plural1">
+                        <th mat-header-cell *matHeaderCellDef>Plural</th>
+                        <td mat-cell *matCellDef="let element"> {{element.plural1}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="singular2">
+                        <th mat-header-cell *matHeaderCellDef>Singular</th>
+                        <td mat-cell *matCellDef="let element"> {{element.singular2}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="plural2">
+                        <th mat-header-cell *matHeaderCellDef>Plural</th>
+                        <td mat-cell *matCellDef="let element"> {{element.plural2}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumnsDouble"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumnsDouble;"></tr>
+                </table>
+            </div>
+
+            <div fxFlex="0 1 calc(50% - 32px)">
+                <h3 style="display: flex; justify-content: center;">šuo, šunims ('dog')</h3>
+                <table mat-table style="background-color: rgb(58, 158, 125);" [dataSource]="suo"
+                    class="mat-elevation-z8">
+                    <ng-container matColumnDef="inflection">
+                        <th mat-header-cell *matHeaderCellDef>Case</th>
+                        <td mat-cell *matCellDef="let element"> {{element.inflection}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="singular">
+                        <th mat-header-cell *matHeaderCellDef>Singular</th>
+                        <td mat-cell *matCellDef="let element"> {{element.singular}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="plural">
+                        <th mat-header-cell *matHeaderCellDef>Plural</th>
+                        <td mat-cell *matCellDef="let element"> {{element.plural}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+            </div>
+
+        </div>
+
+        <h4 style="display: flex; justify-content: center;">This declension also includes the noun mėnuo ('month'),
+            which,
+            despite its nominative singular ending, is inflected according to the 1st declension. </h4>
+
+        <div fxFlex="0 1 100%">
+            <h3 style="display: flex; justify-content: center;">mėnuo, mėnesiams ('month')</h3>
+            <table mat-table style="background-color: rgb(58, 158, 125);" [dataSource]="menuo" class="mat-elevation-z8">
+                <ng-container matColumnDef="inflection">
+                    <th mat-header-cell *matHeaderCellDef>Case</th>
+                    <td mat-cell *matCellDef="let element"> {{element.inflection}} </td>
+                </ng-container>
+                <ng-container matColumnDef="singular">
+                    <th mat-header-cell *matHeaderCellDef>Singular</th>
+                    <td mat-cell *matCellDef="let element"> {{element.singular}} </td>
+                </ng-container>
+                <ng-container matColumnDef="plural">
+                    <th mat-header-cell *matHeaderCellDef>Plural</th>
+                    <td mat-cell *matCellDef="let element"> {{element.plural}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+
+
+        <h3 style="display: flex; justify-content: center;">The 5h declension also contains two feminine nouns
+            duktė('daughter') and sesuo ('sister'). </h3>
+
+            <div fxLayout.xs="column" fxLayout="row" fxLayoutGap="32px">
+                <div fxFlex="0 1 calc(50% - 32px)">
+                    <h3 style="display: flex; justify-content: center;">duktė, dukterims ('daughter')</h3>
+                    <table mat-table style="background-color: rgb(58, 158, 125);" [dataSource]="dukte"
+                        class="mat-elevation-z8">
+                        <ng-container matColumnDef="inflection">
+                            <th mat-header-cell *matHeaderCellDef>Case</th>
+                            <td mat-cell *matCellDef="let element"> {{element.inflection}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="singular">
+                            <th mat-header-cell *matHeaderCellDef>Singular</th>
+                            <td mat-cell *matCellDef="let element"> {{element.singular}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="plural">
+                            <th mat-header-cell *matHeaderCellDef>Plural</th>
+                            <td mat-cell *matCellDef="let element"> {{element.plural}} </td>
+                        </ng-container>
+    
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                </div>
+    
+                <div fxFlex="0 1 calc(50% - 32px)">
+                    <h3 style="display: flex; justify-content: center;">sesuo, seserims ('sister')</h3>
+                    <table mat-table style="background-color: rgb(58, 158, 125);" [dataSource]="sesuo"
+                        class="mat-elevation-z8">
+                        <ng-container matColumnDef="inflection">
+                            <th mat-header-cell *matHeaderCellDef>Case</th>
+                            <td mat-cell *matCellDef="let element"> {{element.inflection}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="singular">
+                            <th mat-header-cell *matHeaderCellDef>Singular</th>
+                            <td mat-cell *matCellDef="let element"> {{element.singular}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="plural">
+                            <th mat-header-cell *matHeaderCellDef>Plural</th>
+                            <td mat-cell *matCellDef="let element"> {{element.plural}} </td>
+                        </ng-container>
+    
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                </div>
+    
+            </div>
+
     </div>
 </div>
