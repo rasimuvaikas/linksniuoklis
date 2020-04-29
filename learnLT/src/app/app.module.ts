@@ -25,6 +25,10 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet'; 
 
 
+import {MatListModule} from '@angular/material/list'; 
+
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -94,6 +98,7 @@ import { BelenkasComponent } from './belenkas/belenkas.component';
     MatBottomSheetModule,
     MatDialogModule,
     MatTableModule,
+    MatListModule,
     LayoutModule
   ],
   providers: [AuthGuard],
