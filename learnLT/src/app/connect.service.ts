@@ -11,69 +11,85 @@ import { Score } from './score';
 })
 export class ConnectService {
 
-  url:string;
+  url: string;
 
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient) {
     this.url = "http://localhost:8080/Decliner/"
   }
 
-  /*authenticate(username):Observable<any>{
-    return this.http.post(this.url, username);
-  }*/
+/**
+ * Retrieve a sentence with a noun of a specific inflection, number and declension
+ * @param inflection noun's case
+ * @param number noun's number
+ * @param declensions all the declensions the user is currently practising
+ */
+  getCards(inflection = "accusative", number = "singular", declensions = ["1masc"]): Observable<any> {
 
-  getCards(inflection="accusative", number="singular", declensions=["1masc"]):Observable<any>{
-
+    //choose a random declension
     let i = declensions[Math.floor(Math.random() * ((declensions.length - 1) - 0 + 1) + 0)];
     console.log("pasirinkta declension: ", i);
 
     let httpParams = new HttpParams()
-    .append("inflection", inflection)
-    .append("number", number)
-    .append("declension", i);
+      .append("inflection", inflection)
+      .append("number", number)
+      .append("declension", i);
 
-    
-    return this.http.get(this.url + "Share", {params: httpParams, responseType: "text"});
+
+    return this.http.get(this.url + "Share", { params: httpParams, responseType: "text" });
   }
 
-  /*sendData(result:Selected):Observable<any>{
-    return this.http.post(this.url + "Evaluation", result)
-  }*/
 
   /**
    * Post a sentence that was used in a successfully completed exercise to update the learner's progress table
    * @param sent  the sentence used in the exercise
    */
-  postProgress(sent: any):Observable<any>{
+  postProgress(sent: any): Observable<any> {
 
     return this.http.post(this.url + "Share", sent);
   }
 
 
-
-  getResults(username:string):Observable<any>{
+  /**
+   * Retrieve the learner model of a particular user
+   * @param username 
+   */
+  getModel(username: string): Observable<any> {
 
     let nameParam = new HttpParams()
-    .append("username", username);
+      .append("username", username);
 
-    return this.http.get(this.url + "Learner", {params: nameParam, responseType: "text"});
+    return this.http.get(this.url + "Learner", { params: nameParam, responseType: "text" });
   }
 
-  postModel(model: Level[]):Observable<any>{
+  /**
+   * Update a particular user's learner model
+   * @param model 
+   */
+  postModel(model: Level[]): Observable<any> {
     return this.http.post(this.url + "Learner", model);
   }
 
 
-  postScore(score: Score):Observable<any>{
+  /**
+   * Update the scores table with a new score for a particular inflection/declension for the current learning session
+   * @param score includes the username, the time of the current session, noun's inflection, number, declension, and whether the answer was correct or incorrect
+   */
+  postScore(score: Score): Observable<any> {
     return this.http.post(this.url + "Score", score);
 
   }
 
-  getScore(username: string, time: string):Observable<any>{
+  /**
+   * Get user's results achieved during the previous sessions
+   * @param username username
+   * @param time time of the current session
+   */
+  getScore(username: string, time: string): Observable<any> {
     let httpParams = new HttpParams()
-    .append("username", username)
-    .append("time", time);
-    return this.http.get(this.url + "Score", {params: httpParams, responseType: "text"});
+      .append("username", username)
+      .append("time", time);
+    return this.http.get(this.url + "Score", { params: httpParams, responseType: "text" });
 
   }
-  
+
 }

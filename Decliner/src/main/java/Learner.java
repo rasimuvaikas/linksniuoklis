@@ -42,7 +42,7 @@ public class Learner extends HttpServlet {
     }
 
     /**
-     * Send learner model information
+     * Check if there is a learner model created for a user. Respond with null if not, respond with the learner model if yes
      * @param request contains the username
      * @param response all the learner model information
      * @throws IOException

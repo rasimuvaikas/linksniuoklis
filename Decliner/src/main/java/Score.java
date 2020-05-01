@@ -119,8 +119,8 @@ public class Score extends HttpServlet {
         String user = request.getParameter("username");
         String time = request.getParameter("time");
 
-        ResultSet rs = data.getColumn("inflection", user, time);
-        ResultSet rsDecl = data.getColumn("declension", user, time);
+        ResultSet rs = data.getRows("inflection", user, time);
+        ResultSet rsDecl = data.getRows("declension", user, time);
 
 
         try {
@@ -136,7 +136,7 @@ public class Score extends HttpServlet {
                     }
                 } while (rs.next());
 
-                //if inflections result set is not null, then declensions will not be
+                //if inflections result set is not null, then declensions will not be null either
                 ArrayList<String> declensions = new ArrayList<>();
                 while(rsDecl.next()){
                     String d = rsDecl.getString("declension");

@@ -51,7 +51,7 @@ export class DashboardComponent implements OnInit {
   inflections: string[] = ["nominative", "genitive", "accusative", "locative", "instrumental", "dative"];
 
   //declensions in the order from most useful (proposed first) to least
-  declensions: string[] = ["1mascIAS", "2femIA", "1mascIS", "2femĖ", "3masc", "3fem", "4masc", "5masc", "5fem", "exception"];
+  declensions: string[] = ["1mascIAS", "2femIA", "2femĖ", "1mascIS", "3masc", "3fem", "4masc", "5masc", "5fem", "exception"];
 
 
   inflectionsTempSg: { number: string; infl: string; checked: boolean; }[];

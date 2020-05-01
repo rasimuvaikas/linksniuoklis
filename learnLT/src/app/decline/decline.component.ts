@@ -193,22 +193,11 @@ export class DeclineComponent implements OnInit {
 
     this.con.postProgress(sentence).subscribe(data => {
       this.progress = data;
-      console.log("data", this.progress);
-      console.log("this.progress.total", this.progress.total);
-      console.log("this.progress.declensions.length", this.progress.declensions.length);
-      for (let i = 0; i < this.progress.declensions.length; i++) {
-        console.log("element.value", this.progress.declensions[i]);
-        for (var j in this.progress.declensions[i]) {
-          console.log("element.invalue", this.progress.declensions[i][j]);
-        }
-
-      }
-
 
       //the user can move to the next level if they have completed a certain number of exercises
       if (level == "novel") {
-        if (this.progress.total >= 30) { //was 3
-          if (this.progress.declensions.length >= 5) {// was 5
+        if (this.progress.total >= 30) { 
+          if (this.progress.declensions.length >= 5) {
             let completed = true;//check if all the user has completed at least 5 exercises for each declension
             for (let i = 0; i < this.progress.declensions.length; i++) {
               for (var j in this.progress.declensions[i]) {

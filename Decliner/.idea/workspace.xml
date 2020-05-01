@@ -3,28 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7b67ce0f-6c65-4b18-830a-95ceb687dbd7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/decl/accusativeDeclPl.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/decl/accusativeDeclPl.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/decl/accusativeDeclSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/decl/accusativeDeclSg.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/decl/dativeDeclPl.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/decl/dativeDeclPl.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/decl/dativeDeclSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/decl/dativeDeclSg.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/decl/genitiveDeclPl.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/decl/genitiveDeclPl.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/decl/genitiveDeclSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/decl/genitiveDeclSg.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/decl/instrumentalDeclSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/decl/instrumentalDeclSg.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/decl/locativeDeclSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/decl/locativeDeclSg.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/decl/nominativeDeclPl.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/decl/nominativeDeclPl.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/decl/nominativeDeclSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/decl/nominativeDeclSg.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Data.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Declension.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Declension.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/decl/accusativeDeclPl.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/decl/accusativeDeclPl.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/decl/accusativeDeclSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/decl/accusativeDeclSg.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/decl/dativeDeclPl.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/decl/dativeDeclPl.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/decl/dativeDeclSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/decl/dativeDeclSg.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/decl/genitiveDeclPl.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/decl/genitiveDeclPl.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/decl/genitiveDeclSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/decl/genitiveDeclSg.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/decl/instrumentalDeclSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/decl/instrumentalDeclSg.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/decl/locativeDeclSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/decl/locativeDeclSg.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/decl/nominativeDeclPl.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/decl/nominativeDeclPl.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/decl/nominativeDeclSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/decl/nominativeDeclSg.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Learner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Learner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Score.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Share.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Share.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,6 +152,9 @@
       <workItem from="1587892621263" duration="4930000" />
       <workItem from="1588065417665" duration="2233000" />
       <workItem from="1588091372819" duration="3191000" />
+      <workItem from="1588246808025" duration="5452000" />
+      <workItem from="1588324842350" duration="4438000" />
+      <workItem from="1588354534229" duration="7821000" />
     </task>
     <servers />
   </component>

@@ -249,7 +249,8 @@ public class Data {
                     " 3fem SMALLINT," +
                     " 4masc SMALLINT," +
                     " 5masc SMALLINT," +
-                    " 5fem SMALLINT)";
+                    " 5fem SMALLINT," +
+                    " exception SMALLINT)";
 
             stmt.executeUpdate(tabDecl);
 
@@ -266,7 +267,8 @@ public class Data {
                     " 3fem SMALLINT DEFAULT 0," +
                     " 4masc SMALLINT DEFAULT 0," +
                     " 5masc SMALLINT DEFAULT 0," +
-                    " 5fem SMALLINT DEFAULT 0)";
+                    " 5fem SMALLINT DEFAULT 0," +
+                    " exception SMALLINT DEFAULT 0)";
 
             stmt.executeUpdate(progress);
 
@@ -657,7 +659,7 @@ public class Data {
      * @param time current session time
      * @return a list of every row in a "column" in scores that appeared in every session other than the current
      */
-    public ResultSet getColumn(String column, String username, String time) {
+    public ResultSet getRows(String column, String username, String time) {
 
         try {
             stmt.executeUpdate("USE models");

@@ -214,7 +214,7 @@ public class Share extends HttpServlet {
     }
 
     /**
-     * Get info of a sentence that appeared in a successfully completed exercise, respond with the user's progress regarding the current inflection/number, declension
+     * Get info of a sentence that appeared in a successfully completed exercise, ,update the progress table, respond with the user's progress regarding the current inflection/number, declension
      * @param request
      * @param response
      * @throws IOException
