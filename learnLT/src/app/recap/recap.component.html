@@ -38,6 +38,7 @@
         <div fxLayout.xs="column" fxLayout="row" fxLayoutGap="32px">
             <div fxFlex="0 1 calc(33.3% - 32px)">
                 <h3 style="display: flex; justify-content: center;">savaitė, saváitėms, saváites ('week');</h3>
+                <div style="display: flex; justify-content: center;">
                 <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="savaite"
                     class="mat-elevation-z8">
                     <ng-container matColumnDef="inflection">
@@ -55,10 +56,12 @@
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
+                </div>
             </div>
 
             <div fxFlex="0 1 calc(33.3% - 32px)">
                 <h3 style="display: flex; justify-content: center;">vasara, vãsaroms, vãsaras ('summer')</h3>
+                <div style="display: flex; justify-content: center;">
                 <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="vasara"
                     class="mat-elevation-z8">
                     <ng-container matColumnDef="inflection">
@@ -78,10 +81,12 @@
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
+                </div>
             </div>
 
             <div fxFlex="0 1 calc(33.3% - 32px)">
                 <h3 style="display: flex; justify-content: center;">brolis, bróliams, brólius ('brother')</h3>
+                <div style="display: flex; justify-content: center;">
                 <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="brolis"
                     class="mat-elevation-z8">
                     <ng-container matColumnDef="inflection">
@@ -101,6 +106,7 @@
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
+                </div>
             </div>
 
         </div>
@@ -116,6 +122,7 @@
         <div fxLayout.xs="column" fxLayout="row" fxLayoutGap="32px">
             <div fxFlex="0 1 calc(33.3% - 32px)">
                 <h3 style="display: flex; justify-content: center;">knyga, knỹgoms, knygàs ('book');</h3>
+                <div style="display: flex; justify-content: center;">
                 <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="knyga"
                     class="mat-elevation-z8">
                     <ng-container matColumnDef="inflection">
@@ -133,10 +140,12 @@
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
+                </div>
             </div>
 
             <div fxFlex="0 1 calc(33.3% - 32px)">
                 <h3 style="display: flex; justify-content: center;">medis, mẽdžiams, medžiùs ('tree')</h3>
+                <div style="display: flex; justify-content: center;">
                 <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="medis"
                     class="mat-elevation-z8">
                     <ng-container matColumnDef="inflection">
@@ -156,10 +165,12 @@
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
+                </div>
             </div>
 
             <div fxFlex="0 1 calc(33.3% - 32px)">
                 <h3 style="display: flex; justify-content: center;">pirštas, pir̃štams, pirštùs ('finger')</h3>
+                <div style="display: flex; justify-content: center;">
                 <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="pirstas"
                     class="mat-elevation-z8">
                     <ng-container matColumnDef="inflection">
@@ -179,6 +190,7 @@
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
+                </div>
             </div>
 
         </div>
@@ -188,6 +200,7 @@
 
             <div fxFlex="0 1 calc(50% - 32px)">
                 <h3 style="display: flex; justify-content: center;">skaičius, skaĩčiams, skaičiùs ('number')</h3>
+                <div style="display: flex; justify-content: center;">
                 <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="skaicius"
                     class="mat-elevation-z8">
                     <ng-container matColumnDef="inflection">
@@ -207,10 +220,12 @@
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
+                </div>
             </div>
 
             <div fxFlex="0 1 calc(50% - 32px)">
                 <h3 style="display: flex; justify-content: center;">upė, ùpėms, upès ('river')</h3>
+                <div style="display: flex; justify-content: center;">
                 <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="upe"
                     class="mat-elevation-z8">
                     <ng-container matColumnDef="inflection">
@@ -230,6 +245,7 @@
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
+                </div>
             </div>
 
         </div>
@@ -242,6 +258,7 @@
         <div fxLayout.xs="column" fxLayout="row" fxLayoutGap="32px">
             <div fxFlex="0 1 calc(33.3% - 32px)">
                 <h3 style="display: flex; justify-content: center;">langas, langáms, lángus ('window');</h3>
+                <div style="display: flex; justify-content: center;">
                 <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="langas"
                     class="mat-elevation-z8">
                     <ng-container matColumnDef="inflection">
@@ -259,10 +276,12 @@
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
+                </div>
             </div>
 
             <div fxFlex="0 1 calc(33.3% - 32px)">
                 <h3 style="display: flex; justify-content: center;">rašinys, rašiniáms, rãšinius ('composition')</h3>
+                <div style="display: flex; justify-content: center;">
                 <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="rasinys"
                     class="mat-elevation-z8">
                     <ng-container matColumnDef="inflection">
@@ -282,10 +301,12 @@
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
+                </div>
             </div>
 
             <div fxFlex="0 1 calc(33.3% - 32px)">
                 <h3 style="display: flex; justify-content: center;">galva, galvóms, gálvas ('head')</h3>
+                <div style="display: flex; justify-content: center;">
                 <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="galva"
                     class="mat-elevation-z8">
                     <ng-container matColumnDef="inflection">
@@ -305,6 +326,7 @@
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
+                </div>
             </div>
 
         </div>
@@ -314,6 +336,7 @@
 
             <div fxFlex="0 1 calc(50% - 32px)">
                 <h3 style="display: flex; justify-content: center;">gerklė, gerklė́ms, gérkles ('throat')</h3>
+                <div style="display: flex; justify-content: center;">
                 <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="gerkle"
                     class="mat-elevation-z8">
                     <ng-container matColumnDef="inflection">
@@ -333,10 +356,12 @@
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
+                </div>
             </div>
 
             <div fxFlex="0 1 calc(50% - 32px)">
                 <h3 style="display: flex; justify-content: center;">viltis, viltìms, vìltis ('hope')</h3>
+                <div style="display: flex; justify-content: center;">
                 <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="viltis"
                     class="mat-elevation-z8">
                     <ng-container matColumnDef="inflection">
@@ -356,6 +381,7 @@
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
+                </div>
             </div>
 
         </div>
@@ -370,6 +396,7 @@
         <div fxLayout.xs="column" fxLayout="row" fxLayoutGap="32px">
             <div fxFlex="0 1 calc(33.3% - 32px)">
                 <h3 style="display: flex; justify-content: center;">namas, namáms, namùs ('house');</h3>
+                <div style="display: flex; justify-content: center;">
                 <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="namas"
                     class="mat-elevation-z8">
                     <ng-container matColumnDef="inflection">
@@ -387,10 +414,12 @@
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
+                </div>
             </div>
 
             <div fxFlex="0 1 calc(33.3% - 32px)">
                 <h3 style="display: flex; justify-content: center;">daina, dainóms, dainàs ('song')</h3>
+                <div style="display: flex; justify-content: center;">
                 <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="daina"
                     class="mat-elevation-z8">
                     <ng-container matColumnDef="inflection">
@@ -410,10 +439,12 @@
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
+                </div>
             </div>
 
             <div fxFlex="0 1 calc(33.3% - 32px)">
                 <h3 style="display: flex; justify-content: center;">žolė, žolė́ms, žolès ('grass')</h3>
+                <div style="display: flex; justify-content: center;">
                 <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="zole"
                     class="mat-elevation-z8">
                     <ng-container matColumnDef="inflection">
@@ -433,6 +464,7 @@
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
+                </div>
             </div>
 
         </div>
@@ -442,6 +474,7 @@
 
             <div fxFlex="0 1 calc(50% - 32px)">
                 <h3 style="display: flex; justify-content: center;">dangus, dangùms, dangùs ('sky')</h3>
+                <div style="display: flex; justify-content: center;">
                 <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="dangus"
                     class="mat-elevation-z8">
                     <ng-container matColumnDef="inflection">
@@ -461,10 +494,12 @@
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
+                </div>
             </div>
 
             <div fxFlex="0 1 calc(50% - 32px)">
                 <h3 style="display: flex; justify-content: center;">akis, akìms, akìs ('eye')</h3>
+                <div style="display: flex; justify-content: center;">
                 <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="akis"
                     class="mat-elevation-z8">
                     <ng-container matColumnDef="inflection">
@@ -484,6 +519,7 @@
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
+                </div>
             </div>
 
         </div>
@@ -502,29 +538,32 @@
             <div fxLayout.xs="column" fxLayout="row" fxLayoutGap="32px">
                 <div fxFlex="0 1 calc(50% - 32px)">
                     <h3 style="display: flex; justify-content: center;">vyras, vyrams ('man')</h3>
-                    <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="declension1mascAS"
-                        class="mat-elevation-z8">
-                        <ng-container matColumnDef="inflection">
-                            <th mat-header-cell *matHeaderCellDef>Case</th>
-                            <td mat-cell *matCellDef="let element"> {{element.inflection}} </td>
-                        </ng-container>
-                        <ng-container matColumnDef="singular">
-                            <th mat-header-cell *matHeaderCellDef>Singular</th>
-                            <td mat-cell *matCellDef="let element"> {{element.singular}} </td>
-                        </ng-container>
-                        <ng-container matColumnDef="plural">
-                            <th mat-header-cell *matHeaderCellDef>Plural</th>
-                            <td mat-cell *matCellDef="let element"> {{element.plural}} </td>
-                        </ng-container>
+                    <div style="display: flex; justify-content: center;">
+                        <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="declension1mascAS"
+                            class="mat-elevation-z8">
+                            <ng-container matColumnDef="inflection">
+                                <th mat-header-cell *matHeaderCellDef>Case</th>
+                                <td mat-cell *matCellDef="let element"> {{element.inflection}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="singular">
+                                <th mat-header-cell *matHeaderCellDef>Singular</th>
+                                <td mat-cell *matCellDef="let element"> {{element.singular}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="plural">
+                                <th mat-header-cell *matHeaderCellDef>Plural</th>
+                                <td mat-cell *matCellDef="let element"> {{element.plural}} </td>
+                            </ng-container>
 
-                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                    </table>
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        </table>
+                    </div>
                 </div>
 
                 <div fxFlex="0 1 calc(50% - 32px)">
                     <h3 style="display: flex; justify-content: center;">kelias, keliams ('road'); vėjas, vėjams ('wind')
                     </h3>
+                    <div style="display: flex; justify-content: center;">
                     <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="declension1mascIAS"
                         class="mat-elevation-z8">
                         <ng-container matColumnDef="inflection">
@@ -551,6 +590,7 @@
                         <tr mat-header-row *matHeaderRowDef="displayedColumnsDouble"></tr>
                         <tr mat-row *matRowDef="let row; columns: displayedColumnsDouble;"></tr>
                     </table>
+                    </div>
                 </div>
 
             </div>
@@ -565,6 +605,7 @@
                 <div fxFlex="0 1 calc(50% - 32px)">
                     <h3 style="display: flex; justify-content: center;">skėtis, skėčiams ('umbrella'); peilis, peiliams
                         ('knife')</h3>
+                        <div style="display: flex; justify-content: center;">
                     <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="declension1mascIS"
                         class="mat-elevation-z8">
                         <ng-container matColumnDef="inflection">
@@ -591,11 +632,13 @@
                         <tr mat-header-row *matHeaderRowDef="displayedColumnsDouble"></tr>
                         <tr mat-row *matRowDef="let row; columns: displayedColumnsDouble;"></tr>
                     </table>
+                    </div>
                 </div>
 
                 <div fxFlex="0 1 calc(50% - 32px)">
                     <h3 style="display: flex; justify-content: center;">arklys, arkliams ('horse'); gaidys, gaidžiams
                         ('rooster') </h3>
+                        <div style="display: flex; justify-content: center;">
                     <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="declension1mascYS"
                         class="mat-elevation-z8">
                         <ng-container matColumnDef="inflection">
@@ -622,6 +665,7 @@
                         <tr mat-header-row *matHeaderRowDef="displayedColumnsDouble"></tr>
                         <tr mat-row *matRowDef="let row; columns: displayedColumnsDouble;"></tr>
                     </table>
+                    </div>
                 </div>
 
             </div>
@@ -635,6 +679,7 @@
             <div fxLayout.xs="column" fxLayout="row" fxLayoutGap="32px">
                 <div fxFlex="0 1 calc(50% - 32px)">
                     <h3 style="display: flex; justify-content: center;">ranka, rankoms ('hand')</h3>
+                    <div style="display: flex; justify-content: center;">
                     <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="declension2femA"
                         class="mat-elevation-z8">
                         <ng-container matColumnDef="inflection">
@@ -653,11 +698,13 @@
                         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                     </table>
+                    </div>
                 </div>
 
                 <div fxFlex="0 1 calc(50% - 32px)">
                     <h3 style="display: flex; justify-content: center;">kaltė, kaltėms ('guilt'); gėlė, gėlėms
                         ('flower') </h3>
+                        <div style="display: flex; justify-content: center;">
                     <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="declension2fem"
                         class="mat-elevation-z8">
                         <ng-container matColumnDef="inflection">
@@ -684,6 +731,7 @@
                         <tr mat-header-row *matHeaderRowDef="displayedColumnsDouble"></tr>
                         <tr mat-row *matRowDef="let row; columns: displayedColumnsDouble;"></tr>
                     </table>
+                    </div>
                 </div>
 
             </div>
@@ -703,6 +751,7 @@
                 <div fxFlex="0 1 calc(50% - 32px)">
                     <h3 style="display: flex; justify-content: center;">dantis, dantims ('tooth'); debesis, debesims
                         ('cloud')</h3>
+                        <div style="display: flex; justify-content: center;">
                     <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="declension3masc"
                         class="mat-elevation-z8">
                         <ng-container matColumnDef="inflection">
@@ -729,11 +778,13 @@
                         <tr mat-header-row *matHeaderRowDef="displayedColumnsDouble"></tr>
                         <tr mat-row *matRowDef="let row; columns: displayedColumnsDouble;"></tr>
                     </table>
+                    </div>
                 </div>
 
                 <div fxFlex="0 1 calc(50% - 32px)">
                     <h3 style="display: flex; justify-content: center;">žvėris, žvėrims ('beast'); vagis, vagims
                         ('thief')</h3>
+                        <div style="display: flex; justify-content: center;">
                     <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="declension3mascVagis"
                         class="mat-elevation-z8">
                         <ng-container matColumnDef="inflection">
@@ -760,6 +811,7 @@
                         <tr mat-header-row *matHeaderRowDef="displayedColumnsDouble"></tr>
                         <tr mat-row *matRowDef="let row; columns: displayedColumnsDouble;"></tr>
                     </table>
+                    </div>
                 </div>
 
             </div>
@@ -776,6 +828,7 @@
                 <div fxFlex="0 1 calc(50% - 32px)">
                     <h3 style="display: flex; justify-content: center;">širdis, širdims ('heart'); žuvis, žuvims
                         ('fish') </h3>
+                        <div style="display: flex; justify-content: center;">
                     <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="declension3femDT"
                         class="mat-elevation-z8">
                         <ng-container matColumnDef="inflection">
@@ -802,12 +855,14 @@
                         <tr mat-header-row *matHeaderRowDef="displayedColumnsDouble"></tr>
                         <tr mat-row *matRowDef="let row; columns: displayedColumnsDouble;"></tr>
                     </table>
+                    </div>
                 </div>
 
                 <div fxFlex="0 1 calc(50% - 32px)">
                     <h3 style="display: flex; justify-content: center;">moteris, moterims ('woman') [this particular
                         noun
                         has a different ending in the genitive singular]</h3>
+                        <div style="display: flex; justify-content: center;">
                     <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="moteris"
                         class="mat-elevation-z8">
                         <ng-container matColumnDef="inflection">
@@ -826,6 +881,7 @@
                         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                     </table>
+                    </div>
                 </div>
 
             </div>
@@ -851,6 +907,7 @@
                 <div fxFlex="0 1 calc(50% - 32px)">
                     <h3 style="display: flex; justify-content: center;">vaisius, vaisiams ('fruit'); muziejus, muziejams
                         ('museum') </h3>
+                        <div style="display: flex; justify-content: center;">
                     <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="vaisius"
                         class="mat-elevation-z8">
                         <ng-container matColumnDef="inflection">
@@ -877,10 +934,12 @@
                         <tr mat-header-row *matHeaderRowDef="displayedColumnsDouble"></tr>
                         <tr mat-row *matRowDef="let row; columns: displayedColumnsDouble;"></tr>
                     </table>
+                    </div>
                 </div>
 
                 <div fxFlex="0 1 calc(50% - 32px)">
                     <h3 style="display: flex; justify-content: center;">dangus, dangums ('sky')</h3>
+                    <div style="display: flex; justify-content: center;">
                     <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="dangus"
                         class="mat-elevation-z8">
                         <ng-container matColumnDef="inflection">
@@ -899,6 +958,7 @@
                         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                     </table>
+                    </div>
                 </div>
 
             </div>
@@ -910,6 +970,7 @@
 
             <div fxFlex="0 1 100%">
                 <h3 style="display: flex; justify-content: center;">žmogus, žmonėms ('man')</h3>
+                <div style="display: flex; justify-content: center;">
                 <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="zmogus"
                     class="mat-elevation-z8">
                     <ng-container matColumnDef="inflection">
@@ -928,6 +989,7 @@
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
+                </div>
             </div>
 
 
@@ -940,6 +1002,7 @@
                 <div fxFlex="0 1 calc(50% - 32px)">
                     <h3 style="display: flex; justify-content: center;">akmuo, akmenims ('stone'); vanduo, vandenims
                         ('water') </h3>
+                        <div style="display: flex; justify-content: center;">
                     <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="akmuo"
                         class="mat-elevation-z8">
                         <ng-container matColumnDef="inflection">
@@ -966,10 +1029,12 @@
                         <tr mat-header-row *matHeaderRowDef="displayedColumnsDouble"></tr>
                         <tr mat-row *matRowDef="let row; columns: displayedColumnsDouble;"></tr>
                     </table>
+                    </div>
                 </div>
 
                 <div fxFlex="0 1 calc(50% - 32px)">
                     <h3 style="display: flex; justify-content: center;">šuo, šunims ('dog')</h3>
+                    <div style="display: flex; justify-content: center;">
                     <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="suo"
                         class="mat-elevation-z8">
                         <ng-container matColumnDef="inflection">
@@ -988,6 +1053,7 @@
                         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                     </table>
+                    </div>
                 </div>
 
             </div>
@@ -998,6 +1064,7 @@
 
             <div fxFlex="0 1 100%">
                 <h3 style="display: flex; justify-content: center;">mėnuo, mėnesiams ('month')</h3>
+                <div style="display: flex; justify-content: center;">
                 <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="menuo"
                     class="mat-elevation-z8">
                     <ng-container matColumnDef="inflection">
@@ -1016,6 +1083,7 @@
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
+                </div>
             </div>
 
 
@@ -1025,6 +1093,7 @@
             <div fxLayout.xs="column" fxLayout="row" fxLayoutGap="32px">
                 <div fxFlex="0 1 calc(50% - 32px)">
                     <h3 style="display: flex; justify-content: center;">duktė, dukterims ('daughter')</h3>
+                    <div style="display: flex; justify-content: center;">
                     <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="dukte"
                         class="mat-elevation-z8">
                         <ng-container matColumnDef="inflection">
@@ -1043,10 +1112,12 @@
                         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                     </table>
+                    </div>
                 </div>
 
                 <div fxFlex="0 1 calc(50% - 32px)">
                     <h3 style="display: flex; justify-content: center;">sesuo, seserims ('sister')</h3>
+                    <div style="display: flex; justify-content: center;">
                     <table mat-table style="background-color: rgb(69, 190, 150);" [dataSource]="sesuo"
                         class="mat-elevation-z8">
                         <ng-container matColumnDef="inflection">
@@ -1065,6 +1136,7 @@
                         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                     </table>
+                    </div>
                 </div>
 
             </div>
