@@ -27,7 +27,6 @@ export class ConnectService {
 
     //choose a random declension
     let i = declensions[Math.floor(Math.random() * ((declensions.length - 1) - 0 + 1) + 0)];
-    console.log("pasirinkta declension: ", i);
 
     let httpParams = new HttpParams()
       .append("inflection", inflection)

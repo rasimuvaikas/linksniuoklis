@@ -129,7 +129,7 @@ Tòmas padarỹs gẽrą dalỹką.	Tomas padarys gerą dalyką.	Tom will do th
 Vãkar gavaũ nuõ jõs láišką.	Vakar gavau nuo jos laišką.	I had a letter from her yesterday.	laišką	4	laiškas	Ncmsan-	1mascIAS
 Ar̃ mãtai tą̃ mãžą nãmą?	Ar matai tą mažą namą?	Can you see that small house?	namą	4	namas	Ncmsan-	1mascIAS
 Àš čià trupùtį užsiė̃męs, Tòmai.	Aš čia truputį užsiėmęs, Tomai.	I'm a little busy here, Tom.	truputį	2	truputis	Ncmsan-	1mascIS
-Àš mačiaũ šùnį.	Aš mačiau šunį.	I saw a dog.	šunį	2	šuo	Ncmsan-	šuo
+Àš mačiaũ šùnį.	Aš mačiau šunį.	I saw a dog.	šunį	2	šuo	Ncmsan-	exception
 Àš norė́čiau keliáuti apliñk pasáulį.	Aš norėčiau keliauti aplink pasaulį.	I'd like to travel around the world.	pasaulį	4	pasaulis	Ncmsan-	1mascIS
 Àš turiù atsakýti į̃ šį̃ láišką.	Aš turiu atsakyti į šį laišką.	I have to answer his letter.	laišką	5	laiškas	Ncmsan-	1mascIAS
 Àš turiù žíedą.	Aš turiu žiedą.	I have a ring.	žiedą	2	žiedas	Ncmsan-	1mascIAS
@@ -140,7 +140,7 @@ Jiẽ kalbė́jo apiẽ méilę.	Jie kalbėjo apie meilę.	They talked about lo
 Jiẽ kalbė́jo vìsą nãktį.	Jie kalbėjo visą naktį.	They went on talking all night.	naktį	3	naktis	Ncfsan-	3fem
 Jiẽ tùri dìdelį nãmą.	Jie turi didelį namą.	They have a large house.	namą	3	namas	Ncmsan-	1mascIAS
 Jì nóri skaitýti knỹgą.	Ji nori skaityti knygą.	She wants to read a book.	knygą	3	knyga	Ncfsan-	2femIA
-Jì palìko sàvo šùnį màno kambaryjè.	Ji paliko savo šunį mano kambaryje.	She left her dog in my room.	šunį	3	šuo	Ncmsan-	šuo
+Jì palìko sàvo šùnį màno kambaryjè.	Ji paliko savo šunį mano kambaryje.	She left her dog in my room.	šunį	3	šuo	Ncmsan-	exception
 Jìs tùri atsakýti į̃ kláusimą.	Jis turi atsakyti į klausimą.	He needs to answer the question.	klausimą	4	klausimas	Ncmsan-	1mascIAS
 Ką̃ jì màno apiẽ màno automobìlį?	Ką ji mano apie mano automobilį?	What does she think about my car?	automobilį	5	automobilis	Ncmsan-	1mascIS
 Kókį maĩstą Tòmas mė́gsta?	Kokį maistą Tomas mėgsta?	What kind of food does Tom like?	maistą	1	maistas	Ncmsan-	1mascIAS
@@ -231,7 +231,7 @@ Àš ėjaũ į̃ sàvo mokỹklą.	Aš ėjau į savo mokyklą.	I went to your
 Àš pàėmiau knỹgą.	Aš paėmiau knygą.	I took the book.	knygą	2	knyga	Ncfsan-	2femIA
 Àš palikaũ táu pranešìmą.	Aš palikau tau pranešimą.	I left you a message.	pranešimą	3	pranešimas	Ncmsan-	1mascIAS
 Bóbas rãšo mán kar̃tą į̃ mė́nesį.	Bobas rašo man kartą į mėnesį.	Bob writes to me once a month.	kartą	3	kartas	Ncmsan-	1mascIAS
-Bóbas rãšo mán kar̃tą į̃ mė́nesį.	Bobas rašo man kartą į mėnesį.	Bob writes to me once a month.	mėnesį	5	mėnuo	Ncmsan-	mėnuo
+Bóbas rãšo mán kar̃tą į̃ mė́nesį.	Bobas rašo man kartą į mėnesį.	Bob writes to me once a month.	mėnesį	5	mėnuo	Ncmsan-	exception
 Karỹs bùvo sùžeistas į̃ kóją.	Karys buvo sužeistas į koją.	The soldier was wounded in the leg.	koją	4	koja	Ncfsan-	2femIA
 Kodė̃l jū̃s nórite išmoktì šią̃ kal̃bą?	Kodėl jūs norite išmokti šią kalbą?	Why do you want to learn this language?	kalbą	5	kalba	Ncfsan-	2femIA
 Kodė̃l tù nóri išmoktì šią̃ kal̃bą?	Kodėl tu nori išmokti šią kalbą?	Why do you want to learn this language?	kalbą	5	kalba	Ncfsan-	2femIA
@@ -309,7 +309,7 @@ Àš pàmečiau sàvo rãktą kažkur̃ čià.	Aš pamečiau savo raktą ka
 Àš paprašiaũ jõs palauktì minutė̃lę.	Aš paprašiau jos palaukti minutėlę.	I asked her to wait a minute.	minutėlę	4	minutėlė	Ncfsan-	2femĖ
 Àš pérskaičiau tą̃ knỹgą kẽletą kar̃tų.	Aš perskaičiau tą knygą keletą kartų.	I have read that book several times.	knygą	3	knyga	Ncfsan-	2femIA
 Àš rašaũ láišką.	Aš rašau laišką.	I am writing a letter.	laišką	2	laiškas	Ncmsan-	1mascIAS
-Àš sáu nusipirkaũ šùnį.	Aš sau nusipirkau šunį.	I bought myself a dog.	šunį	3	šuo	Ncmsan-	šuo
+Àš sáu nusipirkaũ šùnį.	Aš sau nusipirkau šunį.	I bought myself a dog.	šunį	3	šuo	Ncmsan-	exception
 Àš tìk ką̃ pérskaičiau šią̃ knỹgą.	Aš tik ką perskaičiau šią knygą.	I have just read this book.	šią	4	knyga	Ncfsan-	2femIA
 Džònas laĩkė sàvo gálvą vir̃š vandeñs.	Džonas laikė savo galvą virš vandens.	John kept his head above the water.	galvą	3	galva	Ncfsan-	2femIA
 Gãli skaitýti bèt kókią knỹgą kurì tavè dõmina.	Gali skaityti bet kokią knygą kuri tave domina.	You can read any book that interests you.	kokią	3	knyga	Ncfsan-	2femIA
@@ -404,7 +404,7 @@ Mán reĩkia eitì į̃ polìcijos stõtį.	Man reikia eiti į policijos st
 Mẽs eĩname į̃ virtùvę.	Mes einame į virtuvę.	We're going to the kitchen.	virtuvę	3	virtuvė	Ncfsan-	2femĖ
 Nueitì į̃ stõtį reikė́jo penkių̃ minùčių.	Nueiti į stotį reikėjo penkių minučių.	It took five minutes to get to the station.	stotį	2	stotis	Ncfsan-	3fem
 Nusipirkaũ naũją kompiùterį pràeitą mė́nesį.	Nusipirkau naują kompiuterį praeitą mėnesį.	I bought a new computer last month.	kompiuterį	2	kompiuteris	Ncmsan-	1mascIS
-Nusipirkaũ naũją kompiùterį pràeitą mė́nesį.	Nusipirkau naują kompiuterį praeitą mėnesį.	I bought a new computer last month.	mėnesį	4	mėnuo	Ncmsan-	mėnuo
+Nusipirkaũ naũją kompiùterį pràeitą mė́nesį.	Nusipirkau naują kompiuterį praeitą mėnesį.	I bought a new computer last month.	mėnesį	4	mėnuo	Ncmsan-	exception
 Padarýsiu táu gėrìmą.	Padarysiu tau gėrimą.	I'm going to make you a drink.	gėrimą	2	gėrimas	Ncmsan-	1mascIAS
 Tòmas praléido laĩką sù Merè.	Tomas praleido laiką su Mere.	Tom spent time with Mary.	laiką	2	laikas	Ncmsan-	1mascIAS
 Turiù kvaĩlą kláusimą.	Turiu kvailą klausimą.	I have a stupid question.	klausimą	2	klausimas	Ncmsan-	1mascIAS
@@ -424,12 +424,12 @@ Jiẽ sė́di virtùvėje ir̃ gẽria arbãtą.	Jie sėdi virtuvėje ir geria
 Jì manę̃s paklaũsė ar̃ àš bū́siu laĩsva kìtą sekmãdienį.	Ji manęs paklausė ar aš būsiu laisva kitą sekmadienį.	She asked me if I would be free next Sunday.	sekmadienį	8	sekmadienis	Ncmsan-	1mascIS
 Jì manę̃s paklaũsė ar̃ àš bū́siu laisvàs kìtą sekmãdienį.	Ji manęs paklausė ar aš būsiu laisvas kitą sekmadienį.	She asked me if I would be free next Sunday.	sekmadienį	8	sekmadienis	Ncmsan-	1mascIS
 Jì norė́tų surastì gyvẽnimo prãsmę.	Ji norėtų surasti gyvenimo prasmę.	She'd like to find the purpose of life.	prasmę	4	prasmė	Ncfsan-	2femĖ
-Jì nupir̃ko jám šùnį.	Ji nupirko jam šunį.	She bought him a dog.	šunį	3	šuo	Ncmsan-	šuo
+Jì nupir̃ko jám šùnį.	Ji nupirko jam šunį.	She bought him a dog.	šunį	3	šuo	Ncmsan-	exception
 Jì pažadė́jo rašýti mán kiekvíeną saváitę.	Ji pažadėjo rašyti man kiekvieną savaitę.	She made a promise to write to me every week.	savaitę	5	savaitė	Ncfsan-	2femĖ
 Jì púolė príešą.	Ji puolė priešą.	She attacked the enemy.	priešą	2	priešas	Ncmsan-	1mascIAS
 Jì sė́di virtùvėje ir̃ gẽria arbãtą.	Ji sėdi virtuvėje ir geria arbatą.	She's sitting in the kitchen and drinking tea.	arbatą	5	arbata	Ncfsan-	2femIA
 Jį̃ slẽpia nuõ mū́sų tiẽsą.	Jį slepia nuo mūsų tiesą.	She's hiding the truth from us.	tiesą	4	tiesa	Ncfsan-	2femIA
-Jìs nupir̃ko jái šùnį.	Jis nupirko jai šunį.	He bought her a dog.	šunį	3	šuo	Ncmsan-	šuo
+Jìs nupir̃ko jái šùnį.	Jis nupirko jai šunį.	He bought her a dog.	šunį	3	šuo	Ncmsan-	exception
 Ką̃ veikeĩ šią̃ vãsarą?	Ką veikei šią vasarą?	What did you do this summer?	vasarą	3	vasara	Ncfsan-	2femIA
 Kažkàs privãlo paskubė́ti ir̃ greĩtai nuvežtì ją̃ į̃ ligóninę.	Kažkas privalo paskubėti ir greitai nuvežti ją į ligoninę.	Somebody has to hurry and quickly drive her to the hospital.	ligoninę	8	ligoninė	Ncfsan-	2femĖ
 Kókį ãlų mė́gsti gertì?	Kokį alų mėgsti gerti?	What kind of beer do you like to drink?	alų	1	alus	Ncmsan-	4masc
@@ -447,7 +447,7 @@ Móterys keĩčia pasáulį.	Moterys keičia pasaulį.	Women change the world
 Nesù nė̃ trupùtį álkana.	Nesu nė truputį alkana.	I'm not even a little hungry.	truputį	2	truputis	Ncmsan-	1mascIS
 Nesvarbù kókią knỹgą skaitaĩ, skaitýk ją̃ atidžiaĩ.	Nesvarbu kokią knygą skaitai, skaityk ją atidžiai.	Whatever book you read, read it carefully.	knygą	2	knyga	Ncfsan-	2femIA
 Padė́jau mótinai išvalýti virtùvę.	Padėjau motinai išvalyti virtuvę.	I helped my mother clean the kitchen.	virtuvę	3	virtuvė	Ncfsan-	2femĖ
-Rugsė́jo mė́nesį bùs lýgiai mẽtai, kaĩp àš ją̃ pažį́stu.	Rugsėjo mėnesį bus lygiai metai, kaip aš ją pažįstu.	By September I will have known her for a whole year.	mėnesį	1	mėnuo	Ncmsan-	mėnuo
+Rugsė́jo mė́nesį bùs lýgiai mẽtai, kaĩp àš ją̃ pažį́stu.	Rugsėjo mėnesį bus lygiai metai, kaip aš ją pažįstu.	By September I will have known her for a whole year.	mėnesį	1	mėnuo	Ncmsan-	exception
 Tė̃tis nupir̃ko mán kãmerą.	Tėtis nupirko man kamerą.	Dad bought me a camera.	kamerą	3	kamera	Ncfsan-	2femIA
 Tikrì výrai gẽria arbãtą.	Tikri vyrai geria arbatą.	Real men drink tea.	arbatą	3	arbata	Ncfsan-	2femIA
 Tù gerì arbãtą.	Tu geri arbatą.	You drink tea.	arbatą	2	arbata	Ncfsan-	2femIA
@@ -593,7 +593,7 @@ Àš tą̃ daraũ kiekvíeną sekmãdienio rýtą.	Aš tą darau kiekvieną
 Àš trupùtį ner̃vinuosi.	Aš truputį nervinuosi.	I'm a little nervous.	truputį	1	truputis	Ncmsan-	1mascIS
 Àš turiù báltą kãtę.	Aš turiu baltą katę.	I have a white cat.	katę	3	katė	Ncfsan-	2femĖ
 Àš turiù kãtę ir̃ šùnį. Katė̃ ỹra júoda, õ šuõ ỹra báltas.	Aš turiu katę ir šunį. Katė yra juoda, o šuo yra baltas.	I have a cat and a dog. The cat is black and the dog is white.	katę	2	katė	Ncfsan-	2femĖ
-Àš turiù kãtę ir̃ šùnį. Katė̃ ỹra júoda, õ šuõ ỹra báltas.	Aš turiu katę ir šunį. Katė yra juoda, o šuo yra baltas.	I have a cat and a dog. The cat is black and the dog is white.	šunį	4	šuo	Ncmsan-	šuo
+Àš turiù kãtę ir̃ šùnį. Katė̃ ỹra júoda, õ šuõ ỹra báltas.	Aš turiu katę ir šunį. Katė yra juoda, o šuo yra baltas.	I have a cat and a dog. The cat is black and the dog is white.	šunį	4	šuo	Ncmsan-	exception
 Àš turiù víeną kãtę.	Aš turiu vieną katę.	I own one cat.	katę	3	katė	Ncfsan-	2femĖ
 Atidarýk durìs ir̃ įléisk màno kãtę.	Atidaryk duris ir įleisk mano katę.	Open the door to let my cat in.	katę	5	katė	Ncfsan-	2femĖ
 Bèt jái patìko vaikaĩ ir̃ jì mė́go sàvo dárbą.	Bet jai patiko vaikai ir ji mėgo savo darbą.	But she liked children and she enjoyed her work.	darbą	8	darbas	Ncmsan-	1mascIAS
@@ -850,7 +850,7 @@ Jìs mòka žaistì ir̃ tènisą ir̃ beĩsbolą.	Jis moka žaisti ir teni
 Jìs parãšė knỹgą apiẽ Kìniją.	Jis parašė knygą apie Kiniją.	He wrote a book about China.	knygą	2	knyga	Ncfsan-	2femIA
 Jìs parãšė knỹgą apiẽ Kìniją.	Jis parašė knygą apie Kiniją.	He wrote a book about China.	Kiniją	4	Kinija	Npfsang	2femIA
 Jìs pažiūrė́jo prõ lángą.	Jis pažiūrėjo pro langą.	He looked through the window.	langą	3	langas	Ncmsan-	1mascIAS
-Jìs tùri víeną šùnį ir̃ šešiàs katès.	Jis turi vieną šunį ir šešias kates.	He has one dog and six cats.	šunį	3	šuo	Ncmsan-	šuo
+Jìs tùri víeną šùnį ir̃ šešiàs katès.	Jis turi vieną šunį ir šešias kates.	He has one dog and six cats.	šunį	3	šuo	Ncmsan-	exception
 Jìs vìs kartója tą̃ pãčią klaĩdą.	Jis vis kartoja tą pačią klaidą.	He keeps making the same mistake.	klaidą	5	klaida	Ncfsan-	2femIA
 Jìs žìno, kaĩp žaistì pòkerį.	Jis žino, kaip žaisti pokerį.	He knows how to play poker.	pokerį	5	pokeris	Ncmsan-	1mascIS
 Jì turė́jo móters gálvą, liū̃to kū́ną, paũkščio sparnùs ir̃ gyvãtės úodegą.	Ji turėjo moters galvą, liūto kūną, paukščio sparnus ir gyvatės uodegą.	It had the head of a woman, the body of a lion, the wings of a bird, and the tail of a serpent.	galvą	3	galva	Ncfsan-	2femIA
@@ -976,7 +976,7 @@ Kàs atsitìks, jéi paspáusiu šį̃ mygtùką?	Kas atsitiks, jei paspaus
 Kàs bùs, jéigu paspáusiu šį̃ mygtùką?	Kas bus, jeigu paspausiu šį mygtuką?	What happens if I press this button?	mygtuką	6	mygtukas	Ncmsan-	1mascIAS
 Kelì iškė́lė reĩkalą į̃ dienõs šviẽsą.	Keli iškėlė reikalą į dienos šviesą.	Kelly brought the matter to light.	reikalą	2	reikalas	Ncmsan-	1mascIAS
 Kelì iškė́lė reĩkalą į̃ dienõs šviẽsą.	Keli iškėlė reikalą į dienos šviesą.	Kelly brought the matter to light.	šviesą	5	šviesa	Ncfsan-	2femIA
-Kókiu maistù àš turė́čiau maitìnti sàvo šùnį?	Kokiu maistu aš turėčiau maitinti savo šunį?	What kind of food should I be feeding my dog?	šunį	6	šuo	Ncmsan-	šuo
+Kókiu maistù àš turė́čiau maitìnti sàvo šùnį?	Kokiu maistu aš turėčiau maitinti savo šunį?	What kind of food should I be feeding my dog?	šunį	6	šuo	Ncmsan-	exception
 Màno katė̃ bėgiója põ kam̃barį.	Mano katė bėgioja po kambarį.	My cat is running around the room.	kambarį	4	kambarys	Ncmsan-	1mascIS
 Mán reikė̃s patìkrinti sàvo tvarkãraštį.	Man reikės patikrinti savo tvarkaraštį.	I'll need to check my schedule.	tvarkaraštį	4	tvarkaraštis	Ncmsan-	1mascIS
 Mẽs tùrime pagautì tą̃ liū̃tą gývą.	Mes turime pagauti tą liūtą gyvą.	We've got to catch the lion alive.	liūtą	4	liūtas	Ncmsan-	1mascIAS
@@ -1175,7 +1175,7 @@ Gyvẽnimas per̃ trumpàs gertì pìgų vỹną.	Gyvenimas per trumpas gerti
 Ìš píeno mẽs gamìname sū́rį ir̃ svíestą.	Iš pieno mes gaminame sūrį ir sviestą.	We make milk into cheese and butter.	sūrį	4	sūris	Ncmsan-	1mascIS
 Ìš píeno mẽs gamìname sū́rį ir̃ svíestą.	Iš pieno mes gaminame sūrį ir sviestą.	We make milk into cheese and butter.	sviestą	6	sviestas	Ncmsan-	1mascIAS
 Jiẽ àtšaukė festivãlį.	Jie atšaukė festivalį.	They cancelled the festival.	festivalį	2	festivalis	Ncmsan-	1mascIS
-Jiẽ susituõks kìtą mė́nesį.	Jie susituoks kitą mėnesį.	They will get married next month.	mėnesį	3	mėnuo	Ncmsan-	mėnuo
+Jiẽ susituõks kìtą mė́nesį.	Jie susituoks kitą mėnesį.	They will get married next month.	mėnesį	3	mėnuo	Ncmsan-	exception
 Jì pavėlãvo į̃ tráukinį.	Ji pavėlavo į traukinį.	She missed the train.	traukinį	3	traukinys	Ncmsan-	1mascIS
 Jìs atvažiãvo į̃ Tòkiją sù dìdele svajonè.	Jis atvažiavo į Tokiją su didele svajone.	He came up to Tokyo with a big dream.	Tokiją	3	Tokijas	Npmsang	1mascIAS
 Jìs bùvo pasodìntas į̃ kalė́jimą.	Jis buvo pasodintas į kalėjimą.	He was put in prison.	kalėjimą	4	kalėjimas	Ncmsan-	1mascIAS
@@ -1261,7 +1261,7 @@ Mán sunkù garantúoti tàvo pasisekìmą.	Man sunku garantuoti tavo pasis
 Mìlė skaĩto sàvo knỹgą.	Milė skaito savo knygą.	Millie is reading her book.	knygą	3	knyga	Ncfsan-	2femIA
 Mìlė tùri kãtę.	Milė turi katę.	Millie has a cat.	katę	2	katė	Ncfsan-	2femĖ
 Mìlė tùri knỹgą.	Milė turi knygą.	Millie has a book.	knygą	2	knyga	Ncfsan-	2femIA
-Mìlė tùri šùnį.	Milė turi šunį.	Millie has a dog.	šunį	2	šuo	Ncmsan-	šuo
+Mìlė tùri šùnį.	Milė turi šunį.	Millie has a dog.	šunį	2	šuo	Ncmsan-	exception
 Mìlė válgo banãną.	Milė valgo bananą.	Millie is eating a banana.	bananą	2	bananas	Ncmsan-	1mascIAS
 Mìlė válgo óbuolį.	Milė valgo obuolį.	Millie is eating an apple.	obuolį	2	obuolys	Ncmsan-	1mascIS
 Mokinỹs bùvo nùbaustas ùž rū̃kymą.	Mokinys buvo nubaustas už rūkymą.	The student was punished for smoking.	rūkymą	4	rūkymas	Ncmsan-	1mascIAS
@@ -1308,7 +1308,7 @@ Màno žmóna nóri įsivaĩkinti vaĩką.	Mano žmona nori įsivaikinti va
 Mažaĩ tikė́tina, jóg į̃ mū́sų internètinę svetaĩnę galė́jo įsibráuti hãkeris.	Mažai tikėtina, jog į mūsų internetinę svetainę galėjo įsibrauti hakeris.	It's unlikely that a hacker could get into our website.	svetainę	7	svetainė	Ncfsan-	2femĖ
 Mẽs pripažį́stame jõ tãlentą.	Mes pripažįstame jo talentą.	We appreciate his talent.	talentą	3	talentas	Ncmsan-	1mascIAS
 Nesikéik ar̃ àš išpláusiu tàvo bùrną sù muilù.	Nesikeik ar aš išplausiu tavo burną su muilu.	Don't curse or I'll wash your mouth out with soap.	burną	5	burna	Ncfsan-	2femIA
-Nórint pažintì žmógų, užteñka tìk saváitę sù juõ pakeliáuti.	Norint pažinti žmogų, užtenka tik savaitę su juo pakeliauti.	In order to know a man, you have only to travel with him for a week.	žmogų	2	žmogus	Ncmsan-	žmogus
+Nórint pažintì žmógų, užteñka tìk saváitę sù juõ pakeliáuti.	Norint pažinti žmogų, užtenka tik savaitę su juo pakeliauti.	In order to know a man, you have only to travel with him for a week.	žmogų	2	žmogus	Ncmsan-	exception
 Nórint pažintì žmógų, užteñka tìk saváitę sù juõ pakeliáuti.	Norint pažinti žmogų, užtenka tik savaitę su juo pakeliauti.	In order to know a man, you have only to travel with him for a week.	savaitę	6	savaitė	Ncfsan-	2femĖ
 Nueĩk į̃ kirpỹklą.	Nueik į kirpyklą.	Go to the barbershop.	kirpyklą	2	kirpykla	Ncfsan-	2femIA
 Pagal̃ órų prognòzę, rytój lìs.	Pagal orų prognozę, rytoj lis.	According to the weather forecast, it is going to rain tomorrow.	prognozę	2	prognozė	Ncfsan-	2femĖ
@@ -1443,8 +1443,8 @@ Nepavėlúok į̃ autobùsą.	Nepavėluok į autobusą.	Don't miss the bus.	au
 Norė́čiau nusipir̃kti medìnę trobẽlę kur̃ nórs Kanãdoje.	Norėčiau nusipirkti medinę trobelę kur nors Kanadoje.	I'd like to buy a log cabin somewhere in Canada.	trobelę	3	trobelė	Ncfsan-	2femĖ
 Pažiūrė́jus į̃ jõ véidą, gãlima bùvo pasakýti kàd jìs bùvo susiérzinęs.	Pažiūrėjus į jo veidą, galima buvo pasakyti kad jis buvo susierzinęs.	Looking at his face, you could tell that he was annoyed.	veidą	3	veidas	Ncmsan-	1mascIAS
 Pažiūrė́k į̃ tą̃ kálną pàdengtą sniegù.	Pažiūrėk į tą kalną padengtą sniegu.	Look at that mountain which is covered with snow.	kalną	3	kalnas	Ncmsan-	1mascIAS
-Rugsė́jo mė́nesį vandenýne bū̃na gausù medū̃zų.	Rugsėjo mėnesį vandenyne būna gausu medūzų.	There are lots of jellyfish in the ocean in September.	mėnesį	1	mėnuo	Ncmsan-	mėnuo
-Šį̃ mė́nesį dár nelìjo.	Šį mėnesį dar nelijo.	It has not rained this month yet.	mėnesį	1	mėnuo	Ncmsan-	mėnuo
+Rugsė́jo mė́nesį vandenýne bū̃na gausù medū̃zų.	Rugsėjo mėnesį vandenyne būna gausu medūzų.	There are lots of jellyfish in the ocean in September.	mėnesį	1	mėnuo	Ncmsan-	exception
+Šį̃ mė́nesį dár nelìjo.	Šį mėnesį dar nelijo.	It has not rained this month yet.	mėnesį	1	mėnuo	Ncmsan-	exception
 Sudarýkite jõ fotoròbotą!	Sudarykite jo fotorobotą!	Make his identikit!	fotorobotą	2	fotorobotas	Ncmsan-	1mascIAS
 Testè padariaũ rim̃tą klaĩdą.	Teste padariau rimtą klaidą.	I made a serious mistake on the test.	klaidą	3	klaida	Ncfsan-	2femIA
 Turiù vyrèsnįjį brólį, kurìs ỹra tàvo mẽtų.	Turiu vyresnįjį brolį, kuris yra tavo metų.	I have an older brother who's the same age as you.	vyresnįjį	1	vyresnysis	Ncmsan-	1mascIS
@@ -1485,7 +1485,6 @@ Visì keliaĩ vẽdantys į̃ miẽstą ỹra pilnì automobìlių.	Visi kel
 Žaidžiù žaidìmą sù sàvo sẽseria.	Žaidžiu žaidimą su savo seseria.	I play a game with my sister.	žaidimą	1	žaidimas	Ncmsan-	1mascIAS
 Àš atlikaũ karìnę tarnýbą Ankarojè.	Aš atlikau karinę tarnybą Ankaroje.	I had my military service in Ankara.	tarnybą	3	tarnyba	Ncfsan-	2femIA
 Àš mė́gstu tinklìnį taĩp pàt kaĩp ir̃ krepšìnį.	Aš mėgstu tinklinį taip pat kaip ir krepšinį.	I like volleyball as well as basketball.	ir	6	krepšinis	Ncmsan-	1mascIS
-Àš nurausiù táu kiáušus, jéigu beñt dìrstelėsi į̃ jõs pùsę.	Aš nurausiu tau kiaušus, jeigu bent dirstelėsi į jos pusę.	I'll rip your fucking balls off if you ever as much as look her way.	pusę	10	pusė	Ncfsan-	2femĖ
 Àš radaũ knỹgą sù raudónu viršeliù ir̃ nuspréndžiau ją̃ pasiskõlinti.	Aš radau knygą su raudonu viršeliu ir nusprendžiau ją pasiskolinti.	I found a book with a red cover and decided to borrow it.	knygą	2	knyga	Ncfsan-	2femIA
 Į̃kaliau vìnį į̃ síeną pavéikslui pakabìnti.	Įkaliau vinį į sieną paveikslui pakabinti.	I hammered a nail into the wall in order to hang a painting.	vinį	1	vinis	Ncfsan-	3fem
 Į̃kaliau vìnį į̃ síeną pavéikslui pakabìnti.	Įkaliau vinį į sieną paveikslui pakabinti.	I hammered a nail into the wall in order to hang a painting.	sieną	3	siena	Ncfsan-	2femIA
@@ -1515,7 +1514,7 @@ Víenišas žmogùs gáuna malonùmą stebė́damas skrùzdėles.	Vienišas
 Vìsą nãktį praléidome kalbė́damiesi.	Visą naktį praleidome kalbėdamiesi.	We talked the night away.	naktį	1	naktis	Ncfsan-	3fem
 Àš gavaũ bònusą.	Aš gavau bonusą.	I got a bonus.	bonusą	2	bonusas	Ncmsan-	1mascIAS
 Àš gavaũ sàvo bònusą.	Aš gavau savo bonusą.	I received my bonus.	bonusą	3	bonusas	Ncmsan-	1mascIAS
-Àš girdė́jau mū́sų šùnį lójant vìsą nãktį.	Aš girdėjau mūsų šunį lojant visą naktį.	I heard our dog barking all night.	šunį	3	šuo	Ncmsan-	šuo
+Àš girdė́jau mū́sų šùnį lójant vìsą nãktį.	Aš girdėjau mūsų šunį lojant visą naktį.	I heard our dog barking all night.	šunį	3	šuo	Ncmsan-	exception
 Àš girdė́jau mū́sų šùnį lójant vìsą nãktį.	Aš girdėjau mūsų šunį lojant visą naktį.	I heard our dog barking all night.	naktį	6	naktis	Ncfsan-	3fem
 Àš mė́gstu instrumeñtinę mùziką.	Aš mėgstu instrumentinę muziką.	I like instrumental music.	muziką	3	muzika	Ncfsan-	2femIA
 Àš nugrióviau mokỹklą.	Aš nugrioviau mokyklą.	I demolished the school.	mokyklą	2	mokykla	Ncfsan-	2femIA

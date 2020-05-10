@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
     if (this.auth.isUserLoggedIn(this.username)) {
 
       //check if the user has an existing learner model
-      this.conn.getResults(this.username).subscribe(res => {
+      this.conn.getModel(this.username).subscribe(res => {
       this.lmodel = JSON.parse(res); 
 
         if (this.lmodel.length == 1 && this.lmodel[0].infl == null) {

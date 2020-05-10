@@ -14,7 +14,7 @@ Dúok mán dvì minutès.	Duok man dvi minutes.	Give me two minutes.	minutes
 Mùms nebùvo leñgva rastì jõ namùs.	Mums nebuvo lengva rasti jo namus.	It was not easy for us to find his house.	namus	5	namai	Ncmpan-	1mascIAS
 Jìs palìko sàvo žmóną ir̃ vaikùs.	Jis paliko savo žmoną ir vaikus.	He left his wife and children.	vaikus	5	vaikas	Ncmpan-	1mascIAS
 Laikýk sàvo rankàs vir̃š stãlo.	Laikyk savo rankas virš stalo.	Keep your hands above the table.	rankas	2	ranka	Ncfpan-	2femIA
-Mẽs bùvome kartù tìk trìs mė́nesius.	Mes buvome kartu tik tris mėnesius.	We've only been together three months.	mėnesius	5	mėnuo	Ncmpan-	mėnuo
+Mẽs bùvome kartù tìk trìs mė́nesius.	Mes buvome kartu tik tris mėnesius.	We've only been together three months.	mėnesius	5	mėnuo	Ncmpan-	exception
 Mán bùvo per̃ daũg gė́da pažiūrė́ti jái į̃ akìs.	Man buvo per daug gėda pažiūrėti jai į akis.	I was too embarrassed to look her in the eye.	akis	8	akis	Ncfpan-	3fem
 Atnèšk visùs sàvo pìnigus.	Atnešk visus savo pinigus.	Bring all your money.	pinigus	3	pinigas	Ncmpan-	1mascIAS
 Kadà jì pasãkė tuõs žodžiùs?	Kada ji pasakė tuos žodžius?	When did she say those words?	žodžius	4	žodis	Ncmpan-	1mascIS
@@ -34,7 +34,7 @@ Ar̃ žinaĩ kur̃ Tòmas padė́jo raktùs?	Ar žinai kur Tomas padėjo rakt
 Àš radaũ sàvo batùs.	Aš radau savo batus.	I found my shoes.	batus	3	batas	Ncmpan-	1mascIAS
 Ìš kur̃ tù tùri visùs tuõs raktùs?	Iš kur tu turi visus tuos raktus?	Where did you get all those keys?	raktus	6	raktas	Ncmpan-	1mascIAS
 Prãšome palauktì penkiàs minutès.	Prašome palaukti penkias minutes.	Please wait for five minutes.	minutes	3	minutė	Ncfpan-	2femĖ
-Kókius žmónes mė́gsti labiáusiai?	Kokius žmones mėgsti labiausiai?	What kind of people do you like best?	žmones	1	žmogus	Ncmpan-	žmogus
+Kókius žmónes mė́gsti labiáusiai?	Kokius žmones mėgsti labiausiai?	What kind of people do you like best?	žmones	1	žmogus	Ncmpan-	exception
 Uždarýk vartùs.	Uždaryk vartus.	Lock the gate.	vartus	1	vartai	Ncmpan-	1mascIAS
 Àš daviaũ sàvo knygàs tíems žmonė́ms.	Aš daviau savo knygas tiems žmonėms.	I gave my books to those people.	knygas	3	knyga	Ncfpan-	2femIA
 Bóbas gãli atsakýti į̃ visùs kláusimus.	Bobas gali atsakyti į visus klausimus.	Bob can answer all the questions.	Bobas	0	boba	Ncfpan-	2femIA
@@ -73,21 +73,21 @@ Tòmas nenorė́jo niẽko žinóti apiẽ màno problemàs.	Tomas nenorėjo
 Tù skaitaĩ màno mintìs.	Tu skaitai mano mintis.	You are reading my thoughts.	mintis	3	mintis	Ncfpan-	3fem
 Ỹra rýtas. Vaikaĩ válgo pùsryčius.	Yra rytas. Vaikai valgo pusryčius.	It is morning. The children are eating breakfast.	pusryčius	5	pusrytis	Ncmpan-	1mascIS
 Àš dúosiu táu penkìs dólerius.	Aš duosiu tau penkis dolerius.	I'll give you five dollars.	dolerius	4	doleris	Ncmpan-	1mascIS
-Àš mýliu šunìs.	Aš myliu šunis.	I love dogs.	šunis	2	šuo	Ncmpan-	šuo
+Àš mýliu šunìs.	Aš myliu šunis.	I love dogs.	šunis	2	šuo	Ncmpan-	exception
 Atvèsk tuõs výrus čià.	Atvesk tuos vyrus čia.	Bring those men here.	vyrus	2	vyras	Ncmpan-	1mascIAS
 Įdomù žiūrė́ti į̃ žvaigždès.	Įdomu žiūrėti į žvaigždes.	It is interesting to watch stars.	žvaigždes	3	žvaigždė	Ncfpan-	2femĖ
 Jì bùvo pirmóji mergáitė kurì laimė́jo tàs varžýbas.	Ji buvo pirmoji mergaitė kuri laimėjo tas varžybas.	She was the first girl to win that contest.	varžybas	7	varžybos	Ncfpan-	2femIA
 Kókius fìlmus Tòmas mė́gsta?	Kokius filmus Tomas mėgsta?	What kind of movies does Tom like?	filmus	1	filmas	Ncmpan-	1mascIAS
-Màno mamà tùri trìs šunìs.	Mano mama turi tris šunis.	My mum has three dogs.	šunis	4	šuo	Ncmpan-	šuo
+Màno mamà tùri trìs šunìs.	Mano mama turi tris šunis.	My mum has three dogs.	šunis	4	šuo	Ncmpan-	exception
 Miegójau tìk dvì vãlandas.	Miegojau tik dvi valandas.	I only slept two hours.	valandas	3	valanda	Ncfpan-	2femIA
-Nè visì žmónės mė́gsta šunìs.	Ne visi žmonės mėgsta šunis.	Not all people like dogs.	šunis	4	šuo	Ncmpan-	šuo
+Nè visì žmónės mė́gsta šunìs.	Ne visi žmonės mėgsta šunis.	Not all people like dogs.	šunis	4	šuo	Ncmpan-	exception
 Ar̃ tù mateĩ jų̃ véidus?	Ar tu matei jų veidus?	Did you see their faces?	veidus	4	veidas	Ncmpan-	1mascIAS
 Àš nóriu pamatýti gatvès.	Aš noriu pamatyti gatves.	I want to see the streets.	gatves	3	gatvė	Ncfpan-	2femĖ
 Àš turiù išvalýti sàvo dantìs.	Aš turiu išvalyti savo dantis.	I have to brush my teeth.	dantis	4	dantis	Ncmpan-	3masc
 Àš turiù mė́lynas akìs.	Aš turiu mėlynas akis.	I have blue eyes.	akis	3	akis	Ncfpan-	3fem
 Jìs uždãrė durìs.	Jis uždarė duris.	He shut the door.	duris	2	durys	Ncfpan-	3fem
 Màno brólis mė́gsta siaũbo fìlmus.	Mano brolis mėgsta siaubo filmus.	My brother likes horror movies.	filmus	4	filmas	Ncmpan-	1mascIAS
-Tuõj pàt paruõšk sàvo namų̃ dárbus.	Tuoj pat paruošk savo namų darbus.	Do your homework right away.	namų	4	darbas	Ncmpan-	1mascIAS
+Tuõj pàt paruõšk sàvo namų̃ dárbus.	Tuoj pat paruošk savo namų darbus.	Do your homework right away.	darbus	5	darbas	Ncmpan-	1mascIAS
 Ar̃ girdė́jai naujíenas?	Ar girdėjai naujienas?	Did you hear the news?	naujienas	2	naujiena	Ncfpan-	2femIA
 Ar̃ jū̃s pažį́state Tòmo tėvùs?	Ar jūs pažįstate Tomo tėvus?	Do you know Tom's parents?	tėvus	4	tėvai	Ncmpan-	1mascIAS
 Ar̃ tù pamiršaĩ sàvo ginklùs automobìlyje?	Ar tu pamiršai savo ginklus automobilyje?	Did you forget your weapons in the car?	ginklus	4	ginklas	Ncmpan-	1mascIAS
@@ -166,7 +166,7 @@ Ỹra áišku kàd jìs pàvogė pìnigus ìš seĩfo.	Yra aišku kad jis
 Àš padariaũ keliàs klaidàs per̃ egzãminą.	Aš padariau kelias klaidas per egzaminą.	I made several mistakes in the exam.	klaidas	3	klaida	Ncfpan-	2femIA
 Dúok mán kẽturias báltas lėkštès.	Duok man keturias baltas lėkštes.	Give me four white plates.	lėkštes	4	lėkštė	Ncfpan-	2femĖ
 Jiẽ dìrba aštúonias vãlandas per̃ diẽną.	Jie dirba aštuonias valandas per dieną.	They work eight hours a day.	valandas	3	valanda	Ncfpan-	2femIA
-Jì parãšė knỹgą apiẽ žmónes jì aplañkė.	Ji parašė knygą apie žmones ji aplankė.	She wrote the book about people she visited.	žmones	4	žmogus	Ncmpan-	žmogus
+Jì parãšė knỹgą apiẽ žmónes jì aplañkė.	Ji parašė knygą apie žmones ji aplankė.	She wrote the book about people she visited.	žmones	4	žmogus	Ncmpan-	exception
 Jìs dìrba aštúonias vãlandas per̃ diẽną.	Jis dirba aštuonias valandas per dieną.	He works eight hours every day.	valandas	3	valanda	Ncfpan-	2femIA
 Jìs dìrba kiekvíeną diẽną põ aštúonias vãlandas.	Jis dirba kiekvieną dieną po aštuonias valandas.	He works eight hours every day.	valandas	6	valanda	Ncfpan-	2femIA
 Jìs mė́gsta válgyti salotàs sù mėsà.	Jis mėgsta valgyti salotas su mėsa.	He likes to eat salad with meat.	salotas	3	salotos	Ncfpan-	2femIA
@@ -182,7 +182,7 @@ Àš negaliù prisimiñti kur̃ pàslėpiau sàvo pìnigus.	Aš negaliu pr
 Àš pradė́jau mókytis ánglų kalbõs priẽš šẽšerius metùs.	Aš pradėjau mokytis anglų kalbos prieš šešerius metus.	I started learning English six years ago.	metus	7	metai	Ncmpan-	1mascIAS
 Àš turiù dvì katès.	Aš turiu dvi kates.	I have two cats.	kates	3	katė	Ncfpan-	2femĖ
 Džeĩnė mė́gsta katès labiaũ neĩ šunìs.	Džeinė mėgsta kates labiau nei šunis.	Jane likes dogs better than cats.	kates	2	katė	Ncfpan-	2femĖ
-Džeĩnė mė́gsta katès labiaũ neĩ šunìs.	Džeinė mėgsta kates labiau nei šunis.	Jane likes dogs better than cats.	šunis	5	šuo	Ncmpan-	šuo
+Džeĩnė mė́gsta katès labiaũ neĩ šunìs.	Džeinė mėgsta kates labiau nei šunis.	Jane likes dogs better than cats.	šunis	5	šuo	Ncmpan-	exception
 Ìš kõ tù išgirdaĩ šiàs naujíenas?	Iš ko tu išgirdai šias naujienas?	Who did you hear this news from?	naujienas	5	naujiena	Ncfpan-	2femIA
 Jì atvė́rė durìs.	Ji atvėrė duris.	She opened the door.	duris	2	durys	Ncfpan-	3fem
 Jì dãro pačiùs geriáusius sumuštiniùs pasáulyje.	Ji daro pačius geriausius sumuštinius pasaulyje.	She makes the best sandwiches in the world.	sumuštinius	4	sumuštinis	Ncmpan-	1mascIS
@@ -234,7 +234,7 @@ Mẽs ẽsame atsakìngi ùž núostolius.	Mes esame atsakingi už nuostolius
 Per̃ šálta vilkė́ti šòrtus.	Per šalta vilkėti šortus.	It's still too cold to wear shorts.	šortus	3	šortai	Ncmpan-	1mascIAS
 Polìcininkai dė̃vi mė́lynas unifòrmas.	Policininkai dėvi mėlynas uniformas.	Police officers wear blue uniforms.	uniformas	3	uniforma	Ncfpan-	2femIA
 Priẽš dvejùs metùs àš vìsiškai nemokė́jau žaistì krepšìnio.	Prieš dvejus metus aš visiškai nemokėjau žaisti krepšinio.	Two years ago I could not play basketball at all.	metus	2	metai	Ncmpan-	1mascIAS
-Šunìs ỹra ištikimì.	Šunis yra ištikimi.	Dogs are faithful.	Šunis	0	šuo	Ncmpan-	šuo
+Šunìs ỹra ištikimì.	Šunis yra ištikimi.	Dogs are faithful.	Šunis	0	šuo	Ncmpan-	exception
 Užsisakiaũ naujùs baldùs.	Užsisakiau naujus baldus.	I ordered new furniture.	baldus	2	baldas	Ncmpan-	1mascIAS
 Àš mintinaĩ žinaũ taisyklès, bèt geraĩ žaistì nemokù.	Aš mintinai žinau taisykles, bet gerai žaisti nemoku.	I know the rules by heart, but I'm not so good playing.	taisykles	3	taisyklė	Ncfpan-	2femĖ
 Àš nežinaũ kadà Bóbas atvỹko į̃ Japòniją.	Aš nežinau kada Bobas atvyko į Japoniją.	I don't know when Bob came to Japan.	Bobas	3	boba	Ncfpan-	2femIA
@@ -281,7 +281,7 @@ Nėrà niẽko svarbèsnio ùž draugùs.	Nėra nieko svarbesnio už draugus
 Bóbas skùndėsi sàvo draũgui.	Bobas skundėsi savo draugui.	Bob complained to his friend.	Bobas	0	boba	Ncfpan-	2femIA
 Jiẽ teñ stõvi ir̃ válgo traškučiùs.	Jie ten stovi ir valgo traškučius.	They are standing there and eating potato chips.	traškučius	5	traškutis	Ncmpan-	1mascIS
 Kókias vietàs tàs tùras ãplanko?	Kokias vietas tas turas aplanko?	What places does that tour visit?	vietas	1	vieta	Ncfpan-	2femIA
-Mẽs tùrime dù šunìs, trìs katès ir̃ šešìs viščiukùs.	Mes turime du šunis, tris kates ir šešis viščiukus.	We have two dogs, three cats, and six chickens.	šunis	3	šuo	Ncmpan-	šuo
+Mẽs tùrime dù šunìs, trìs katès ir̃ šešìs viščiukùs.	Mes turime du šunis, tris kates ir šešis viščiukus.	We have two dogs, three cats, and six chickens.	šunis	3	šuo	Ncmpan-	exception
 Mẽs tùrime dù šunìs, trìs katès ir̃ šešìs viščiukùs.	Mes turime du šunis, tris kates ir šešis viščiukus.	We have two dogs, three cats, and six chickens.	kates	6	katė	Ncfpan-	2femĖ
 Mẽs tùrime dù šunìs, trìs katès ir̃ šešìs viščiukùs.	Mes turime du šunis, tris kates ir šešis viščiukus.	We have two dogs, three cats, and six chickens.	viščiukus	9	viščiukas	Ncmpan-	1mascIAS
 Paprastaĩ Tòmas skaĩto tìk añtraštes.	Paprastai Tomas skaito tik antraštes.	Tom usually only reads the headlines.	antraštes	4	antraštė	Ncfpan-	2femĖ
@@ -323,8 +323,8 @@ Jõs šùnys bėgiójo põ namùs.	Jos šunys bėgiojo po namus.	Her dogs w
 Katė̃ mė́gsta gáudyti pelès.	Katė mėgsta gaudyti peles.	The cat loves to chase mice.	peles	3	pelė	Ncfpan-	2femĖ
 Kãtės mė́gsta lakstýti pãskui siū́lų kamuoliukùs.	Katės mėgsta lakstyti paskui siūlų kamuoliukus.	Cats love to run after balls of wool.	kamuoliukus	5	kamuoliukas	Ncmpan-	1mascIAS
 Mẽs tùrime kontroliúoti sàvo aistràs.	Mes turime kontroliuoti savo aistras.	We must control our passions.	aistras	4	aistra	Ncfpan-	2femIA
-Nekalbė́k apiẽ žmónes jíems ùž nùgarų.	Nekalbėk apie žmones jiems už nugarų.	Don't talk about people behind their backs.	žmones	2	žmogus	Ncmpan-	žmogus
-Neturė́tum kalbė́ti apiẽ žmónes jíems ùž nùgarų.	Neturėtum kalbėti apie žmones jiems už nugarų.	You shouldn't talk about people behind their backs.	žmones	3	žmogus	Ncmpan-	žmogus
+Nekalbė́k apiẽ žmónes jíems ùž nùgarų.	Nekalbėk apie žmones jiems už nugarų.	Don't talk about people behind their backs.	žmones	2	žmogus	Ncmpan-	exception
+Neturė́tum kalbė́ti apiẽ žmónes jíems ùž nùgarų.	Neturėtum kalbėti apie žmones jiems už nugarų.	You shouldn't talk about people behind their backs.	žmones	3	žmogus	Ncmpan-	exception
 Tòmo namùs ir̃ òfisą apieškójo polìcija.	Tomo namus ir ofisą apieškojo policija.	Tom's home and office were searched by the police.	namus	1	namai	Ncmpan-	1mascIAS
 Bóbas tuõ metù plóvė indùs.	Bobas tuo metu plovė indus.	Bob was washing the dishes at that time.	Bobas	0	boba	Ncfpan-	2femIA
 Bóbas tuõ metù plóvė indùs.	Bobas tuo metu plovė indus.	Bob was washing the dishes at that time.	indus	4	indas	Ncmpan-	1mascIAS
@@ -368,7 +368,7 @@ Triùšiai mė́gsta válgyti morkàs.	Triušiai mėgsta valgyti morkas.	Rabb
 Vaikaĩ skìna sodè gėlès.	Vaikai skina sode gėles.	The kids are picking flowers in the garden.	gėles	3	gėlė	Ncfpan-	2femĖ
 Voveráitės válgo lazdýno ríešutus.	Voveraitės valgo lazdyno riešutus.	Squirrels eat hazelnuts.	riešutus	3	riešutas	Ncmpan-	1mascIAS
 Àš skõlinu pìnigus.	Aš skolinu pinigus.	I lend money.	pinigus	2	pinigas	Ncmpan-	1mascIAS
-Jìs mòka tárdyti žmónes.	Jis moka tardyti žmones.	He knows how to interrogate people.	žmones	3	žmogus	Ncmpan-	žmogus
+Jìs mòka tárdyti žmónes.	Jis moka tardyti žmones.	He knows how to interrogate people.	žmones	3	žmogus	Ncmpan-	exception
 Jì tùri patraukliàs akìs.	Ji turi patrauklias akis.	She has attractive eyes.	akis	3	akis	Ncfpan-	3fem
 Metùs sudãro dvýlika mė́nesių: saũsis, vasãris, kovàs, balañdis, gegužė̃, biržẽlis, líepa, rugpjū́tis, rugsė́jis, spãlis, lãpkritis ir̃ grúodis.	Metus sudaro dvylika mėnesių: sausis, vasaris, kovas, balandis, gegužė, birželis, liepa, rugpjūtis, rugsėjis, spalis, lapkritis ir gruodis.	January, February, March, April, May, June, July, August, September, October, November and December are the twelve months of the year.	Metus	0	metai	Ncmpan-	1mascIAS
 Sãlė prisìminė laikùs kaĩ jõs senė̃lė bùvo stiprì ir̃ sveĩka.	Salė prisiminė laikus kai jos senėlė buvo stipri ir sveika.	Sally recalled the days when her grandma was strong and healthy.	laikus	2	laikas	Ncmpan-	1mascIAS
@@ -378,7 +378,6 @@ Tòmas stipriaĩ ùžmerkė sàvo akìs ir̃ ištvė́rė skaũsmą.	Tomas
 Vãkar àš girdė́jau tavè kal̃bančią per̃ miegùs.	Vakar aš girdėjau tave kalbančią per miegus.	Yesterday I heard you talking in your sleep.	miegus	6	miegas	Ncmpan-	1mascIAS
 Àš ir̃ dabar̃ atsìmenu tuõs laikùs, kaĩ sù tavim̃ kartù reñgėme ìškylas.	Aš ir dabar atsimenu tuos laikus, kai su tavim kartu rengėme iškylas.	I can still remember the time when we went on a picnic together.	laikus	5	laikas	Ncmpan-	1mascIAS
 Àš ir̃ dabar̃ atsìmenu tuõs laikùs, kaĩ sù tavim̃ kartù reñgėme ìškylas.	Aš ir dabar atsimenu tuos laikus, kai su tavim kartu rengėme iškylas.	I can still remember the time when we went on a picnic together.	iškylas	12	iškyla	Ncfpan-	2femIA
-Àš nurausiù táu kiáušus, jéigu beñt dìrstelėsi į̃ jõs pùsę.	Aš nurausiu tau kiaušus, jeigu bent dirstelėsi į jos pusę.	I'll rip your fucking balls off if you ever as much as look her way.	kiaušus	3	kiaušas	Ncmpan-	1mascIAS
 Àš turiù iššukúoti sàvo pláukus.	Aš turiu iššukuoti savo plaukus.	I have to comb my hair.	plaukus	4	plaukas	Ncmpan-	1mascIAS
 Àš valaũsi dantìs põ val̃gio.	Aš valausi dantis po valgio.	I brush my teeth after eating.	dantis	2	dantis	Ncmpan-	3masc
 Bū́k atsargùs riñkdamasis draugùs.	Būk atsargus rinkdamasis draugus.	You should be careful in choosing friends.	draugus	3	draugas	Ncmpan-	1mascIAS

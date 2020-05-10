@@ -13,8 +13,8 @@ public class Data {
 
     public static void main(String[] args) {
         Data d = new Data();
-        //d.fillTables();
-        d.model();
+        d.fillTables();
+        //d.model();
     }
 
 
@@ -61,6 +61,7 @@ public class Data {
     public void fillTables() {
         try {
             //create a database to store data on accentuation mark frequencies
+/*
             stmt.executeUpdate("CREATE DATABASE IF NOT EXISTS stats CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci");
 
             stmt.executeUpdate("USE stats");
@@ -112,10 +113,13 @@ public class Data {
 
 
             stmt.executeUpdate("CREATE DATABASE IF NOT EXISTS text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci");
+*/
 
             stmt.executeUpdate("USE text");
 
-            //possibly will have to delete this one
+            stmt.executeUpdate("SET GLOBAL local_infile = 1");
+
+/*            //possibly will have to delete this one
            String nouns = "CREATE TABLE IF NOT EXISTS nouns" +
                     "(stressed NVARCHAR(200), " +
                     " clean NVARCHAR(200), " +
@@ -156,7 +160,7 @@ public class Data {
                 } else if (s.startsWith("locative")) {
                     stmt.executeUpdate("UPDATE nouns SET inflection = \"locative\" WHERE inflection IS NULL");
                 }
-            }
+            }*/
 
 
             String nouns2 = "CREATE TABLE IF NOT EXISTS nouns2" +
@@ -173,13 +177,15 @@ public class Data {
 
             stmt.executeUpdate(nouns2);
 
-            URL url2 = getClass().getResource("decl");
+            //URL url2 = getClass().getResource("decl");
+            URL url2 = getClass().getResource("OP");
             File temp2 = new File(url2.toURI());
 
             for (String s : temp2.list()) {
 
                 System.out.println(s);
-                stmt.executeUpdate("LOAD DATA LOCAL INFILE '" + getClass().getResource("decl/" + s).toURI().getPath() + "' INTO TABLE nouns2 CHARACTER SET utf8mb4 lines TERMINATED BY '\r\n'");
+                //stmt.executeUpdate("LOAD DATA LOCAL INFILE '" + getClass().getResource("decl/" + s).toURI().getPath() + "' INTO TABLE nouns2 CHARACTER SET utf8mb4 lines TERMINATED BY '\r\n'");
+                stmt.executeUpdate("LOAD DATA LOCAL INFILE '" + getClass().getResource("OP/" + s).toURI().getPath() + "' INTO TABLE nouns2 CHARACTER SET utf8mb4 lines TERMINATED BY '\r\n'");
 
                 if (s.endsWith("Pl.tsv")) {
                     stmt.executeUpdate("UPDATE nouns2 SET number = \"plural\" WHERE number IS NULL");
@@ -187,17 +193,17 @@ public class Data {
                     stmt.executeUpdate("UPDATE nouns2 SET number = \"singular\" WHERE number IS NULL");
                 }
 
-                if (s.startsWith("nominative")) {
-                    stmt.executeUpdate("UPDATE nouns2 SET inflection = \"nominative\" WHERE inflection IS NULL");
-                } else if (s.startsWith("genitive")) {
+                //if (s.startsWith("nominative")) {
+                    //stmt.executeUpdate("UPDATE nouns2 SET inflection = \"nominative\" WHERE inflection IS NULL");}
+                if (s.startsWith("OPgenitive")) {
                     stmt.executeUpdate("UPDATE nouns2 SET inflection = \"genitive\" WHERE inflection IS NULL");
-                } else if (s.startsWith("dative")) {
+                } else if (s.startsWith("OPdative")) {
                     stmt.executeUpdate("UPDATE nouns2 SET inflection = \"dative\" WHERE inflection IS NULL");
-                } else if (s.startsWith("accusative")) {
+                } else if (s.startsWith("OPaccusative")) {
                     stmt.executeUpdate("UPDATE nouns2 SET inflection = \"accusative\" WHERE inflection IS NULL");
-                } else if (s.startsWith("instrumental")) {
+                } else if (s.startsWith("OPinstrumental")) {
                     stmt.executeUpdate("UPDATE nouns2 SET inflection = \"instrumental\" WHERE inflection IS NULL");
-                } else if (s.startsWith("locative")) {
+                } else if (s.startsWith("OPlocative")) {
                     stmt.executeUpdate("UPDATE nouns2 SET inflection = \"locative\" WHERE inflection IS NULL");
                 }
             }
@@ -206,9 +212,9 @@ public class Data {
             System.out.println(e.getMessage());
         } catch (URISyntaxException e) {
             e.printStackTrace();
-        } catch (IOException e) {
+        } /*catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 
     /**
@@ -577,6 +583,55 @@ public class Data {
 
         return rs;
     }
+
+    /**
+     * Find the number of a sentences there with nouns in a specific inflection, number and declension
+     * @param infl the infection
+     * @param num number
+     * @param decl declension
+     * @return
+     */
+    public ResultSet getNumNouns(String infl, String num, String decl) {
+
+        try {
+            stmt.executeUpdate("USE text");
+
+            String sql = "SELECT count(*) FROM nouns2 WHERE inflection = ? AND number = ? AND pattern = ? COLLATE utf8mb4_bin";
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, infl);
+            pstmt.setString(2, num);
+            pstmt.setString(3, decl);
+            rs = pstmt.executeQuery();
+        } catch (SQLException e) {
+            e.getMessage();
+        }
+
+        return rs;
+    }
+
+    /**
+     * Find the declensions that nouns in a specific inflection and number appear in
+     * @param infl the infection
+     * @param num number
+     * @return
+     */
+    public ResultSet getDecls(String infl, String num) {
+
+        try {
+            stmt.executeUpdate("USE text");
+
+            String sql = "SELECT count(DISTINCT pattern) FROM nouns2 WHERE inflection = ? AND number = ? COLLATE utf8mb4_bin";
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, infl);
+            pstmt.setString(2, num);
+            rs = pstmt.executeQuery();
+        } catch (SQLException e) {
+            e.getMessage();
+        }
+
+        return rs;
+    }
+
 
     /**
      * Update the scores database with a correct or an incorrect answer for a specific inflection/declension pair in a specific learning session
