@@ -242,7 +242,7 @@ public class Learner extends HttpServlet {
 
                     JSONObject jsb = new JSONObject();
 
-                    if (rs.getString(j) != null) {
+                    if (rs.getString(j) != null) { //the inflection has been selected
 
                             jsb.put("username", username);
                             jsb.put("declensions", js);

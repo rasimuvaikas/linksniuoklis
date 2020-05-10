@@ -504,6 +504,22 @@ public class Data {
                 pstmt.executeUpdate();
             }
 
+            //remove the declensions that the user decided to stop practising
+            String sql = "SELECT * FROM declensions WHERE username = ? COLLATE utf8mb4_bin";
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, username);
+            ResultSet result = pstmt.executeQuery();
+            ResultSetMetaData rsmd = result.getMetaData();
+            result.next();
+            for(int i = 2; i < 11; i++){
+                if(!decls.contains(rsmd.getColumnLabel(i))){
+                    String s = "UPDATE declensions SET " + rsmd.getColumnLabel(i) + " = 0 WHERE username = ? COLLATE utf8mb4_bin";;
+                    pstmt = conn.prepareStatement(s);
+                    pstmt.setString(1, username);
+                    pstmt.executeUpdate();
+                }
+            }
+
 
 
         } catch (SQLException e) {
