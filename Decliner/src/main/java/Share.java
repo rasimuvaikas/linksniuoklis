@@ -300,14 +300,25 @@ public class Share extends HttpServlet {
                     if(rs.getInt(i) > 0){
                         JSONObject temp = new JSONObject();
 
+                        ResultSet countDecl = data.getNumNouns(inflection, num, rsmd.getColumnLabel(i));
+                        countDecl.next();
+                        int count = countDecl.getInt("count(*)");
                         temp.put(rsmd.getColumnLabel(i), rs.getInt(i));
+                        temp.put("count", count);
                         decls.put(temp);
                     }
 
                 }
 
-
                 jsb.put("declensions", decls);
+
+                ResultSet declensions = data.getDecls(inflection, num);
+                declensions.next();
+
+                jsb.put("total_declensions", declensions.getInt("count(distinct pattern)"));
+
+
+
 
             }
 
