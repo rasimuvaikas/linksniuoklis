@@ -54,8 +54,8 @@ export class DashboardComponent implements OnInit {
   declensions: string[] = ["1mascIAS", "2femIA", "2femĖ", "1mascIS", "3masc", "3fem", "4masc", "5masc", "5fem", "exception"];
 
 
-  inflectionsTempSg: { number: string; infl: string; checked: boolean; }[];
-  inflectionsTempPl: { number: string; infl: string; checked: boolean; }[];
+  inflectionsTempSg: { number: string; infl: string; checked: boolean; beginner: boolean; }[];
+  inflectionsTempPl: { number: string; infl: string; checked: boolean; beginner: boolean}[];
 
   constructor(private user: UserInfoService, private model: LearnerModelService, private route: Router, private con: ConnectService,
     private _bottomSheet: MatBottomSheet, private dialogue: MatDialog) {
@@ -102,19 +102,19 @@ export class DashboardComponent implements OnInit {
     { number: "plural", infl: "instrumental", checked: false },
     { number: "plural", infl: "locative", checked: false }];
 
-    this.inflectionsTempSg = [{ number: "singular", infl: "nominative", checked: false },
-    { number: "singular", infl: "genitive", checked: false },
-    { number: "singular", infl: "dative", checked: false },
-    { number: "singular", infl: "accusative", checked: false },
-    { number: "singular", infl: "instrumental", checked: false },
-    { number: "singular", infl: "locative", checked: false }];
+    this.inflectionsTempSg = [{ number: "singular", infl: "nominative", checked: false, beginner: false },
+    { number: "singular", infl: "genitive", checked: false, beginner: false  },
+    { number: "singular", infl: "dative", checked: false , beginner: false },
+    { number: "singular", infl: "accusative", checked: false, beginner: false  },
+    { number: "singular", infl: "instrumental", checked: false, beginner: false  },
+    { number: "singular", infl: "locative", checked: false, beginner: false  }];
 
-    this.inflectionsTempPl = [{ number: "plural", infl: "nominative", checked: false },
-    { number: "plural", infl: "genitive", checked: false },
-    { number: "plural", infl: "dative", checked: false },
-    { number: "plural", infl: "accusative", checked: false },
-    { number: "plural", infl: "instrumental", checked: false },
-    { number: "plural", infl: "locative", checked: false }];
+    this.inflectionsTempPl = [{ number: "plural", infl: "nominative", checked: false, beginner: false  },
+    { number: "plural", infl: "genitive", checked: false, beginner: false  },
+    { number: "plural", infl: "dative", checked: false, beginner: false  },
+    { number: "plural", infl: "accusative", checked: false, beginner: false  },
+    { number: "plural", infl: "instrumental", checked: false, beginner: false  },
+    { number: "plural", infl: "locative", checked: false, beginner: false  }];
 
 
     this.lmodel = [];
@@ -301,6 +301,7 @@ export class DashboardComponent implements OnInit {
         for (let j of this.inflectionsTempSg) {
           if (j.infl == i.infl) {
             j.checked = i.checked;
+            j.beginner = true;
           }
         }
       }
@@ -311,6 +312,7 @@ export class DashboardComponent implements OnInit {
         for (let j of this.inflectionsTempPl) {
           if (j.infl == i.infl) {
             j.checked = i.checked;
+            j.beginner = true;
           }
         }
       }
@@ -503,7 +505,7 @@ export class DashboardComponent implements OnInit {
     this.con.getScore(this.username, this.time.toString()).subscribe(data => {
       console.log(JSON.parse(data)); let response = JSON.parse(data);
       this.decls = response['declension']; this.infls = response['inflections'];
-      if (this.decls == null && this.infls == null) {
+      if (this.decls == null && this.infls == null) { //no previous data
         this.empty = true;
       }
     });

@@ -26,7 +26,7 @@ export class ConnectService {
   getCards(inflection = "accusative", number = "singular", declensions = ["1masc"]): Observable<any> {
 
     //choose a random declension
-    let i = declensions[Math.floor(Math.random() * ((declensions.length - 1) - 0 + 1) + 0)];
+    let i = declensions[Math.floor(Math.random() * ((declensions.length - 1) - 0 + 1) + 0)]; 
 
     let httpParams = new HttpParams()
       .append("inflection", inflection)
