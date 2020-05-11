@@ -53,7 +53,7 @@ export class ProgressComponent implements OnChanges {
     } else if (score < 5) {
       this.filling = "blue";
     } else if (score < 9) {
-      this.filling = "yellow";
+      this.filling = "rgb(202, 199, 15)";
     } else if (score < 10) {
       this.filling = "orange";
     } else if (score >= 10) {
