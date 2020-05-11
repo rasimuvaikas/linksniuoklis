@@ -52,7 +52,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { LayoutModule } from '@angular/cdk/layout';
 import { RecapComponent } from './recap/recap.component';
 import { AlertComponent } from './alert/alert.component';
-import { BelenkasComponent } from './belenkas/belenkas.component';
 
 
 @NgModule({
@@ -68,8 +67,7 @@ import { BelenkasComponent } from './belenkas/belenkas.component';
     ExerciseComponent,
     DashboardComponent,
     RecapComponent,
-    AlertComponent,
-    BelenkasComponent
+    AlertComponent
   ],
   imports: [
     BrowserModule,
