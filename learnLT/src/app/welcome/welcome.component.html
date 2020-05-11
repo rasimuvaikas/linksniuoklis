@@ -39,7 +39,7 @@
                     <mat-card class="mat-card-blue" fxFlex="0 1 auto">
                         <mat-card-header class="centreIn">
                             <mat-card-title>
-                                We propose starting your practice from the inflectional cases checked below.
+                                We propose starting your practice with the inflections checked below.
                                 Feel free to make any desired changes, mark and unmark any cases you wish or do not
                                 wish to practice.
                             </mat-card-title>
@@ -102,10 +102,8 @@
                             <mat-card-title>
                                 Before we begin, please choose the declensions you would like to practice first.
                                 The declensions are presented in a descending order of difficulty. The ones we propose
-                                starting from are marked.
-                                You can always come back to this list later once you're ready to practice more
-                                declensions.
-
+                                starting with are marked.
+                                You can always come back to this list later and adjust it as you prefer.
                             </mat-card-title>
                         </mat-card-header>
 
@@ -313,7 +311,7 @@
                                     </div>
 
                                     <div *ngIf="!in.checked==true">
-                                        <div *ngFor="let i of inflectionsNoviceSg">
+                                        <div *ngFor="let i of inflectionsBeginnerSg">
                                             <div *ngIf="in.infl == i.infl && i.checked==true">
                                                 <mat-checkbox class="example-margin" [checked]="true" color=primary
                                                     (change)="onChangeNov(in.infl, in.number)">
@@ -342,7 +340,7 @@
                                     </div>
 
                                     <div *ngIf="!in.checked==true">
-                                        <div *ngFor="let i of inflectionsNovicePl">
+                                        <div *ngFor="let i of inflectionsBeginnerPl">
                                             <div *ngIf="in.infl == i.infl && i.checked==true">
                                                 <mat-checkbox class="example-margin" [checked]="true" color=primary
                                                     (change)="onChangeNov(in.infl, in.number)">
@@ -380,9 +378,8 @@
                             <mat-card-title>
                                 Before we begin, please choose the declensions you would like to practice first.
                                 The declensions are presented in a descending order of difficulty. The ones we propose
-                                starting from are marked.
-                                You can always come back to this list later once you're ready to practice more
-                                declensions.
+                                starting with are marked.
+                                You can always come back to this list later and adjust it as you prefer.
 
                             </mat-card-title>
                         </mat-card-header>

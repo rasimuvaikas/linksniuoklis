@@ -38,8 +38,8 @@ export class DashboardComponent implements OnInit {
   inflectionsPl: { number: string; infl: string; checked: boolean; }[];
   advancedSg: { number: string; infl: string; checked: boolean; }[];
   advancedPl: { number: string; infl: string; checked: boolean; }[];
-  familiarSg: { number: string; infl: string; checked: boolean; }[];
-  familiarPl: { number: string; infl: string; checked: boolean; }[];
+  intermediateSg: { number: string; infl: string; checked: boolean; }[];
+  intermediatePl: { number: string; infl: string; checked: boolean; }[];
 
   declensionsMasc: any;
   declensionsFem: any;
@@ -88,14 +88,14 @@ export class DashboardComponent implements OnInit {
     { number: "plural", infl: "instrumental", checked: false },
     { number: "plural", infl: "locative", checked: false }];
 
-    this.familiarSg = [{ number: "singular", infl: "nominative", checked: false },
+    this.intermediateSg = [{ number: "singular", infl: "nominative", checked: false },
     { number: "singular", infl: "genitive", checked: false },
     { number: "singular", infl: "dative", checked: false },
     { number: "singular", infl: "accusative", checked: false },
     { number: "singular", infl: "instrumental", checked: false },
     { number: "singular", infl: "locative", checked: false }];
 
-    this.familiarPl = [{ number: "plural", infl: "nominative", checked: false },
+    this.intermediatePl = [{ number: "plural", infl: "nominative", checked: false },
     { number: "plural", infl: "genitive", checked: false },
     { number: "plural", infl: "dative", checked: false },
     { number: "plural", infl: "accusative", checked: false },
@@ -255,7 +255,7 @@ export class DashboardComponent implements OnInit {
   propose() {
 
 
-    for (let i of this.familiarSg) {
+    for (let i of this.intermediateSg) {
       if (i.checked == true) {
         for (let j of this.inflectionsTempSg) {
           if (j.infl == i.infl) {
@@ -275,7 +275,7 @@ export class DashboardComponent implements OnInit {
       }
     }
 
-    for (let i of this.familiarPl) {
+    for (let i of this.intermediatePl) {
       if (i.checked == true) {
         for (let j of this.inflectionsTempPl) {
           if (j.infl == i.infl) {
@@ -384,7 +384,7 @@ export class DashboardComponent implements OnInit {
   }
 
   /**
- * Mark inflections selected as novel to the user
+ * Mark inflections selected as beginner to the user
  * @param infl inflection
  * @param num number
  */
@@ -457,30 +457,30 @@ export class DashboardComponent implements OnInit {
         }
       }
 
-      for (let i of this.familiarSg) {
+      for (let i of this.intermediateSg) {
         if (i.checked) {
-          let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "familiar", declensions: decls };
+          let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "intermediate", declensions: decls };
           this.lmodel.push(temp);
         }
       }
 
-      for (let i of this.familiarPl) {
+      for (let i of this.intermediatePl) {
         if (i.checked) {
-          let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "familiar", declensions: decls };
+          let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "intermediate", declensions: decls };
           this.lmodel.push(temp);
         }
       }
 
       for (let i of this.inflectionsSg) {
         if (i.checked) {
-          let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "novel", declensions: decls };
+          let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "beginner", declensions: decls };
           this.lmodel.push(temp);
         }
       }
 
       for (let i of this.inflectionsPl) {
         if (i.checked) {
-          let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "novel", declensions: decls };
+          let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "beginner", declensions: decls };
           this.lmodel.push(temp);
         }
       }
@@ -512,7 +512,7 @@ export class DashboardComponent implements OnInit {
 
     //mark all the checkboxes that are part of the learner model
     for (let i of this.levels) {
-      if (i.level == "novel") {
+      if (i.level == "beginner") {
         if (i.number == "singular") {
           for (let j of this.inflectionsSg) {
             if (j.infl == i.infl) {
@@ -526,15 +526,15 @@ export class DashboardComponent implements OnInit {
             }
           }
         }
-      } else if (i.level == "familiar") {
+      } else if (i.level == "intermediate") {
         if (i.number == "singular") {
-          for (let j of this.familiarSg) {
+          for (let j of this.intermediateSg) {
             if (j.infl == i.infl) {
               j.checked = true;
             }
           }
         } else {
-          for (let j of this.familiarPl) {
+          for (let j of this.intermediatePl) {
             if (j.infl == i.infl) {
               j.checked = true;
             }

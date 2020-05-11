@@ -34,11 +34,11 @@ export class WelcomeComponent implements OnInit {
   advancedSg: Inflection[];
   advancedPl: Inflection[];
 
-  familiarSg: Inflection[];
-  familiarPl: Inflection[];
+  intermediateSg: Inflection[];
+  intermediatePl: Inflection[];
 
-  inflectionsNoviceSg: Inflection[];
-  inflectionsNovicePl: Inflection[];
+  inflectionsBeginnerSg: Inflection[];
+  inflectionsBeginnerPl: Inflection[];
 
   inflectionsTempSg: Inflection[];
   inflectionsTempPl: Inflection[];
@@ -92,28 +92,28 @@ export class WelcomeComponent implements OnInit {
     { number: "plural", infl: "instrumental", checked: false },
     { number: "plural", infl: "locative", checked: false }];
 
-    this.familiarSg = [{ number: "singular", infl: "nominative", checked: false },
+    this.intermediateSg = [{ number: "singular", infl: "nominative", checked: false },
     { number: "singular", infl: "genitive", checked: false },
     { number: "singular", infl: "dative", checked: false },
     { number: "singular", infl: "accusative", checked: false },
     { number: "singular", infl: "instrumental", checked: false },
     { number: "singular", infl: "locative", checked: false }];
 
-    this.familiarPl = [{ number: "plural", infl: "nominative", checked: false },
+    this.intermediatePl = [{ number: "plural", infl: "nominative", checked: false },
     { number: "plural", infl: "genitive", checked: false },
     { number: "plural", infl: "dative", checked: false },
     { number: "plural", infl: "accusative", checked: false },
     { number: "plural", infl: "instrumental", checked: false },
     { number: "plural", infl: "locative", checked: false }];
 
-    this.inflectionsNoviceSg = [{ number: "singular", infl: "nominative", checked: false },
+    this.inflectionsBeginnerSg = [{ number: "singular", infl: "nominative", checked: false },
     { number: "singular", infl: "genitive", checked: false },
     { number: "singular", infl: "dative", checked: false },
     { number: "singular", infl: "accusative", checked: false },
     { number: "singular", infl: "instrumental", checked: false },
     { number: "singular", infl: "locative", checked: false }];
 
-    this.inflectionsNovicePl = [{ number: "plural", infl: "nominative", checked: false },
+    this.inflectionsBeginnerPl = [{ number: "plural", infl: "nominative", checked: false },
     { number: "plural", infl: "genitive", checked: false },
     { number: "plural", infl: "dative", checked: false },
     { number: "plural", infl: "accusative", checked: false },
@@ -175,14 +175,14 @@ export class WelcomeComponent implements OnInit {
   }
 
   /**
-   * Mark inflections selected as familiar 
+   * Mark inflections selected as intermediate level 
    * @param infl the selected inflection
    * @param num the selected number
    */
   onChangeFam(infl: string, num: string) {
 
     if (num == 'singular') {
-      for (let j of this.familiarSg) {
+      for (let j of this.intermediateSg) {
         if (j.infl == infl) {
           if (j.checked == true) {
             j.checked = false;
@@ -194,7 +194,7 @@ export class WelcomeComponent implements OnInit {
     }
 
     else {
-      for (let j of this.familiarPl) {
+      for (let j of this.intermediatePl) {
         if (j.infl == infl) {
           if (j.checked == true) {
             j.checked = false;
@@ -216,7 +216,7 @@ export class WelcomeComponent implements OnInit {
   onLast() {
 
 
-    for (let i of this.familiarSg) {
+    for (let i of this.intermediateSg) {
       if (i.checked == true) {
         for (let j of this.inflectionsTempSg) {
           if (j.infl == i.infl) {
@@ -236,7 +236,7 @@ export class WelcomeComponent implements OnInit {
       }
     }
 
-    for (let i of this.familiarPl) {
+    for (let i of this.intermediatePl) {
       if (i.checked == true) {
         for (let j of this.inflectionsTempPl) {
           if (j.infl == i.infl) {
@@ -265,7 +265,7 @@ export class WelcomeComponent implements OnInit {
         if (i == j.infl && !j.checked) {
           console.log(j.infl);
           foundSg = true;
-          for (let k of this.inflectionsNoviceSg) {
+          for (let k of this.inflectionsBeginnerSg) {
             if (k.infl == j.infl) {
               console.log("k: " + k.infl)
               k.checked = true;
@@ -285,7 +285,7 @@ export class WelcomeComponent implements OnInit {
         if (i == j.infl && !j.checked) {
           console.log(j.infl);
           foundPl = true;
-          for (let k of this.inflectionsNovicePl) {
+          for (let k of this.inflectionsBeginnerPl) {
             if (k.infl == j.infl) {
               console.log("k: " + k.infl)
               k.checked = true;
@@ -304,14 +304,14 @@ export class WelcomeComponent implements OnInit {
 
 
   /**
-   * Mark inflections selected as novel to the user
+   * Mark inflections selected as beginner level by the user
    * @param infl inflection
    * @param num number
    */
   onChangeNov(infl: string, num: string) {
 
     if (num == 'singular') {
-      for (let j of this.inflectionsNoviceSg) {
+      for (let j of this.inflectionsBeginnerSg) {
         if (j.infl == infl) {
           if (j.checked == true) {
             j.checked = false;
@@ -323,7 +323,7 @@ export class WelcomeComponent implements OnInit {
     }
 
     else {
-      for (let j of this.inflectionsNovicePl) {
+      for (let j of this.inflectionsBeginnerPl) {
         if (j.infl == infl) {
           if (j.checked == true) {
             j.checked = false;
@@ -380,30 +380,30 @@ export class WelcomeComponent implements OnInit {
         }
       }
 
-      for (let i of this.familiarSg) {
+      for (let i of this.intermediateSg) {
         if (i.checked) {
-          let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "familiar", declensions: decls };
+          let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "intermediate", declensions: decls };
           this.lmodel.push(temp);
         }
       }
 
-      for (let i of this.familiarPl) {
+      for (let i of this.intermediatePl) {
         if (i.checked) {
-          let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "familiar", declensions: decls };
+          let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "intermediate", declensions: decls };
           this.lmodel.push(temp);
         }
       }
 
-      for (let i of this.inflectionsNoviceSg) {
+      for (let i of this.inflectionsBeginnerSg) {
         if (i.checked) {
-          let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "novel", declensions: decls };
+          let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "beginner", declensions: decls };
           this.lmodel.push(temp);
         }
       }
 
-      for (let i of this.inflectionsNovicePl) {
+      for (let i of this.inflectionsBeginnerPl) {
         if (i.checked) {
-          let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "novel", declensions: decls };
+          let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "beginner", declensions: decls };
           this.lmodel.push(temp);
         }
       }
@@ -454,14 +454,14 @@ export class WelcomeComponent implements OnInit {
 
       for (let i of this.inflectionsSg) {
         if (i.checked) {
-          let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "novel", declensions: decls };
+          let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "beginner", declensions: decls };
           this.lmodel.push(temp);
         }
       }
 
       for (let i of this.inflectionsPl) {
         if (i.checked) {
-          let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "novel", declensions: decls };
+          let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "beginner", declensions: decls };
           this.lmodel.push(temp);
         }
       }

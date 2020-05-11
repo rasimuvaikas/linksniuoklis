@@ -33,6 +33,8 @@ export class ConnectService {
       .append("number", number)
       .append("declension", i);
 
+      console.log("connect sent a request");
+
 
     return this.http.get(this.url + "Share", { params: httpParams, responseType: "text" });
   }

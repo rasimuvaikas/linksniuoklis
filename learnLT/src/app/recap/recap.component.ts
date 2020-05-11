@@ -14,6 +14,8 @@ export class RecapComponent implements OnInit {
 
   decl:boolean;
   stress:boolean;
+  decline:boolean;
+  inflect:boolean;
 
 
   declension1mascAS = [

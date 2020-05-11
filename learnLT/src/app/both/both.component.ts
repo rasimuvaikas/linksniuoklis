@@ -50,8 +50,8 @@ export class BothComponent implements OnInit {
   answered: boolean;
 
   advanced: Level[];
-  familiar: Level[];
-  novel: Level[];
+  intermediate: Level[];
+  beginner: Level[];
 
   counterFam: number
   counterAdv: number
@@ -62,8 +62,8 @@ export class BothComponent implements OnInit {
     this.user.currenttime.subscribe(t => this.time = t);
 
     this.advanced = [];
-    this.familiar = [];
-    this.novel = [];
+    this.intermediate = [];
+    this.beginner = [];
 
     this.model.sendFam(0);
     this.model.sendAdv(0);
@@ -154,7 +154,7 @@ export class BothComponent implements OnInit {
       console.log(data);
 
       //the user can move to the next level if they have completed a certain number of exercises
-      if (level == "novel") {
+      if (level == "beginner") {
         if (this.progress.total >= 30) { 
           if (this.progress.declensions.length > 4) {
             let completed = true;//check if the user has completed at least 5 exercises for each declension, if there are 5 or more sentences in that declension group
@@ -189,7 +189,7 @@ export class BothComponent implements OnInit {
             if (completed) {
               let lvls: Level[] = [];
 
-              level = "familiar";
+              level = "intermediate";
 
               let lvl: Level = { number: sentence.number, level: level, infl: sentence.inflection, username: this.username, declensions: declensions }
               lvls.push(lvl);
@@ -200,7 +200,7 @@ export class BothComponent implements OnInit {
           }
         }
       }
-      else if (level == "familiar") {
+      else if (level == "intermediate") {
         if (this.progress.total >= 30) {
           if (this.progress.declensions.length >= this.progress.total_declensions) { 
             let completed = true;
@@ -380,26 +380,26 @@ export class BothComponent implements OnInit {
       for (let i of this.levels) {
         if (i.level == "advanced") {
           this.advanced.push(i);
-        } else if (i.level == "familiar") {
-          this.familiar.push(i);
-        } else if (i.level == "novel") {
-          this.novel.push(i);
+        } else if (i.level == "intermediate") {
+          this.intermediate.push(i);
+        } else if (i.level == "beginner") {
+          this.beginner.push(i);
         }
       }
     });
 
-    //get variables that get incremented to keep track of when familiar or advanced level inflection noun should be displayed
-    this.model.cFam.subscribe(count => this.counterFam = count); //familiar
+    //get variables that get incremented to keep track of when intermediate or advanced level inflection noun should be displayed
+    this.model.cFam.subscribe(count => this.counterFam = count); //intermediate
     this.model.cAdv.subscribe(count => this.counterAdv = count); //advanced
 
 
-    if (this.counterFam > 2 && this.familiar.length > 0) { //display a sentence with a noun in a familiar level case every 3rd sentence
+    if (this.counterFam > 2 && this.intermediate.length > 0) { //display a sentence with a noun in a intermediate level case every 3rd sentence
 
-      let i = this.familiar[Math.floor(Math.random() * ((this.familiar.length - 1) - 0 + 1) + 0)]; //choose a random case that belongs to the familiar category
+      let i = this.intermediate[Math.floor(Math.random() * ((this.intermediate.length - 1) - 0 + 1) + 0)]; //choose a random case that belongs to the intermediate category
       this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
         console.log(JSON.parse(car))
-        if (this.card.length == 0 && this.familiar.length > 1) {
+        if (this.card.length == 0 && this.intermediate.length > 1) {
           this.ngOnInit();
         }
         else if (this.card.length == 0) {
@@ -434,12 +434,12 @@ export class BothComponent implements OnInit {
 
     }
 
-    else if (this.novel.length > 0) {
-      let i = this.novel[Math.floor(Math.random() * ((this.novel.length - 1) - 0 + 1) + 0)]; //choose a random case that belongs to the novel category
+    else if (this.beginner.length > 0) {
+      let i = this.beginner[Math.floor(Math.random() * ((this.beginner.length - 1) - 0 + 1) + 0)]; //choose a random case that belongs to the beginner category
       this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
         console.log(JSON.parse(car))
-        if (this.card.length == 0 && this.novel.length > 1) {
+        if (this.card.length == 0 && this.beginner.length > 1) {
           this.ngOnInit();
         }
         else if (this.card.length == 0) {
@@ -453,13 +453,13 @@ export class BothComponent implements OnInit {
       console.log("nov: ", i);
     }
 
-    //if novel is empty, try other arrays
-    else if (this.familiar.length > 0) {
-      let i = this.familiar[Math.floor(Math.random() * ((this.familiar.length - 1) - 0 + 1) + 0)];
+    //if beginner is empty, try other arrays
+    else if (this.intermediate.length > 0) {
+      let i = this.intermediate[Math.floor(Math.random() * ((this.intermediate.length - 1) - 0 + 1) + 0)];
       this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
         console.log(JSON.parse(car))
-        if (this.card.length == 0 && this.familiar.length > 1) {
+        if (this.card.length == 0 && this.intermediate.length > 1) {
           this.ngOnInit();
         }
         else if (this.card.length == 0) {
