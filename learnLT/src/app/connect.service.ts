@@ -23,7 +23,7 @@ export class ConnectService {
  * @param number noun's number
  * @param declensions all the declensions the user is currently practising
  */
-  getCards(inflection = "accusative", number = "singular", declensions = ["1masc"]): Observable<any> {
+  getCard(inflection = "accusative", number = "singular", declensions = ["1masc"]): Observable<any> {
 
     //choose a random declension
     let i = declensions[Math.floor(Math.random() * ((declensions.length - 1) - 0 + 1) + 0)]; 
@@ -33,7 +33,7 @@ export class ConnectService {
       .append("number", number)
       .append("declension", i);
 
-      console.log("connect sent a request");
+      console.log("connect sent a request with ", i);
 
 
     return this.http.get(this.url + "Share", { params: httpParams, responseType: "text" });

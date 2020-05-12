@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Properties;
 
 /**
- * A class that connects to the mysql server and performs various related processes
+ * A class that connects to the mysql server
  */
 public class Data {
 
@@ -14,7 +14,7 @@ public class Data {
     public static void main(String[] args) {
         Data d = new Data();
         d.fillTables();
-        //d.model();
+        d.model();
     }
 
 
@@ -56,12 +56,12 @@ public class Data {
     }
 
     /**
-     * create databases and tables for statistical data and the sentences containing nouns
+     * Create databases and tables for statistical data and the sentences containing nouns
      */
     public void fillTables() {
         try {
             //create a database to store data on accentuation mark frequencies
-/*
+
             stmt.executeUpdate("CREATE DATABASE IF NOT EXISTS stats CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci");
 
             stmt.executeUpdate("USE stats");
@@ -113,33 +113,31 @@ public class Data {
 
 
             stmt.executeUpdate("CREATE DATABASE IF NOT EXISTS text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci");
-*/
+
 
             stmt.executeUpdate("USE text");
 
-            stmt.executeUpdate("SET GLOBAL local_infile = 1");
-
-/*            //possibly will have to delete this one
-           String nouns = "CREATE TABLE IF NOT EXISTS nouns" +
+            String nouns = "CREATE TABLE IF NOT EXISTS nouns" +
                     "(stressed NVARCHAR(200), " +
                     " clean NVARCHAR(200), " +
                     " english NVARCHAR(200), " +
                     " noun NVARCHAR(50), " +
                     " position MEDIUMINT, " +
                     " lemma NVARCHAR(50), " +
-                    " info NVARCHAR(20), " +
+                    " info NVARCHAR(20)," +
+                    " pattern NVARCHAR(20)," +
                     " inflection NVARCHAR(20), " +
                     " number NVARCHAR(20))";
 
             stmt.executeUpdate(nouns);
 
-            URL url = getClass().getResource("pos");
+            URL url = getClass().getResource("infl");
             File temp = new File(url.toURI());
 
             for (String s : temp.list()) {
 
                 System.out.println(s);
-                stmt.executeUpdate("LOAD DATA LOCAL INFILE '" + getClass().getResource("pos/" + s).toURI().getPath() + "' INTO TABLE nouns CHARACTER SET utf8mb4");
+                stmt.executeUpdate("LOAD DATA LOCAL INFILE '" + getClass().getResource("infl/" + s).toURI().getPath() + "' INTO TABLE nouns CHARACTER SET utf8mb4 lines TERMINATED BY '\r\n'");
 
                 if (s.endsWith("Pl.tsv")) {
                     stmt.executeUpdate("UPDATE nouns SET number = \"plural\" WHERE number IS NULL");
@@ -160,61 +158,15 @@ public class Data {
                 } else if (s.startsWith("locative")) {
                     stmt.executeUpdate("UPDATE nouns SET inflection = \"locative\" WHERE inflection IS NULL");
                 }
-            }*/
-
-
-            String nouns2 = "CREATE TABLE IF NOT EXISTS nouns2" +
-                    "(stressed NVARCHAR(200), " +
-                    " clean NVARCHAR(200), " +
-                    " english NVARCHAR(200), " +
-                    " noun NVARCHAR(50), " +
-                    " position MEDIUMINT, " +
-                    " lemma NVARCHAR(50), " +
-                    " info NVARCHAR(20)," +
-                    " pattern NVARCHAR(20)," +
-                    " inflection NVARCHAR(20), " +
-                    " number NVARCHAR(20))";
-
-            stmt.executeUpdate(nouns2);
-
-            //URL url2 = getClass().getResource("decl");
-            URL url2 = getClass().getResource("OP");
-            File temp2 = new File(url2.toURI());
-
-            for (String s : temp2.list()) {
-
-                System.out.println(s);
-                //stmt.executeUpdate("LOAD DATA LOCAL INFILE '" + getClass().getResource("decl/" + s).toURI().getPath() + "' INTO TABLE nouns2 CHARACTER SET utf8mb4 lines TERMINATED BY '\r\n'");
-                stmt.executeUpdate("LOAD DATA LOCAL INFILE '" + getClass().getResource("OP/" + s).toURI().getPath() + "' INTO TABLE nouns2 CHARACTER SET utf8mb4 lines TERMINATED BY '\r\n'");
-
-                if (s.endsWith("Pl.tsv")) {
-                    stmt.executeUpdate("UPDATE nouns2 SET number = \"plural\" WHERE number IS NULL");
-                } else if (s.endsWith("Sg.tsv")) {
-                    stmt.executeUpdate("UPDATE nouns2 SET number = \"singular\" WHERE number IS NULL");
-                }
-
-                //if (s.startsWith("nominative")) {
-                    //stmt.executeUpdate("UPDATE nouns2 SET inflection = \"nominative\" WHERE inflection IS NULL");}
-                if (s.startsWith("OPgenitive")) {
-                    stmt.executeUpdate("UPDATE nouns2 SET inflection = \"genitive\" WHERE inflection IS NULL");
-                } else if (s.startsWith("OPdative")) {
-                    stmt.executeUpdate("UPDATE nouns2 SET inflection = \"dative\" WHERE inflection IS NULL");
-                } else if (s.startsWith("OPaccusative")) {
-                    stmt.executeUpdate("UPDATE nouns2 SET inflection = \"accusative\" WHERE inflection IS NULL");
-                } else if (s.startsWith("OPinstrumental")) {
-                    stmt.executeUpdate("UPDATE nouns2 SET inflection = \"instrumental\" WHERE inflection IS NULL");
-                } else if (s.startsWith("OPlocative")) {
-                    stmt.executeUpdate("UPDATE nouns2 SET inflection = \"locative\" WHERE inflection IS NULL");
-                }
             }
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } catch (URISyntaxException e) {
             e.printStackTrace();
-        } /*catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
-        }*/
+        }
     }
 
     /**
@@ -341,44 +293,19 @@ public class Data {
     }
 
     /**
-     * Get a sentence that contains a noun in a particular case and number
-     * @param infl the particular case
-     * @param num the particular number
-     * @return a result set that contains a sentence that contains a noun in a particular case and number
-     */
-    public ResultSet getSentence(String infl, String num){
-
-        ResultSet result = null;
-        try {
-
-            stmt.executeUpdate("USE text");
-            String sql = "SELECT * FROM nouns where inflection = ? AND number = ? ORDER BY RAND() LIMIT 1";
-            pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, infl);
-            pstmt.setString(2, num);
-            result = pstmt.executeQuery();
-
-        } catch (SQLException e) {
-            e.getMessage();
-        }
-
-        return result;
-    }
-
-    /**
      * Get a sentence that contains a noun that belong to a particular declension and is in a particular case, number
      * @param infl the case
      * @param num the number
      * @param decl the declension
      * @return a result set that contains a sentence that contains a noun that belong to a particular declension and is in a particular case, number
      */
-    public ResultSet getSentenceDecl(String infl, String num, String decl){
+    public ResultSet getSentence(String infl, String num, String decl){
 
         ResultSet result = null;
         try {
 
             stmt.executeUpdate("USE text");
-            String sql = "SELECT * FROM nouns2 where inflection = ? AND number = ? AND pattern = ? ORDER BY RAND() LIMIT 1";
+            String sql = "SELECT * FROM nouns where inflection = ? AND number = ? AND pattern = ? ORDER BY RAND() LIMIT 1";
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, infl);
             pstmt.setString(2, num);
@@ -612,7 +539,7 @@ public class Data {
         try {
             stmt.executeUpdate("USE text");
 
-            String sql = "SELECT count(*) FROM nouns2 WHERE inflection = ? AND number = ? AND pattern = ? COLLATE utf8mb4_bin";
+            String sql = "SELECT count(*) FROM nouns WHERE inflection = ? AND number = ? AND pattern = ? COLLATE utf8mb4_bin";
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, infl);
             pstmt.setString(2, num);
@@ -636,7 +563,7 @@ public class Data {
         try {
             stmt.executeUpdate("USE text");
 
-            String sql = "SELECT count(DISTINCT pattern) FROM nouns2 WHERE inflection = ? AND number = ? COLLATE utf8mb4_bin";
+            String sql = "SELECT count(DISTINCT pattern) FROM nouns WHERE inflection = ? AND number = ? COLLATE utf8mb4_bin";
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, infl);
             pstmt.setString(2, num);

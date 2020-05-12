@@ -31,7 +31,7 @@ export class DeclineComponent implements OnInit {
   lmodel: Level[];
 
   levels: Level[];
-  card: Selected[];
+  card: Selected;
 
   correct: number;
 
@@ -376,109 +376,113 @@ export class DeclineComponent implements OnInit {
     if (this.counterFam > 2 && this.intermediate.length > 0) { //display a sentence with a noun in a intermediate level case every 3rd sentence
 
       let i = this.intermediate[Math.floor(Math.random() * ((this.intermediate.length - 1) - 0 + 1) + 0)]; //choose a random case that belongs to the intermediate category
-      this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
+      this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
-        console.log(JSON.parse(car))
-        if (this.card.length == 0 && this.intermediate.length > 1) {
+        if(this.card.simple == null && this.intermediate.length > 1){
           this.ngOnInit();
         }
-        else if (this.card.length == 0) {
+        else if (this.card.simple == null) {
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
           this.ngOnInit();
-        }
+        } 
         else{
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
-
-        }
+        } 
+        console.log(JSON.parse(car))
       });
+
       console.log("fam: ", i);
+
+
     } else if (this.counterAdv > 4 && this.advanced.length > 0) { //display a sentence with a noun in an advanced level case every 5th sentence
 
       let i = this.advanced[Math.floor(Math.random() * ((this.advanced.length - 1) - 0 + 1) + 0)]; //choose a random case that belongs to the advanced category
-      this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
+      this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
-        console.log(JSON.parse(car))
-        if (this.card.length == 0 && this.advanced.length > 1) {
+        if(this.card.simple == null && this.advanced.length > 1){
           this.ngOnInit();
         }
-        else if (this.card.length == 0) {
-          this.model.sendFam(0); //reset the variable to start counting from 0 again
-          this.model.sendAdv(this.counterAdv + 1);
+        else if (this.card.simple == null) {
+          this.model.sendFam(this.counterFam + 1);
+          this.model.sendAdv(0); //reset the variable to start counting from 0 again
           this.ngOnInit();
         }
         else{
           this.model.sendFam(this.counterFam + 1);
           this.model.sendAdv(0); //reset the variable to start counting from 0 again
-
-        }
+        } 
+        console.log(JSON.parse(car))
       });
+
       console.log("adv: ", i);
+
     }
 
     else if (this.beginner.length > 0) {
       let i = this.beginner[Math.floor(Math.random() * ((this.beginner.length - 1) - 0 + 1) + 0)]; //choose a random case that belongs to the beginner category
-      this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
+      this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
-        console.log(JSON.parse(car))
-        if (this.card.length == 0 && this.beginner.length > 1) {
+        if(this.card.simple == null && this.beginner.length > 1){
           this.ngOnInit();
         }
-        else if (this.card.length == 0) {
-          this.model.sendFam(0); //reset the variable to start counting from 0 again
+        else if (this.card.simple == null) {
+          this.model.sendFam(this.counterFam + 1);
           this.model.sendAdv(this.counterAdv + 1);
           this.ngOnInit();
         }
         else{
           this.model.sendFam(this.counterFam + 1);
           this.model.sendAdv(this.counterAdv + 1);
-
-        }
+        }   
+        console.log(JSON.parse(car))
       });
+
       console.log("nov: ", i);
     }
 
     //if beginner is empty, try other arrays
     else if (this.intermediate.length > 0) {
       let i = this.intermediate[Math.floor(Math.random() * ((this.intermediate.length - 1) - 0 + 1) + 0)];
-      this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
+      this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
-        console.log(JSON.parse(car))
-        if (this.card.length == 0 && this.intermediate.length > 1) {
+        if(this.card.simple == null && this.intermediate.length > 1){
           this.ngOnInit();
         }
-        else if (this.card.length == 0) {
+        else if (this.card.simple == null) {
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
           this.ngOnInit();
         }
         else{
-          this.model.sendFam(this.counterFam + 1);
+          this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
-        }
+        }   
+        console.log(JSON.parse(car))
       });
       console.log("fam: ", i);
     }
 
     else if (this.advanced.length > 0) {
       let i = this.advanced[Math.floor(Math.random() * ((this.advanced.length - 1) - 0 + 1) + 0)];
-      this.con.getCards(i.infl, i.number, i.declensions).subscribe(car => {
+      this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
-        console.log(JSON.parse(car))
-        if (this.card.length == 0 && this.advanced.length > 1) {
+        if(this.card.simple == null && this.advanced.length > 1){
           this.ngOnInit();
         }
-        else if (this.card.length == 0) {
-          this.model.sendFam(0); //reset the variable to start counting from 0 again
-          this.model.sendAdv(this.counterAdv + 1);
+        else if (this.card.simple == null) {
+          this.model.sendFam(this.counterFam + 1); //reset the variable to start counting from 0 again
+          this.model.sendAdv(0);
           this.ngOnInit();
         }
         else{
-          this.model.sendFam(this.counterFam + 1);
-          this.model.sendAdv(this.counterAdv + 1);
-        }
+          this.model.sendFam(this.counterFam + 1); //reset the variable to start counting from 0 again
+          this.model.sendAdv(0);
+        }   
+        console.log(JSON.parse(car))
       });
+
       console.log("adv: ", i);
     }
 

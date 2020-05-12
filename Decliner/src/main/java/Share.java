@@ -61,7 +61,7 @@ public class Share extends HttpServlet {
         String pattern = request.getParameter("declension");
 
 
-        ResultSet rs = data.getSentenceDecl(infl, num, pattern);
+        ResultSet rs = data.getSentence(infl, num, pattern);
 
         try {
 
@@ -70,11 +70,10 @@ public class Share extends HttpServlet {
             response.setContentType("application/json");
             PrintWriter out = response.getWriter();
 
-            JSONArray jsonArray = new JSONArray();
+            JSONObject jsb = new JSONObject();
 
-            while (rs.next()) {
+            if(rs.next()) {
 
-                JSONObject jsb = new JSONObject();
 
                 String stressed = rs.getString("stressed");
                 String simple = rs.getString("clean");
@@ -195,13 +194,32 @@ public class Share extends HttpServlet {
                 jsb.put("nounDist", nounDist);
                 jsb.put("stressDist", stressDist);
                 jsb.put("declension", declension);
+            }
 
+            else{
+                jsb.put("gender", JSONObject.NULL);
 
-                jsonArray.put(jsb);
+                jsb.put("stressed", JSONObject.NULL);
+                jsb.put("simple", JSONObject.NULL);
+                jsb.put("english", JSONObject.NULL);
+                jsb.put("noun", JSONObject.NULL);
+                jsb.put("accNoun", JSONObject.NULL);
+                jsb.put("position", JSONObject.NULL);
+                jsb.put("lemma", JSONObject.NULL);
+                jsb.put("info", JSONObject.NULL);
+                jsb.put("inflection", JSONObject.NULL);
+                jsb.put("number", JSONObject.NULL);
+                jsb.put("slice1", JSONObject.NULL);
+                jsb.put("slice2", JSONObject.NULL);
+                jsb.put("strice1", JSONObject.NULL);
+                jsb.put("strice2", JSONObject.NULL);
+                jsb.put("nounDist", JSONObject.NULL);
+                jsb.put("stressDist", JSONObject.NULL);
+                jsb.put("declension", JSONObject.NULL);
             }
 
 
-            out.println(jsonArray);
+            out.println(jsb);
 
             out.close();
 

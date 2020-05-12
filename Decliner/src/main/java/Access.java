@@ -20,7 +20,7 @@ public class Access {
             //test.annotate();
             //test.fix();
             //test.stress();
-            test.divide();
+            test.divide("stressed.tsv");
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
@@ -51,10 +51,10 @@ public class Access {
      * @throws IOException
      * @throws InterruptedException
      */
-    public void annotate() throws IOException, InterruptedException {
+    public void annotate(String inputFile, String outputFile) throws IOException, InterruptedException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(
-                this.getClass().getResourceAsStream("/" + "sentences.tsv")));
+                this.getClass().getResourceAsStream("/" + inputFile)));
 
         String line;
         int count = 1;
@@ -67,7 +67,7 @@ public class Access {
                 String[] split = line.split("\\t");
                 String sent = split[0];
 
-                PrintWriter pw = new PrintWriter(new FileWriter("src/main/resources/usable.tsv", true));
+                PrintWriter pw = new PrintWriter(new FileWriter("src/main/resources/" + outputFile, true));
 
                 //connect to the web service
                 URL url = new URL("http://itpu.semantika.lt/Proxy/api/chains/morph");
@@ -156,10 +156,10 @@ public class Access {
      * @throws IOException
      * @throws InterruptedException
      */
-    public void stress() throws IOException, InterruptedException {
+    public void stress(String inputFile, String outputFile) throws IOException, InterruptedException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(
-                this.getClass().getResourceAsStream("/" + "usable.tsv")));
+                this.getClass().getResourceAsStream("/" + inputFile)));
 
         String line;
         int count = 1;
@@ -173,7 +173,7 @@ public class Access {
             String sent = split[0];
 
 
-            PrintWriter pw = new PrintWriter(new FileWriter("src/main/resources/stressed.tsv", true));
+            PrintWriter pw = new PrintWriter(new FileWriter("src/main/resources/" + outputFile, true));
 
 
             //connect to the web service
@@ -255,9 +255,9 @@ public class Access {
      * @throws InterruptedException
      * @throws IOException
      */
-    public void divide() throws InterruptedException, IOException {
+    public void divide(String inputFile) throws InterruptedException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(
-                this.getClass().getResourceAsStream("/" + "stressed.tsv")));
+                this.getClass().getResourceAsStream("/" + inputFile)));
 
         String line;
         int count = 1;
@@ -319,43 +319,46 @@ public class Access {
                             String infl = pos.get(1).toString().substring(4, 5);
                             String[] spl = sent.split(" ?(?<!\\G)((?<=[^\\p{Punct}])(?=\\p{Punct})|\\b) ?");
                             String word = spl[position];
-                            System.out.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString());
+                            Declension d = new Declension();
+                            Noun n = d.createNoun(word, pos.get(0).toString(), pos.get(1).toString());
+                            String add = d.findDeclension(n);
+                            System.out.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString() + "\t" + add);
                             if (number.equals("s")) {
                                 if (infl.equals("n")) {
                                     pw = new PrintWriter(new FileWriter("src/main/resources/nominativeSg.tsv", true));
 
                                     //stressed, lithuanian, english, word's position, word, lemma, info about word
-                                    pw.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString());
+                                    pw.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString() + "\t" + add);
                                     pw.close();
                                 } else if (infl.equals("g")) {
                                     pw = new PrintWriter(new FileWriter("src/main/resources/genitiveSg.tsv", true));
 
                                     //stressed, lithuanian, english, word's position, word, lemma, info about word
-                                    pw.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString());
+                                    pw.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString() + "\t" + add);
                                     pw.close();
                                 } else if (infl.equals("d")) {
                                     pw = new PrintWriter(new FileWriter("src/main/resources/dativeSg.tsv", true));
 
                                     //stressed, lithuanian, english, word's position, word, lemma, info about word
-                                    pw.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString());
+                                    pw.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString() + "\t" + add);
                                     pw.close();
                                 } else if (infl.equals("a")) {
                                     pw = new PrintWriter(new FileWriter("src/main/resources/accusativeSg.tsv", true));
 
                                     //stressed, lithuanian, english, word's position, word, lemma, info about word
-                                    pw.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString());
+                                    pw.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString() + "\t" + add);
                                     pw.close();
                                 } else if (infl.equals("i")) {
                                     pw = new PrintWriter(new FileWriter("src/main/resources/instrumentalSg.tsv", true));
 
                                     //stressed, lithuanian, english, word's position, word, lemma, info about word
-                                    pw.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString());
+                                    pw.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString() + "\t" + add);
                                     pw.close();
                                 } else if (infl.equals("l")) {
                                     pw = new PrintWriter(new FileWriter("src/main/resources/locativeSg.tsv", true));
 
                                     //stressed, lithuanian, english, word's position, word, lemma, info about word
-                                    pw.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString());
+                                    pw.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString() + "\t" + add);
                                     pw.close();
                                 }
 
@@ -364,37 +367,37 @@ public class Access {
                                     pw = new PrintWriter(new FileWriter("src/main/resources/nominativePl.tsv", true));
 
                                     //stressed, lithuanian, english, word's position, word, lemma, info about word
-                                    pw.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString());
+                                    pw.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString() + "\t" + add);
                                     pw.close();
                                 } else if (infl.equals("g")) {
                                     pw = new PrintWriter(new FileWriter("src/main/resources/genitivePl.tsv", true));
 
                                     //stressed, lithuanian, english, word's position, word, lemma, info about word
-                                    pw.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString());
+                                    pw.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString() + "\t" + add);
                                     pw.close();
                                 } else if (infl.equals("d")) {
                                     pw = new PrintWriter(new FileWriter("src/main/resources/dativePl.tsv", true));
 
                                     //stressed, lithuanian, english, word's position, word, lemma, info about word
-                                    pw.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString());
+                                    pw.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString() + "\t" + add);
                                     pw.close();
                                 } else if (infl.equals("a")) {
                                     pw = new PrintWriter(new FileWriter("src/main/resources/accusativePl.tsv", true));
 
                                     //stressed, lithuanian, english, word's position, word, lemma, info about word
-                                    pw.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString());
+                                    pw.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString() + "\t" + add);
                                     pw.close();
                                 } else if (infl.equals("i")) {
                                     pw = new PrintWriter(new FileWriter("src/main/resources/instrumentalPl.tsv", true));
 
                                     //stressed, lithuanian, english, word's position, word, lemma, info about word
-                                    pw.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString());
+                                    pw.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString() + "\t" + add);
                                     pw.close();
                                 } else if (infl.equals("l")) {
                                     pw = new PrintWriter(new FileWriter("src/main/resources/locativePl.tsv", true));
 
                                     //stressed, lithuanian, english, word's position, word, lemma, info about word
-                                    pw.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString());
+                                    pw.println(line + "\t" + word + "\t" + position + "\t" + pos.get(0).toString() + "\t" + pos.get(1).toString() + "\t" + add);
                                     pw.close();
                                 }
                             }
@@ -422,5 +425,60 @@ public class Access {
 
         br.close();
     }
+
+
+    //***openSubtitles processing:***
+
+    /**
+     * Align english and Lithuanian OpenSub text files
+     * @throws IOException
+     */
+    public static void align() throws IOException {
+        BufferedReader en = new BufferedReader(new FileReader("C:/Users/zivil/Downloads/opensub/OpenSubtitles.en-lt.en"));
+        BufferedReader lit = new BufferedReader(new FileReader("C:/Users/zivil/Downloads/opensub/OpenSubtitles.en-lt.lt"));
+
+        PrintWriter pw = new PrintWriter(new FileWriter("src/main/resources/openSub.tsv", true));
+
+
+        while (true) {
+            String partOne = lit.readLine();
+            String partTwo = en.readLine();
+
+            if (partOne == null || partTwo == null)
+                break;
+
+            pw.println(partOne + "\t" + partTwo);
+        }
+
+        pw.close();
+    }
+
+    /**
+     * Find sentences longer than 5 words and shorter than 11
+     * @throws IOException
+     */
+    public static void find() throws IOException {
+        BufferedReader lit = new BufferedReader(new FileReader("src/main/resources/openSub.tsv"));
+
+        PrintWriter pw = new PrintWriter(new FileWriter("src/main/resources/openSubUsable.tsv", true));
+
+
+        String line;
+        int count = 1;
+        int l = 1;
+        while((line = lit.readLine()) != null) {
+
+            String[] split = line.split("\t");
+            String[] words = split[0].split("\\s+");
+            if(words.length > 5 && words.length < 11){
+                pw.println(line);
+            }
+
+        }
+
+        pw.close();
+    }
+
+
 
 }

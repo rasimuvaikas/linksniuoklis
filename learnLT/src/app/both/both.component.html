@@ -37,29 +37,29 @@
                             <p>Select the correct inflection</p>
                         </div>
                     </h1>
-                    <div *ngFor="let num of card; let i=index">
+                    <div>
                         <mat-card class="mat-card-blue" fxFlex="0 1 100%">
                             <mat-card-content>
 
                                 <div style="display:flex; justify-content: center; align-items: center">
-                                    <p>{{num.slice1}}</p>
+                                    <p>{{card.slice1}}</p>
                                     <mat-form-field>
-                                        <mat-select [(ngModel)]="correct" (ngModelChange)="onChangeDecl(num)">
+                                        <mat-select [(ngModel)]="correct" (ngModelChange)="onChangeDecl(card)">
                                             <mat-option disabled selected></mat-option>
-                                            <mat-option *ngFor="let entry of num.nounDist"
-                                                [value]="assign(entry, num.noun)">
+                                            <mat-option *ngFor="let entry of card.nounDist"
+                                                [value]="assign(entry, card.noun)">
                                                 {{entry}}
                                             </mat-option>
                                         </mat-select>
                                     </mat-form-field>
-                                    <p>{{num.slice2}}</p>
+                                    <p>{{card.slice2}}</p>
                                 </div>
 
                                 <div (mouseover)="displayInfo=true" (mouseout)="displayInfo=false">
                                     <div *ngIf="displayInfo">
-                                        <p style="color:rgb(15, 51, 117);">Gender: {{num.gender}};
-                                            inflection: {{num.inflection}}; number: {{num.number}}; declension:
-                                            {{getDecl(num.declension)}}</p>
+                                        <p style="color:rgb(15, 51, 117);">Gender: {{card.gender}};
+                                            inflection: {{card.inflection}}; number: {{card.number}}; declension:
+                                            {{getDecl(card.declension)}}</p>
                                     </div>
                                     <div *ngIf="!displayInfo">
                                         <p>Hint</p>
@@ -68,7 +68,7 @@
 
                                 <div (mouseover)="displayEng=true" (mouseout)="displayEng=false">
                                     <div *ngIf="displayEng">
-                                        <p style="color:orange;">{{num.english}}</p>
+                                        <p style="color:orange;">{{card.english}}</p>
                                     </div>
                                     <div *ngIf="!displayEng">
                                         <p>English Translation</p>
@@ -97,23 +97,23 @@
                             <p>Type in the correct inflection</p>
                         </div>
                     </h1>
-                    <div *ngFor="let num of card; let i=index">
+                    <div>
                         <mat-card class="mat-card-blue" fxFlex="0 1 100%">
                             <mat-card-content>
 
                                 <div style="display:flex; justify-content: center; align-items: center">
-                                    <p>{{num.strice1}}</p>
+                                    <p>{{card.strice1}}</p>
                                     <mat-form-field>
-                                        <mat-label>{{num.lemma}}</mat-label>
+                                        <mat-label>{{card.lemma}}</mat-label>
                                         <input matInput [(ngModel)]="answer">
-                                        <mat-error *ngIf="answer!=num.noun">Try again!</mat-error>
+                                        <mat-error *ngIf="answer!=card.noun">Try again!</mat-error>
                                     </mat-form-field>
-                                    <p>{{num.strice2}}</p>
+                                    <p>{{card.strice2}}</p>
                                 </div>
 
 
                                 <div style="display:flex; justify-content:right;">
-                                    <button mat-stroked-button (click)="onSubmit(num.noun, num)">Submit</button>
+                                    <button mat-stroked-button (click)="onSubmit(card.noun, card)">Submit</button>
                                 </div>
 
 
@@ -121,7 +121,7 @@
                                     <div style="display:flex; justify-content:right;">
                                         <div (mouseover)="show=true">
                                             <div *ngIf="show">
-                                                <p style="color:rgb(73, 43, 209);">{{num.noun}}</p>
+                                                <p style="color:rgb(73, 43, 209);">{{card.noun}}</p>
                                             </div>
                                             <div *ngIf="!show">
                                                 <p style="color:rgb(226, 59, 30);">Answer</p>
@@ -132,9 +132,9 @@
 
                                 <div (mouseover)="displayInfo=true" (mouseout)="displayInfo=false">
                                     <div *ngIf="displayInfo">
-                                        <p style="color:rgb(15, 51, 117);">Gender: {{num.gender}};
-                                            inflection: {{num.inflection}}; number: {{num.number}}; declension:
-                                            {{getDecl(num.declension)}}</p>
+                                        <p style="color:rgb(15, 51, 117);">Gender: {{card.gender}};
+                                            inflection: {{card.inflection}}; number: {{card.number}}; declension:
+                                            {{getDecl(card.declension)}}</p>
                                     </div>
                                     <div *ngIf="!displayInfo">
                                         <p>Hint</p>
@@ -143,7 +143,7 @@
 
                                 <div (mouseover)="displayEng=true" (mouseout)="displayEng=false">
                                     <div *ngIf="displayEng">
-                                        <p style="color:orange;">{{num.english}}</p>
+                                        <p style="color:orange;">{{card.english}}</p>
                                     </div>
                                     <div *ngIf="!displayEng">
                                         <p>English Translation</p>
@@ -181,29 +181,29 @@
                         <p>Select the correctly stressed form</p>
                     </div>
                 </h1>
-                <div *ngFor="let num of card; let i=index">
+                <div>
                     <mat-card class="mat-card-blue" fxFlex="0 1 100%">
                         <mat-card-content>
                             <div style="display:flex; justify-content: center; align-items: center">
-                                <p>{{num.strice1}}</p>
+                                <p>{{card.strice1}}</p>
                                 <mat-form-field>
-                                    <mat-select [(ngModel)]="correct" (ngModelChange)="onChangeStress(num)">
+                                    <mat-select [(ngModel)]="correct" (ngModelChange)="onChangeStress(card)">
                                         <mat-option disabled selected></mat-option>
-                                        <mat-option *ngFor="let entry of num.stressDist"
-                                            [value]="assign(entry, num.accNoun)">
+                                        <mat-option *ngFor="let entry of card.stressDist"
+                                            [value]="assign(entry, card.accNoun)">
                                             {{entry}}
                                         </mat-option>
                                     </mat-select>
                                 </mat-form-field>
-                                <p>{{num.strice2}}</p>
+                                <p>{{card.strice2}}</p>
                             </div>
 
 
                             <div (mouseover)="displayInfo=true" (mouseout)="displayInfo=false">
                                 <div *ngIf="displayInfo">
-                                    <p style="color:rgb(15, 51, 117);">Gender: {{num.gender}}, inflection:
-                                        {{num.inflection}}, number: {{num.number}}, declension:
-                                        {{getDecl(num.declension)}}</p>
+                                    <p style="color:rgb(15, 51, 117);">Gender: {{card.gender}}, inflection:
+                                        {{card.inflection}}, number: {{card.number}}, declension:
+                                        {{getDecl(card.declension)}}</p>
                                 </div>
                                 <div *ngIf="!displayInfo">
                                     <p>Hint</p>
@@ -212,7 +212,7 @@
 
                             <div (mouseover)="displayEng=true" (mouseout)="displayEng=false">
                                 <div *ngIf="displayEng">
-                                    <p style="color:orange;">{{num.english}}</p>
+                                    <p style="color:orange;">{{card.english}}</p>
                                 </div>
                                 <div *ngIf="!displayEng">
                                     <p>English Translation</p>
@@ -230,11 +230,7 @@
                         </div>
 
                     </mat-card>
-
                 </div>
-
-
-
             </div>
 
 

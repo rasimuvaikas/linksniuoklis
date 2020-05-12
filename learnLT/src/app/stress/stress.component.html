@@ -1,33 +1,36 @@
 <div class="grid-container">
-<div fxLayout.xs="column" fxLayout="row">
+    <div fxLayout.xs="column" fxLayout="row">
 
 
-    <div fxFlex="0 1 calc(80% - 32px)">
+        <div fxFlex="0 1 calc(80% - 32px)">
 
-        <div fxLayout="row">
-            <form>
-                <button mat-stroked-button type="submit" routerLink="/exercise">Go Back</button>
-            </form>
-            <form>
-                <button mat-stroked-button (click)="openBottomSheet()">Recap</button>
-            </form>
-        </div>
+            <div fxLayout="row">
+                <form>
+                    <button mat-stroked-button type="submit" routerLink="/exercise">Go Back</button>
+                </form>
+                <form>
+                    <button mat-stroked-button (click)="openBottomSheet()">Recap</button>
+                </form>
+            </div>
+            <h1 class="mat-h1">
+                <div class="centreIn">
+                    <p>Select the correctly stressed form</p>
+                </div>
+            </h1>
 
-
-            <div *ngFor="let num of card; let i=index">
-
+            <div>
                 <mat-card class="mat-card-blue" fxFlex="0 1 100%" style="margin-top: 32px;">
                     <mat-card-content>
 
                         <div style="display:flex; justify-content: center; align-items: center">
-                            <p>{{num.strice1}}</p>
+                            <p>{{card.strice1}}</p>
                             <mat-form-field>
 
 
-                                <mat-select [(ngModel)]="correct" (ngModelChange)="onChange(num)">
+                                <mat-select [(ngModel)]="correct" (ngModelChange)="onChange(card)">
                                     <mat-option disabled selected></mat-option>
-                                    <mat-option *ngFor="let entry of num.stressDist"
-                                        [value]="assign(entry, num.accNoun)">
+                                    <mat-option *ngFor="let entry of card.stressDist"
+                                        [value]="assign(entry, card.accNoun)">
                                         {{entry}}
                                     </mat-option>
 
@@ -36,13 +39,14 @@
 
 
                             </mat-form-field>
-                            <p>{{num.strice2}}</p>
+                            <p>{{card.strice2}}</p>
                         </div>
 
                         <div (mouseover)="displayInfo=true" (mouseout)="displayInfo=false">
                             <div *ngIf="displayInfo">
-                                <p style="color:rgb(15, 51, 117);">Gender: {{num.gender}}; inflection:
-                                    {{num.inflection}}; number: {{num.number}}; declension: {{getDecl(num.declension)}}
+                                <p style="color:rgb(15, 51, 117);">Gender: {{card.gender}}; inflection:
+                                    {{card.inflection}}; number: {{card.number}}; declension:
+                                    {{getDecl(card.declension)}}
                                 </p>
                             </div>
                             <div *ngIf="!displayInfo">
@@ -52,7 +56,7 @@
 
                         <div (mouseover)="displayEng=true" (mouseout)="displayEng=false">
                             <div *ngIf="displayEng">
-                                <p style="color:orange;">{{num.english}}</p>
+                                <p style="color:orange;">{{card.english}}</p>
                             </div>
                             <div *ngIf="!displayEng">
                                 <p>English Translation</p>
@@ -69,20 +73,15 @@
                     </div>
 
                 </mat-card>
-
-
-
             </div>
 
-        
+        </div>
+
+        <div fxFlex="0 1 calc(25% - 32px)">
+
+            <app-progress [numNow]="score" [overall]="update"></app-progress>
+        </div>
+
 
     </div>
-
-    <div fxFlex="0 1 calc(25% - 32px)">
-
-        <app-progress [numNow]="score" [overall]="update"></app-progress>
-    </div>
-
-
-</div>
 </div>
