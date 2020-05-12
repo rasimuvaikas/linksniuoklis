@@ -136,7 +136,6 @@ public class Data {
 
             for (String s : temp.list()) {
 
-                System.out.println(s);
                 stmt.executeUpdate("LOAD DATA LOCAL INFILE '" + getClass().getResource("infl/" + s).toURI().getPath() + "' INTO TABLE nouns CHARACTER SET utf8mb4 lines TERMINATED BY '\r\n'");
 
                 if (s.endsWith("Pl.tsv")) {

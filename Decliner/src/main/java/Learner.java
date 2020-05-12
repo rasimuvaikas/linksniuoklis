@@ -268,7 +268,6 @@ public class Learner extends HttpServlet {
 
 
                         jsb.put("level", rs.getString(j));
-                        System.out.println(jsb.toString());
                     }
 
                     if (!jsb.isEmpty()) {

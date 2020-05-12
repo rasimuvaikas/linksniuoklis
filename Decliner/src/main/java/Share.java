@@ -18,7 +18,7 @@ import java.util.Collections;
 import java.util.regex.Pattern;
 
 /**
- * A class that shares sentence with requested noun forms and information about the user's current learning level
+ * A class that shares sentences with requested noun forms and information about the user's current learning level
  */
 @WebServlet("/Share")
 public class Share extends HttpServlet {
@@ -141,6 +141,7 @@ public class Share extends HttpServlet {
                     }
                 }
 
+                //get declension distractors
                 ArrayList<String> l = new ArrayList<>();
 
                 Declension decl = new Declension();
@@ -155,6 +156,7 @@ public class Share extends HttpServlet {
                 Collections.shuffle(l);
                 JSONArray nounDist = new JSONArray(l);
 
+                //get accentuation distractors
                 ArrayList<String> m = new ArrayList<>();
 
                 Stress str = new Stress();

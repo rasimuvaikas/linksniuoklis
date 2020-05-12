@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class Access {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Access test = new Access();
 
         try {
@@ -28,6 +28,7 @@ public class Access {
 
     /**
      * Remove the first column from the tsv file, leave only Lithuanian + English sentences
+     *
      * @throws IOException
      */
     public void fix() throws IOException {
@@ -36,7 +37,7 @@ public class Access {
         BufferedReader br = new BufferedReader(new InputStreamReader(
                 this.getClass().getResourceAsStream("/" + "lit-eng-tatoeba-by-freq.tsv")));
         String line;
-        while((line = br.readLine()) != null){
+        while ((line = br.readLine()) != null) {
             String[] split = line.split("\\t");
             pw.println(split[1] + "\t" + split[2]);
         }
@@ -48,7 +49,8 @@ public class Access {
     /**
      * Web crawler for automatic morphological text annotation
      * Determines which sentences contain nouns and verbs and can therefore be used for further processing
-     * @param inputFile input files that contains Lithuanian sentences
+     *
+     * @param inputFile  input files that contains Lithuanian sentences
      * @param outputFile a file that sentences that contain nous and verbs are printed to
      * @throws IOException
      * @throws InterruptedException
@@ -61,10 +63,10 @@ public class Access {
         String line;
         int count = 1;
         int l = 1;
-        while((line = br.readLine()) != null) {
+        while ((line = br.readLine()) != null) {
 
             if (l == 1) { //this variable is to be manually incremented to the current tsv file line that has to be read IN CASE there is an unexpected problem with reading
-                            //any of the lines and the programme stops
+                //any of the lines and the programme stops
 
                 String[] split = line.split("\\t");
                 String sent = split[0];
@@ -115,7 +117,6 @@ public class Access {
                         JSONArray pos = ((JSONArray) o).getJSONArray(0); //get the first one as that is most likely the correct annotation
                         if (pos.get(1).toString().substring(0, 1).equals("N")) {
                             noun = true;
-                            System.out.println(pos.toString());
                         }
 
                         if (pos.get(1).toString().substring(0, 1).equals("V")) {
@@ -142,8 +143,7 @@ public class Access {
                     count++;
                 }
 
-            }
-            else{
+            } else {
                 l++;
             }
         }
@@ -155,7 +155,8 @@ public class Access {
 
     /**
      * Web crawler for automatic text accentuation
-     * @param inputFile a file with Lithuanian sentences that need to be accentuated
+     *
+     * @param inputFile  a file with Lithuanian sentences that need to be accentuated
      * @param outputFile a file that accentuated sentences will be printed to
      * @throws IOException
      * @throws InterruptedException
@@ -168,83 +169,81 @@ public class Access {
         String line;
         int count = 1;
         int l = 1;
-        while((line = br.readLine()) != null) {
+        while ((line = br.readLine()) != null) {
             if (l == 1) {//this variable is to be manually incremented to the current tsv file line that has to be read IN CASE there is an unexpected problem with reading
                 //any of the lines and the programme stops
 
-            System.out.println(line);
-            String[] split = line.split("\\t");
-            String sent = split[0];
+                String[] split = line.split("\\t");
+                String sent = split[0];
 
 
-            PrintWriter pw = new PrintWriter(new FileWriter("src/main/resources/" + outputFile, true));
+                PrintWriter pw = new PrintWriter(new FileWriter("src/main/resources/" + outputFile, true));
 
 
-            //connect to the web service
-            URL url = new URL("http://klcdocker.vdu.lt/textaccenter/text-accents");
+                //connect to the web service
+                URL url = new URL("http://klcdocker.vdu.lt/textaccenter/text-accents");
 
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setRequestMethod("POST");
-            connection.setDoOutput(true); // Triggers POST.
-            connection.setRequestProperty("accept", "application/json;charset=utf-8");
-            connection.setRequestProperty("Accept-Charset", "utf-8");
-            connection.setRequestProperty("Content-Type", "text/plain;charset=utf-8");
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                connection.setRequestMethod("POST");
+                connection.setDoOutput(true); // Triggers POST.
+                connection.setRequestProperty("accept", "application/json;charset=utf-8");
+                connection.setRequestProperty("Accept-Charset", "utf-8");
+                connection.setRequestProperty("Content-Type", "text/plain;charset=utf-8");
 
-            OutputStream os = connection.getOutputStream();
+                OutputStream os = connection.getOutputStream();
 
-            os.write(sent.getBytes());
-            os.flush();
-            os.close();
+                os.write(sent.getBytes());
+                os.flush();
+                os.close();
 
 
-            int responseCode = connection.getResponseCode();
+                int responseCode = connection.getResponseCode();
 
-            if (responseCode == HttpURLConnection.HTTP_OK) { //success
-                BufferedReader in = new BufferedReader(new InputStreamReader(
-                        connection.getInputStream()));
-                String inputLine;
-                StringBuffer response = new StringBuffer();
+                if (responseCode == HttpURLConnection.HTTP_OK) { //success
+                    BufferedReader in = new BufferedReader(new InputStreamReader(
+                            connection.getInputStream()));
+                    String inputLine;
+                    StringBuffer response = new StringBuffer();
 
-                while ((inputLine = in.readLine()) != null) {
-                    response.append(inputLine);
-                }
-                in.close();
-
-                JSONObject jO = new JSONObject(response.toString());
-
-                JSONArray jsonArray = jO.getJSONArray("textParts");
-                StringBuilder sB = new StringBuilder();
-                for (Object o : jsonArray) {
-                    if (((JSONObject) o).get("type").equals("WORD") && !((JSONObject) o).get("accentType").equals("NONE")) {
-                        sB.append(((JSONObject) o).get("accented"));
-                    } else if (((JSONObject) o).get("type").equals("SEPARATOR")) {
-                        sB.append(((JSONObject) o).get("string"));
-                    } else {
-                        sB = null;
-                        break;
+                    while ((inputLine = in.readLine()) != null) {
+                        response.append(inputLine);
                     }
-                }
-                if (sB == null) {
-                    continue;
+                    in.close();
+
+                    JSONObject jO = new JSONObject(response.toString());
+
+                    JSONArray jsonArray = jO.getJSONArray("textParts");
+                    StringBuilder sB = new StringBuilder();
+                    for (Object o : jsonArray) {
+                        if (((JSONObject) o).get("type").equals("WORD") && !((JSONObject) o).get("accentType").equals("NONE")) {
+                            sB.append(((JSONObject) o).get("accented"));
+                        } else if (((JSONObject) o).get("type").equals("SEPARATOR")) {
+                            sB.append(((JSONObject) o).get("string"));
+                        } else {
+                            sB = null;
+                            break;
+                        }
+                    }
+                    if (sB == null) {
+                        continue;
+                    } else {
+                        pw.println(sB.toString() + "\t" + line);
+                    }
+
+                    pw.close();
+
                 } else {
-                    pw.println(sB.toString() + "\t" + line);
+                    System.out.println("POST request did not work.");
                 }
 
-                pw.close();
-
+                if (count == 19) {  //can only send post requests for 20 lines at a time
+                    System.out.println("waiting");
+                    TimeUnit.MINUTES.sleep(1);
+                    count = 1;
+                } else {
+                    count++;
+                }
             } else {
-                System.out.println("POST request did not work.");
-            }
-
-            if (count == 19) {  //can only send post requests for 20 lines at a time
-                System.out.println("waiting");
-                TimeUnit.MINUTES.sleep(1);
-                count = 1;
-            } else {
-                count++;
-            }
-        }
-            else{
                 l++;
             }
 
@@ -256,6 +255,7 @@ public class Access {
 
     /**
      * Divide the stressed and annotated sentences into groups based on number and inflection of the nouns they contain
+     *
      * @param inputFile a file that contains stressed and annotated sentences (in resources folder)
      * @throws InterruptedException
      * @throws IOException
@@ -267,9 +267,9 @@ public class Access {
         String line;
         int count = 1;
         int l = 1;
-        while((line = br.readLine()) != null) {
+        while ((line = br.readLine()) != null) {
 
-            if(l==1) { //this variable is to be manually incremented to the current tsv file line that has to be read IN CASE there is an unexpected problem with reading
+            if (l == 1) { //this variable is to be manually incremented to the current tsv file line that has to be read IN CASE there is an unexpected problem with reading
                 //any of the lines and the programme stops
 
                 String[] split = line.split("\\t");
@@ -421,8 +421,7 @@ public class Access {
                 } else {
                     count++;
                 }
-            }
-            else{
+            } else {
                 l++;
             }
 
@@ -436,6 +435,7 @@ public class Access {
 
     /**
      * Align english and Lithuanian OpenSub text files
+     *
      * @throws IOException
      */
     public static void align() throws IOException {
@@ -460,6 +460,7 @@ public class Access {
 
     /**
      * Find sentences longer than 5 words and shorter than 11
+     *
      * @throws IOException
      */
     public static void find() throws IOException {
@@ -471,11 +472,11 @@ public class Access {
         String line;
         int count = 1;
         int l = 1;
-        while((line = lit.readLine()) != null) {
+        while ((line = lit.readLine()) != null) {
 
             String[] split = line.split("\t");
             String[] words = split[0].split("\\s+");
-            if(words.length > 5 && words.length < 11){
+            if (words.length > 5 && words.length < 11) {
                 pw.println(line);
             }
 
@@ -483,7 +484,6 @@ public class Access {
 
         pw.close();
     }
-
 
 
 }

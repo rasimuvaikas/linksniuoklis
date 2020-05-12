@@ -16,6 +16,9 @@ import java.util.ArrayList;
 
 
 @WebServlet("/Score")
+/**
+ * A class that shares a user's current and previous learning sessions' results
+ */
 public class Score extends HttpServlet {
 
     Data data = null;
@@ -276,7 +279,6 @@ public class Score extends HttpServlet {
 
                 result.put("inflections", infl);
                 result.put("declension", dec);
-                System.out.println("score: " + result.toString());
 
                 out.println(result);
                 out.close();

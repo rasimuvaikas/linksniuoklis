@@ -86,8 +86,6 @@ public class Stress {
                     String str = tokenSeq.getString("stressed");
                     double pr = tokenSeq.getDouble("prob");
 
-                    System.out.println("str: " + str);
-
                     if (!org.toString().equals(str)) {
                         ArrayList<String> aL = new ArrayList<>();
                         String[] array = str.substring(1, str.length() - 1).split(", "); //put the sequence into an arraylist
@@ -464,8 +462,6 @@ public class Stress {
      * @return
      */
     public String generateDistractor(ArrayList<String> dist, String cleanWord) {
-        System.out.println("disttostring: " + dist.toString());
-        System.out.println("cleanWord: " + cleanWord);
 
         findSyllables(cleanWord, true); //generate count arraylist that contains the indices of consonants that go inbetween tokens (vowels or diphthongs)
         String result = "";
@@ -542,7 +538,6 @@ public class Stress {
         if (Character.isUpperCase(cleanWord.charAt(0))) {
             result = result.substring(0, 1).toUpperCase() + result.substring(1);
         }
-        System.out.println(result);
         return result;
     }
 
