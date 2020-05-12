@@ -48,6 +48,8 @@ public class Access {
     /**
      * Web crawler for automatic morphological text annotation
      * Determines which sentences contain nouns and verbs and can therefore be used for further processing
+     * @param inputFile input files that contains Lithuanian sentences
+     * @param outputFile a file that sentences that contain nous and verbs are printed to
      * @throws IOException
      * @throws InterruptedException
      */
@@ -153,6 +155,8 @@ public class Access {
 
     /**
      * Web crawler for automatic text accentuation
+     * @param inputFile a file with Lithuanian sentences that need to be accentuated
+     * @param outputFile a file that accentuated sentences will be printed to
      * @throws IOException
      * @throws InterruptedException
      */
@@ -252,6 +256,7 @@ public class Access {
 
     /**
      * Divide the stressed and annotated sentences into groups based on number and inflection of the nouns they contain
+     * @param inputFile a file that contains stressed and annotated sentences (in resources folder)
      * @throws InterruptedException
      * @throws IOException
      */

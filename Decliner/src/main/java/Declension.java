@@ -1,6 +1,4 @@
 import java.io.*;
-import java.net.URISyntaxException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -646,89 +644,4 @@ public class Declension {
 
     }
 
-    /**
-     * Find declensions of every noun in every inflection/number file and print it into separate tsv files
-     */
-    public void createDeclensionsFile(){
-        URL url = getClass().getResource("pos");
-        System.out.println(url.toString());
-        File temp = null;
-        try {
-            temp = new File(url.toURI());
-
-            for (String s : temp.list()) {
-
-                System.out.println(s);
-
-                BufferedReader br = new BufferedReader(new FileReader(
-                        getClass().getResource("pos/" + s).toURI().getPath()));
-
-                String line;
-                while((line = br.readLine()) != null){
-                    String[] split = line.split("\t");
-                    Noun n = createNoun(split[3], split[5], split[6]);
-                    String add = this.findDeclension(n);
-
-                    PrintWriter pw = null;
-
-                    if (n.getNumber().equals("s")) {
-                        if (n.getInfl().equals("n")) {
-                            pw = new PrintWriter(new FileWriter("src/main/resources/decl/nominativeDeclSg.tsv", true));
-                            pw.println(line + "\t" + add);
-                            pw.close();
-                        } else if (n.getInfl().equals("g")) {
-                            pw = new PrintWriter(new FileWriter("src/main/resources/decl/genitiveDeclSg.tsv", true));
-                            pw.println(line + "\t" + add);
-                            pw.close();
-                        } else if (n.getInfl().equals("d")) {
-                            pw = new PrintWriter(new FileWriter("src/main/resources/decl/dativeDeclSg.tsv", true));
-                            pw.println(line + "\t" + add);
-                            pw.close();
-                        } else if (n.getInfl().equals("a")) {
-                            pw = new PrintWriter(new FileWriter("src/main/resources/decl/accusativeDeclSg.tsv", true));
-                            pw.println(line + "\t" + add);
-                            pw.close();
-                        } else if (n.getInfl().equals("i")) {
-                            pw = new PrintWriter(new FileWriter("src/main/resources/decl/instrumentalDeclSg.tsv", true));
-                            pw.println(line + "\t" + add);
-                            pw.close();
-                        } else if (n.getInfl().equals("l")) {
-                            pw = new PrintWriter(new FileWriter("src/main/resources/decl/locativeDeclSg.tsv", true));
-                            pw.println(line + "\t" + add);
-                            pw.close();
-                        }
-                    } else if (n.getNumber().equals("p")) {
-                        if (n.getInfl().equals("n")) {
-                            pw = new PrintWriter(new FileWriter("src/main/resources/decl/nominativeDeclPl.tsv", true));
-                            pw.println(line + "\t" + add);
-                            pw.close();
-                        } else if (n.getInfl().equals("g")) {
-                            pw = new PrintWriter(new FileWriter("src/main/resources/decl/genitiveDeclPl.tsv", true));
-                            pw.println(line + "\t" + add);
-                            pw.close();
-                        } else if (n.getInfl().equals("d")) {
-                            pw = new PrintWriter(new FileWriter("src/main/resources/decl/dativeDeclPl.tsv", true));
-                            pw.println(line + "\t" + add);
-                            pw.close();
-                        } else if (n.getInfl().equals("a")) {
-                            pw = new PrintWriter(new FileWriter("src/main/resources/decl/accusativeDeclPl.tsv", true));
-                            pw.println(line + "\t" + add);
-                            pw.close();
-                        } else if (n.getInfl().equals("i")) {
-                            pw = new PrintWriter(new FileWriter("src/main/resources/decl/instrumentalDeclPl.tsv", true));
-                            pw.println(line + "\t" + add);
-                            pw.close();
-                        } else if (n.getInfl().equals("l")) {
-                            pw = new PrintWriter(new FileWriter("src/main/resources/decl/locativeDeclPl.tsv", true));
-                            pw.println(line + "\t" + add);
-                            pw.close();
-                        }
-                    }
-                }
-
-            }
-        } catch (URISyntaxException | IOException e) {
-            System.out.println(e.getMessage());
-        }
-    }
 }
