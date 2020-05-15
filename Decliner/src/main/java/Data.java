@@ -14,7 +14,7 @@ public class Data {
     public static void main(String[] args) {
         Data d = new Data();
         d.fillTables();
-        d.model();
+        //d.model();
     }
 
 
@@ -32,8 +32,10 @@ public class Data {
             //connect to mysql service using a properties file
             ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
             InputStream stream = classLoader.getResourceAsStream("dbconfig.properties");
+
             Properties prop = new Properties ();
             prop.load(stream);
+            System.out.println("found properties");
             String driver = (String) prop.get("db.driver");
             String url = (String) prop.get("db.url");
             String username = (String) prop.get("db.username");
@@ -47,6 +49,7 @@ public class Data {
 
             conn = DriverManager.getConnection(url, info);
             stmt = conn.createStatement();
+            System.out.println("connected");
 
         } catch (SQLException | ClassNotFoundException | FileNotFoundException e) {
             e.printStackTrace();
@@ -69,7 +72,7 @@ public class Data {
             String tokenSeq = "CREATE TABLE IF NOT EXISTS tokenSeq" +
                     "(clean NVARCHAR(100), " +
                     " stressed NVARCHAR(100), " +
-                    " prob FLOAT) ";
+                    " prob FLOAT) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci";
 
             stmt.executeUpdate(tokenSeq);
 
@@ -83,14 +86,15 @@ public class Data {
                     " stressed NVARCHAR(100), " +
                     " first FLOAT, " +
                     " middle FLOAT, " +
-                    " last FLOAT) ";
+                    " last FLOAT) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci";
 
             stmt.executeUpdate(conditionalProb);
 
             BufferedReader br = new BufferedReader(new InputStreamReader(
-                    this.getClass().getResourceAsStream("/stats/conditionalProbabilities.tsv")));
+                    this.getClass().getResourceAsStream("/stats/conditionalProbabilities.tsv"), "UTF8"));
             String line;
             while ((line = br.readLine()) != null) {
+
                 String[] split = line.split("\t");
                 double first = 0.0;
                 double middle = 0.0;
@@ -330,10 +334,15 @@ public class Data {
             ResultSet check = stmt.executeQuery("SELECT count(*) FROM learnermodel where username = '" + user +"' COLLATE utf8mb4_bin");
             check.next();
             if(check.getInt("count(*)") == 0) {
-                String sql = "INSERT INTO learnermodel VALUES('" + user + "', null, null, null, null, null, null, null, null, null, null, null, null)";
-                stmt.executeUpdate(sql);
+                String sql = "INSERT INTO learnermodel VALUES(?, null, null, null, null, null, null, null, null, null, null, null, null)";
+                pstmt = conn.prepareStatement(sql);
+                pstmt.setString(1, user);
+                pstmt.executeUpdate();
 
-                stmt.executeUpdate("INSERT INTO declensions VALUES('" + user + "', 0, 0, 0, 0, 0, 0, 0, 0, 0)");
+                String sql2 = "INSERT INTO declensions VALUES(?, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)";
+                pstmt = conn.prepareStatement(sql2);
+                pstmt.setString(1, user);
+                pstmt.executeUpdate();
 
             }
         }

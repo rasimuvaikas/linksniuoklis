@@ -147,6 +147,10 @@ export class DeclineComponent implements OnInit {
    */
   onChange(sentence: any) {
     if (this.correct == 1) {
+      this.answer = ""; //reset answer
+      this.count = 0; //reset the counter
+      this.displayAnswer = false; //reset answer display boolean
+
       this.score = this.score + 1;
       this.answered = true;
 
@@ -351,6 +355,7 @@ export class DeclineComponent implements OnInit {
     this.user.currentName.subscribe(username => this.username = username); //get username
 
     this.answered = false;
+    this.show = false;
 
     this.correct = 3; //reset correct so that neither 'correct' nor 'incorrect' would be displayed
 

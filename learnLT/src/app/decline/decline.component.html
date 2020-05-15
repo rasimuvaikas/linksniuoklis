@@ -40,7 +40,7 @@
 
                             <div *ngIf="!answered">
                                 <div style="display:flex; justify-content: center; align-items: center">
-                                    <p>{{card.strice1}}</p>
+                                    <p style="margin-left: 10px;">{{card.strice1}} </p>
                                     <mat-form-field>
 
 
@@ -56,7 +56,7 @@
 
 
                                     </mat-form-field>
-                                    <p>{{card.strice2}}</p>
+                                    <p style="margin-right: 10px;"> {{card.strice2}}</p>
                                 </div>
                             </div>
 
@@ -114,14 +114,14 @@
                         <mat-card-content>
                             <div *ngIf="!answered">
                                 <div style="display:flex; justify-content: center; align-items: center">
-                                    <p>{{card.strice1}}</p>
+                                    <p>{{card.strice1}} </p>
                                     <mat-form-field>
                                         <mat-label>{{card.lemma}}</mat-label>
-                                        <input matInput [(ngModel)]="answer">
+                                        <input matInput maxlength="30" [(ngModel)]="answer">
                                         <mat-error *ngIf="answer!=card.noun">Try again!</mat-error>
 
                                     </mat-form-field>
-                                    <p>{{card.strice2}}</p>
+                                    <p> {{card.strice2}}</p>
                                 </div>
                             </div>
                             <div *ngIf="answered">

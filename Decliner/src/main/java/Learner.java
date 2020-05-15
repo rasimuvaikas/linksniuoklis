@@ -53,14 +53,19 @@ public class Learner extends HttpServlet {
         request.setCharacterEncoding("utf-8");
 
         String name = request.getParameter("username");
+        System.out.println("user " + name);
 
         ResultSet rs = data.getModel(name);
         ResultSet rsDecl = data.getDecls(name);
+
+        System.out.println("rs: " + rs.toString());
 
 
         try {
 
             if (!rs.next()) {
+
+                System.out.println("nėra");
 
                 data.setRecord(name);
                 response.setCharacterEncoding("UTF-8");
@@ -83,6 +88,7 @@ public class Learner extends HttpServlet {
 
             } else {
 
+                System.out.println("yra");
 
                 ResultSetMetaData rsmd = rs.getMetaData();
 
@@ -100,6 +106,7 @@ public class Learner extends HttpServlet {
                 for(int k = 2; k < 11; k++){
 
                     if(rsDecl.getShort(k) == 1){
+                        System.out.println(rsmdDecl.getColumnLabel(k));
                         aL.add(rsmdDecl.getColumnLabel(k));
                     }
                 }
@@ -151,6 +158,8 @@ public class Learner extends HttpServlet {
 
                 } while (rs.next());
 
+                System.out.println("json array pirmiausia" + jsonArray.toString());
+
                 if(!jsonArray.isEmpty()){
                     out.println(jsonArray);
                 }
@@ -165,6 +174,8 @@ public class Learner extends HttpServlet {
                     jsonArray.put(jsb);
                     out.println(jsonArray);
                 }
+
+                System.out.println("sending: " + jsonArray.toString());
 
 
                 out.close();
@@ -214,6 +225,7 @@ public class Learner extends HttpServlet {
             js = ((JSONObject) o).getJSONArray("declensions");
             declensions = new ArrayList<String>();
             for (int i=0; i< js.length(); i++){
+                System.out.println("decl" + js.getString(i));
                 declensions.add(js.getString(i));
             }
 

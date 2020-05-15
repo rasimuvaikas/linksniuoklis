@@ -8,7 +8,7 @@
         <mat-card-content>
             <div class="centreIn">
                 <form ngNativeValidate #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)">
-                    <input placeholder="Enter username" type="text" name="username" ngModel required>
+                    <input placeholder="Enter username" type="text" maxlength="30" name="username" ngModel required>
                     <br>
                     <br>
 

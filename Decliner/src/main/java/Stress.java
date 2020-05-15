@@ -25,8 +25,8 @@ public class Stress {
         //s.findPatterns(s.findSyllables("slenksčiaìs", false));
         try {
             //s.mapIt();
-            for (ArrayList<String> a : s.findDistractors("ánglų")) {
-                s.generateDistractor(a, "anglų");
+            for (ArrayList<String> a : s.findDistractors("rỹtą")) {
+                System.out.println(s.generateDistractor(a, "rytą"));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -83,7 +83,9 @@ public class Stress {
         try {
             if (tokenSeq.next()) {
                 do {
+
                     String str = tokenSeq.getString("stressed");
+                    System.out.println(str);
                     double pr = tokenSeq.getDouble("prob");
 
                     if (!org.toString().equals(str)) {
@@ -538,6 +540,7 @@ public class Stress {
         if (Character.isUpperCase(cleanWord.charAt(0))) {
             result = result.substring(0, 1).toUpperCase() + result.substring(1);
         }
+
         return result;
     }
 

@@ -47,8 +47,6 @@ export class BothComponent implements OnInit {
 
   time: Date;
 
-  answered: boolean;
-
   advanced: Level[];
   intermediate: Level[];
   beginner: Level[];
@@ -260,7 +258,6 @@ export class BothComponent implements OnInit {
   onChangeDecl(sentence: any) {
     if (this.correct == 1) {
       this.score = this.score + 1;
-      this.answered = true;
       this.model.sendScore(this.score);
       this.advance(sentence);
 
@@ -292,6 +289,10 @@ export class BothComponent implements OnInit {
    */
   onChangeStress(sentence: any) {
     if (this.correct == 1) {
+      this.answer = ""; //reset answer
+      this.count = 0; //reset the counter
+      this.displayAnswer = false; //reset answer display boolean
+
       this.score = this.score + 1;
       this.model.sendScore(this.score);
       this.advance(sentence);
@@ -332,7 +333,6 @@ export class BothComponent implements OnInit {
       this.displayAnswer = false; //reset answer display boolean
       this.score = this.score + 1;
       this.model.sendScore(this.score);
-      this.answered = true;
       this.advance(sentence);
 
       var send: Score = {
@@ -370,8 +370,7 @@ export class BothComponent implements OnInit {
     this.model.scTotal.subscribe(data => this.update = data);
 
     this.correct = 3; //reset correct so that neither 'correct' nor 'incorrect' would be displayed
-
-    this.answered = false; 
+    this.show = false;
 
 
 
