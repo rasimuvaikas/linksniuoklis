@@ -285,6 +285,10 @@ public class Declension {
                 if (rqrd.equals("n")) {
                     if (lemma.endsWith("as")) {
                         noun = lemma.substring(0, lemma.length() - 2) + "ai";
+                    } else if(lemma.endsWith("ai")){
+                        noun = lemma;
+                    } else if(lemma.endsWith("ūs")){
+                        noun = lemma;
                     } else if (lemma.equals("šuo")) {
                         noun = "šunys";
                     } else if (lemma.equals("mėnuo")) {
@@ -317,6 +321,10 @@ public class Declension {
                 } else if (rqrd.equals("g")) {
                     if (lemma.endsWith("as")) {
                         noun = lemma.substring(0, lemma.length() - 2) + "ų";
+                    } else if(lemma.endsWith("ai")){
+                        noun = lemma.substring(0, lemma.length() - 2) + "ų";
+                    } else if(lemma.endsWith("ūs")){
+                        noun = lemma.substring(0, lemma.length() - 2) + "ų";
                     } else if (lemma.equals("šuo")) {
                         noun = "šunų";
                     } else if (lemma.equals("mėnuo")) {
@@ -345,6 +353,10 @@ public class Declension {
                 } else if (rqrd.equals("d")) {
                     if (lemma.endsWith("as")) {
                         noun = lemma.substring(0, lemma.length() - 2) + "ams";
+                    } else if(lemma.endsWith("ai")){
+                        noun = lemma.substring(0, lemma.length() - 2) + "ams";
+                    } else if(lemma.endsWith("ūs")){
+                        noun = lemma.substring(0, lemma.length() - 2) + "ums";
                     } else if (lemma.equals("šuo")) {
                         noun = "šunims";
                     } else if (lemma.equals("mėnuo")) {
@@ -377,6 +389,10 @@ public class Declension {
                 } else if (rqrd.equals("a")) {
                     if (lemma.endsWith("as")) {
                         noun = lemma.substring(0, lemma.length() - 2) + "us";
+                    } else if(lemma.endsWith("ai")){
+                        noun = lemma.substring(0, lemma.length() - 2) + "us";
+                    } else if(lemma.endsWith("ūs")){
+                        noun = lemma.substring(0, lemma.length() - 2) + "us";
                     } else if (lemma.equals("šuo")) {
                         noun = "šunis";
                     } else if (lemma.equals("mėnuo")) {
@@ -405,6 +421,10 @@ public class Declension {
                 } else if (rqrd.equals("i")) {
                     if (lemma.endsWith("as")) {
                         noun = lemma.substring(0, lemma.length() - 2) + "ais";
+                    } else if(lemma.endsWith("ai")){
+                        noun = lemma.substring(0, lemma.length() - 2) + "ais";
+                    } else if(lemma.endsWith("ūs")){
+                        noun = lemma.substring(0, lemma.length() - 2) + "umis";
                     } else if (lemma.equals("šuo")) {
                         noun = "šunimis";
                     } else if (lemma.equals("mėnuo")) {
@@ -437,6 +457,10 @@ public class Declension {
                 } else if (rqrd.equals("l")) {
                     if (lemma.endsWith("as")) {
                         noun = lemma.substring(0, lemma.length() - 2) + "uose";
+                    } else if(lemma.endsWith("ai")){
+                        noun = lemma.substring(0, lemma.length() - 2) + "uose";
+                    } else if(lemma.endsWith("ūs")){
+                        noun = lemma.substring(0, lemma.length() - 2) + "ūse";
                     } else if (lemma.equals("šuo")) {
                         noun = "šunyse";
                     } else if (lemma.equals("mėnuo")) {
@@ -469,6 +493,12 @@ public class Declension {
                 if (rqrd.equals("n")) {
                     if (lemma.endsWith("a")) {
                         noun = lemma.substring(0, lemma.length() - 1) + "os";
+                    } else if(lemma.endsWith("os")){
+                        noun = lemma;
+                    } else if(lemma.endsWith("ės")){
+                        noun = lemma;
+                    } else if(lemma.endsWith("ys")){
+                        noun = lemma;
                     } else if (lemma.equals("duktė")) {
                         noun = lemma.substring(0, lemma.length() - 1) + "erys";
                     } else if (lemma.equals("sesuo")) {
@@ -483,11 +513,17 @@ public class Declension {
                 } else if (rqrd.equals("g")) {
                     if (lemma.endsWith("a")) {
                         noun = lemma.substring(0, lemma.length() - 1) + "ų";
-                    } else if (lemma.equals("grindys") || lemma.equals("durys")) {
+                    } else if(lemma.endsWith("os")){
                         noun = lemma.substring(0, lemma.length() - 2) + "ų";
-                    } else if (lemma.equals("sultys")) {
+                    } else if(lemma.endsWith("tės")){
                         noun = lemma.substring(0, lemma.length() - 3) + "čių";
-                    } else if (lemma.equals("lubos")) {
+                    } else if(lemma.endsWith("dės")){
+                        noun = lemma.substring(0, lemma.length() - 3) + "džių";
+                    }  else if(lemma.endsWith("ės")){
+                        noun = lemma.substring(0, lemma.length() - 2) + "ių";
+                    } else if(lemma.endsWith("tys")){
+                        noun = lemma.substring(0, lemma.length() - 3) + "čių";
+                    }  else if(lemma.endsWith("ys")){
                         noun = lemma.substring(0, lemma.length() - 2) + "ų";
                     } else if (lemma.equals("naktis")) {
                         noun = lemma.substring(0, lemma.length() - 2) + "ų";
@@ -515,12 +551,12 @@ public class Declension {
                 } else if (rqrd.equals("d")) {
                     if (lemma.endsWith("a")) {
                         noun = lemma.substring(0, lemma.length() - 1) + "oms";
-                    } else if (lemma.equals("grindys") || lemma.equals("durys")) {
-                        noun = lemma.substring(0, lemma.length() - 2) + "ims";
-                    } else if (lemma.equals("sultys")) {
-                        noun = lemma.substring(0, lemma.length() - 3) + "tims";
-                    } else if (lemma.equals("lubos")) {
+                    } else if(lemma.endsWith("os")){
                         noun = lemma.substring(0, lemma.length() - 2) + "oms";
+                    } else if(lemma.endsWith("ės")){
+                        noun = lemma.substring(0, lemma.length() - 2) + "ėms";
+                    } else if(lemma.endsWith("ys")){
+                        noun = lemma.substring(0, lemma.length() - 2) + "ims";
                     } else if (lemma.equals("duktė")) {
                         noun = lemma.substring(0, lemma.length() - 1) + "erims";
                     } else if (lemma.equals("sesuo")) {
@@ -535,12 +571,12 @@ public class Declension {
                 } else if (rqrd.equals("a")) {
                     if (lemma.endsWith("a")) {
                         noun = lemma.substring(0, lemma.length() - 1) + "as";
-                    } else if (lemma.equals("grindys") || lemma.equals("durys")) {
-                        noun = lemma.substring(0, lemma.length() - 2) + "is";
-                    } else if (lemma.equals("sultys")) {
-                        noun = lemma.substring(0, lemma.length() - 3) + "tis";
-                    } else if (lemma.equals("lubos")) {
+                    } else if(lemma.endsWith("os")){
                         noun = lemma.substring(0, lemma.length() - 2) + "as";
+                    } else if(lemma.endsWith("ės")){
+                        noun = lemma.substring(0, lemma.length() - 2) + "es";
+                    } else if(lemma.endsWith("ys")){
+                        noun = lemma.substring(0, lemma.length() - 2) + "is";
                     } else if (lemma.equals("duktė")) {
                         noun = lemma.substring(0, lemma.length() - 1) + "eris";
                     } else if (lemma.equals("sesuo")) {
@@ -555,12 +591,12 @@ public class Declension {
                 } else if (rqrd.equals("i")) {
                     if (lemma.endsWith("a")) {
                         noun = lemma.substring(0, lemma.length() - 1) + "omis";
-                    } else if (lemma.equals("grindys") || lemma.equals("durys")) {
-                        noun = lemma.substring(0, lemma.length() - 2) + "imis";
-                    } else if (lemma.equals("sultys")) {
-                        noun = lemma.substring(0, lemma.length() - 3) + "imis";
-                    } else if (lemma.equals("lubos")) {
+                    } else if(lemma.endsWith("os")){
                         noun = lemma.substring(0, lemma.length() - 2) + "omis";
+                    } else if(lemma.endsWith("ės")){
+                        noun = lemma.substring(0, lemma.length() - 2) + "ėmis";
+                    } else if(lemma.endsWith("ys")){
+                        noun = lemma.substring(0, lemma.length() - 2) + "imis";
                     } else if (lemma.equals("duktė")) {
                         noun = lemma.substring(0, lemma.length() - 1) + "erimis";
                     } else if (lemma.equals("sesuo")) {
@@ -575,12 +611,12 @@ public class Declension {
                 } else if (rqrd.equals("l")) {
                     if (lemma.endsWith("a")) {
                         noun = lemma.substring(0, lemma.length() - 1) + "ose";
-                    } else if (lemma.equals("grindys") || lemma.equals("durys")) {
-                        noun = lemma.substring(0, lemma.length() - 2) + "yse";
-                    } else if (lemma.equals("sultys")) {
-                        noun = lemma.substring(0, lemma.length() - 3) + "tyse";
-                    } else if (lemma.equals("lubos")) {
+                    } else if(lemma.endsWith("os")){
                         noun = lemma.substring(0, lemma.length() - 2) + "ose";
+                    } else if(lemma.endsWith("ės")){
+                        noun = lemma.substring(0, lemma.length() - 2) + "ėse";
+                    } else if(lemma.endsWith("ys")){
+                        noun = lemma.substring(0, lemma.length() - 2) + "yse";
                     } else if (lemma.equals("duktė")) {
                         noun = lemma.substring(0, lemma.length() - 1) + "eryse";
                     } else if (lemma.equals("sesuo")) {

@@ -3,109 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="7b67ce0f-6c65-4b18-830a-95ceb687dbd7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Learner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Learner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Stress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Stress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/infl/nominativePl.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/infl/nominativePl.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/infl/nominativeSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/infl/nominativeSg.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Declension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Declension.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Share.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Share.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Decliner.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Decliner.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/Access.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/Access.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/Align.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/Data.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/Declension.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/Declension.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/Learner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/Learner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/OP/OPaccusativePl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/OP/OPaccusativeSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/OP/OPdativePl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/OP/OPdativeSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/OP/OPgenitivePl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/OP/OPgenitiveSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/OP/OPinstrumentalPl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/OP/OPinstrumentalSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/OP/OPlocativePl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/OP/OPlocativeSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/OP/OPnominativePl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/OP/OPnominativeSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/Score.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/Score.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/Share.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/Share.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/Stress$Pair.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/Stress$Pair.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/Stress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/Stress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/decl/accusativeDeclPl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/decl/accusativeDeclSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/decl/dativeDeclPl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/decl/dativeDeclSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/decl/genitiveDeclPl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/decl/genitiveDeclSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/decl/instrumentalDeclPl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/decl/instrumentalDeclSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/decl/locativeDeclPl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/decl/locativeDeclSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/decl/nominativeDeclPl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/decl/nominativeDeclSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/pos/accusativePl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/pos/accusativeSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/pos/dativePl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/pos/dativeSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/pos/genitivePl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/pos/genitiveSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/pos/instrumentalPl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/pos/instrumentalSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/pos/locativePl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/pos/locativeSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/pos/nominativePl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/pos/nominativeSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Access.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Access.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Align.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Data.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Declension.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Declension.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Learner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Learner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/OP/OPaccusativePl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/OP/OPaccusativeSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/OP/OPdativePl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/OP/OPdativeSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/OP/OPgenitivePl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/OP/OPgenitiveSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/OP/OPinstrumentalPl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/OP/OPinstrumentalSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/OP/OPlocativePl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/OP/OPlocativeSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/OP/OPnominativePl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/OP/OPnominativeSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Score.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Score.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Share.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Share.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Stress$Pair.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Stress$Pair.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Stress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Stress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/decl/accusativeDeclPl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/decl/accusativeDeclSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/decl/dativeDeclPl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/decl/dativeDeclSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/decl/genitiveDeclPl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/decl/genitiveDeclSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/decl/instrumentalDeclPl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/decl/instrumentalDeclSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/decl/locativeDeclPl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/decl/locativeDeclSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/decl/nominativeDeclPl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/decl/nominativeDeclSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/infl/nominativePl.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/infl/nominativePl.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/infl/nominativeSg.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/infl/nominativeSg.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pos/accusativePl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pos/accusativeSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pos/dativePl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pos/dativeSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pos/genitivePl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pos/genitiveSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pos/instrumentalPl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pos/instrumentalSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pos/locativePl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pos/locativeSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pos/nominativePl.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pos/nominativeSg.tsv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../learnLT/src/app/both/both.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../learnLT/src/app/both/both.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../learnLT/src/app/decline/decline.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../learnLT/src/app/decline/decline.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../learnLT/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../learnLT/src/app/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../learnLT/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../learnLT/src/app/login/login.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,6 +183,7 @@
       <workItem from="1589287884126" duration="45000" />
       <workItem from="1589489653403" duration="212000" />
       <workItem from="1589529202519" duration="5970000" />
+      <workItem from="1589557549774" duration="1922000" />
     </task>
     <servers />
   </component>
@@ -301,22 +206,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="501" y="157" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585169540376" />
-    <state width="1493" height="139" key="GridCell.Tab.0.bottom" timestamp="1589539433479">
+    <state width="1493" height="139" key="GridCell.Tab.0.bottom" timestamp="1589558648151">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="139" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589539433479" />
-    <state width="1493" height="139" key="GridCell.Tab.0.center" timestamp="1589539433478">
+    <state width="1493" height="139" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589558648151" />
+    <state width="1493" height="139" key="GridCell.Tab.0.center" timestamp="1589558648151">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="139" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589539433478" />
-    <state width="1493" height="139" key="GridCell.Tab.0.left" timestamp="1589539433478">
+    <state width="1493" height="139" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589558648151" />
+    <state width="1493" height="139" key="GridCell.Tab.0.left" timestamp="1589558648151">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="139" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589539433478" />
-    <state width="1493" height="139" key="GridCell.Tab.0.right" timestamp="1589539433478">
+    <state width="1493" height="139" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589558648151" />
+    <state width="1493" height="139" key="GridCell.Tab.0.right" timestamp="1589558648151">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="139" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589539433478" />
+    <state width="1493" height="139" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589558648151" />
     <state x="299" y="70" key="Maven.ArtifactSearchDialog" timestamp="1585170845296">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
