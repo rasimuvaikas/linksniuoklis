@@ -334,7 +334,7 @@ public class Share extends HttpServlet {
 
                 jsb.put("inflection", inflection);
 
-                jsb.put("total",  rs.getInt(4));
+                jsb.put("total",  rs.getInt(4)); //number of exercises completed in total
 
                 jsb.put("level", rs.getString(3));
 
@@ -349,7 +349,7 @@ public class Share extends HttpServlet {
                         countDecl.next();
                         int count = countDecl.getInt("count(*)");
                         temp.put(rsmd.getColumnLabel(i), rs.getInt(i));
-                        temp.put("count", count);
+                        temp.put("count", count); //number of sentences with this declension
                         decls.put(temp);
                     }
 
@@ -360,7 +360,7 @@ public class Share extends HttpServlet {
                 ResultSet declensions = data.getDecls(inflection, num);
                 declensions.next();
 
-                jsb.put("total_declensions", declensions.getInt("count(distinct pattern)"));
+                jsb.put("total_declensions", declensions.getInt("count(distinct pattern)")); //the number of distinct declensions that appear in this inflection
 
 
 

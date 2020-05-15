@@ -25,8 +25,8 @@ public class Stress {
         //s.findPatterns(s.findSyllables("slenksčiaìs", false));
         try {
             //s.mapIt();
-            for (ArrayList<String> a : s.findDistractors("žinių̃")) {
-                System.out.println(s.generateDistractor(a, "žinių"));
+            for (ArrayList<String> a : s.findDistractors("žuvìs")) {
+                System.out.println(s.generateDistractor(a, "žuvis"));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -320,7 +320,6 @@ public class Stress {
                         }
                     }
 
-                    System.out.println("add");
                     if (result.size() < 2 && !add.equals(org) && !result.contains(add) && !add.equals(clean)) {
                         result.add(add);
                     }
@@ -390,56 +389,55 @@ public class Stress {
             //last resort
             else {
 
+                ArrayList<String> a = new ArrayList<>(Arrays.asList("à", "á", "ã"));
+                ArrayList<String> e = new ArrayList<>(Arrays.asList("è", "é", "ẽ"));
+                ArrayList<String> i = new ArrayList<>(Arrays.asList("ì", "í", "ĩ"));
+                ArrayList<String> u = new ArrayList<>(Arrays.asList("ù", "ú", "ũ"));
+                ArrayList<String> o = new ArrayList<>(Arrays.asList("ò", "ó", "õ"));
+                ArrayList<String> y = new ArrayList<>(Arrays.asList("ý", "ỹ"));
+
                 System.out.println("reached last stage");
                 while (result.size() < 2) {
-
-                    ArrayList<String> a = new ArrayList<>(Arrays.asList("à", "á", "ã"));
-                    ArrayList<String> e = new ArrayList<>(Arrays.asList("è", "é", "ẽ"));
-                    ArrayList<String> i = new ArrayList<>(Arrays.asList("ì", "í", "ĩ"));
-                    ArrayList<String> u = new ArrayList<>(Arrays.asList("ù", "ú", "ũ"));
-                    ArrayList<String> o = new ArrayList<>(Arrays.asList("ò", "ó", "õ"));
-                    ArrayList<String> y = new ArrayList<>(Arrays.asList("ý", "ỹ"));
 
                     for (int k = 0; k < clean.size(); k++) {
                         String token = clean.get(k);
                         String acc = "";
                         for (int j = 0; j < token.length(); j++) {
-                            System.out.println(token.charAt(j));
                             switch (token.charAt(j)) {
                                 case 'a':
                                     if (a.size() > 0) {
                                         acc = token.replace(token.charAt(j), a.get(0).charAt(0));
-                                        a.remove(a.get(0));
+                                        a.remove(0);
                                         break;
                                     }
                                 case 'e':
                                     if (e.size() > 0) {
                                         acc = token.replace(token.charAt(j), e.get(0).charAt(0));
-                                        e.remove(a.get(0));
+                                        e.remove(0);
                                         break;
                                     }
                                 case 'i':
                                     if (i.size() > 0) {
                                         acc = token.replace(token.charAt(j), i.get(0).charAt(0));
-                                        i.remove(a.get(0));
+                                        i.remove(0);
                                         break;
                                     }
                                 case 'u':
                                     if (u.size() > 0) {
                                         acc = token.replace(token.charAt(j), u.get(0).charAt(0));
-                                        u.remove(a.get(0));
+                                        u.remove(0);
                                         break;
                                     }
                                 case 'o':
                                     if (o.size() > 0) {
                                         acc = token.replace(token.charAt(j), o.get(0).charAt(0));
-                                        o.remove(a.get(0));
+                                        o.remove(0);
                                         break;
                                     }
                                 case 'y':
                                     if (y.size() > 0) {
                                         acc = token.replace(token.charAt(j), y.get(0).charAt(0));
-                                        y.remove(a.get(0));
+                                        y.remove(0);
                                         break;
                                     }
                             }
@@ -453,6 +451,7 @@ public class Stress {
                                         add.add(clean.get(h));
                                     }
                                 }
+
                                 if (result.size() < 2 && !add.equals(org) && !result.contains(add) && !add.equals(clean)) {
                                     result.add(add);
                                 }

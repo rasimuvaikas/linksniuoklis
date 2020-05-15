@@ -103,7 +103,7 @@ public class Learner extends HttpServlet {
                 rsDecl.next();
 
                 ArrayList<String> aL = new ArrayList<>();
-                for(int k = 2; k < 11; k++){
+                for(int k = 2; k < 12; k++){
 
                     if(rsDecl.getShort(k) == 1){
                         System.out.println(rsmdDecl.getColumnLabel(k));

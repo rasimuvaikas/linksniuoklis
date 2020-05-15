@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="7b67ce0f-6c65-4b18-830a-95ceb687dbd7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Learner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Learner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Share.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Share.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Stress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Stress.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Decliner.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Decliner.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/Declension.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Decliner/WEB-INF/classes/Declension.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Declension.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Declension.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Data.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Learner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Learner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Stress$Pair.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Stress$Pair.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Stress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Stress.class" afterDir="false" />
     </list>
@@ -182,7 +185,8 @@
       <workItem from="1589287884126" duration="45000" />
       <workItem from="1589489653403" duration="212000" />
       <workItem from="1589529202519" duration="5970000" />
-      <workItem from="1589557549774" duration="4402000" />
+      <workItem from="1589557549774" duration="5458000" />
+      <workItem from="1589565563467" duration="3792000" />
     </task>
     <servers />
   </component>
@@ -205,22 +209,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="501" y="157" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585169540376" />
-    <state width="1493" height="139" key="GridCell.Tab.0.bottom" timestamp="1589562372031">
+    <state width="1493" height="139" key="GridCell.Tab.0.bottom" timestamp="1589567640328">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="139" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589562372031" />
-    <state width="1493" height="139" key="GridCell.Tab.0.center" timestamp="1589562372031">
+    <state width="1493" height="139" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589567640328" />
+    <state width="1493" height="139" key="GridCell.Tab.0.center" timestamp="1589567640327">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="139" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589562372031" />
-    <state width="1493" height="139" key="GridCell.Tab.0.left" timestamp="1589562372031">
+    <state width="1493" height="139" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589567640327" />
+    <state width="1493" height="139" key="GridCell.Tab.0.left" timestamp="1589567640327">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="139" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589562372031" />
-    <state width="1493" height="139" key="GridCell.Tab.0.right" timestamp="1589562372031">
+    <state width="1493" height="139" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589567640327" />
+    <state width="1493" height="139" key="GridCell.Tab.0.right" timestamp="1589567640327">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="139" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589562372031" />
+    <state width="1493" height="139" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589567640327" />
     <state x="299" y="70" key="Maven.ArtifactSearchDialog" timestamp="1585170845296">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

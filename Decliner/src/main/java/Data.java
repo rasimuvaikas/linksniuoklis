@@ -446,7 +446,7 @@ public class Data {
             ResultSet result = pstmt.executeQuery();
             ResultSetMetaData rsmd = result.getMetaData();
             result.next();
-            for(int i = 2; i < 11; i++){
+            for(int i = 2; i < 12; i++){
                 if(!decls.contains(rsmd.getColumnLabel(i))){
                     String s = "UPDATE declensions SET " + rsmd.getColumnLabel(i) + " = 0 WHERE username = ? COLLATE utf8mb4_bin";;
                     pstmt = conn.prepareStatement(s);

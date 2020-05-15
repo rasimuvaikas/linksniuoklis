@@ -199,36 +199,43 @@ export class DeclineComponent implements OnInit {
       this.progress = data;
       console.log(data);
 
+      for (let i = 0; i < this.progress.declensions.length; i++) {
+        console.log(this.progress.declensions[i])
+        console.log(Object.keys(this.progress.declensions[i]).indexOf("count"))
+        console.log(this.progress.declensions[i][1])
+        console.log(this.progress.declensions[i][0])
+      }
+
       //the user can move to the next level if they have completed a certain number of exercises
       if (level == "beginner") {
         if (this.progress.total >= 30) { 
-          if (this.progress.declensions.length > 4) {
-            let completed = true;//check if the user has completed at least 5 exercises for each declension, if there are 5 or more sentences in that declension group
+          if (this.progress.declensions.length > 4 || this.progress.declensions.length == this.progress.total_declensions) { //some inflection do not contain nouns in 4 declensions
+            let completed = true;//check if the user has completed at least 5 exercises for each declensions
+            let decls = 0
             for (let i = 0; i < this.progress.declensions.length; i++) {
-                if (this.progress.declensions[i]["count"] >= 5) { 
+              console.log(this.progress.declensions[i])
                   if(Object.keys(this.progress.declensions[i]).indexOf("count") == 0){ //find the index of the count key to get the index of the key of the number of exercises completed
                     if(this.progress.declensions[i][1] < 5){ 
+                    
+                      console.log("here")
                       completed = false;
                     }
                   }
                   else{
                     if(this.progress.declensions[i][0] < 5){
+                      console.log("or here")
                       completed = false;
                     }
                   }
-                }
-                else{//there are less than 5 sentences in a declension group. check if the user has completed exercises for the few sentences that exist
-                  if(Object.keys(this.progress.declensions[i]).indexOf("count") == 0){
-                    if(this.progress.declensions[i][1] < this.progress.declensions[i]["count"]){
-                      completed = false;
+                  if(completed){
+                    decls = decls + 1
+                    if(decls==5 || decls==this.progress.total_declensions){ //check if the user has completed at least 5 exercises for each declensions
+                      break
                     }
+                  } else {
+                    break
                   }
-                  else{
-                    if(this.progress.declensions[i][0] < this.progress.declensions[i]["count"]){
-                      completed = false;
-                    }
-                  }
-                }
+                
             }
 
             //if all conditions are satisfied, move the user up a level for the specific inflection
@@ -252,7 +259,6 @@ export class DeclineComponent implements OnInit {
             let completed = true;
 
             for (let i = 0; i < this.progress.declensions.length; i++) {
-              if (this.progress.declensions[i]["count"] >= 5) { 
                 if(Object.keys(this.progress.declensions[i]).indexOf("count") == 0){ //find the index of the count key to get the index of the key of the number of exercises completed
                   if(this.progress.declensions[i][1] < 5){ 
                     completed = false;
@@ -263,19 +269,6 @@ export class DeclineComponent implements OnInit {
                     completed = false;
                   }
                 }
-              }
-              else{//there are less than 5 sentences in a declension group. check if the user has completed exercises for the few sentences that exist
-                if(Object.keys(this.progress.declensions[i]).indexOf("count") == 0){
-                  if(this.progress.declensions[i][1] < this.progress.declensions[i]["count"]){
-                    completed = false;
-                  }
-                }
-                else{
-                  if(this.progress.declensions[i][0] < this.progress.declensions[i]["count"]){
-                    completed = false;
-                  }
-                }
-              }
             }
 
 
