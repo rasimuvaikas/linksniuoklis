@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b67ce0f-6c65-4b18-830a-95ceb687dbd7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Learner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Learner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Share.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Share.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Stress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Stress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Decliner.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Decliner.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Data.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Learner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Learner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Stress$Pair.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Stress$Pair.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Stress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Stress.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/infl/locativePl.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/infl/locativePl.tsv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +177,7 @@
       <workItem from="1589489653403" duration="212000" />
       <workItem from="1589529202519" duration="5970000" />
       <workItem from="1589557549774" duration="5458000" />
-      <workItem from="1589565563467" duration="3792000" />
+      <workItem from="1589565563467" duration="3817000" />
     </task>
     <servers />
   </component>

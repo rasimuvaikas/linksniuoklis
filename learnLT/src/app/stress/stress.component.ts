@@ -122,121 +122,98 @@ export class StressComponent implements OnInit {
  * Advance the learner through levels if they have completed a certain amount of exercises
  * @param sentence the sentence used in the exercise
  */
-  advance(sentence: any) {
+advance(sentence: any) {
 
-    sentence.username = this.username;
-    let level: string;
-    let declensions: string[];
-    this.levels.forEach(el => {
-      if (el.infl == sentence.inflection && el.number == sentence.number) {
-        level = el.level;
-        declensions = el.declensions;
-      }
-    })
+  sentence.username = this.username;
+  let level: string;
+  let declensions: string[];
+  this.levels.forEach(el => {
+    if (el.infl == sentence.inflection && el.number == sentence.number) {
+      level = el.level;
+      declensions = el.declensions;
+    }
+  })
 
-    sentence.level = level;
+  sentence.level = level;
 
-    this.con.postProgress(sentence).subscribe(data => {
-      this.progress = data;
-      console.log(data);
+  this.con.postProgress(sentence).subscribe(data => {
+    this.progress = data;
+    console.log(data);
 
-      //the user can move to the next level if they have completed a certain number of exercises
-      if (level == "beginner") {
-        if (this.progress.total >= 30) {
-          if (this.progress.declensions.length >= 4) {//nouns of at least 4 declension have appeared 
-            let completed = true;//check if the user has completed at least 5 exercises for each declension, if there are 5 or more sentences in that declension group
-            for (let i = 0; i < this.progress.declensions.length; i++) {
-              if (this.progress.declensions[i]["count"] >= 5) {
-                if (Object.keys(this.progress.declensions[i]).indexOf("count") == 0) { //find the index of the count key to get the index of the key of the number of exercises completed
-                  if (this.progress.declensions[i][1] < 5) {
-                    completed = false;
+
+    //the user can move to the next level if they have completed a certain number of exercises
+    if (level == "beginner") {
+      if (this.progress.total >= 30) {
+        if (this.progress.declensions.length > 4 || this.progress.declensions.length == this.progress.total_declensions) { //some inflection do not contain nouns in 4 declensions
+          let advance = false
+          let decls = 0
+          for (let i = 0; i < this.progress.declensions.length; i++) {
+            for (var j in this.progress.declensions[i]) {
+              if (j != 'count') {
+                if (this.progress.declensions[i][j] >= 5) {
+                  console.log("here")
+                  decls = decls + 1
+                  if (decls == 5 || decls == this.progress.total_declensions) { //check if the user has completed at least 5 exercises for each declensions
+                    advance = true
+                    break
                   }
                 }
-                else {
-                  if (this.progress.declensions[i][0] < 5) {
-                    completed = false;
-                  }
-                }
-              }
-              else {//there are less than 5 sentences in a declension group. check if the user has completed exercises for the few sentences that exist
-                if (Object.keys(this.progress.declensions[i]).indexOf("count") == 0) {
-                  if (this.progress.declensions[i][1] < this.progress.declensions[i]["count"]) {
-                    completed = false;
-                  }
-                }
-                else {
-                  if (this.progress.declensions[i][0] < this.progress.declensions[i]["count"]) {
-                    completed = false;
-                  }
+                else{
+                  console.log(j, this.progress.declensions[i][j], " less than 5")
                 }
               }
             }
 
-            //if all conditions are satisfied, move the user up a level for the specific inflection
-            if (completed) {
-              let lvls: Level[] = [];
+          }
 
-              level = "intermediate";
+          //if all conditions are satisfied, move the user up a level for the specific inflection
+          if (advance) {
+            let lvls: Level[] = [];
 
-              let lvl: Level = { number: sentence.number, level: level, infl: sentence.inflection, username: this.username, declensions: declensions }
-              lvls.push(lvl);
-              //update the learner model: both in the database, and service
-              this.con.postModel(lvls).subscribe(data => { this.lmodel = data; this.model.sendModel(this.lmodel); console.log(this.lmodel) });
+            level = "intermediate";
 
-            }
+            let lvl: Level = { number: sentence.number, level: level, infl: sentence.inflection, username: this.username, declensions: declensions }
+            lvls.push(lvl);
+            //update the learner model: both in the database, and service
+            this.con.postModel(lvls).subscribe(data => { this.lmodel = data; this.model.sendModel(this.lmodel); console.log(this.lmodel) });
+
           }
         }
       }
-      else if (level == "intermediate") {
-        if (this.progress.total >= 30) {
-          if (this.progress.declensions.length >= this.progress.total_declensions) { //some inflections dont have nouns in all declensions
-            let completed = true;
-
-            for (let i = 0; i < this.progress.declensions.length; i++) {
-              if (this.progress.declensions[i]["count"] >= 5) {
-                if (Object.keys(this.progress.declensions[i]).indexOf("count") == 0) { //find the index of the count key to get the index of the key of the number of exercises completed
-                  if (this.progress.declensions[i][1] < 5) {
-                    completed = false;
-                  }
-                }
-                else {
-                  if (this.progress.declensions[i][0] < 5) {
-                    completed = false;
-                  }
-                }
-              }
-              else {//there are less than 5 sentences in a declension group. check if the user has completed exercises for the few sentences that exist
-                if (Object.keys(this.progress.declensions[i]).indexOf("count") == 0) {
-                  if (this.progress.declensions[i][1] < this.progress.declensions[i]["count"]) {
-                    completed = false;
-                  }
-                }
-                else {
-                  if (this.progress.declensions[i][0] < this.progress.declensions[i]["count"]) {
-                    completed = false;
-                  }
+    }
+    else if (level == "intermediate") {
+      if (this.progress.total >= 30) {
+        let advance = true
+        if (this.progress.declensions.length >= this.progress.total_declensions) {
+          for (let i = 0; i < this.progress.declensions.length; i++) {
+            for (var j in this.progress.declensions[i]) {
+              if (j != 'count') {
+                if (this.progress.declensions[i][j] < 5) {
+                  advance = false
+                  break
                 }
               }
             }
+          }
 
 
-            //if all conditions are satisfied, move the user up a level for the specific inflection
-            if (completed) {
-              let lvls: Level[] = [];
+          //if all conditions are satisfied, move the user up a level for the specific inflection
+          if (advance) {
+            let lvls: Level[] = [];
 
-              level = "advanced";
+            level = "advanced";
 
-              let lvl: Level = { number: sentence.number, level: level, infl: sentence.inflection, username: this.username, declensions: declensions }
-              lvls.push(lvl);
-              //update the learner model: both in the database, and service
-              this.con.postModel(lvls).subscribe(data => { this.lmodel = data; this.model.sendModel(this.lmodel); console.log(this.lmodel) });
-            }
+            let lvl: Level = { number: sentence.number, level: level, infl: sentence.inflection, username: this.username, declensions: declensions }
+            lvls.push(lvl);
+            //update the learner model: both in the database, and service
+            this.con.postModel(lvls).subscribe(data => { this.lmodel = data; this.model.sendModel(this.lmodel); console.log(this.lmodel) });
           }
         }
       }
-    })
+    }
+  })
 
-  }
+}
 
 
   /**

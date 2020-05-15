@@ -199,47 +199,34 @@ export class DeclineComponent implements OnInit {
       this.progress = data;
       console.log(data);
 
-      for (let i = 0; i < this.progress.declensions.length; i++) {
-        console.log(this.progress.declensions[i])
-        console.log(Object.keys(this.progress.declensions[i]).indexOf("count"))
-        console.log(this.progress.declensions[i][1])
-        console.log(this.progress.declensions[i][0])
-      }
 
       //the user can move to the next level if they have completed a certain number of exercises
       if (level == "beginner") {
-        if (this.progress.total >= 30) { 
+        if (this.progress.total >= 30) {
           if (this.progress.declensions.length > 4 || this.progress.declensions.length == this.progress.total_declensions) { //some inflection do not contain nouns in 4 declensions
-            let completed = true;//check if the user has completed at least 5 exercises for each declensions
+            let advance = false
             let decls = 0
             for (let i = 0; i < this.progress.declensions.length; i++) {
-              console.log(this.progress.declensions[i])
-                  if(Object.keys(this.progress.declensions[i]).indexOf("count") == 0){ //find the index of the count key to get the index of the key of the number of exercises completed
-                    if(this.progress.declensions[i][1] < 5){ 
-                    
-                      console.log("here")
-                      completed = false;
+              for (var j in this.progress.declensions[i]) {
+                if (j != 'count') {
+                  if (this.progress.declensions[i][j] >= 5) {
+                    console.log("here")
+                    decls = decls + 1
+                    if (decls == 5 || decls == this.progress.total_declensions) { //check if the user has completed at least 5 exercises for each declensions
+                      advance = true
+                      break
                     }
                   }
                   else{
-                    if(this.progress.declensions[i][0] < 5){
-                      console.log("or here")
-                      completed = false;
-                    }
+                    console.log(j, this.progress.declensions[i][j], " less than 5")
                   }
-                  if(completed){
-                    decls = decls + 1
-                    if(decls==5 || decls==this.progress.total_declensions){ //check if the user has completed at least 5 exercises for each declensions
-                      break
-                    }
-                  } else {
-                    break
-                  }
-                
+                }
+              }
+
             }
 
             //if all conditions are satisfied, move the user up a level for the specific inflection
-            if (completed) {
+            if (advance) {
               let lvls: Level[] = [];
 
               level = "intermediate";
@@ -255,25 +242,22 @@ export class DeclineComponent implements OnInit {
       }
       else if (level == "intermediate") {
         if (this.progress.total >= 30) {
+          let advance = true
           if (this.progress.declensions.length >= this.progress.total_declensions) {
-            let completed = true;
-
             for (let i = 0; i < this.progress.declensions.length; i++) {
-                if(Object.keys(this.progress.declensions[i]).indexOf("count") == 0){ //find the index of the count key to get the index of the key of the number of exercises completed
-                  if(this.progress.declensions[i][1] < 5){ 
-                    completed = false;
+              for (var j in this.progress.declensions[i]) {
+                if (j != 'count') {
+                  if (this.progress.declensions[i][j] < 5) {
+                    advance = false
+                    break
                   }
                 }
-                else{
-                  if(this.progress.declensions[i][0] < 5){
-                    completed = false;
-                  }
-                }
+              }
             }
 
 
             //if all conditions are satisfied, move the user up a level for the specific inflection
-            if (completed) {
+            if (advance) {
               let lvls: Level[] = [];
 
               level = "advanced";
@@ -376,18 +360,18 @@ export class DeclineComponent implements OnInit {
       let i = this.intermediate[Math.floor(Math.random() * ((this.intermediate.length - 1) - 0 + 1) + 0)]; //choose a random case that belongs to the intermediate category
       this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
-        if(this.card.simple == null && this.intermediate.length > 1){
+        if (this.card.simple == null && this.intermediate.length > 1) {
           this.ngOnInit();
         }
         else if (this.card.simple == null) {
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
           this.ngOnInit();
-        } 
-        else{
+        }
+        else {
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
-        } 
+        }
         console.log(JSON.parse(car))
       });
 
@@ -399,7 +383,7 @@ export class DeclineComponent implements OnInit {
       let i = this.advanced[Math.floor(Math.random() * ((this.advanced.length - 1) - 0 + 1) + 0)]; //choose a random case that belongs to the advanced category
       this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
-        if(this.card.simple == null && this.advanced.length > 1){
+        if (this.card.simple == null && this.advanced.length > 1) {
           this.ngOnInit();
         }
         else if (this.card.simple == null) {
@@ -407,10 +391,10 @@ export class DeclineComponent implements OnInit {
           this.model.sendAdv(0); //reset the variable to start counting from 0 again
           this.ngOnInit();
         }
-        else{
+        else {
           this.model.sendFam(this.counterFam + 1);
           this.model.sendAdv(0); //reset the variable to start counting from 0 again
-        } 
+        }
         console.log(JSON.parse(car))
       });
 
@@ -422,7 +406,7 @@ export class DeclineComponent implements OnInit {
       let i = this.beginner[Math.floor(Math.random() * ((this.beginner.length - 1) - 0 + 1) + 0)]; //choose a random case that belongs to the beginner category
       this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
-        if(this.card.simple == null && this.beginner.length > 1){
+        if (this.card.simple == null && this.beginner.length > 1) {
           this.ngOnInit();
         }
         else if (this.card.simple == null) {
@@ -430,10 +414,10 @@ export class DeclineComponent implements OnInit {
           this.model.sendAdv(this.counterAdv + 1);
           this.ngOnInit();
         }
-        else{
+        else {
           this.model.sendFam(this.counterFam + 1);
           this.model.sendAdv(this.counterAdv + 1);
-        }   
+        }
         console.log(JSON.parse(car))
       });
 
@@ -445,7 +429,7 @@ export class DeclineComponent implements OnInit {
       let i = this.intermediate[Math.floor(Math.random() * ((this.intermediate.length - 1) - 0 + 1) + 0)];
       this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
-        if(this.card.simple == null && this.intermediate.length > 1){
+        if (this.card.simple == null && this.intermediate.length > 1) {
           this.ngOnInit();
         }
         else if (this.card.simple == null) {
@@ -453,10 +437,10 @@ export class DeclineComponent implements OnInit {
           this.model.sendAdv(this.counterAdv + 1);
           this.ngOnInit();
         }
-        else{
+        else {
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
-        }   
+        }
         console.log(JSON.parse(car))
       });
       console.log("fam: ", i);
@@ -466,7 +450,7 @@ export class DeclineComponent implements OnInit {
       let i = this.advanced[Math.floor(Math.random() * ((this.advanced.length - 1) - 0 + 1) + 0)];
       this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
-        if(this.card.simple == null && this.advanced.length > 1){
+        if (this.card.simple == null && this.advanced.length > 1) {
           this.ngOnInit();
         }
         else if (this.card.simple == null) {
@@ -474,10 +458,10 @@ export class DeclineComponent implements OnInit {
           this.model.sendAdv(0);
           this.ngOnInit();
         }
-        else{
+        else {
           this.model.sendFam(this.counterFam + 1); //reset the variable to start counting from 0 again
           this.model.sendAdv(0);
-        }   
+        }
         console.log(JSON.parse(car))
       });
 
