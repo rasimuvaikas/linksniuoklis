@@ -25,8 +25,8 @@ public class Stress {
         //s.findPatterns(s.findSyllables("slenksčiaìs", false));
         try {
             //s.mapIt();
-            for (ArrayList<String> a : s.findDistractors("rỹtą")) {
-                System.out.println(s.generateDistractor(a, "rytą"));
+            for (ArrayList<String> a : s.findDistractors("žinių̃")) {
+                System.out.println(s.generateDistractor(a, "žinių"));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -244,6 +244,7 @@ public class Stress {
                     }
                 }
 
+                System.out.println(add);
 
                 if (result.size() < 2 && !add.equals(org) && !result.contains(add) && !add.equals(clean)) {
                     result.add(add);
@@ -267,7 +268,7 @@ public class Stress {
             //if enough stress patterns still could not be found, introduce some flexibility with token positions
             else {
 
-
+                System.out.println("reached stage 3");
                 HashMap<String, HashMap<String, Double>> flexes = new HashMap<>();
                 for (int k = 0; k < clean.size(); k++) {
                     String token = clean.get(k);
@@ -319,7 +320,7 @@ public class Stress {
                         }
                     }
 
-
+                    System.out.println("add");
                     if (result.size() < 2 && !add.equals(org) && !result.contains(add) && !add.equals(clean)) {
                         result.add(add);
                     }
@@ -340,6 +341,8 @@ public class Stress {
 
             //whichever position from what's still left in the tokens hashmap
             else {
+
+                System.out.println("reached stage 4");
                 for (int k = 0; k < clean.size(); k++) {
 
                     String token = clean.get(k);
@@ -387,6 +390,7 @@ public class Stress {
             //last resort
             else {
 
+                System.out.println("reached last stage");
                 while (result.size() < 2) {
 
                     ArrayList<String> a = new ArrayList<>(Arrays.asList("à", "á", "ã"));
@@ -400,36 +404,43 @@ public class Stress {
                         String token = clean.get(k);
                         String acc = "";
                         for (int j = 0; j < token.length(); j++) {
+                            System.out.println(token.charAt(j));
                             switch (token.charAt(j)) {
                                 case 'a':
                                     if (a.size() > 0) {
                                         acc = token.replace(token.charAt(j), a.get(0).charAt(0));
                                         a.remove(a.get(0));
+                                        break;
                                     }
                                 case 'e':
                                     if (e.size() > 0) {
                                         acc = token.replace(token.charAt(j), e.get(0).charAt(0));
                                         e.remove(a.get(0));
+                                        break;
                                     }
                                 case 'i':
                                     if (i.size() > 0) {
                                         acc = token.replace(token.charAt(j), i.get(0).charAt(0));
                                         i.remove(a.get(0));
+                                        break;
                                     }
                                 case 'u':
                                     if (u.size() > 0) {
                                         acc = token.replace(token.charAt(j), u.get(0).charAt(0));
                                         u.remove(a.get(0));
+                                        break;
                                     }
                                 case 'o':
                                     if (o.size() > 0) {
                                         acc = token.replace(token.charAt(j), o.get(0).charAt(0));
                                         o.remove(a.get(0));
+                                        break;
                                     }
                                 case 'y':
                                     if (y.size() > 0) {
                                         acc = token.replace(token.charAt(j), y.get(0).charAt(0));
                                         y.remove(a.get(0));
+                                        break;
                                     }
                             }
 
@@ -437,12 +448,11 @@ public class Stress {
                                 ArrayList<String> add = new ArrayList<>();
                                 for (int h = 0; h < clean.size(); h++) {
                                     if (h == k) {
-                                        add.add(token);
+                                        add.add(acc);
                                     } else {
                                         add.add(clean.get(h));
                                     }
                                 }
-
                                 if (result.size() < 2 && !add.equals(org) && !result.contains(add) && !add.equals(clean)) {
                                     result.add(add);
                                 }
