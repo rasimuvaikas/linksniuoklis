@@ -124,6 +124,7 @@ export class StressComponent implements OnInit {
  */
 advance(sentence: any) {
 
+  //get sentence info
   sentence.username = this.username;
   let level: string;
   let declensions: string[];
@@ -136,6 +137,7 @@ advance(sentence: any) {
 
   sentence.level = level;
 
+  //update the progress table
   this.con.postProgress(sentence).subscribe(data => {
     this.progress = data;
     console.log(data);
@@ -258,6 +260,7 @@ advance(sentence: any) {
 
     this.correct = 3; //reset correct so that neither 'correct' nor 'incorrect' would be displayed
 
+    //get learner model and divide all inflections into levels
     this.model.lvls.subscribe(lvl => {
       this.levels = lvl;
       for (let i of this.levels) {
@@ -281,7 +284,7 @@ advance(sentence: any) {
       let i = this.intermediate[Math.floor(Math.random() * ((this.intermediate.length - 1) - 0 + 1) + 0)]; //choose a random case that belongs to the intermediate category
       this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
-        if(this.card.simple == null && this.intermediate.length > 1){
+        if(this.card.simple == null && this.intermediate.length > 1 || i.declensions.length > 1){
           this.ngOnInit();
         }
         else if (this.card.simple == null) {
@@ -304,7 +307,7 @@ advance(sentence: any) {
       let i = this.advanced[Math.floor(Math.random() * ((this.advanced.length - 1) - 0 + 1) + 0)]; //choose a random case that belongs to the advanced category
       this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
-        if(this.card.simple == null && this.advanced.length > 1){
+        if(this.card.simple == null && this.advanced.length > 1 || i.declensions.length > 1){
           this.ngOnInit();
         }
         else if (this.card.simple == null) {
@@ -327,7 +330,7 @@ advance(sentence: any) {
       let i = this.beginner[Math.floor(Math.random() * ((this.beginner.length - 1) - 0 + 1) + 0)]; //choose a random case that belongs to the beginner category
       this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
-        if(this.card.simple == null && this.beginner.length > 1){
+        if(this.card.simple == null && this.beginner.length > 1 || i.declensions.length > 1){
           this.ngOnInit();
         }
         else if (this.card.simple == null) {
@@ -350,7 +353,7 @@ advance(sentence: any) {
       let i = this.intermediate[Math.floor(Math.random() * ((this.intermediate.length - 1) - 0 + 1) + 0)];
       this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
-        if(this.card.simple == null && this.intermediate.length > 1){
+        if(this.card.simple == null && this.intermediate.length > 1 || i.declensions.length > 1){
           this.ngOnInit();
         }
         else if (this.card.simple == null) {
@@ -371,7 +374,7 @@ advance(sentence: any) {
       let i = this.advanced[Math.floor(Math.random() * ((this.advanced.length - 1) - 0 + 1) + 0)];
       this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
-        if(this.card.simple == null && this.advanced.length > 1){
+        if(this.card.simple == null && this.advanced.length > 1 || i.declensions.length > 1){
           this.ngOnInit();
         }
         else if (this.card.simple == null) {
