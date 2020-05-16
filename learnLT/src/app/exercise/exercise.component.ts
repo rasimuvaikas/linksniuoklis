@@ -39,7 +39,6 @@ export class ExerciseComponent implements OnInit {
    */
   onSubmitDecl() {
 
-    this.model.sendModel(this.currentModel);
     this.route.navigate(['decline']);
 
   }
@@ -49,7 +48,6 @@ export class ExerciseComponent implements OnInit {
  */
   onSubmitStress() {
 
-    this.model.sendModel(this.currentModel);
     this.route.navigate(['stress']);
 
   }
@@ -59,18 +57,20 @@ export class ExerciseComponent implements OnInit {
  */
   onSubmitBoth() {
 
-    this.model.sendModel(this.currentModel);
     this.route.navigate(['both']);
 
   }
 
   ngOnInit(): void {
 
-
+    //get learner model from service
     this.model.lvls.subscribe(data => { this.lmodel = data; console.log(JSON.stringify(data)); });
 
     //update the learner model table
     this.connect.postModel(this.lmodel).subscribe(dt => { this.currentModel = dt; console.log(dt) });
+
+    //send updated learner model back to service
+    this.model.sendModel(this.currentModel);
 
   }
 
