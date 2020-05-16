@@ -55,7 +55,7 @@ export class DashboardComponent implements OnInit {
 
 
   inflectionsTempSg: { number: string; infl: string; checked: boolean; beginner: boolean; }[];
-  inflectionsTempPl: { number: string; infl: string; checked: boolean; beginner: boolean}[];
+  inflectionsTempPl: { number: string; infl: string; checked: boolean; beginner: boolean }[];
 
   constructor(private user: UserInfoService, private model: LearnerModelService, private route: Router, private con: ConnectService,
     private _bottomSheet: MatBottomSheet, private dialogue: MatDialog) {
@@ -103,18 +103,18 @@ export class DashboardComponent implements OnInit {
     { number: "plural", infl: "locative", checked: false }];
 
     this.inflectionsTempSg = [{ number: "singular", infl: "nominative", checked: false, beginner: false },
-    { number: "singular", infl: "genitive", checked: false, beginner: false  },
-    { number: "singular", infl: "dative", checked: false , beginner: false },
-    { number: "singular", infl: "accusative", checked: false, beginner: false  },
-    { number: "singular", infl: "instrumental", checked: false, beginner: false  },
-    { number: "singular", infl: "locative", checked: false, beginner: false  }];
+    { number: "singular", infl: "genitive", checked: false, beginner: false },
+    { number: "singular", infl: "dative", checked: false, beginner: false },
+    { number: "singular", infl: "accusative", checked: false, beginner: false },
+    { number: "singular", infl: "instrumental", checked: false, beginner: false },
+    { number: "singular", infl: "locative", checked: false, beginner: false }];
 
-    this.inflectionsTempPl = [{ number: "plural", infl: "nominative", checked: false, beginner: false  },
-    { number: "plural", infl: "genitive", checked: false, beginner: false  },
-    { number: "plural", infl: "dative", checked: false, beginner: false  },
-    { number: "plural", infl: "accusative", checked: false, beginner: false  },
-    { number: "plural", infl: "instrumental", checked: false, beginner: false  },
-    { number: "plural", infl: "locative", checked: false, beginner: false  }];
+    this.inflectionsTempPl = [{ number: "plural", infl: "nominative", checked: false, beginner: false },
+    { number: "plural", infl: "genitive", checked: false, beginner: false },
+    { number: "plural", infl: "dative", checked: false, beginner: false },
+    { number: "plural", infl: "accusative", checked: false, beginner: false },
+    { number: "plural", infl: "instrumental", checked: false, beginner: false },
+    { number: "plural", infl: "locative", checked: false, beginner: false }];
 
 
     this.lmodel = [];
@@ -138,10 +138,10 @@ export class DashboardComponent implements OnInit {
   /**
    * Alert box
    */
-  openDialog(): void {
+  openDialog(d: string): void {
     const dialogRef = this.dialogue.open(AlertComponent, {
       width: '250px',
-      data: "At least one declension type must be marked."
+      data: d
     });
   }
 
@@ -437,7 +437,7 @@ export class DashboardComponent implements OnInit {
     });
 
     if (decls.length == 0) {
-      this.openDialog();
+      this.openDialog("At least one declension type must be marked.");
     }
 
 
@@ -485,9 +485,33 @@ export class DashboardComponent implements OnInit {
         }
       }
 
-      this.model.sendModel(this.lmodel);
 
-      this.route.navigate(['exercise'])
+      //check if any sentences exist for any of the selected declensions or inflections
+      let found = false
+      for (let i of this.lmodel) {
+        for (let j of i.declensions) {
+          this.con.getCard(i.infl, i.number, [j]).subscribe(card => {
+            console.log(card); let car = JSON.parse(card); console.log(car.simple);
+            if (car.simple != null) {
+              found = true
+            }
+          })
+        }
+      }
+
+      //delay the processing of the found boolean as getCard takes time to update everything
+      setTimeout(() => {
+        if (found) {
+          this.model.sendModel(this.lmodel);
+          this.route.navigate(['exercise'])
+        }
+
+        else {
+          this.openDialog("Oops, no examples of such inflection or declension could be found. Please select more declensions or inflections.");
+        }
+      }, 1000);
+
+
     }
   }
 

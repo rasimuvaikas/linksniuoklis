@@ -410,16 +410,14 @@ export class WelcomeComponent implements OnInit {
       }
 
       else {
-        //check if any sentences exist in any of the selected declensions or declensions 
+        //check if any sentences exist for any of the selected declensions or inflections 
         let found = false
         for (let i of lmodel) {
           for (let j of i.declensions) {
             this.connect.getCard(i.infl, i.number, [j]).subscribe(card => {
               console.log(card); let car = JSON.parse(card); console.log(car.simple);
               if (car.simple != null) {
-                console.log('found')
                 found = true
-                console.log('čia found', found)
               }
             })
           }
@@ -429,7 +427,6 @@ export class WelcomeComponent implements OnInit {
         setTimeout(() => {
           if (found) {
             this.model.sendModel(lmodel);
-
             this.route.navigate(['exercise'])
           }
 
@@ -487,7 +484,6 @@ export class WelcomeComponent implements OnInit {
         }
       }
 
-      console.log('modelis', lmodel)
       //make sure the user has chosen at least one inflection type
       if (lmodel.length == 0) {
         this.openDialog("At least one inflection type must be marked.");
@@ -501,9 +497,7 @@ export class WelcomeComponent implements OnInit {
             this.connect.getCard(i.infl, i.number, [j]).subscribe(card => {
               console.log(card); let car = JSON.parse(card); console.log(car.simple);
               if (car.simple != null) {
-                console.log('found')
                 found = true
-                console.log('čia found', found)
               }
             })
           }
