@@ -23,8 +23,6 @@ export class WelcomeComponent implements OnInit {
 
   username: any;
 
-  lmodel: Level[];
-
   //šitą turbūt reiks ištrint kaip ir getResult iš ngoninit
   userModel: Level[];
 
@@ -133,11 +131,6 @@ export class WelcomeComponent implements OnInit {
     { number: "plural", infl: "accusative", checked: false },
     { number: "plural", infl: "instrumental", checked: false },
     { number: "plural", infl: "locative", checked: false }];
-
-
-
-    this.lmodel = [];
-
 
     this.declensionsMasc = [{ display: "-(i)as", declension: "1mascIAS", decl: "1st", checked: true },
     { display: "-is, -ys", declension: "1mascIS", decl: "1st", checked: false },
@@ -364,60 +357,86 @@ export class WelcomeComponent implements OnInit {
 
     else {
 
+      let lmodel: Level[] = []
 
 
       for (let i of this.advancedSg) {
         if (i.checked) {
           let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "advanced", declensions: decls };
-          this.lmodel.push(temp);
+          lmodel.push(temp);
         }
       }
 
       for (let i of this.advancedPl) {
         if (i.checked) {
           let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "advanced", declensions: decls };
-          this.lmodel.push(temp);
+          lmodel.push(temp);
         }
       }
 
       for (let i of this.intermediateSg) {
         if (i.checked) {
           let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "intermediate", declensions: decls };
-          this.lmodel.push(temp);
+          lmodel.push(temp);
         }
       }
 
       for (let i of this.intermediatePl) {
         if (i.checked) {
           let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "intermediate", declensions: decls };
-          this.lmodel.push(temp);
+          lmodel.push(temp);
         }
       }
 
       for (let i of this.inflectionsBeginnerSg) {
         if (i.checked) {
           let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "beginner", declensions: decls };
-          this.lmodel.push(temp);
+          lmodel.push(temp);
         }
       }
 
       for (let i of this.inflectionsBeginnerPl) {
         if (i.checked) {
           let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "beginner", declensions: decls };
-          this.lmodel.push(temp);
+          lmodel.push(temp);
         }
       }
 
+      console.log('modelis', lmodel)
+
       //make sure the user has chosen at least one inflection type
-      if (this.lmodel.length == 0) {
+      if (lmodel.length == 0) {
         this.openDialog("At least one inflection type must be marked.");
       }
 
       else {
+        //check if any sentences exist in any of the selected declensions or declensions 
+        let found = false
+        for (let i of lmodel) {
+          for (let j of i.declensions) {
+            this.connect.getCard(i.infl, i.number, [j]).subscribe(card => {
+              console.log(card); let car = JSON.parse(card); console.log(car.simple);
+              if (car.simple != null) {
+                console.log('found')
+                found = true
+                console.log('čia found', found)
+              }
+            })
+          }
+        }
 
-        this.model.sendModel(this.lmodel);
+        //delay the processing of the found boolean as getCard takes time to update everything
+        setTimeout(() => {
+          if (found) {
+            this.model.sendModel(lmodel);
 
-        this.route.navigate(['exercise'])
+            this.route.navigate(['exercise'])
+          }
+
+          else {
+            this.openDialog("Oops, no examples of such inflection or declension could be found. Please select another combination");
+          }
+        }, 1000);
       }
     }
 
@@ -452,30 +471,56 @@ export class WelcomeComponent implements OnInit {
 
     else {
 
+      let lmodel: Level[] = []
+
       for (let i of this.inflectionsSg) {
         if (i.checked) {
           let temp: Level = { username: this.username, number: "singular", infl: i.infl, level: "beginner", declensions: decls };
-          this.lmodel.push(temp);
+          lmodel.push(temp);
         }
       }
 
       for (let i of this.inflectionsPl) {
         if (i.checked) {
           let temp: Level = { username: this.username, number: "plural", infl: i.infl, level: "beginner", declensions: decls };
-          this.lmodel.push(temp);
+          lmodel.push(temp);
         }
       }
 
+      console.log('modelis', lmodel)
       //make sure the user has chosen at least one inflection type
-      if (this.lmodel.length == 0) {
+      if (lmodel.length == 0) {
         this.openDialog("At least one inflection type must be marked.");
       }
 
       else {
+        //check if any sentences exist in any of the selected declensions or declensions 
+        let found = false
+        for (let i of lmodel) {
+          for (let j of i.declensions) {
+            this.connect.getCard(i.infl, i.number, [j]).subscribe(card => {
+              console.log(card); let car = JSON.parse(card); console.log(car.simple);
+              if (car.simple != null) {
+                console.log('found')
+                found = true
+                console.log('čia found', found)
+              }
+            })
+          }
+        }
 
-        this.model.sendModel(this.lmodel);
+        //delay the processing of the found boolean as getCard takes time to update everything
+        setTimeout(() => {
+          if (found) {
+            this.model.sendModel(lmodel);
 
-        this.route.navigate(['exercise'])
+            this.route.navigate(['exercise'])
+          }
+
+          else {
+            this.openDialog("Oops, no examples of such inflection or declension could be found. Please select another combination");
+          }
+        }, 1000);
       }
 
 
