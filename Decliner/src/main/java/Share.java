@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
@@ -55,20 +54,12 @@ public class Share extends HttpServlet {
 
         request.setCharacterEncoding("utf-8");
 
-        System.out.println("gavo request");
-
         String infl = request.getParameter("inflection");
         String num = request.getParameter("number");
 
         String pattern = request.getParameter("declension");
 
-        System.out.println("su šitais param: " + infl + " " + num + " " + pattern);
-
-        System.out.println("prašo resultset");
-
         ResultSet rs = data.getSentence(infl, num, pattern);
-
-        System.out.println("gavo resultset");
 
         try {
 
@@ -83,26 +74,15 @@ public class Share extends HttpServlet {
 
 
                 String stressed = rs.getString("stressed");
-                System.out.println(stressed);
                 String simple = rs.getString("clean");
-                System.out.println(simple);
                 String english = rs.getString("english");
-                System.out.println(english);
                 String noun = rs.getString("noun");
-                System.out.println(noun);
                 int position = rs.getInt("position");
-                System.out.println(position);
                 String lemma = rs.getString("lemma");
-                System.out.println(lemma);
                 String info = rs.getString("info");
-                System.out.println(info);
                 String inflection = rs.getString("inflection");
-                System.out.println(inflection);
                 String number = rs.getString("number");
-                System.out.println(number);
                 String declension = rs.getString("pattern");
-                System.out.println(declension);
-
 
                 //create slices - plain text surrounding the noun in question; and strices - stressed text surrounding the noun in question
                 String[] slice = simple.split(" ?(?<!\\G)((?<=[^\\p{Punct}])(?=\\p{Punct})|\\b) ?");
@@ -132,8 +112,6 @@ public class Share extends HttpServlet {
                     }
                 }
 
-                System.out.println("slices: " + slice1 + " " + slice2);
-
                 String[] strice = stressed.split(" ?(?<!\\G)((?<=[^\\p{Punct}])(?=\\p{Punct})|\\b) ?");
                 String strice1 = "";
                 String strice2 = "";
@@ -161,7 +139,6 @@ public class Share extends HttpServlet {
                     }
                 }
 
-                System.out.println("strices: " + strice1 + " " + strice2);
                 //get declension distractors
                 ArrayList<String> l = new ArrayList<>();
 
@@ -177,9 +154,6 @@ public class Share extends HttpServlet {
                 Collections.shuffle(l);
                 JSONArray nounDist = new JSONArray(l);
 
-                System.out.println("distractors: " + l.toString());
-
-
                 //get accentuation distractors
                 ArrayList<String> m = new ArrayList<>();
 
@@ -194,8 +168,6 @@ public class Share extends HttpServlet {
 
                 Collections.shuffle(m);
                 JSONArray stressDist = new JSONArray(m);
-
-                System.out.println("stressers: " + m.toString());
 
                 String gender = "";
                 if(n.getGender().equals("m")){
@@ -224,7 +196,7 @@ public class Share extends HttpServlet {
                 jsb.put("declension", declension);
             }
 
-            else{
+            else{ //no sentence could be found
                 jsb.put("gender", JSONObject.NULL);
 
                 jsb.put("stressed", JSONObject.NULL);
@@ -357,7 +329,7 @@ public class Share extends HttpServlet {
 
                 jsb.put("declensions", decls);
 
-                ResultSet declensions = data.getDecls(inflection, num);
+                ResultSet declensions = data.getDeclsNum(inflection, num);
                 declensions.next();
 
                 jsb.put("total_declensions", declensions.getInt("count(distinct pattern)")); //the number of distinct declensions that appear in this inflection

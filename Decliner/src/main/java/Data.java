@@ -14,7 +14,7 @@ public class Data {
     public static void main(String[] args) {
         Data d = new Data();
         d.fillTables();
-        //d.model();
+        d.model();
     }
 
 
@@ -35,7 +35,7 @@ public class Data {
 
             Properties prop = new Properties ();
             prop.load(stream);
-            System.out.println("found properties");
+            System.out.println("Reading properties...");
             String driver = (String) prop.get("db.driver");
             String url = (String) prop.get("db.url");
             String username = (String) prop.get("db.username");
@@ -47,9 +47,10 @@ public class Data {
             info.put("characterEncoding", "utf8");
             Class.forName(driver);
 
+            System.out.println("Connecting...");
             conn = DriverManager.getConnection(url, info);
             stmt = conn.createStatement();
-            System.out.println("connected");
+            System.out.println("Connected.");
 
         } catch (SQLException | ClassNotFoundException | FileNotFoundException e) {
             e.printStackTrace();
@@ -163,11 +164,7 @@ public class Data {
                 }
             }
 
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (SQLException | URISyntaxException | IOException e) {
             e.printStackTrace();
         }
     }
@@ -296,7 +293,7 @@ public class Data {
     }
 
     /**
-     * Get a sentence that contains a noun that belong to a particular declension and is in a particular case, number
+     * Get a sentence that contains a noun that belong to a particular declension and is in a particular case and number
      * @param infl the case
      * @param num the number
      * @param decl the declension
@@ -536,11 +533,11 @@ public class Data {
     }
 
     /**
-     * Find the number of a sentences there with nouns in a specific inflection, number and declension
-     * @param infl the infection
+     * Find the number of sentences there are with nouns in a specific inflection, number and declension
+     * @param infl the inflection
      * @param num number
      * @param decl declension
-     * @return
+     * @return a result set with the number
      */
     public ResultSet getNumNouns(String infl, String num, String decl) {
 
@@ -561,12 +558,12 @@ public class Data {
     }
 
     /**
-     * Find the declensions that nouns in a specific inflection and number appear in
+     * Find the number of distinct declensions that nouns in a specific inflection and number appear in
      * @param infl the infection
      * @param num number
-     * @return
+     * @return the result set with the number
      */
-    public ResultSet getDecls(String infl, String num) {
+    public ResultSet getDeclsNum(String infl, String num) {
 
         try {
             stmt.executeUpdate("USE text");
@@ -670,7 +667,7 @@ public class Data {
         try {
             stmt.executeUpdate("USE models");
 
-            String sql = "SELECT " + column + " FROM scores WHERE username = ? AND time <> ? COLLATE utf8mb4_bin"; //make sure the current sessions scores are not included
+            String sql = "SELECT DISTINCT" + column + " FROM scores WHERE username = ? AND time <> ? COLLATE utf8mb4_bin"; //make sure the current sessions scores are not included
             pstmt = conn.prepareStatement(sql);
 
             pstmt.setString(1, username);
@@ -792,14 +789,4 @@ public class Data {
 
         return result;
     }
-
-
-
-    
-
-
-
-
-
 }
-

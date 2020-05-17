@@ -20,13 +20,9 @@ public class Stress {
     public static void main(String[] args) {
         Stress s = new Stress();
 
-        //ArrayList<String> test = new ArrayList<>(Arrays.asList("į̃", "o"));
-        //s.generateDistractor(test, "grįžo");
-        //s.findPatterns(s.findSyllables("slenksčiaìs", false));
         try {
-            //s.mapIt();
-            for (ArrayList<String> a : s.findDistractors("žuvìs")) {
-                System.out.println(s.generateDistractor(a, "žuvis"));
+            for (ArrayList<String> a : s.findDistractors("vérgus")) {
+                System.out.println(s.generateDistractor(a, "vergus"));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -85,7 +81,6 @@ public class Stress {
                 do {
 
                     String str = tokenSeq.getString("stressed");
-                    System.out.println(str);
                     double pr = tokenSeq.getDouble("prob");
 
                     if (!org.toString().equals(str)) {
@@ -152,8 +147,6 @@ public class Stress {
                             double first = tokenProb.getDouble("first");
                             double middle = tokenProb.getDouble("middle");
                             double last = tokenProb.getDouble("last");
-
-                            System.out.println("other str: " + str);
 
                             String positions = "";
                             if (first != 0.0) {
@@ -244,8 +237,6 @@ public class Stress {
                     }
                 }
 
-                System.out.println(add);
-
                 if (result.size() < 2 && !add.equals(org) && !result.contains(add) && !add.equals(clean)) {
                     result.add(add);
                 }
@@ -255,8 +246,10 @@ public class Stress {
                 if (exacts.get(nonAcc).size() == 0) {
                     exacts.remove(nonAcc);
                 }
-
                 tokens.get(nonAcc).remove(acc);
+                if(tokens.get(nonAcc).size()==0){
+                    tokens.remove(nonAcc);
+                }
 
             }
 
@@ -267,70 +260,71 @@ public class Stress {
 
             //if enough stress patterns still could not be found, introduce some flexibility with token positions
             else {
+                if (tokens.size() > 0) {
+                    HashMap<String, HashMap<String, Double>> flexes = new HashMap<>();
+                    for (int k = 0; k < clean.size(); k++) {
+                        String token = clean.get(k);
+                        token = Normalizer.normalize(token, Normalizer.Form.NFC);
+                        position = findPosition(k, pair.getLen());
 
-                System.out.println("reached stage 3");
-                HashMap<String, HashMap<String, Double>> flexes = new HashMap<>();
-                for (int k = 0; k < clean.size(); k++) {
-                    String token = clean.get(k);
-                    token = Normalizer.normalize(token, Normalizer.Form.NFC);
-                    position = findPosition(k, pair.getLen());
+                        HashMap<String, Double> flex = new HashMap<>();
 
-
-                    HashMap<String, Double> flex = new HashMap<>();
-
-
-                    for (String c : tokens.keySet()) {
-                        if (c.equals(token)) {
-                            for (String s : tokens.get(c).keySet()) {
-                                String[] spl = tokens.get(c).get(s).split("\t");
-                                for (int i = 0; i < spl.length; i++) {
-                                    if (position.equals("first") && spl[i].equals("middle") || position.equals("middle") && spl[i].equals("last")) {
-                                        flex.put(s, Double.parseDouble(spl[i + 1]));
-                                        flexes.put(token, flex);
+                        for (String c : tokens.keySet()) {
+                            if (c.equals(token)) {
+                                for (String s : tokens.get(c).keySet()) {
+                                    String[] spl = tokens.get(c).get(s).split("\t");
+                                    for (int i = 0; i < spl.length; i++) {
+                                        if (position.equals("first") && spl[i].equals("middle") || position.equals("middle") && spl[i].equals("last")) {
+                                            flex.put(s, Double.parseDouble(spl[i + 1]));
+                                            flexes.put(token, flex);
+                                        }
                                     }
                                 }
                             }
                         }
                     }
-                }
 
-                //determine the most likely accentuation
-                while (flexes.size() > 0 && result.size() < 2) {
-                    double high = 0.0;
-                    ArrayList<String> add = new ArrayList<>();
-                    String acc = "";
-                    String nonAcc = "";
-                    //find the most probable stress patterns first
-                    for (String s : flexes.keySet()) {
-                        for (String c : flexes.get(s).keySet()) {
-                            if (flexes.get(s).get(c) > high) {
-                                high = flexes.get(s).get(c);
-                                acc = c;
-                                nonAcc = s;
+                    //determine the most likely accentuation
+                    while (flexes.size() > 0 && result.size() < 2) {
+                        double high = 0.0;
+                        ArrayList<String> add = new ArrayList<>();
+                        String acc = "";
+                        String nonAcc = "";
+                        //find the most probable stress patterns first
+                        for (String s : flexes.keySet()) {
+                            for (String c : flexes.get(s).keySet()) {
+                                if (flexes.get(s).get(c) > high) {
+                                    high = flexes.get(s).get(c);
+                                    acc = c;
+                                    nonAcc = s;
+                                }
                             }
                         }
-                    }
 
-                    //create an arraylist that contains the accentuated token
-                    for (int j = 0; j < clean.size(); j++) {
-                        if (j == clean.indexOf(nonAcc)) {
-                            add.add(acc);
-                        } else {
-                            add.add(clean.get(j));
+                        //create an arraylist that contains the accentuated token
+                        for (int j = 0; j < clean.size(); j++) {
+                            if (j == clean.indexOf(nonAcc)) {
+                                add.add(acc);
+                            } else {
+                                add.add(clean.get(j));
+                            }
+                        }
+
+                        if (result.size() < 2 && !add.equals(org) && !result.contains(add) && !add.equals(clean)) {
+                            result.add(add);
+                        }
+
+
+                        flexes.get(nonAcc).remove(acc);
+                        if (flexes.get(nonAcc).size() == 0) {
+                            flexes.remove(nonAcc);
+                        }
+
+                        tokens.get(nonAcc).remove(acc);
+                        if(tokens.get(nonAcc).size()==0){
+                            tokens.remove(nonAcc);
                         }
                     }
-
-                    if (result.size() < 2 && !add.equals(org) && !result.contains(add) && !add.equals(clean)) {
-                        result.add(add);
-                    }
-
-
-                    flexes.get(nonAcc).remove(acc);
-                    if (flexes.get(nonAcc).size() == 0) {
-                        flexes.remove(nonAcc);
-                    }
-
-                    tokens.get(nonAcc).remove(acc);
                 }
             }
 
@@ -340,8 +334,7 @@ public class Stress {
 
             //whichever position from what's still left in the tokens hashmap
             else {
-
-                System.out.println("reached stage 4");
+                if(tokens.size() > 0){
                 for (int k = 0; k < clean.size(); k++) {
 
                     String token = clean.get(k);
@@ -364,7 +357,6 @@ public class Stress {
                                             add.add(clean.get(j));
                                         }
                                     }
-
                                     if (result.size() < 2 && !add.equals(org) && !result.contains(add) && !add.equals(clean)) {
                                         result.add(add);
                                     }
@@ -378,6 +370,7 @@ public class Stress {
                         }
                     }
                 }
+            }
             }
 
 
@@ -396,7 +389,6 @@ public class Stress {
                 ArrayList<String> o = new ArrayList<>(Arrays.asList("ò", "ó", "õ"));
                 ArrayList<String> y = new ArrayList<>(Arrays.asList("ý", "ỹ"));
 
-                System.out.println("reached last stage");
                 while (result.size() < 2) {
 
                     for (int k = 0; k < clean.size(); k++) {

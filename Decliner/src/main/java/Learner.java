@@ -46,26 +46,21 @@ public class Learner extends HttpServlet {
      * @throws IOException
      * @throws ServletException
      */
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException{
 
         setAccessControlHeaders(response);
 
         request.setCharacterEncoding("utf-8");
 
         String name = request.getParameter("username");
-        System.out.println("user " + name);
+
 
         ResultSet rs = data.getModel(name);
         ResultSet rsDecl = data.getDecls(name);
 
-        System.out.println("rs: " + rs.toString());
-
-
         try {
 
-            if (!rs.next()) {
-
-                System.out.println("nėra");
+            if (!rs.next()) { //no learner model can be found
 
                 data.setRecord(name);
                 response.setCharacterEncoding("UTF-8");
@@ -86,9 +81,7 @@ public class Learner extends HttpServlet {
 
                 out.close();
 
-            } else {
-
-                System.out.println("yra");
+            } else { //learner model found
 
                 ResultSetMetaData rsmd = rs.getMetaData();
 
@@ -106,7 +99,6 @@ public class Learner extends HttpServlet {
                 for(int k = 2; k < 12; k++){
 
                     if(rsDecl.getShort(k) == 1){
-                        System.out.println(rsmdDecl.getColumnLabel(k));
                         aL.add(rsmdDecl.getColumnLabel(k));
                     }
                 }
@@ -158,8 +150,6 @@ public class Learner extends HttpServlet {
 
                 } while (rs.next());
 
-                System.out.println("json array pirmiausia" + jsonArray.toString());
-
                 if(!jsonArray.isEmpty()){
                     out.println(jsonArray);
                 }
@@ -174,8 +164,6 @@ public class Learner extends HttpServlet {
                     jsonArray.put(jsb);
                     out.println(jsonArray);
                 }
-
-                System.out.println("sending: " + jsonArray.toString());
 
 
                 out.close();
@@ -225,7 +213,6 @@ public class Learner extends HttpServlet {
             js = ((JSONObject) o).getJSONArray("declensions");
             declensions = new ArrayList<String>();
             for (int i=0; i< js.length(); i++){
-                System.out.println("decl" + js.getString(i));
                 declensions.add(js.getString(i));
             }
 
