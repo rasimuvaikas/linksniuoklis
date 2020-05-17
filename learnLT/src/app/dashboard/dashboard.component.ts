@@ -15,6 +15,9 @@ import { AlertComponent } from '../alert/alert.component';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
+/**
+ * A component that presents the user with their learner model
+ */
 export class DashboardComponent implements OnInit {
 
   decls: any;
@@ -50,7 +53,7 @@ export class DashboardComponent implements OnInit {
   //inflections in the order from most useful (proposed first) to least
   inflections: string[] = ["nominative", "genitive", "accusative", "locative", "instrumental", "dative"];
 
-  //declensions in the order from most useful (proposed first) to least
+  //declensions in the order from the easiest (proposed first) to the most difficult
   declensions: string[] = ["1mascIAS", "2femIA", "2femĖ", "1mascIS", "3masc", "3fem", "4masc", "5masc", "5fem", "exception"];
 
 
@@ -135,9 +138,10 @@ export class DashboardComponent implements OnInit {
     ]
   }
 
-  /**
-   * Alert box
-   */
+/**
+ * Alert box
+ * @param Message to display
+ */
   openDialog(d: string): void {
     const dialogRef = this.dialogue.open(AlertComponent, {
       width: '250px',
@@ -249,8 +253,8 @@ export class DashboardComponent implements OnInit {
   }
 
   /**
-   * Create two temporary arrays of inflections to be marked as checked
-   * Determine which inflections should be proposed to the user to practice next
+   * Create two temporary arrays of inflections marked as checked
+   * Determine which inflections and declensions should be proposed to the user to practice next
    */
   propose() {
 
@@ -384,7 +388,7 @@ export class DashboardComponent implements OnInit {
   }
 
   /**
- * Mark inflections selected as beginner to the user
+ * Mark inflections selected as beginner level by the user
  * @param infl inflection
  * @param num number
  */
@@ -491,11 +495,14 @@ export class DashboardComponent implements OnInit {
       for (let i of this.lmodel) {
         for (let j of i.declensions) {
           this.con.getCard(i.infl, i.number, [j]).subscribe(card => {
-            console.log(card); let car = JSON.parse(card); console.log(car.simple);
+            let car = JSON.parse(card);
             if (car.simple != null) {
               found = true
             }
           })
+          if(found){
+            break
+          }
         }
       }
 
@@ -518,8 +525,6 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
 
-
-
     this.user.currentName.subscribe(username => this.username = username); //get username
     this.user.currenttime.subscribe(t => this.time = t); //get the time of the current session
     this.model.lvls.subscribe(lvls => this.levels = lvls); //get learner model
@@ -527,7 +532,7 @@ export class DashboardComponent implements OnInit {
 
     //get user's results from previous sessions
     this.con.getScore(this.username, this.time.toString()).subscribe(data => {
-      console.log(JSON.parse(data)); let response = JSON.parse(data);
+      let response = JSON.parse(data);
       this.decls = response['declension']; this.infls = response['inflections'];
       if (this.decls == null && this.infls == null) { //no previous data
         this.empty = true;
@@ -598,7 +603,7 @@ export class DashboardComponent implements OnInit {
       }
     }
 
-    //propose new inflection & declensions to practice
+    //propose new inflections & declensions to practice
     this.propose();
   }
 

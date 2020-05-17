@@ -1,3 +1,6 @@
+/**
+ * Interface that tracks the user's score at each inflection, number, and declension combination during the current session
+ */
 export interface Score {
     username:string;
     time:string;

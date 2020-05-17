@@ -9,7 +9,7 @@ import { Level } from './level';
 /**
  * Make learner model accessible for all components,
  * as well as variables that track the frequency of familiar and advanced case sentences,
- * and the score of the progress bar
+ * and the score of a progress bar
  */
 export class LearnerModelService {
 

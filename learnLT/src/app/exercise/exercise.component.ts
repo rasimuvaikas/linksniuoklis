@@ -64,11 +64,12 @@ export class ExerciseComponent implements OnInit {
   ngOnInit(): void {
 
 
-    this.model.lvls.subscribe(data => { this.lmodel = data; console.log('exercise ', JSON.stringify(data)); });
+    //get learner model
+    this.model.lvls.subscribe(data => { this.lmodel = data; });
 
 
     //update the learner model table
-    this.connect.postModel(this.lmodel).subscribe(dt => { this.currentModel = dt;  this.model.sendModel(this.currentModel); console.log(dt) });
+    this.connect.postModel(this.lmodel).subscribe(dt => { this.currentModel = dt;  this.model.sendModel(this.currentModel); });
 
   }
 

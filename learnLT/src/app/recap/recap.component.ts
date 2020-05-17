@@ -425,13 +425,6 @@ akis = [
 ];
 
 
-
-
-
-
-   
-
-
   displayedColumns: string[] = ["inflection", "singular", "plural"]
   displayedColumnsDouble: string[] = ["inflection", "singular1", "plural1", "singular2", "plural2" ]
 

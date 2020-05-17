@@ -1,3 +1,6 @@
+/**
+ * Interface that stores information about the user's progress at a specific inflection
+ */
 export interface Advance {
 
     declensions: any[];

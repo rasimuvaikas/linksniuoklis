@@ -16,6 +16,10 @@ import { AlertComponent } from '../alert/alert.component';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
+/**
+ * A component that collects and processes user's login info
+ */
 export class LoginComponent implements OnInit {
 
   username: string;
@@ -44,7 +48,6 @@ export class LoginComponent implements OnInit {
 
       //check if the user has an existing learner model
       this.conn.getModel(this.username).subscribe(res => {
-        console.log(res);
       this.lmodel = JSON.parse(res); 
 
         if (this.lmodel.length == 1 && this.lmodel[0].infl == null) {

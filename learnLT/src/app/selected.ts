@@ -1,3 +1,6 @@
+/**
+ * Interface that stores all the information about a sentence used for an exercise
+ */
 export interface Selected {
 
     slice1:string;

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { UserInfoService } from '../user-info.service';
-import { Inflection } from '../inflection';
 import { Router } from '@angular/router';
 import { LearnerModelService } from '../learner-model.service';
 import { Level } from '../level';
@@ -10,6 +9,12 @@ import { RecapComponent } from '../recap/recap.component';
 import { MatDialog } from '@angular/material/dialog';
 import { AlertComponent } from '../alert/alert.component';
 
+export interface Inflection {
+  number:string;
+  infl:string;
+  checked:boolean
+}
+
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
@@ -17,7 +22,7 @@ import { AlertComponent } from '../alert/alert.component';
 })
 
 /**
- * A component that helps create a learner model
+ * A component that helps user create a learner model
  */
 export class WelcomeComponent implements OnInit {
 
@@ -150,9 +155,10 @@ export class WelcomeComponent implements OnInit {
 
   }
 
-  /**
-   * Alert box
-   */
+/**
+ * Alert box
+ * @param d Message to be displayed 
+ */
   openDialog(d: string): void {
     const dialogRef = this.dialogue.open(AlertComponent, {
       width: '250px',
@@ -199,8 +205,6 @@ export class WelcomeComponent implements OnInit {
     }
 
   }
-
-
 
   /**
    * Create two temporary arrays of inflections to be marked as checked
@@ -256,11 +260,9 @@ export class WelcomeComponent implements OnInit {
     for (let i of this.inflections) {
       for (let j of this.inflectionsTempSg) {
         if (i == j.infl && !j.checked) {
-          console.log(j.infl);
           foundSg = true;
           for (let k of this.inflectionsBeginnerSg) {
             if (k.infl == j.infl) {
-              console.log("k: " + k.infl)
               k.checked = true;
             }
           }
@@ -276,11 +278,9 @@ export class WelcomeComponent implements OnInit {
     for (let i of this.inflections) {
       for (let j of this.inflectionsTempPl) {
         if (i == j.infl && !j.checked) {
-          console.log(j.infl);
           foundPl = true;
           for (let k of this.inflectionsBeginnerPl) {
             if (k.infl == j.infl) {
-              console.log("k: " + k.infl)
               k.checked = true;
             }
           }
@@ -293,8 +293,6 @@ export class WelcomeComponent implements OnInit {
 
 
   }
-
-
 
   /**
    * Mark inflections selected as beginner level by the user
@@ -402,8 +400,6 @@ export class WelcomeComponent implements OnInit {
         }
       }
 
-      console.log('modelis', lmodel)
-
       //make sure the user has chosen at least one inflection type
       if (lmodel.length == 0) {
         this.openDialog("At least one inflection type must be marked.");
@@ -415,11 +411,14 @@ export class WelcomeComponent implements OnInit {
         for (let i of lmodel) {
           for (let j of i.declensions) {
             this.connect.getCard(i.infl, i.number, [j]).subscribe(card => {
-              console.log(card); let car = JSON.parse(card); console.log(car.simple);
+             let car = JSON.parse(card);
               if (car.simple != null) {
                 found = true
               }
             })
+            if(found){
+              break
+            }
           }
         }
 
@@ -495,11 +494,14 @@ export class WelcomeComponent implements OnInit {
         for (let i of lmodel) {
           for (let j of i.declensions) {
             this.connect.getCard(i.infl, i.number, [j]).subscribe(card => {
-              console.log(card); let car = JSON.parse(card); console.log(car.simple);
+              let car = JSON.parse(card);
               if (car.simple != null) {
                 found = true
               }
             })
+            if(found){
+              break
+            }
           }
         }
 

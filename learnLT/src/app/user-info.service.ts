@@ -4,6 +4,9 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+/**
+ * Keep track of user's info
+ */
 export class UserInfoService {
 
   private subject = new BehaviorSubject<any>("default");

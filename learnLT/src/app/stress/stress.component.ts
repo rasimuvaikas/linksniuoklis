@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Selected } from '../selected';
-import { Inflection } from '../inflection';
 import { Router } from '@angular/router';
 import { ConnectService } from '../connect.service';
 import { Level } from '../level';
@@ -16,6 +15,9 @@ import { RecapComponent } from '../recap/recap.component';
   templateUrl: './stress.component.html',
   styleUrls: ['./stress.component.css']
 })
+/**
+ * A component that allows a user to practise accentuation
+ */
 export class StressComponent implements OnInit {
 
   username: string;
@@ -138,14 +140,11 @@ advance(sentence: any) {
       declensions = el.declensions;
     }
   })
-
   sentence.level = level;
 
   //update the progress table
   this.con.postProgress(sentence).subscribe(data => {
     this.progress = data;
-    console.log(data);
-
 
     //the user can move to the next level if they have completed a certain number of exercises
     if (level == "beginner") {
@@ -157,15 +156,11 @@ advance(sentence: any) {
             for (var j in this.progress.declensions[i]) {
               if (j != 'count') {
                 if (this.progress.declensions[i][j] >= 5) {
-                  console.log("here")
                   decls = decls + 1
                   if (decls == 5 || decls == this.progress.total_declensions) { //check if the user has completed at least 5 exercises for each declensions
                     advance = true
                     break
                   }
-                }
-                else{
-                  console.log(j, this.progress.declensions[i][j], " less than 5")
                 }
               }
             }
@@ -181,7 +176,7 @@ advance(sentence: any) {
             let lvl: Level = { number: sentence.number, level: level, infl: sentence.inflection, username: this.username, declensions: declensions }
             lvls.push(lvl);
             //update the learner model: both in the database, and service
-            this.con.postModel(lvls).subscribe(data => { this.lmodel = data; this.model.sendModel(this.lmodel); console.log(this.lmodel) });
+            this.con.postModel(lvls).subscribe(data => { this.lmodel = data; this.model.sendModel(this.lmodel); });
 
           }
         }
@@ -212,7 +207,7 @@ advance(sentence: any) {
             let lvl: Level = { number: sentence.number, level: level, infl: sentence.inflection, username: this.username, declensions: declensions }
             lvls.push(lvl);
             //update the learner model: both in the database, and service
-            this.con.postModel(lvls).subscribe(data => { this.lmodel = data; this.model.sendModel(this.lmodel); console.log(this.lmodel) });
+            this.con.postModel(lvls).subscribe(data => { this.lmodel = data; this.model.sendModel(this.lmodel);});
           }
         }
       }
@@ -233,6 +228,7 @@ advance(sentence: any) {
       this.advance(sentence);
       this.model.sendScore(this.score);
 
+      //update score table and progress bar
       var send: Score = {
         username: this.username, time: this.time.toDateString() + " " + this.time.toLocaleTimeString(),
         inflection: sentence.inflection, number: sentence.number, declension: sentence.declension, correct: 1, incorrect: 0
@@ -245,6 +241,7 @@ advance(sentence: any) {
       this.score = 0;
       this.model.sendScore(this.score);
 
+      //update score table and progress bar
       var send: Score = {
         username: this.username, time: this.time.toDateString() + " " + this.time.toLocaleTimeString(),
         inflection: sentence.inflection, number: sentence.number, declension: sentence.declension, correct: 0, incorrect: 1
@@ -254,9 +251,6 @@ advance(sentence: any) {
   }
 
   ngOnInit(): void {
-
-
-    console.log('attempts ', this.attempts)
 
     //int score is used to update a progress bar in the progress component
     this.model.sc.subscribe(data => this.score = data);
@@ -291,7 +285,7 @@ advance(sentence: any) {
       let i = this.intermediate[Math.floor(Math.random() * ((this.intermediate.length - 1) - 0 + 1) + 0)]; //choose a random case that belongs to the intermediate category
       this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car); 
-        //add attempts counter to make sure no infinite loop can happen
+        //add attempts counter to prevent infinite loops
         if (this.card.simple == null && (this.intermediate.length > 1 || i.declensions.length > 1) && this.attempts < 4) {
           this.attempts = this.attempts + 1
           this.ngOnInit();
@@ -306,10 +300,7 @@ advance(sentence: any) {
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
         }
-        console.log(JSON.parse(car))
       });
-
-      console.log("fam: ", i);
 
 
     } else if (this.counterAdv > 4 && this.advanced.length > 0) { //display a sentence with a noun in an advanced level case every 5th sentence
@@ -317,6 +308,7 @@ advance(sentence: any) {
       let i = this.advanced[Math.floor(Math.random() * ((this.advanced.length - 1) - 0 + 1) + 0)]; //choose a random case that belongs to the advanced category
       this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
+        //add attempts counter to prevent infinite loops
         if (this.card.simple == null && (this.advanced.length > 1 || i.declensions.length > 1) && this.attempts < 4) {
           this.attempts = this.attempts + 1
           this.ngOnInit();
@@ -331,10 +323,7 @@ advance(sentence: any) {
           this.model.sendFam(this.counterFam + 1);
           this.model.sendAdv(0); //reset the variable to start counting from 0 again
         }
-        console.log(JSON.parse(car))
       });
-
-      console.log("adv: ", i);
 
     }
 
@@ -342,6 +331,7 @@ advance(sentence: any) {
       let i = this.beginner[Math.floor(Math.random() * ((this.beginner.length - 1) - 0 + 1) + 0)]; //choose a random case that belongs to the beginner category
       this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
+        //add attempts counter to prevent infinite loops
         if (this.card.simple == null && (this.beginner.length > 1 || i.declensions.length > 1)  && this.attempts < 4) {
           this.attempts = this.attempts + 1
           this.ngOnInit();
@@ -356,10 +346,7 @@ advance(sentence: any) {
           this.model.sendFam(this.counterFam + 1);
           this.model.sendAdv(this.counterAdv + 1);
         }
-        console.log(JSON.parse(car))
       });
-
-      console.log("nov: ", i);
     }
 
     //if beginner is empty, try other arrays
@@ -367,6 +354,7 @@ advance(sentence: any) {
       let i = this.intermediate[Math.floor(Math.random() * ((this.intermediate.length - 1) - 0 + 1) + 0)];
       this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
+        //add attempts counter to prevent infinite loops
         if (this.card.simple == null && (this.intermediate.length > 1 || i.declensions.length > 1) && this.attempts < 4) {
           this.attempts = this.attempts + 1
           this.ngOnInit();
@@ -381,15 +369,14 @@ advance(sentence: any) {
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
         }
-        console.log(JSON.parse(car))
       });
-      console.log("fam: ", i);
     }
 
     else if (this.advanced.length > 0) {
       let i = this.advanced[Math.floor(Math.random() * ((this.advanced.length - 1) - 0 + 1) + 0)];
       this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
+        //add attempts counter to prevent infinite loops
         if (this.card.simple == null && (this.advanced.length > 1 || i.declensions.length > 1) && this.attempts < 4) {
           this.attempts = this.attempts + 1
           this.ngOnInit();
@@ -404,10 +391,7 @@ advance(sentence: any) {
           this.model.sendFam(this.counterFam + 1); //reset the variable to start counting from 0 again
           this.model.sendAdv(0);
         }
-        console.log(JSON.parse(car))
       });
-
-      console.log("adv: ", i);
     }
 
 

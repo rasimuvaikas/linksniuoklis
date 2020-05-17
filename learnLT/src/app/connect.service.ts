@@ -9,6 +9,9 @@ import { Score } from './score';
 @Injectable({
   providedIn: 'root'
 })
+/**
+ * Connect to a Java servlet
+ */
 export class ConnectService {
 
   url: string;
@@ -32,9 +35,6 @@ export class ConnectService {
       .append("inflection", inflection)
       .append("number", number)
       .append("declension", i);
-
-      console.log("connect sent a request with ", i);
-
 
     return this.http.get(this.url + "Share", { params: httpParams, responseType: "text" });
   }
@@ -63,7 +63,7 @@ export class ConnectService {
   }
 
   /**
-   * Update a particular user's learner model
+   * Update the particular user's learner model
    * @param model 
    */
   postModel(model: Level[]): Observable<any> {

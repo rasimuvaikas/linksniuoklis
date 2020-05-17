@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ConnectService } from '../connect.service';
-import { Inflection } from '../inflection';
 import { Selected } from '../selected';
 import { Level } from '../level';
 import { LearnerModelService } from '../learner-model.service';
@@ -16,6 +15,10 @@ import { RecapComponent } from '../recap/recap.component';
   templateUrl: './both.component.html',
   styleUrls: ['./both.component.css']
 })
+
+/**
+ * A component that allows a user to practise both declension and accentuation at the same time
+ */
 export class BothComponent implements OnInit {
 
   username: string;
@@ -140,6 +143,7 @@ export class BothComponent implements OnInit {
    */
   advance(sentence: any) {
 
+    //get sentence information
     sentence.username = this.username;
     let level: string;
     let declensions: string[];
@@ -149,19 +153,16 @@ export class BothComponent implements OnInit {
         declensions = el.declensions;
       }
     })
-
     sentence.level = level;
 
     //update the progress table
     this.con.postProgress(sentence).subscribe(data => {
       this.progress = data;
-      console.log(data);
-
 
       //the user can move to the next level if they have completed a certain number of exercises
       if (level == "beginner") {
         if (this.progress.total >= 30) {
-          if (this.progress.declensions.length > 4 || this.progress.declensions.length == this.progress.total_declensions) { //some inflection do not contain nouns in 4 declensions
+          if (this.progress.declensions.length > 4 || this.progress.declensions.length == this.progress.total_declensions) { //some inflection do not contain nouns in 4 distinct declensions
             let advance = false
             let decls = 0
             for (let i = 0; i < this.progress.declensions.length; i++) {
@@ -174,15 +175,12 @@ export class BothComponent implements OnInit {
                       break
                     }
                   }
-                  else{
-                    console.log(j, this.progress.declensions[i][j], " less than 5")
-                  }
                 }
               }
 
             }
 
-            //if all conditions are satisfied, move the user up a level for the specific inflection
+            //if all conditions are satisfied, move the user up a level in the specific inflection/number
             if (advance) {
               let lvls: Level[] = [];
 
@@ -191,7 +189,7 @@ export class BothComponent implements OnInit {
               let lvl: Level = { number: sentence.number, level: level, infl: sentence.inflection, username: this.username, declensions: declensions }
               lvls.push(lvl);
               //update the learner model: both in the database, and service
-              this.con.postModel(lvls).subscribe(data => { this.lmodel = data; this.model.sendModel(this.lmodel); console.log(this.lmodel) });
+              this.con.postModel(lvls).subscribe(data => { this.lmodel = data; this.model.sendModel(this.lmodel); });
 
             }
           }
@@ -213,7 +211,7 @@ export class BothComponent implements OnInit {
             }
 
 
-            //if all conditions are satisfied, move the user up a level for the specific inflection
+            //if all conditions are satisfied, move the user up a level in the specific inflection/number
             if (advance) {
               let lvls: Level[] = [];
 
@@ -222,7 +220,7 @@ export class BothComponent implements OnInit {
               let lvl: Level = { number: sentence.number, level: level, infl: sentence.inflection, username: this.username, declensions: declensions }
               lvls.push(lvl);
               //update the learner model: both in the database, and service
-              this.con.postModel(lvls).subscribe(data => { this.lmodel = data; this.model.sendModel(this.lmodel); console.log(this.lmodel) });
+              this.con.postModel(lvls).subscribe(data => { this.lmodel = data; this.model.sendModel(this.lmodel); });
             }
           }
         }
@@ -238,23 +236,28 @@ export class BothComponent implements OnInit {
    */
   onChangeDecl(sentence: any) {
     if (this.correct == 1) {
+      this.answer = ""; //reset answer in the answer field
+      this.count = 0; //reset the counter
+      this.displayAnswer = false; //reset answer display boolean
       this.score = this.score + 1;
-      this.model.sendScore(this.score);
+      this.model.sendScore(this.score); //update progress bar
       this.advance(sentence);
 
+      //update score table and progress bar
       var send: Score = {
         username: this.username, time: this.time.toDateString() + " " + this.time.toLocaleTimeString(),
         inflection: sentence.inflection, number: sentence.number, declension: sentence.declension, correct: 1, incorrect: 0
       };
-      this.con.postScore(send).subscribe(data => { this.update = data; this.model.sendOverallScore(this.update) });
+      this.con.postScore(send).subscribe(data => { this.update = data; this.model.sendOverallScore(this.update) }); 
 
       //reset correct, and set decl to false and stress to true to display a stress exercise card next
       setTimeout(() => { this.correct = 3; this.decl = false; this.stress = true; }, 1000);
     }
     else {
       this.score = 0;
-      this.model.sendScore(this.score);
+      this.model.sendScore(this.score); //update progress bar
 
+      //update score table and progress bar
       var send: Score = {
         username: this.username, time: this.time.toDateString() + " " + this.time.toLocaleTimeString(),
         inflection: sentence.inflection, number: sentence.number, declension: sentence.declension, correct: 0, incorrect: 1
@@ -278,18 +281,20 @@ export class BothComponent implements OnInit {
       this.model.sendScore(this.score);
       this.advance(sentence);
 
+      //update score table and progress bar
       var send: Score = {
         username: this.username, time: this.time.toDateString() + " " + this.time.toLocaleTimeString(),
         inflection: sentence.inflection, number: sentence.number, declension: sentence.declension, correct: 1, incorrect: 0
       };
       this.con.postScore(send).subscribe(data => { this.update = data; this.model.sendOverallScore(this.update) });
-      //reset correct, and set decl to true and stress to false to display a declension exercise card next
+      // set decl to true and stress to false to display a declension exercise card next
       setTimeout(() => { this.ngOnInit(); this.decl = true; this.stress = false; }, 1000);
     }
     else {
       this.score = 0;
       this.model.sendScore(this.score);
 
+      //update score table and progress bar
       var send: Score = {
         username: this.username, time: this.time.toDateString() + " " + this.time.toLocaleTimeString(),
         inflection: sentence.inflection, number: sentence.number, declension: sentence.declension, correct: 0, incorrect: 1
@@ -316,6 +321,7 @@ export class BothComponent implements OnInit {
       this.model.sendScore(this.score);
       this.advance(sentence);
 
+      //update score table and progress bar
       var send: Score = {
         username: this.username, time: this.time.toDateString() + " " + this.time.toLocaleTimeString(),
         inflection: sentence.inflection, number: sentence.number, declension: sentence.declension, correct: 1, incorrect: 0
@@ -323,17 +329,19 @@ export class BothComponent implements OnInit {
       this.con.postScore(send).subscribe(data => { this.update = data; this.model.sendOverallScore(this.update) });
       //reset correct, and set decl to false and stress to true to display a stress exercise card next
       setTimeout(() => { this.correct = 3; this.decl = false; this.stress = true; }, 1000);
-    } else {
+    } 
+    
+    else {
       this.score = 0;
-      this.model.sendScore(this.score);
+      this.model.sendScore(this.score); //update progress bar
 
+      //update score table and progress bar
       var send: Score = {
         username: this.username, time: this.time.toDateString() + " " + this.time.toLocaleTimeString(),
         inflection: sentence.inflection, number: sentence.number, declension: sentence.declension, correct: 0, incorrect: 1
       };
       this.con.postScore(send).subscribe(data => { this.update = data; this.model.sendOverallScore(this.update) });
       this.count = this.count + 1;
-      console.log(this.count);
       this.correct = 0; //set correct to 0 to display "incorrect" message
       if (this.count > 2) {
         this.displayAnswer = true; //display the correct answer if the user fails to enter the correct one 3 times
@@ -343,8 +351,6 @@ export class BothComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log('attempts ', this.attempts)
-
     this.user.currentName.subscribe(username => this.username = username); //get username
 
     //int score is used to update a progress bar in the progress component
@@ -353,7 +359,7 @@ export class BothComponent implements OnInit {
     this.model.scTotal.subscribe(data => this.update = data);
 
     this.correct = 3; //reset correct so that neither 'correct' nor 'incorrect' would be displayed
-    this.show = false;
+    this.show = false; //do not show correct answer
 
 
 
@@ -376,14 +382,14 @@ export class BothComponent implements OnInit {
     this.model.cAdv.subscribe(count => this.counterAdv = count); //advanced
 
 
-    if (this.counterFam > 2 && this.intermediate.length > 0) { //display a sentence with a noun in a intermediate level case every 3rd sentence
+    if (this.counterFam > 2 && this.intermediate.length > 0) { //display a sentence with a noun in an intermediate level case every 3rd sentence
 
       let i = this.intermediate[Math.floor(Math.random() * ((this.intermediate.length - 1) - 0 + 1) + 0)]; //choose a random case that belongs to the intermediate category
       this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car); 
-        //add attempts counter to make sure no infinite loop can happen
+        //add attempts counter to prevent infinite loops
         if (this.card.simple == null && (this.intermediate.length > 1 || i.declensions.length > 1) && this.attempts < 4) {
-          this.attempts = this.attempts + 1
+          this.attempts = this.attempts + 1 
           this.ngOnInit();
         }
         else if (this.card.simple == null) {
@@ -396,17 +402,15 @@ export class BothComponent implements OnInit {
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
         }
-        console.log(JSON.parse(car))
+
       });
-
-      console.log("fam: ", i);
-
 
     } else if (this.counterAdv > 4 && this.advanced.length > 0) { //display a sentence with a noun in an advanced level case every 5th sentence
 
       let i = this.advanced[Math.floor(Math.random() * ((this.advanced.length - 1) - 0 + 1) + 0)]; //choose a random case that belongs to the advanced category
       this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
+        //add attempts counter to prevent infinite loops
         if (this.card.simple == null && (this.advanced.length > 1 || i.declensions.length > 1) && this.attempts < 4) {
           this.attempts = this.attempts + 1
           this.ngOnInit();
@@ -421,10 +425,8 @@ export class BothComponent implements OnInit {
           this.model.sendFam(this.counterFam + 1);
           this.model.sendAdv(0); //reset the variable to start counting from 0 again
         }
-        console.log(JSON.parse(car))
       });
 
-      console.log("adv: ", i);
 
     }
 
@@ -432,6 +434,7 @@ export class BothComponent implements OnInit {
       let i = this.beginner[Math.floor(Math.random() * ((this.beginner.length - 1) - 0 + 1) + 0)]; //choose a random case that belongs to the beginner category
       this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
+        //add attempts counter to prevent infinite loops
         if (this.card.simple == null && (this.beginner.length > 1 || i.declensions.length > 1)  && this.attempts < 4) {
           this.attempts = this.attempts + 1
           this.ngOnInit();
@@ -446,10 +449,8 @@ export class BothComponent implements OnInit {
           this.model.sendFam(this.counterFam + 1);
           this.model.sendAdv(this.counterAdv + 1);
         }
-        console.log(JSON.parse(car))
       });
 
-      console.log("nov: ", i);
     }
 
     //if beginner is empty, try other arrays
@@ -457,6 +458,7 @@ export class BothComponent implements OnInit {
       let i = this.intermediate[Math.floor(Math.random() * ((this.intermediate.length - 1) - 0 + 1) + 0)];
       this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
+        //add attempts counter to prevent infinite loops
         if (this.card.simple == null && (this.intermediate.length > 1 || i.declensions.length > 1) && this.attempts < 4) {
           this.attempts = this.attempts + 1
           this.ngOnInit();
@@ -471,13 +473,12 @@ export class BothComponent implements OnInit {
           this.model.sendFam(0); //reset the variable to start counting from 0 again
           this.model.sendAdv(this.counterAdv + 1);
         }
-        console.log(JSON.parse(car))
       });
-      console.log("fam: ", i);
     }
 
     else if (this.advanced.length > 0) {
       let i = this.advanced[Math.floor(Math.random() * ((this.advanced.length - 1) - 0 + 1) + 0)];
+      //add attempts counter to prevent infinite loops
       this.con.getCard(i.infl, i.number, i.declensions).subscribe(car => {
         this.card = JSON.parse(car);
         if (this.card.simple == null && (this.advanced.length > 1 || i.declensions.length > 1) && this.attempts < 4) {
@@ -494,10 +495,8 @@ export class BothComponent implements OnInit {
           this.model.sendFam(this.counterFam + 1); //reset the variable to start counting from 0 again
           this.model.sendAdv(0);
         }
-        console.log(JSON.parse(car))
       });
 
-      console.log("adv: ", i);
     }
 
   }

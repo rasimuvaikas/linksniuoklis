@@ -4,6 +4,9 @@ import {HttpClient} from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
+/**
+ * Ensure user is logged in
+ */
 export class AuthService {
 
   private isLoggedIn:boolean;
@@ -12,11 +15,6 @@ export class AuthService {
 
     this.isLoggedIn = false;
    }
-
-  /*logIn(name){
-    
-    return this.http.post('localhost:8080/javax.servlet-api/Assignment', {"username":name});
-  }*/
 
   isUserLoggedIn(username)
   {
