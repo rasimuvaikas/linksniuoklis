@@ -19,5 +19,5 @@ Linksniuoklis requires the following to run:
   * For Windows: Move into the WEB-INF directory, and run ```java -cp "lib/*;classes/." Data```
 4. Rezip the directory and change the file ending to .war
 5. Add the rezipped Decliner.war to Tomcat WebApps folder, run TomCat bin/startup
-6. Run "npm install", and then "ng serve" commands inside the learnLT folder
+6. Run ```npm install```, and then ```ng serve``` commands inside the learnLT folder
 5. Access the learning tool through localhost://4200
