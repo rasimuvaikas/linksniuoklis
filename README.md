@@ -1,5 +1,5 @@
 ## Linksniuoklis 
-An online learning tool for practising Lithuanian declension and accentuation
+An online learning tool for practising Lithuanian noun declension and accentuation
 
 ## Requirements
 
