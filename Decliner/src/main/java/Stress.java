@@ -17,16 +17,49 @@ public class Stress {
     private HashMap<String, Integer> stressedTokens = new HashMap<>();
     private HashMap<String, Integer> cleanSeq = new HashMap<>();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(
+                new FileInputStream("C:/Users/zivil/linksniuoklis/Decliner/src/main/resources/infl/accusativePl.tsv"), "UTF-8"));
+        String line;
+        ArrayList<String> all_words = new ArrayList<>();
+        ArrayList<String> non_acc = new ArrayList<>();
+        while ((line = br.readLine()) != null) {
+            String[] split = line.split("\t");
+            if (split[7].equals("1mascIAS")) {
+                String stressed = split[0];
+                String[] strice = stressed.split(" ?(?<!\\G)((?<=[^\\p{Punct}])(?=\\p{Punct})|\\b) ?");
+                String word = strice[Integer.parseInt(split[4])];
+                all_words.add(word);
+                non_acc.add(split[3]);
+            }
+
+        }
+
+        System.out.println(all_words.toString());
+        System.out.println(non_acc.toString());
+
         Stress s = new Stress();
 
+        for (String a : all_words){
+            System.out.println(a);
+            try {
+                for (ArrayList<String> al : s.findDistractors(a)) {
+                    System.out.println(al.toString());
+                    //System.out.println(s.generateDistractor(al, "vergus"));
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        /**
         try {
             for (ArrayList<String> a : s.findDistractors("vérgus")) {
                 System.out.println(s.generateDistractor(a, "vergus"));
             }
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }**/
 
 
     }

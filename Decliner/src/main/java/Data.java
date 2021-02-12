@@ -23,6 +23,10 @@ public class Data {
     ResultSet rs = null;
     Connection conn = null;
 
+    String driver;
+    String username;
+    String password;
+
 
     public Data() {
 
@@ -36,10 +40,10 @@ public class Data {
             Properties prop = new Properties ();
             prop.load(stream);
             System.out.println("Reading properties...");
-            String driver = (String) prop.get("db.driver");
+            driver = (String) prop.get("db.driver");
             String url = (String) prop.get("db.url");
-            String username = (String) prop.get("db.username");
-            String password = (String) prop.get ("db.password");
+            username = (String) prop.get("db.username");
+            password = (String) prop.get ("db.password");
 
             Properties info = new Properties();
             info.put("user", username);
@@ -55,6 +59,28 @@ public class Data {
         } catch (SQLException | ClassNotFoundException | FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void changeDB(String db){
+
+        try{
+            Properties info = new Properties();
+            info.put("user", username);
+            info.put("password", password);
+            info.put("characterEncoding", "utf8");
+            Class.forName(driver);
+
+            String url = "jdbc:mysql://localhost/" + db + "?allowLoadLocalInfile=true&useTimezone=true&serverTimezone" +
+                    "=UTC&defaultCharacterSet=utf8mb4";
+
+            System.out.println("Connecting to " + db + " database");
+            conn = DriverManager.getConnection(url, info);
+            stmt = conn.createStatement();
+            System.out.println("Connected.");
+
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
@@ -256,9 +282,9 @@ public class Data {
     public ResultSet getSeq(String sequence){
         try {
 
-            stmt.executeUpdate("USE stats");
+            changeDB("stats");
 
-            String sql = "SELECT * FROM tokenseq where clean = ? COLLATE utf8mb4_bin";
+            String sql = "SELECT * FROM tokenSeq where clean = ? COLLATE utf8mb4_bin";
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, sequence);
             rs = pstmt.executeQuery();
@@ -278,7 +304,7 @@ public class Data {
     public ResultSet getToken(String token){
         try {
 
-            stmt.executeUpdate("USE stats");
+            changeDB("stats");
 
             String sql = "SELECT * FROM conditionalProb where clean = ? COLLATE utf8mb4_bin";
             pstmt = conn.prepareStatement(sql);
@@ -304,7 +330,7 @@ public class Data {
         ResultSet result = null;
         try {
 
-            stmt.executeUpdate("USE text");
+            changeDB("text");
             String sql = "SELECT * FROM nouns where inflection = ? AND number = ? AND pattern = ? ORDER BY RAND() LIMIT 1";
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, infl);
@@ -327,7 +353,7 @@ public class Data {
     {
         try {
 
-            stmt.executeUpdate("USE models");
+            changeDB("models");
             ResultSet check = stmt.executeQuery("SELECT count(*) FROM learnermodel where username = '" + user +"' COLLATE utf8mb4_bin");
             check.next();
             if(check.getInt("count(*)") == 0) {
@@ -358,7 +384,7 @@ public class Data {
     public ResultSet getModel(String username) {
 
         try {
-            stmt.executeUpdate("USE models");
+            changeDB("models");
             String sql = "SELECT * FROM learnermodel WHERE username = ? COLLATE utf8mb4_bin";
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, username);
@@ -380,7 +406,7 @@ public class Data {
      */
     public void updateModel(String infl, String number, String level, String username){
         try {
-            stmt.executeUpdate("USE models");
+            changeDB("models");
 
             String column = generateInfl(infl, number);
 
@@ -406,7 +432,7 @@ public class Data {
     public ResultSet getDecls(String username) {
 
         try {
-            stmt.executeUpdate("USE models");
+            changeDB("models");
             String sql = "SELECT * FROM declensions WHERE username = ? COLLATE utf8mb4_bin";
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, username);
@@ -426,7 +452,7 @@ public class Data {
      */
     public void updateDecls(ArrayList<String> decls, String username){
         try {
-            stmt.executeUpdate("USE models");
+            changeDB("models");
 
             for(String s : decls){
                 String sql = "UPDATE declensions SET " + s + " = 1 WHERE username = ? COLLATE utf8mb4_bin";
@@ -471,7 +497,7 @@ public class Data {
     public void updateProgress(String infl, String num, String decl, String username, String level){
         try {
 
-            stmt.executeUpdate("USE models");
+            changeDB("models");
 
             String column = generateInfl(infl, num);
 
@@ -515,7 +541,7 @@ public class Data {
     public ResultSet getProgress(String infl, String num, String username, String level) {
 
         try {
-            stmt.executeUpdate("USE models");
+            changeDB("models");
 
             String column = generateInfl(infl, num);
 
@@ -542,7 +568,7 @@ public class Data {
     public ResultSet getNumNouns(String infl, String num, String decl) {
 
         try {
-            stmt.executeUpdate("USE text");
+            changeDB("models");
 
             String sql = "SELECT count(*) FROM nouns WHERE inflection = ? AND number = ? AND pattern = ? COLLATE utf8mb4_bin";
             pstmt = conn.prepareStatement(sql);
@@ -566,7 +592,7 @@ public class Data {
     public ResultSet getDeclsNum(String infl, String num) {
 
         try {
-            stmt.executeUpdate("USE text");
+            changeDB("text");
 
             String sql = "SELECT count(DISTINCT pattern) FROM nouns WHERE inflection = ? AND number = ? COLLATE utf8mb4_bin";
             pstmt = conn.prepareStatement(sql);
@@ -594,7 +620,7 @@ public class Data {
     public void updateScores(String infl, String num, String username, String time, String decl, int correct, int incorrect){
         try {
 
-            stmt.executeUpdate("USE models");
+            changeDB("models");
 
             String column = generateInfl(infl, num);
 
@@ -641,7 +667,7 @@ public class Data {
     public ResultSet getScoresOverall(String username, String time) {
 
         try {
-            stmt.executeUpdate("USE models");
+            changeDB("models");
 
             String sql = "SELECT SUM(correct), SUM(incorrect) FROM scores WHERE username = ? AND time = ? COLLATE utf8mb4_bin";
             pstmt = conn.prepareStatement(sql);
@@ -665,9 +691,9 @@ public class Data {
     public ResultSet getRows(String column, String username, String time) {
 
         try {
-            stmt.executeUpdate("USE models");
+            changeDB("models");
 
-            String sql = "SELECT DISTINCT" + column + " FROM scores WHERE username = ? AND time <> ? COLLATE utf8mb4_bin"; //make sure the current sessions scores are not included
+            String sql = "SELECT " + column + " FROM scores WHERE username = ? AND time <> ? COLLATE utf8mb4_bin"; //make sure the current sessions scores are not included
             pstmt = conn.prepareStatement(sql);
 
             pstmt.setString(1, username);
@@ -691,7 +717,7 @@ public class Data {
     public ResultSet getColumnScores(String column, String username, String value, String time) {
 
         try {
-            stmt.executeUpdate("USE models");
+            changeDB("models");
 
             String sql = "SELECT SUM(correct), SUM(incorrect) FROM scores WHERE username = ? AND "+ column + " = ? AND time <> ? COLLATE utf8mb4_bin";
             pstmt = conn.prepareStatement(sql);
@@ -716,7 +742,7 @@ public class Data {
     public ResultSet getDeclensionInflections(String declension, String username, String time) {
 
         try {
-            stmt.executeUpdate("USE models");
+            changeDB("models");
 
             String sql = "SELECT inflection FROM scores WHERE username = ? AND declension = ? AND time <> ? COLLATE utf8mb4_bin";
             pstmt = conn.prepareStatement(sql);
@@ -742,7 +768,7 @@ public class Data {
     public ResultSet getDeclensionScores(String declension, String inflection, String username, String time) {
 
         try {
-            stmt.executeUpdate("USE models");
+            changeDB("models");
 
             String sql = "SELECT SUM(correct), SUM(incorrect) FROM scores WHERE username = ? AND declension = ? AND inflection = ? AND time <> ? COLLATE utf8mb4_bin";
             pstmt = conn.prepareStatement(sql);
